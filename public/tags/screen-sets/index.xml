@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Screen Sets on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/screen-sets/</link>
+		<description>Recent content in Screen Sets on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 06 Apr 2017 21:05:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/screen-sets/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Manager Layouts, Screen Sets, Labels</title>
+				<link>http://localhost:1313/posts/manager-layouts-screen-sets-labels/</link>
+				<pubDate>Thu, 06 Apr 2017 21:05:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/manager-layouts-screen-sets-labels/</guid>
+				<description>&lt;p&gt;OTM comes with a variety of screens for each business object like Shipment, Order Release, etc and some of them can be copied and customized to ensure that they show only data elements required for that particular user/role.&lt;/p&gt;&#xA;&lt;p&gt;For example, a user might want to query a shipment by some attribute(custom) element, want the results screen to show only few elements like Shipment ID, Carrier Name etc, want view only screen(layout) to display the information to avoid accidental data updates, etc. All these requirements can be configured from the OTM UI using Manager Layouts and Screen sets.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

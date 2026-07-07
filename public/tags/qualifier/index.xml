@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Qualifier on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/qualifier/</link>
+		<description>Recent content in Qualifier on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 07 Jul 2017 18:37:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/qualifier/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Refnums</title>
+				<link>http://localhost:1313/posts/refnums/</link>
+				<pubDate>Fri, 07 Jul 2017 18:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/refnums/</guid>
+				<description>&lt;p&gt;OTM gives flexibility to associate custom attributes(also called refnums) to every transaction object like Order Base, Order Release, Shipment, etc.&lt;/p&gt;&#xA;&lt;p&gt;Developers can use these refnums to store client specific custom values like source system information, custom dates, etc. Note that in newer versions of OTM, we also have attribute columns to save custom values. We discussed this in previous post &amp;lsquo;Flexfields&amp;rsquo;.&lt;/p&gt;&#xA;&lt;p&gt;To create a refnum, you can navigate to specific business object menu. For example for shipment renfum, you can navigate to :&lt;br&gt;&#xA;Shipment Management &amp;gt; Power Data &amp;gt; Qaulifiers &amp;gt; Shipment Reference Number Qualifiers &amp;gt; Enter below values:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

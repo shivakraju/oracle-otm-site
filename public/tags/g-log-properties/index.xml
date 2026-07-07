@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>G-Log Properties on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/g-log-properties/</link>
+		<description>Recent content in G-Log Properties on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 13 Aug 2017 21:22:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/g-log-properties/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>G-Log Properties</title>
+				<link>http://localhost:1313/posts/g-log-properties/</link>
+				<pubDate>Sun, 13 Aug 2017 21:22:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/g-log-properties/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post is applicable for OTM ver 6.x and below.&lt;/p&gt;&#xA;&lt;p&gt;G-Log Properties on the OTM App and Web server have the configurations that control the interactions between OTM App, Web and Database tiers. They also have configurable properties for the application like number of results to display on search screens, etc.&lt;/p&gt;&#xA;&lt;p&gt;Always take backup of current file, before changing these properties because this file is critical and used by the application during re-boot. Any corruption to this file would result in issues with application behavior.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

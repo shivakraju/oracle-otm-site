@@ -1,0 +1,19 @@
+<script>
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable Ctrl+C, Ctrl+A, Ctrl+U, Ctrl+S
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (
+      e.key === 'c' || e.key === 'C' ||
+      e.key === 'a' || e.key === 'A' ||
+      e.key === 'u' || e.key === 'U' ||
+      e.key === 's' || e.key === 'S' ||
+      e.key === 'p' || e.key === 'P'
+    )) {
+      e.preventDefault();
+    }
+  });
+</script>

@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DIRECT SQL UPDATE
+This is very useful action in writing a DML statement or to call an PLSQL procedure.
+While using the Action, there are specific formats for DML statements or calling Procedures:
+Insert Statement format:
+INSERT INTO order_release_refnum (order_release_gid,
+ORDER_RELEASE_REFNUM_QUAL_GID,
+ORDER_RELEASE_REFNUM_VALUE,
+DOMAIN_NAME)
+SELECT orr.order_release_gid,
+‘SO_NUM’,
+orlr.orl_refnum_value,
+orlr.domain_name
+FROM order_release orr,
+order_release_line orl,
+order_release_line_refnum orlr
+WHERE orr.order_release_gid = orl.order_release_gid
+AND orl.order_release_line_gid = orlr.order_release_line_gid
+AND orlr.ORDER_RELEASE_REFNUM_QUAL_GID = ‘SO_NUM’
+AND ROWNUM = 1
+AND NOT EXISTS
+(SELECT 1
+FROM order_release_refnum oref
+WHERE oref.order_release_gid =
+orr.order_release_gid
+AND oref.order_release_refnum_qual_gid =
+‘SO_NUM’)
+AND orr.order_release_gid = $gid
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/agents-frequently-used-actions/">
+	<meta property="og:site_name" content="Learn Oracle OTM">
+	<meta property="og:title" content="Agents - Frequently Used Actions">
+	<meta property="og:description" content="DIRECT SQL UPDATE
+This is very useful action in writing a DML statement or to call an PLSQL procedure.
+While using the Action, there are specific formats for DML statements or calling Procedures:
+Insert Statement format:
+INSERT INTO order_release_refnum (order_release_gid,
+ORDER_RELEASE_REFNUM_QUAL_GID,
+ORDER_RELEASE_REFNUM_VALUE,
+DOMAIN_NAME)
+SELECT orr.order_release_gid,
+‘SO_NUM’,
+orlr.orl_refnum_value,
+orlr.domain_name
+FROM order_release orr,
+order_release_line orl,
+order_release_line_refnum orlr
+WHERE orr.order_release_gid = orl.order_release_gid
+AND orl.order_release_line_gid = orlr.order_release_line_gid
+AND orlr.ORDER_RELEASE_REFNUM_QUAL_GID = ‘SO_NUM’
+AND ROWNUM = 1
+AND NOT EXISTS
+(SELECT 1
+FROM order_release_refnum oref
+WHERE oref.order_release_gid =
+orr.order_release_gid
+AND oref.order_release_refnum_qual_gid =
+‘SO_NUM’)
+AND orr.order_release_gid = $gid">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2016-08-05T20:29:00+00:00">
+		<meta property="article:modified_time" content="2016-08-05T20:29:00+00:00">
+		<meta property="article:tag" content="CALL">
+		<meta property="article:tag" content="DATA TYPE ASSOCIATIONS">
+		<meta property="article:tag" content="DIRECT SQL UPDATE">
+		<meta property="article:tag" content="RAISE EVENT">
+
+
+	<meta itemprop="name" content="Agents - Frequently Used Actions">
+	<meta itemprop="description" content="DIRECT SQL UPDATE
+This is very useful action in writing a DML statement or to call an PLSQL procedure.
+While using the Action, there are specific formats for DML statements or calling Procedures:
+Insert Statement format:
+INSERT INTO order_release_refnum (order_release_gid,
+ORDER_RELEASE_REFNUM_QUAL_GID,
+ORDER_RELEASE_REFNUM_VALUE,
+DOMAIN_NAME)
+SELECT orr.order_release_gid,
+‘SO_NUM’,
+orlr.orl_refnum_value,
+orlr.domain_name
+FROM order_release orr,
+order_release_line orl,
+order_release_line_refnum orlr
+WHERE orr.order_release_gid = orl.order_release_gid
+AND orl.order_release_line_gid = orlr.order_release_line_gid
+AND orlr.ORDER_RELEASE_REFNUM_QUAL_GID = ‘SO_NUM’
+AND ROWNUM = 1
+AND NOT EXISTS
+(SELECT 1
+FROM order_release_refnum oref
+WHERE oref.order_release_gid =
+orr.order_release_gid
+AND oref.order_release_refnum_qual_gid =
+‘SO_NUM’)
+AND orr.order_release_gid = $gid">
+	<meta itemprop="datePublished" content="2016-08-05T20:29:00+00:00">
+	<meta itemprop="dateModified" content="2016-08-05T20:29:00+00:00">
+	<meta itemprop="wordCount" content="1227">
+	<meta itemprop="keywords" content="CALL,DATA TYPE ASSOCIATIONS,DIRECT SQL UPDATE,RAISE EVENT">
+
+<title>Agents - Frequently Used Actions • Learn Oracle OTM</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/agents-frequently-used-actions/">
+<link rel="stylesheet" href="/book.min.0bc2ccea40da58d619c260c3cbe79c1f9c2ba0b7dc521a7fb7987f26000c9757.css" integrity="sha256-C8LM6kDaWNYZwmDDy&#43;ecH5wroLfcUhp/t5h/JgAMl1c=" crossorigin="anonymous">
+
+
+  <script defer type="module" src="/en.search.min.16d05727d2808ad79a71df07fc9b22b467aae8da71e28126262f393ea7428605.js" integrity="sha256-FtBXJ9KAiteacd8H/JsitGeq6Npx4oEmJi85PqdChgU=" crossorigin="anonymous"></script>
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Learn Oracle OTM</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/what-is-otm/" class="">
+      What is OTM ?</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-logistics-terminology/" class="">
+      Basic Logistics terminology</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-architecture-this-is-applicable-for-on-premise-installations/" class="">
+      OTM Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-inbound-integrations-xml/" class="">
+      OTM Inbound Integrations (XML)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-outbound-integrations/" class="">
+      OTM Outbound Integrations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/csv-data-uploads/" class="">
+      CSV Data Uploads</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/posting-data-to-otm-using-http-request/" class="">
+      Posting Data to OTM using HTTP request</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-domains-standard-schema-and-data-dictionary/" class="">
+      OTM Domains, Standard Schema and Data Dictionary</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-order-management-data-structure/" class="">
+      OTM Order Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-shipment-management-data-structure/" class="">
+      OTM Shipment Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-contract-rate-management-data-structure/" class="">
+      OTM Contract &amp; Rate Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-process-automation-data-structure/" class="">
+      Business Process Automation Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/" class="">
+      01 - Domain, Items, Locations, and Equipment</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-02-itinerary/" class="">
+      02 - Itinerary</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-03-service-provider-and-rates/" class="">
+      03 - Service Provider and Rates</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-04-business-numbers-planning-parameter/" class="">
+      04 - Business Numbers, Planning Parameter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-05-bulk-plan/" class="">
+      05 - Bulk Plan</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-06-tender-process/" class="">
+      06 - Tender process</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-07-invoicing/" class="">
+      07 - Invoicing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-08-voucher-allocation/" class="">
+      08 - Voucher Allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/saved-queriesconditions/" class="">
+      Saved Queries/Conditions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-frequently-used-actions/" class="active">
+      Agents - Frequently Used Actions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-sample-agent-creation-steps/" class="">
+      Agents - Sample Agent Creation Steps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-agent-event-restrictions/" class="">
+      Agents - Agent Event Restrictions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agent-gates/" class="">
+      Agent Gates</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-monitors/" class="">
+      Business Monitors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-numbers/" class="">
+      Business Numbers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/report-development-sample-report/" class="">
+      Report Development - Sample Report</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/emailing-reports-to-users-on-a-business-event/" class="">
+      Emailing Reports to Users on a Business Event</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/report-workspaces/" class="">
+      Report Workspaces</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/manager-layouts-screen-sets-labels/" class="">
+      Manager Layouts, Screen Sets, Labels</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/flex-fields/" class="">
+      Flex fields</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/advanced-layouts/" class="">
+      Advanced Layouts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/workbenches/" class="">
+      Workbenches</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/user-roles-vpd-and-access-control-lists/" class="">
+      User Roles - VPD and Access Control Lists</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/user-menu-and-manage-user-access/" class="">
+      User Menu and Manage User Access</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/service-provider-user-login-creation/" class="">
+      Service Provider User Login creation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/refnums/" class="">
+      Refnums</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/status-types/" class="">
+      Status Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/action-checks/" class="">
+      Action Checks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/custom-actions-smart-links/" class="">
+      Custom Actions &amp; Smart Links</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/yard-management-and-appointment-scheduling/" class="">
+      Yard Management and Appointment Scheduling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-application-admin-notes/" class="">
+      OTM Application ADMIN Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/oracle-dba-notes/" class="">
+      Oracle DBA notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/g-log-properties/" class="">
+      G-Log Properties</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sidebar-author">
+  <div class="sidebar-author-name">Shiva G (OTM Consultant)</div>
+  <img src="/images/author-profile.jpg" alt="Shiva G" class="sidebar-author-photo" />
+  <div class="sidebar-author-email">
+    <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+  </div>
+</div>
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Agents - Frequently Used Actions</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents"></nav>
+<div class="site-notice-sidebar">
+  Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+</div>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    Agents - Frequently Used Actions
+  </h1>
+  
+
+  <div class="book-post-content markdown-inner"><p>DIRECT SQL UPDATE</p>
+<p>This is very useful action in writing a DML statement or to call an PLSQL procedure.</p>
+<p>While using the Action, there are specific formats for DML statements or calling Procedures:</p>
+<p><strong>Insert Statement format:</strong></p>
+<p>INSERT INTO order_release_refnum (order_release_gid,<br>
+ORDER_RELEASE_REFNUM_QUAL_GID,<br>
+ORDER_RELEASE_REFNUM_VALUE,<br>
+DOMAIN_NAME)<br>
+SELECT orr.order_release_gid,<br>
+&lsquo;SO_NUM&rsquo;,<br>
+orlr.orl_refnum_value,<br>
+orlr.domain_name<br>
+FROM order_release orr,<br>
+order_release_line orl,<br>
+order_release_line_refnum orlr<br>
+WHERE orr.order_release_gid = orl.order_release_gid<br>
+AND orl.order_release_line_gid = orlr.order_release_line_gid<br>
+AND orlr.ORDER_RELEASE_REFNUM_QUAL_GID = &lsquo;SO_NUM&rsquo;<br>
+AND ROWNUM = 1<br>
+AND NOT EXISTS<br>
+(SELECT 1<br>
+FROM order_release_refnum oref<br>
+WHERE oref.order_release_gid =<br>
+orr.order_release_gid<br>
+AND oref.order_release_refnum_qual_gid =<br>
+&lsquo;SO_NUM&rsquo;)<br>
+AND orr.order_release_gid = $gid</p>
+<p><strong>Update Statement format:</strong></p>
+<p>UPDATE SHIP_UNIT SU<br>
+SET su.transport_handling_unit_gid = &lsquo;EXPORT&rsquo;<br>
+WHERE EXISTS<br>
+(SELECT 1<br>
+FROM ORDER_RELEASE_LINE ORL, ship_unit_line sul<br>
+WHERE ORL.ORDER_RELEASE_GID = $GID<br>
+AND SUL.SHIP_UNIT_GID = SU.SHIP_UNIT_GID<br>
+AND sul.order_release_line_gid = orl.order_release_line_gid)</p>
+<p><strong>Stored Procedure Calls:</strong></p>
+<p>CALL xxotm_agent_pkg.update_ebs_fsu($gid)</p>
+<p>For Oracle Stored Procedure to be accessible by OTM agent, we need to create a PUBLIC synonym for the procedure that you define in GLOGOWNER schema.</p>
+<p>CREATE OR REPLACE PUBLIC SYNONYM xxotm_agent_pkg FOR glogowner.xxotm_agent_pkg;</p>
+<p><strong>Note:</strong> Synonym is not required if you are making a call to the stored procedure along with the schema name. Example : CALL glogowner.xxotm_agent_pkg.update_ebs_fsu($gid)</p>
+<p><strong>Direct SQL Update Tips:</strong></p>
+<ul>
+<li>While using statement type as stored procedure, ensure refresh cache is not &lsquo;DML Returing&rsquo; which is default value.</li>
+<li>SQL Description - always write small description for the DSU action so that agent is readable.</li>
+</ul>
+<p>ASSIGN VARIABLE</p>
+<p>This is used in agents to declare a variable and associate a SQL statement to the variable.</p>
+<p>For example, following agent reads status of order release and sets the indicator color appropriately:</p>
+<p><img src="/images/agents-frequently-used-actions-img1-1be557884e.png" alt="" /></p>
+<p><img src="/images/agents-frequently-used-actions-img2-ae374fffe2.png" alt="" /></p>
+<p><strong>Query SQL:</strong></p>
+<p>SELECT NVL(STATUS_VALUE_XID,&lsquo;X&rsquo;)<br>
+FROM ORDER_RELEASE_STATUS ORS, STATUS_VALUE SV, STATUS_TYPE ST<br>
+WHERE SV.STATUS_VALUE_GID = ORS.STATUS_VALUE_GID<br>
+AND ST.STATUS_TYPE_GID = ORS.STATUS_TYPE_GID<br>
+AND ST.STATUS_TYPE_XID = &lsquo;PLANNING&rsquo;<br>
+AND ORS.ORDER_RELEASE_GID = $gid</p>
+<p><strong>Note:</strong> SQL associated with assign variable should always have NVL handling. If SQL doesn’t return a value, agent will fail at that point.</p>
+<p>Variables used in Parent Agent can be accessed from child agent</p>
+<p><strong>Agent Variables:</strong><br>
+Refer Topic ‘Agent Variables’ in OTM Help for variables like $gid.<br>
+<strong>Examples:</strong><br>
+$gid variable refers to current object ID on which agent is triggered like Order Release GID for Order Release agent, Shipment GID for shipment agent, etc.$event_gid variable: Say, if we have an agent already created in OTM that triggers on ORDER - CREATED and ORDER - MODIFIED events, and if we want to add some action specific to ORDER – CREATED event , use $EVENT_GID which is standard variable provided by OTM.</p>
+<p>RAISE EVENT ACTION</p>
+<p>This is used to trigger one agent from another agent.</p>
+<p><strong>Example:</strong> If we have 5 agents based on ORDER - CREATED event for different business process flows and if we need to perform activities common to all the processes, in this scenario we follow these steps:</p>
+<p>Business Process Automation &gt; Power Data &gt; Event Management &gt; Agent Events<br>
+<strong>Define a custom agent event:</strong></p>
+<p><img src="/images/agents-frequently-used-actions-img3-ea95a9fb7c.png" alt="" /></p>
+<p>Define an agent based on this custom event as shown:</p>
+<p><img src="/images/agents-frequently-used-actions-img4-dd0af676bc.png" alt="" /></p>
+<p>You can call this agent now from another agent using RAISE EVENT as shown below:</p>
+<p><img src="/images/agents-frequently-used-actions-img5-a862c3a8db.png" alt="" /></p>
+<p>DATA TYPE ASSOCIATIONS<br>
+<strong>Example:</strong> Set Order Release Status to Executed, when corresponding Shipment is in Accepted status.</p>
+<p>This requires updating order release status when shipment agent is running. In such cases use Data Type Associations as follows:</p>
+<p><img src="/images/agents-frequently-used-actions-img6-a48947db2e.png" alt="" /><br>
+Above screen shot shows SHIPMENT AGENT action that updates status on all corresponding order releases.</p>
+<p>When using a Data Type Association to run an agent action against related objects, “Create New Process” checkbox appears. If selected, the related action runs in a separate workflow process. The initial agent does not wait for the related object actions to complete. This provides you a way to avoid potential deadlock when raising custom events.</p>
+<p>FOR EACH</p>
+<p>This is used from any agent to repeat a custom event on related objects.<br>
+<strong>Example:</strong> From a shipment agent, you want to identify specific order release based on some saved query and perform some custom action on each of these order releases. In this case define a saved query and condition to identify those order releases, define a custom agent(listening to custom event) with the set of actions that you want to perform on these order releases. Call this event for those order releases using FOR-EACH.<br>
+<strong>Note:</strong> For performing standard events on related objects, note that you can use DATA TYPE ASSOCIATION.</p>
+<p>IF, ESLE, ESLEIF, END IF<br>
+These are condition actions provided by OTM to control the agent action flow as required.IF and ELSEIF should be associated with saved conditions and this action would return either true or false based on either saved condition returns rows or not.</p>
+<p>Complex Expression</p>
+<p>In the IF conditions, you can use complex expressions if you have multiple individual conditions to be combined with a logical AND or OR operators.</p>
+<p>SCHEDULE EVENT</p>
+<p><strong>Usage:</strong> Alternate to WAIT logic</p>
+<p><strong>Example:</strong> Say we need to ensure that a particular action in an agent is triggered only after a record exists in particular table and if we are not aware of the time when this record would be available in the DB. In this case, using WAIT will not work as we might not be aware of exactly how much time to WAIT. So create an IF condition checking if record that we are looking is existing or not. If record is not existing call the same agent again after 2 mins using this action.To call the same agent, create a custom event and trigger the custom event in the above IF block. Add the custom event to existing agent. In the IF block use STOP so that no further processing happens in the agent.If the IF condition fails – meaning record not exists – we can write further processing logic after the IF block.</p>
+<p>BUILD SHIPMENT<br>
+This is used in ORDER RELEASE agent to plan the order and create a shipment. In this action you need to specify the perspective(&lsquo;B&rsquo; for Buy, etc) and parameter set value.</p>
+<p>RELEASE ORDER BASE<br>
+This is used in ORDER BASE agent to release the instructions associated with that Order Base(PO) to create Order Release transactions.</p>
+<p>LINK SHIPMENT TO ORDER BASE<br>
+From Shipment Agent, we can use this action to link related Order Bases to Shipment. As a pre-req we need to ensure:</p>
+<ul>
+<li>Corresponding Order Bases(PO) are released - Order Releases exist</li>
+<li>Shipment Ship Unit Line qualifier &lsquo;CIN&rsquo; value should match to Order Base(PO Number)</li>
+</ul>
+<p>SEND INTEGRATION<br>
+This is used from any agent to send object XML to an external system.</p>
+<p>SET STATUS<br>
+This is used in any agent to set internal status values for current object.</p>
+<p>STOP<br>
+This is used to stop the workflow at that point based on some condition. Please note that no further agent actions will be executed once a STOP action is encountered.</p>
+<p>NOTIFY CONTACT<br>
+This is used in any agent to send notification to already defined contact in the system(like E-mail, etc)</p>
+<p>AUTO MATCH INVOICE<br>
+On Invoice Agent, this will trigger the match rule defined for the carrier sending this invoice.</p>
+<p>INVOICE - AUTO APPROVE, REJECT INVOICE<br>
+These actions on invoice agent are used to approve/reject that particular invoice transaction.</p>
+<p>DIVERT SHIPMENT<br>
+This action on a shipment is used to change destination location on the shipment and re-rate the shipment.</p>
+<p>SET INDICATOR<br>
+This action on any agent is used to set indicator status to Red, Green, White or Yellow. Usually R is used to indicate transaction failure, Green for success, White for New status and Yellow for Warning status.</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/saved-queriesconditions/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>Saved Queries/Conditions</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/agents-sample-agent-creation-steps/" class="flex align-center">
+      <span>Agents - Sample Agent Creation Steps</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents"></nav>
+<div class="site-notice-sidebar">
+  Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+</div>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  <script>
+  
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (
+      e.key === 'c' || e.key === 'C' ||
+      e.key === 'a' || e.key === 'A' ||
+      e.key === 'u' || e.key === 'U' ||
+      e.key === 's' || e.key === 'S' ||
+      e.key === 'p' || e.key === 'P'
+    )) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

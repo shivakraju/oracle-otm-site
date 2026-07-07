@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Learn on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/learn/</link>
+		<description>Recent content in Learn on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 03 May 2016 17:42:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/learn/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>What is OTM ?</title>
+				<link>http://localhost:1313/posts/what-is-otm/</link>
+				<pubDate>Thu, 14 Apr 2016 21:35:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/what-is-otm/</guid>
+				<description>&lt;p&gt;OTM stands for Oracle Transportation Management and it is a software product designed to automate various logistics business processes like receiving orders from source ERP systems for freight consolidation, optimizing routes and shipping costs, sending tender requests to service providers(carriers), receiving shipment tracking revents from carriers, recieving and processing invoices from carriers, allocate freight costs to orders, and similar other functions which we will further discuss in future posts.&lt;/p&gt;&#xA;&lt;p&gt;This product is designed such a way that it can be easily configured and customized by IT Consultants for various client specific business needs with minimal technical expertise. IT Technical consultants would need basic Oracle SQL and XML knowledge for customizing the product and Functional consultants would need basic logistics domain knowledge to configure(setup) the product based on the documentation and use cases provided by Oracle. Latest OTM SaaS versions make it easier for clients to just focus on core business configurations to fast track product implementation timelines while Oracle provides necessary infrastructure and application maintainance for all the standard (out of the box) OTM features.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>OTM Architecture</title>
+				<link>http://localhost:1313/posts/otm-architecture-this-is-applicable-for-on-premise-installations/</link>
+				<pubDate>Fri, 15 Apr 2016 14:54:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/otm-architecture-this-is-applicable-for-on-premise-installations/</guid>
+				<description>&lt;p&gt;OTM application has a typical three tier architecture. It has web tier, app tier and oracle database as third tier. These three components can be installed on separate servers (Linux/Windows) or they may be installed on the same server. Usually for lower environment like DEV or TEST they are installed on same server.&lt;/p&gt;&#xA;&lt;p&gt;At a high level, this OTM product can be installed with below software:&lt;/p&gt;&#xA;&lt;p&gt;1. Install Oracle Enterprise Linux - Operating System on the base servers. Note that OTM can be installed either on Linux server or Windows Server.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>OTM Inbound Integrations (XML)</title>
+				<link>http://localhost:1313/posts/otm-inbound-integrations-xml/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/otm-inbound-integrations-xml/</guid>
+				<description>&lt;p&gt;There are several ways of bringing in data into OTM system. Below are some of the methods:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;via XML that follows Glog XML schema posted from a middleware applications like Oracle SOA, webMethods, Mulesoft, etc&lt;/li&gt;&#xA;&lt;li&gt;Manaul XML uploads by OTM users&lt;/li&gt;&#xA;&lt;li&gt;CSV Uploads&lt;/li&gt;&#xA;&lt;li&gt;DB.XML Uploads&lt;/li&gt;&#xA;&lt;li&gt;REST-API Calls&lt;/li&gt;&#xA;&lt;li&gt;HTTP Post Requests from programming languages like PLSQL, etc&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;XML Inbound Integrations:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Most common way of receiving OTM Inbound data is via XML files from middleware applications. OTM can read XML files which are in the format specified by GlogXML Schema(OTM Standard XML Schema). You can download this schema from :&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>OTM Outbound Integrations</title>
+				<link>http://localhost:1313/posts/otm-outbound-integrations/</link>
+				<pubDate>Fri, 15 Apr 2016 20:21:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/otm-outbound-integrations/</guid>
+				<description>&lt;p&gt;OTM system can generate outbound XML data for any business object like &amp;lsquo;Order Release&amp;rsquo;, &amp;lsquo;Shipment&amp;rsquo; etc either manually(using Send Interface Transmission action) or programmatically using same action from OTM Agent(workflow). We will discuss about OTM Agents in further posts.&lt;/p&gt;&#xA;&lt;p&gt;For generating outbound XMLs from OTM you may follow below steps:&lt;/p&gt;&#xA;&lt;p&gt;1. Define an Out XML profile.&lt;/p&gt;&#xA;&lt;p&gt;Business Process Automation &amp;gt; Power Data &amp;gt; Integration &amp;gt; Out XML Profiles.&lt;/p&gt;&#xA;&lt;p&gt;Standard OTM XML for any object might have lot of data that might not be necessary or relevant to send it to the external systems. Also the file size for a complete XML would be in MB( for example Shipment XML might be 2 MB). In order to avoid generation of huge files and to control what data we generate in outbound XML we need to define an Out XML profile.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>OTM Order Management Data Structure</title>
+				<link>http://localhost:1313/posts/otm-order-management-data-structure/</link>
+				<pubDate>Tue, 03 May 2016 17:42:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/otm-order-management-data-structure/</guid>
+				<description>&lt;p&gt;Purchase Order&lt;/p&gt;&#xA;&lt;p&gt;PO record will have the basic details like source location, destination location, INCO terms, Item number, Qty etc. Note that PO might not have exact weight/volume details that might be required for planning orders. Usually POs are created in the ERP systems well ahead of time and sent to OTM.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;PO tables:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;OB_ORDER_BASE - PO Header&lt;br&gt;&#xA;OB_REFNUM - PO Header Reference number details&lt;br&gt;&#xA;OB_REMARK - PO Header remarks&lt;br&gt;&#xA;OB_ORDER_BASE_STATUS - PO Header status values&lt;br&gt;&#xA;OB_INVOLVED_PARTY - PO involved party details&lt;br&gt;&#xA;OB_LINE - PO Line&lt;br&gt;&#xA;OB_LINE_REFNUM - PO Line reference numbers&lt;br&gt;&#xA;OB_LINE_REMARK - PO Line level remarks&lt;br&gt;&#xA;OB_LINE_STATUS - PO Line level status values&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

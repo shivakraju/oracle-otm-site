@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Carrier Login on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/carrier-login/</link>
+		<description>Recent content in Carrier Login on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 08 Jan 2018 22:53:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/carrier-login/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Service Provider User Login creation</title>
+				<link>http://localhost:1313/posts/service-provider-user-login-creation/</link>
+				<pubDate>Mon, 08 Jan 2018 22:53:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/service-provider-user-login-creation/</guid>
+				<description>&lt;p&gt;In this article we will discuss how we can configure OTM system to handle users from your service providers to login to OTM and perform actions like accepting tenders, etc.&lt;/p&gt;&#xA;&lt;p&gt;First step is you create a service provider (say ABCD) in the required domain (say DOMN).&lt;/p&gt;&#xA;&lt;p&gt;Now you can login as SERVPROV.ADMIN with default password of &amp;lsquo;CHANGEME&amp;rsquo; or check with your system administrator if this password has been updated.&lt;/p&gt;&#xA;&lt;p&gt;You can view that OTM by default has created a user &amp;ldquo;SERVPROV.DOMN-ABCD&amp;rdquo; with default role of &amp;lsquo;SERVPROV&amp;rsquo; and default password for this user as &amp;lsquo;CHANGEME&amp;rsquo;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

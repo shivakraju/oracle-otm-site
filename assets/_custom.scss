@@ -1,0 +1,156 @@
+// Custom styles for Learn Oracle OTM
+
+// Post page title (h1) — refined style
+.book-page h1 {
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  color: #1e293b;
+  border-bottom: 2px solid var(--color-accent-default);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+// Prevent text selection / copying
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Disable right-click context menu via CSS (JS needed for full block)
+
+
+// Sidebar navigation links - make them clearly clickable
+.book-menu nav > ul li a,
+.book-menu-content ul li a {
+  color: #1a56db !important;
+  text-decoration: none;
+  font-size: 0.85rem;
+
+  &:hover {
+    color: #1e429f !important;
+    text-decoration: underline;
+    background-color: #ebf5ff;
+    border-radius: 4px;
+  }
+}
+
+// Active (current page) link
+.book-menu nav > ul li a.active,
+.book-menu-content ul li a.active {
+  color: #1e429f !important;
+  font-weight: bold;
+  background-color: #e1effe;
+  border-left: 3px solid #1a56db;
+  padding-left: 0.5rem;
+  border-radius: 0 4px 4px 0;
+}
+
+// Section headers (bold group titles like "Topics List", "Agents & Automation")
+.book-menu nav > ul > li > strong,
+.book-menu-content ul > li > strong {
+  color: #374151;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+// Right sidebar static notice message
+.site-notice-sidebar {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--color-accent-default);
+  background-color: var(--gray-100);
+  color: var(--body-font-color);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-style: italic;
+
+  a {
+    color: var(--color-link);
+    text-decoration: underline;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// Total Pageviews block
+.sidebar-pageviews {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--color-accent-default);
+  background-color: var(--gray-100);
+
+  .sidebar-pageviews-label {
+    font-size: 0.8rem;
+    color: var(--body-font-color);
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .sidebar-pageviews-count {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--body-font-color);
+    line-height: 1.3;
+  }
+}
+
+// Author block (left sidebar bottom)
+.sidebar-author {
+  margin-top: 2rem;
+  padding: 0.75rem 0.75rem;
+  border-top: 1px solid var(--gray-200);
+  background-color: var(--gray-100);
+  border-radius: 4px;
+
+  .sidebar-author-name {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--body-font-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-author-photo {
+    width: 70px !important;
+    height: auto !important;
+    border-radius: 4px;
+    border: 1px solid var(--gray-200) !important;
+    box-shadow: none !important;
+    margin: 0.4rem 0 !important;
+  }
+
+  .sidebar-author-email {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    a {
+      color: var(--color-link);
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
+    }
+  }
+}
+
+// Images — full size, full quality, no blurring
+.book-page img,
+.markdown img,
+article img,
+img {
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  display: block;
+  margin: 1rem 0;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}

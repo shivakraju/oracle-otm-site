@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Allocation on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/allocation/</link>
+		<description>Recent content in Allocation on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 22 Aug 2020 04:59:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/allocation/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>08 - Voucher Allocation</title>
+				<link>http://localhost:1313/posts/basic-otm-configurations-08-voucher-allocation/</link>
+				<pubDate>Sat, 22 Aug 2020 04:59:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/basic-otm-configurations-08-voucher-allocation/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/&#34;&gt;01 - Domain, Items, Locations, and Equipment&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Voucher Allocations&lt;/p&gt;&#xA;&lt;p&gt;After invoice is approved, OTM creates a voucher record for this invoice.&lt;/p&gt;&#xA;&lt;blockquote class=&#39;book-hint &#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/basic-otm-configurations-08-vo-img1-0151e64dfd.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;At this stage, ALLOCATION_VOUCHER status on the voucher is – NOT ALLOCATED&lt;/p&gt;&#xA;&lt;blockquote class=&#39;book-hint &#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/basic-otm-configurations-08-vo-img2-09dfa2084c.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;To allocate total voucher costs to correspoding orders based on weight or volume we need to define voucher allocation rule.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

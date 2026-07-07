@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Shipment Routing Options on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/shipment-routing-options/</link>
+		<description>Recent content in Shipment Routing Options on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 21 Jun 2020 16:29:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/shipment-routing-options/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Basic OTM Configurations</title>
+				<link>http://localhost:1313/posts/basic-otm-configurations/</link>
+				<pubDate>Sun, 21 Jun 2020 16:29:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/basic-otm-configurations/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Below configs are shown from 6.3.7 version of the OTM app.&lt;/p&gt;&#xA;&lt;p&gt;Below is a typical OTM end to end flow in it&amp;rsquo;s most simple/vanilla usage. Readers can explore more on each of the below topics and use this as starting point to understand basic OTM configurations using OTM Help documentation.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Business Scenario:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;There is Toys Corporation (TCRP) with one DC/Warehouse and three stores in 3 different cities. DC distributes items – Item A, Item B and Item C to three locations (store locations). TCRP has contract with two carriers (SGTM, PNDP) to support their logistics needs and these carriers use their 20 foot, 40 foot or 50 foot equipments. As specified below each carrier supports specific itineraries/legs for TCRP.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

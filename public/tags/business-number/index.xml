@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Business Number on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/business-number/</link>
+		<description>Recent content in Business Number on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 22 Aug 2020 04:47:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/business-number/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>04 - Business Numbers, Planning Parameter</title>
+				<link>http://localhost:1313/posts/basic-otm-configurations-04-business-numbers-planning-parameter/</link>
+				<pubDate>Sat, 22 Aug 2020 04:47:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/basic-otm-configurations-04-business-numbers-planning-parameter/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/&#34;&gt;01 - Domain, Items, Locations, and Equipment&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Business Numbers:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;OTM has default numbering for all business data objects like the one shown below for shipment - 01001.&lt;/p&gt;&#xA;&lt;blockquote class=&#39;book-hint &#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/basic-otm-configurations-04-bu-img1-18e64bcaca.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;To change this to a specific number requested by business, we can do below:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

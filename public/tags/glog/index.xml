@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Glog on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/glog/</link>
+		<description>Recent content in Glog on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 15 Apr 2016 18:20:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/glog/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>OTM Architecture</title>
+				<link>http://localhost:1313/posts/otm-architecture-this-is-applicable-for-on-premise-installations/</link>
+				<pubDate>Fri, 15 Apr 2016 14:54:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/otm-architecture-this-is-applicable-for-on-premise-installations/</guid>
+				<description>&lt;p&gt;OTM application has a typical three tier architecture. It has web tier, app tier and oracle database as third tier. These three components can be installed on separate servers (Linux/Windows) or they may be installed on the same server. Usually for lower environment like DEV or TEST they are installed on same server.&lt;/p&gt;&#xA;&lt;p&gt;At a high level, this OTM product can be installed with below software:&lt;/p&gt;&#xA;&lt;p&gt;1. Install Oracle Enterprise Linux - Operating System on the base servers. Note that OTM can be installed either on Linux server or Windows Server.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>OTM Inbound Integrations (XML)</title>
+				<link>http://localhost:1313/posts/otm-inbound-integrations-xml/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/otm-inbound-integrations-xml/</guid>
+				<description>&lt;p&gt;There are several ways of bringing in data into OTM system. Below are some of the methods:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;via XML that follows Glog XML schema posted from a middleware applications like Oracle SOA, webMethods, Mulesoft, etc&lt;/li&gt;&#xA;&lt;li&gt;Manaul XML uploads by OTM users&lt;/li&gt;&#xA;&lt;li&gt;CSV Uploads&lt;/li&gt;&#xA;&lt;li&gt;DB.XML Uploads&lt;/li&gt;&#xA;&lt;li&gt;REST-API Calls&lt;/li&gt;&#xA;&lt;li&gt;HTTP Post Requests from programming languages like PLSQL, etc&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;XML Inbound Integrations:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Most common way of receiving OTM Inbound data is via XML files from middleware applications. OTM can read XML files which are in the format specified by GlogXML Schema(OTM Standard XML Schema). You can download this schema from :&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

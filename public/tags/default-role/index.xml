@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Default Role on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/default-role/</link>
+		<description>Recent content in Default Role on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 01 Dec 2016 21:30:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/default-role/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>User Roles - VPD and Access Control Lists</title>
+				<link>http://localhost:1313/posts/user-roles-vpd-and-access-control-lists/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/user-roles-vpd-and-access-control-lists/</guid>
+				<description>&lt;p&gt;OTM application users will be grouped/classified based on their daily functions they perform in their organization. Each such group of users will be assigned a &amp;ldquo;Role&amp;rdquo; in OTM.&lt;/p&gt;&#xA;&lt;p&gt;So a &amp;ldquo;Role&amp;rdquo; controls:&lt;br&gt;&#xA;1. Data visibility (using VPD setups)&lt;br&gt;&#xA;2. User Interface or screen access (using ACLs)&lt;/p&gt;&#xA;&lt;p&gt;For example ADMIN role might have complete data visibility and access to all OTM data and UI functions whereas PLANNER role might have access to only particular domain and particular Order Type PO transactions. PLANNER also might need access to only few OTM functions like Order review, Bulk Plan, Tendering, etc.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

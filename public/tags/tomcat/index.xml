@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tomcat on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/tomcat/</link>
+		<description>Recent content in Tomcat on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 13 Aug 2017 19:33:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/tomcat/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>OTM Application ADMIN Notes</title>
+				<link>http://localhost:1313/posts/otm-application-admin-notes/</link>
+				<pubDate>Sun, 13 Aug 2017 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/otm-application-admin-notes/</guid>
+				<description>&lt;p&gt;Below are useful notes for OTM ADMIN to maintain the application.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;OTM Installation paths:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;To get the home path on the server where OTM (web or app tier) is installed, you can login to OTM application and in the URL use servlet &amp;ldquo;glog.webserver.properties.PropertiesServlet&amp;rdquo; as shown below:&lt;/p&gt;&#xA;&lt;p&gt;http://otm-server:7777/GC3/glog.webserver.properties.PropertiesServlet&lt;/p&gt;&#xA;&lt;p&gt;Click &amp;lsquo;List&amp;rsquo; button and you will see default application properties also knows as glog properties. Note below property for path where OTM is installed:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

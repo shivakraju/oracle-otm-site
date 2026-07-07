@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Note: This post is applicable for OTM ver 6.x - Query and Format template based reports.
+In OTM, you can develop a report with basic knowledge of SQL, PLSQL and Oracle BI Publisher. Reports Developer need to install Oracle BI Publisher Desktop version from Oracle Technology network.
+Once BI Publisher is installed, Word document menu appears as below with ‘Add-Ins’ option:
+Below are the report development steps for typical BI Publisher report in OTM.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/report-development-sample-report/">
+	<meta property="og:site_name" content="Learn Oracle OTM">
+	<meta property="og:title" content="Report Development - Sample Report">
+	<meta property="og:description" content="Note: This post is applicable for OTM ver 6.x - Query and Format template based reports.
+In OTM, you can develop a report with basic knowledge of SQL, PLSQL and Oracle BI Publisher. Reports Developer need to install Oracle BI Publisher Desktop version from Oracle Technology network.
+Once BI Publisher is installed, Word document menu appears as below with ‘Add-Ins’ option:
+Below are the report development steps for typical BI Publisher report in OTM.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2016-10-22T01:58:00+00:00">
+		<meta property="article:modified_time" content="2016-10-22T01:58:00+00:00">
+		<meta property="article:tag" content="BI Publisher">
+		<meta property="article:tag" content="Query Template">
+		<meta property="article:tag" content="Format Template">
+		<meta property="article:tag" content="Report">
+
+
+	<meta itemprop="name" content="Report Development - Sample Report">
+	<meta itemprop="description" content="Note: This post is applicable for OTM ver 6.x - Query and Format template based reports.
+In OTM, you can develop a report with basic knowledge of SQL, PLSQL and Oracle BI Publisher. Reports Developer need to install Oracle BI Publisher Desktop version from Oracle Technology network.
+Once BI Publisher is installed, Word document menu appears as below with ‘Add-Ins’ option:
+Below are the report development steps for typical BI Publisher report in OTM.">
+	<meta itemprop="datePublished" content="2016-10-22T01:58:00+00:00">
+	<meta itemprop="dateModified" content="2016-10-22T01:58:00+00:00">
+	<meta itemprop="wordCount" content="1401">
+	<meta itemprop="keywords" content="BI Publisher,Query Template,Format Template,Report">
+
+<title>Report Development - Sample Report • Learn Oracle OTM</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/report-development-sample-report/">
+<link rel="stylesheet" href="/book.min.0bc2ccea40da58d619c260c3cbe79c1f9c2ba0b7dc521a7fb7987f26000c9757.css" integrity="sha256-C8LM6kDaWNYZwmDDy&#43;ecH5wroLfcUhp/t5h/JgAMl1c=" crossorigin="anonymous">
+
+
+  <script defer type="module" src="/en.search.min.16d05727d2808ad79a71df07fc9b22b467aae8da71e28126262f393ea7428605.js" integrity="sha256-FtBXJ9KAiteacd8H/JsitGeq6Npx4oEmJi85PqdChgU=" crossorigin="anonymous"></script>
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Learn Oracle OTM</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/what-is-otm/" class="">
+      What is OTM ?</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-logistics-terminology/" class="">
+      Basic Logistics terminology</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-architecture-this-is-applicable-for-on-premise-installations/" class="">
+      OTM Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-inbound-integrations-xml/" class="">
+      OTM Inbound Integrations (XML)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-outbound-integrations/" class="">
+      OTM Outbound Integrations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/csv-data-uploads/" class="">
+      CSV Data Uploads</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/posting-data-to-otm-using-http-request/" class="">
+      Posting Data to OTM using HTTP request</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-domains-standard-schema-and-data-dictionary/" class="">
+      OTM Domains, Standard Schema and Data Dictionary</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-order-management-data-structure/" class="">
+      OTM Order Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-shipment-management-data-structure/" class="">
+      OTM Shipment Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-contract-rate-management-data-structure/" class="">
+      OTM Contract &amp; Rate Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-process-automation-data-structure/" class="">
+      Business Process Automation Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/" class="">
+      01 - Domain, Items, Locations, and Equipment</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-02-itinerary/" class="">
+      02 - Itinerary</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-03-service-provider-and-rates/" class="">
+      03 - Service Provider and Rates</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-04-business-numbers-planning-parameter/" class="">
+      04 - Business Numbers, Planning Parameter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-05-bulk-plan/" class="">
+      05 - Bulk Plan</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-06-tender-process/" class="">
+      06 - Tender process</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-07-invoicing/" class="">
+      07 - Invoicing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-08-voucher-allocation/" class="">
+      08 - Voucher Allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/saved-queriesconditions/" class="">
+      Saved Queries/Conditions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-frequently-used-actions/" class="">
+      Agents - Frequently Used Actions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-sample-agent-creation-steps/" class="">
+      Agents - Sample Agent Creation Steps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-agent-event-restrictions/" class="">
+      Agents - Agent Event Restrictions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agent-gates/" class="">
+      Agent Gates</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-monitors/" class="">
+      Business Monitors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-numbers/" class="">
+      Business Numbers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/report-development-sample-report/" class="active">
+      Report Development - Sample Report</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/emailing-reports-to-users-on-a-business-event/" class="">
+      Emailing Reports to Users on a Business Event</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/report-workspaces/" class="">
+      Report Workspaces</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/manager-layouts-screen-sets-labels/" class="">
+      Manager Layouts, Screen Sets, Labels</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/flex-fields/" class="">
+      Flex fields</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/advanced-layouts/" class="">
+      Advanced Layouts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/workbenches/" class="">
+      Workbenches</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/user-roles-vpd-and-access-control-lists/" class="">
+      User Roles - VPD and Access Control Lists</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/user-menu-and-manage-user-access/" class="">
+      User Menu and Manage User Access</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/service-provider-user-login-creation/" class="">
+      Service Provider User Login creation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/refnums/" class="">
+      Refnums</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/status-types/" class="">
+      Status Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/action-checks/" class="">
+      Action Checks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/custom-actions-smart-links/" class="">
+      Custom Actions &amp; Smart Links</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/yard-management-and-appointment-scheduling/" class="">
+      Yard Management and Appointment Scheduling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-application-admin-notes/" class="">
+      OTM Application ADMIN Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/oracle-dba-notes/" class="">
+      Oracle DBA notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/g-log-properties/" class="">
+      G-Log Properties</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sidebar-author">
+  <div class="sidebar-author-name">Shiva G (OTM Consultant)</div>
+  <img src="/images/author-profile.jpg" alt="Shiva G" class="sidebar-author-photo" />
+  <div class="sidebar-author-email">
+    <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+  </div>
+</div>
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Report Development - Sample Report</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents"></nav>
+<div class="site-notice-sidebar">
+  Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+</div>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    Report Development - Sample Report
+  </h1>
+  
+
+  <div class="book-post-content markdown-inner"><p><strong>Note:</strong> This post is applicable for OTM ver 6.x - Query and Format template based reports.</p>
+<p>In OTM, you can develop a report with basic knowledge of SQL, PLSQL and Oracle BI Publisher. Reports Developer need to install Oracle BI Publisher Desktop version from Oracle Technology network.</p>
+<p>Once BI Publisher is installed, Word document menu appears as below with &lsquo;Add-Ins&rsquo; option:</p>
+<p><img src="/images/report-development-sample-repo-img1-2fe34ce33e.png" alt="" /></p>
+<p>Below are the report development steps for typical BI Publisher report in OTM.</p>
+<ul>
+<li>PLSQL Package in REPORTOWNER schema to dynamically frame WHERE clause condition strings based on report input parameters</li>
+<li>Query template with SQL query and XML elements for each output column for the SQL query</li>
+<li>Format template to display the XML elements from Query template in the required display format</li>
+<li>Report definition in OTM application with input parameters names, their data types and link report template, format template with report definition.</li>
+</ul>
+<p>We can review above steps by talking a simple report example. In this example we want to query the salary details for a particular employee by their employee number.</p>
+<p>Let us first create required data.<br>
+Login to GLOGOWNER schema of OTM database and create employee, salary table with sample records:</p>
+<p>create table glogowner.emp(emp_no number,<br>
+emp_name varchar2(100)<br>
+);</p>
+<p>create table glogowner.sal(emp_no number,<br>
+salary number,<br>
+month varchar2(100)<br>
+);</p>
+<p>begin</p>
+<p>insert into emp values(1,&lsquo;Ram&rsquo;);<br>
+insert into emp values(2,&lsquo;Aby&rsquo;);<br>
+insert into emp values(3,&lsquo;Venkat&rsquo;);</p>
+<p>insert into sal values(1,1000,&lsquo;JAN&rsquo;);<br>
+insert into sal values(1,1100,&lsquo;FEB&rsquo;);<br>
+insert into sal values(2,1200,&lsquo;JAN&rsquo;);<br>
+insert into sal values(2,1300,&lsquo;FEB&rsquo;);<br>
+insert into sal values(3,1400,&lsquo;JAN&rsquo;);<br>
+insert into sal values(3,1500,&lsquo;FEB&rsquo;);<br>
+commit;<br>
+end;<br>
+/</p>
+<p><strong>Next step is to write and test your SQL query:</strong></p>
+<p><img src="/images/report-development-sample-repo-img2-14fd49e674.png" alt="" /><br>
+Note that in above query passing employee number to query will be done from your report and let us take that as input parameter for the report.</p>
+<p>OTM application need to accept employee number as input parameter from the user and convert into WHERE clause condition, pass to your query during run time and display the results. To form the WHERE clause based on your input parameter value we will need to define a PLSQL package in REPORTOWNER schema as shown below:</p>
+<p>Login to REPORTOWNER schema for OTM Database and execute below:</p>
+<p>Report Package Body<br>
+Report Package Specification<br>
+Report Synonym</p>
+<p>CREATE OR REPLACE PACKAGE REPORTOWNER.REPORT_EMP_PKG<br>
+IS<br>
+p_emp_no VARCHAR2 (200);<br>
+p_emp_no_param VARCHAR2 (200);<br>
+p_gl_user VARCHAR2 (128);<br>
+FUNCTION afterpform<br>
+RETURN BOOLEAN;<br>
+FUNCTION value_entered (lex_name IN VARCHAR2)<br>
+RETURN BOOLEAN;<br>
+END;<br>
+/</p>
+<p>CREATE OR REPLACE PACKAGE BODY REPORTOWNER.REPORT_EMP_PKG<br>
+IS<br>
+FUNCTION afterpform<br>
+RETURN BOOLEAN<br>
+IS<br>
+v_string VARCHAR2 (32750);<br>
+v_boolean BOOLEAN;<br>
+BEGIN<br>
+reports_library.set_vpd (p_gl_user);</p>
+<p>IF value_entered (p_emp_no)<br>
+THEN<br>
+<strong>p_emp_no_param:</strong>= &rsquo; E.EMP_NO &lsquo;|| &rsquo;&rsquo; ||REPORTS_LIBRARY.GET_FILTER_CONDITION(p_emp_no)||&rsquo;&rsquo;;<br>
+ELSE<br>
+<strong>p_emp_no_param:</strong>= &rsquo; AND 1=1&rsquo;;<br>
+END IF;</p>
+<p>RETURN (TRUE);<br>
+END afterpform;</p>
+<p>FUNCTION value_entered (lex_name IN VARCHAR2)<br>
+RETURN BOOLEAN<br>
+IS<br>
+BEGIN<br>
+IF lex_name &gt; &rsquo; &rsquo; AND lex_name &lt;&gt; &lsquo;1=1&rsquo; AND lex_name IS NOT NULL<br>
+THEN<br>
+RETURN (TRUE);<br>
+ELSE<br>
+RETURN (FALSE);<br>
+END IF;<br>
+END value_entered;</p>
+<p>END;<br>
+/</p>
+<p>CREATE OR REPLACE PUBLIC SYNONYM REPORT_EMP_PKG FOR reportowner.REPORT_EMP_PKG;</p>
+<p>Note that in the package specification we used REPORTS_LIBRARY.GET_FILTER_CONDITION.<br>
+This is standard API provided by OTM where you can pass the report parameter(P_EMP_NO) as input and it would output the WHERE clause condition parameter string depending on whether user has selected options like &lsquo;Equal to&rsquo;, &lsquo;Less Than&rsquo; etc:</p>
+<p><img src="/images/report-development-sample-repo-img3-d5e0baa2a6.png" alt="" /></p>
+<p>In above package, you should note that p_emp_no_param will be your WHERE clause parameter string that you frame using your PLSQL code and you pass this value to SQL in the Query Template which we are going to define next.</p>
+<p>Once you have reports package defined, next step is to make this package available to your query template. Take below code and copy this to a file with extension .xml. This will be your Query Template xml file.</p>
+<?xml version="1.0" encoding = 'UTF-8'?>  
+<dataTemplate name="REPORT_QUERY_TEMPLATE" defaultPackage="REPORT_EMP_PKG" version="1.0">  
+<properties>  
+<property name="xml_tag_case" value="upper"/>  
+<property name="debug_mode" value="on"/>  
+</properties>  
+<parameters>  
+<parameter name="P_GL_USER" dataType="character" defaultValue="DBA.ADMIN"/>   
+<parameter name="P_EMP_NO" dataType="character" defaultValue="1=1"/>  
+</parameters>  
+<dataQuery>  
+<sqlStatement name="QUERY_HDR">  
+<![CDATA[SELECT E.EMP_NO,  
+E.EMP_NAME,  
+S.SALARY,  
+S.MONTH  
+FROM GLOGOWNER.EMP E,  
+GLOGOWNER.SAL S  
+WHERE &P_EMP_NO_PARAM  
+AND E.EMP_NO=S.EMP_NO  
+]]>  
+</sqlStatement>   
+</dataQuery>  
+<dataTrigger name="afterParameterFormTrigger" source="REPORT_EMP_PKG.afterpform"/>  
+<dataStructure>  
+<element name="P_EMP_NO_PARAM" dataType="varchar2" value="REPORT_EMP_PKG.P_EMP_NO_PARAM"/>  
+<group name ="HEADER" source="QUERY_HDR">  
+<element name="EMP_NO" value="EMP_NO"/>  
+<element name="EMP_NAME" value="EMP_NAME"/>  
+<group name ="LINES" source="QUERY_HDR">  
+<element name="SALARY" value="SALARY"/>  
+<element name="MONTH" value="MONTH"/>  
+</group>  
+</group>  
+</dataStructure>  
+</dataTemplate>  
+<p>In this query template, below are important points you should note:</p>
+<ul>
+<li>Report package name mentioned in first line should match to your REPORTOWNER package defined in earlier step.</li>
+<li>Parameters section should have P_EMP_NO, etc and these parameter names should match to input parameters used in REPORT package and also the Report definition(last step below)</li>
+<li>SQL Statement section should have your query where you should use the P_EMP_NO_PARAM string in the WHERE clause. The value from this string comes from your report package logic during report run time.</li>
+<li>Data Structure section where you source the query columns as elements, give name to each element and also group them as Header, Line level data. Same elements will appear in the format template(BI Publisher template) where you can re-arrange the elements as per your report display requirements.</li>
+</ul>
+<p>Once you have query template(.xml file), you can upload this to OTM as follows:<br>
+Business Process Automation &gt; Power Data &gt; Document Generation &gt; Query Template &gt; New<br>
+<img src="/images/report-development-sample-repo-img4-47f1765b02.png" alt="" /><br>
+Give a name to the query template and click upload button to browse for the .xml query template file defined in previous step.</p>
+<p>Once you have .xml file uploaded, click &lsquo;Generate Sample XML&rsquo; button on the query template definition to generate a sample xml file.</p>
+<p><img src="/images/report-development-sample-repo-img5-3c1549f418.png" alt="" /></p>
+<p>You can enter, input parameter value to generate sample data. In this case, pull xml file with data for employee with number 2.</p>
+<p>Save the sample xml file. You can use this to load data into format template(.rtf file) as shown in next step.</p>
+<p>Once you have sample xml, you can create a new word document and may name it as &ldquo;Report_Format_Template.rtf&rdquo;. Open this document and load .xml from previous step from Add-Ins menu:<br>
+Data &gt; Load XML Data<br>
+<img src="/images/report-development-sample-repo-img6-1178c96521.png" alt="" /></p>
+<p><strong>You will receive below message:</strong></p>
+<p><img src="/images/report-development-sample-repo-img7-2b9893aaff.png" alt="" /></p>
+<p>Once, sample data is loaded, you can arrange the columns in the format template either manually or using wizard. If you want to use wizard, you can follow steps:<br>
+Add-Ins &gt; Insert &gt; Table Wizard:<br>
+<img src="/images/report-development-sample-repo-img8-934a0a81ec.png" alt="" /><br>
+<strong>In the wizard you can select:</strong><br>
+<strong>Report Format:</strong> Table<br>
+<strong>Data set:</strong> select one of the groups - Headers/Lines that you defined in the Query Template Data Structure:<br>
+<img src="/images/report-development-sample-repo-img9-e976a73e8f.png" alt="" /><br>
+In this example, we will select Headers(Emp Name and Number) first and then repeat same steps to display line level elements (Month and Salary details).<br>
+<img src="/images/report-development-sample-repo-img10-329c314c82.png" alt="" /><br>
+You can select Group By and Sort By elements(optional) in next screens of the wizard and click &lsquo;Finish&rsquo;.<br>
+If you repeat the steps for line level elements, you will see below format:<br>
+<img src="/images/report-development-sample-repo-img11-00c5345ec6.png" alt="" /></p>
+<p>If you double click on any element like EMP_NO you will see details as below:<br>
+<img src="/images/report-development-sample-repo-img12-102b8ff715.png" alt="" /><br>
+Each group, starts with &lsquo;F&rsquo; and denotes begin loop logic:<br>
+<img src="/images/report-development-sample-repo-img13-2c71f747a2.png" alt="" /><br>
+&lsquo;E&rsquo; denotes loop end logic for that group of elements:<br>
+<img src="/images/report-development-sample-repo-img14-1bbcf72893.png" alt="" /><br>
+You can use above specifications if you are manually arranging elements in the format template without using the wizard.</p>
+<p>Save the RTF file and upload this to OTM as shown below:</p>
+<p>Business Process Automation &gt; Power Data &gt; Document Generation &gt; Format Template:<br>
+<img src="/images/report-development-sample-repo-img15-ef0be887a1.png" alt="" /><br>
+Give a name to the template and upload the .rtf file.</p>
+<p>Last step is to define the report in OTM, to link the format template, query template and define the input parameters.<br>
+Business Process Automation &gt; Power Data &gt; Document Generation &gt; Reports &gt; New<br>
+<img src="/images/report-development-sample-repo-img16-f6c8265564.png" alt="" /><br>
+<strong>In the report, you specify below:</strong></p>
+<ul>
+<li>Report ID, Report Display Name and Description</li>
+<li>Specify Query and Format Template names defined in previous steps</li>
+<li>Check &lsquo;Report Manager Display&rsquo; option</li>
+<li>Check &lsquo;Select via UI&rsquo; option</li>
+<li>Uncheck &lsquo;Use report parameters as Bind values&rsquo;Create a new(n) report group and name it (example: Custom Reports)</li>
+</ul>
+<p><img src="/images/report-development-sample-repo-img17-6cf2402140.png" alt="" /><br>
+Define parameter name &lsquo;P_EMP_NO&rsquo;(should match to name used in query template and report package)<br>
+Select parameter data type - number, character, etc. We can also standard objects types like Buy Shipment, etc as input parameters:<br>
+<img src="/images/report-development-sample-repo-img18-236a8672c1.png" alt="" /><br>
+If we need to define input parameter as &lsquo;mandatory&rsquo; we can check the option(shown above)<br>
+Click &lsquo;Finished&rsquo; button to save the report.</p>
+<p><strong>We can run the report as shown below:</strong><br>
+Business Process Automation &gt; Reporting &gt; Report Manager &gt; Run<br>
+<img src="/images/report-development-sample-repo-img19-baee5baaf9.png" alt="" /></p>
+<p><strong>Enter input parameters:</strong></p>
+<p><img src="/images/report-development-sample-repo-img20-c14defb526.png" alt="" /></p>
+<p>Click submit to see the report output. Report engine will invoke report package, report package will form the WHERE clause parameter as per your package logic, these parameters with values are passed to your SQL query defined in query template, Query is executed and output is associated to XML elements defined in the data structure of Query template, this XML data is passed to format template and displayed as report output as per the format template definition.</p>
+<p><img src="/images/report-development-sample-repo-img21-689808d84c.png" alt="" /></p>
+<p>Once you have report defined, you can automate it to go to certain email ID based on events or configure a report workspace with set of reports and attach this workspace to a user role and so on. We will discuss these configuration in future topics.</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/business-numbers/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>Business Numbers</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/emailing-reports-to-users-on-a-business-event/" class="flex align-center">
+      <span>Emailing Reports to Users on a Business Event</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents"></nav>
+<div class="site-notice-sidebar">
+  Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+</div>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  <script>
+  
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (
+      e.key === 'c' || e.key === 'C' ||
+      e.key === 'a' || e.key === 'A' ||
+      e.key === 'u' || e.key === 'U' ||
+      e.key === 's' || e.key === 'S' ||
+      e.key === 'p' || e.key === 'P'
+    )) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

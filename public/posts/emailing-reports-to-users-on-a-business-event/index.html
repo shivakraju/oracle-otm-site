@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="There can be requirements where we want to send report as attachment to a user. We can configure that with below steps in OTM.
+In this example, suppose that we want to generate a custom report after shipment tender is accepted and send this report to contact on the PO or user who created the PO.
+Step 1: Create a Report Set and include your report.
+Business Process Automation &gt; Reporting &gt; Report Manager &gt; Report Set Manager
+You may add multiple report to the report set as required.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/emailing-reports-to-users-on-a-business-event/">
+	<meta property="og:site_name" content="Learn Oracle OTM">
+	<meta property="og:title" content="Emailing Reports to Users on a Business Event">
+	<meta property="og:description" content="There can be requirements where we want to send report as attachment to a user. We can configure that with below steps in OTM.
+In this example, suppose that we want to generate a custom report after shipment tender is accepted and send this report to contact on the PO or user who created the PO.
+Step 1: Create a Report Set and include your report.
+Business Process Automation &gt; Reporting &gt; Report Manager &gt; Report Set Manager
+You may add multiple report to the report set as required.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2016-11-29T20:57:00+00:00">
+		<meta property="article:modified_time" content="2016-11-29T20:57:00+00:00">
+		<meta property="article:tag" content="PRINT DOCUMENT">
+		<meta property="article:tag" content="REPORT_LOG_PARAMETER">
+		<meta property="article:tag" content="Email OTM Report">
+		<meta property="article:tag" content="REPORT - READY">
+
+
+	<meta itemprop="name" content="Emailing Reports to Users on a Business Event">
+	<meta itemprop="description" content="There can be requirements where we want to send report as attachment to a user. We can configure that with below steps in OTM.
+In this example, suppose that we want to generate a custom report after shipment tender is accepted and send this report to contact on the PO or user who created the PO.
+Step 1: Create a Report Set and include your report.
+Business Process Automation &gt; Reporting &gt; Report Manager &gt; Report Set Manager
+You may add multiple report to the report set as required.">
+	<meta itemprop="datePublished" content="2016-11-29T20:57:00+00:00">
+	<meta itemprop="dateModified" content="2016-11-29T20:57:00+00:00">
+	<meta itemprop="wordCount" content="441">
+	<meta itemprop="keywords" content="PRINT DOCUMENT,REPORT_LOG_PARAMETER,Email OTM Report,REPORT - READY">
+
+<title>Emailing Reports to Users on a Business Event • Learn Oracle OTM</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/emailing-reports-to-users-on-a-business-event/">
+<link rel="stylesheet" href="/book.min.0bc2ccea40da58d619c260c3cbe79c1f9c2ba0b7dc521a7fb7987f26000c9757.css" integrity="sha256-C8LM6kDaWNYZwmDDy&#43;ecH5wroLfcUhp/t5h/JgAMl1c=" crossorigin="anonymous">
+
+
+  <script defer type="module" src="/en.search.min.16d05727d2808ad79a71df07fc9b22b467aae8da71e28126262f393ea7428605.js" integrity="sha256-FtBXJ9KAiteacd8H/JsitGeq6Npx4oEmJi85PqdChgU=" crossorigin="anonymous"></script>
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Learn Oracle OTM</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/what-is-otm/" class="">
+      What is OTM ?</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-logistics-terminology/" class="">
+      Basic Logistics terminology</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-architecture-this-is-applicable-for-on-premise-installations/" class="">
+      OTM Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-inbound-integrations-xml/" class="">
+      OTM Inbound Integrations (XML)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-outbound-integrations/" class="">
+      OTM Outbound Integrations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/csv-data-uploads/" class="">
+      CSV Data Uploads</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/posting-data-to-otm-using-http-request/" class="">
+      Posting Data to OTM using HTTP request</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-domains-standard-schema-and-data-dictionary/" class="">
+      OTM Domains, Standard Schema and Data Dictionary</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-order-management-data-structure/" class="">
+      OTM Order Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-shipment-management-data-structure/" class="">
+      OTM Shipment Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-contract-rate-management-data-structure/" class="">
+      OTM Contract &amp; Rate Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-process-automation-data-structure/" class="">
+      Business Process Automation Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/" class="">
+      01 - Domain, Items, Locations, and Equipment</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-02-itinerary/" class="">
+      02 - Itinerary</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-03-service-provider-and-rates/" class="">
+      03 - Service Provider and Rates</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-04-business-numbers-planning-parameter/" class="">
+      04 - Business Numbers, Planning Parameter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-05-bulk-plan/" class="">
+      05 - Bulk Plan</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-06-tender-process/" class="">
+      06 - Tender process</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-07-invoicing/" class="">
+      07 - Invoicing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-08-voucher-allocation/" class="">
+      08 - Voucher Allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/saved-queriesconditions/" class="">
+      Saved Queries/Conditions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-frequently-used-actions/" class="">
+      Agents - Frequently Used Actions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-sample-agent-creation-steps/" class="">
+      Agents - Sample Agent Creation Steps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-agent-event-restrictions/" class="">
+      Agents - Agent Event Restrictions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agent-gates/" class="">
+      Agent Gates</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-monitors/" class="">
+      Business Monitors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-numbers/" class="">
+      Business Numbers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/report-development-sample-report/" class="">
+      Report Development - Sample Report</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/emailing-reports-to-users-on-a-business-event/" class="active">
+      Emailing Reports to Users on a Business Event</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/report-workspaces/" class="">
+      Report Workspaces</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/manager-layouts-screen-sets-labels/" class="">
+      Manager Layouts, Screen Sets, Labels</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/flex-fields/" class="">
+      Flex fields</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/advanced-layouts/" class="">
+      Advanced Layouts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/workbenches/" class="">
+      Workbenches</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/user-roles-vpd-and-access-control-lists/" class="">
+      User Roles - VPD and Access Control Lists</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/user-menu-and-manage-user-access/" class="">
+      User Menu and Manage User Access</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/service-provider-user-login-creation/" class="">
+      Service Provider User Login creation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/refnums/" class="">
+      Refnums</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/status-types/" class="">
+      Status Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/action-checks/" class="">
+      Action Checks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/custom-actions-smart-links/" class="">
+      Custom Actions &amp; Smart Links</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/yard-management-and-appointment-scheduling/" class="">
+      Yard Management and Appointment Scheduling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-application-admin-notes/" class="">
+      OTM Application ADMIN Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/oracle-dba-notes/" class="">
+      Oracle DBA notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/g-log-properties/" class="">
+      G-Log Properties</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sidebar-author">
+  <div class="sidebar-author-name">Shiva G (OTM Consultant)</div>
+  <img src="/images/author-profile.jpg" alt="Shiva G" class="sidebar-author-photo" />
+  <div class="sidebar-author-email">
+    <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+  </div>
+</div>
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Emailing Reports to Users on a Business Event</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents"></nav>
+<div class="site-notice-sidebar">
+  Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+</div>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    Emailing Reports to Users on a Business Event
+  </h1>
+  
+
+  <div class="book-post-content markdown-inner"><p>There can be requirements where we want to send report as attachment to a user. We can configure that with below steps in OTM.</p>
+<p>In this example, suppose that we want to generate a custom report after shipment tender is accepted and send this report to contact on the PO or user who created the PO.</p>
+<p><strong>Step 1:</strong> Create a Report Set and include your report.<br>
+Business Process Automation &gt; Reporting &gt; Report Manager &gt; Report Set Manager<br>
+You may add multiple report to the report set as required.</p>
+<p><strong>Step 2:</strong> Create a SHIPMENT agent that listens to &lsquo;SHIPMENT - STATUS CHANGED&rsquo; event with restriction as SECURE RESOURCES_ACCEPTED. In this agent use standard action:<br>
+<strong>PRINT DOCUMENT:</strong> In this action specify the name of the Report Set(from Step 1) and output format(say PDF).</p>
+<p><strong>Step 3:</strong> Now in the application, when a tender is accepted on the shipment, PRINT DOCUMENT action generates the report. OTM application will raise an event REPORT-READY(standard OTM event) for the REPORT generated. So you can create a &lsquo;REPORT&rsquo; agent that listens to this event with event restriction having report set name(from step 1). In this agent, you can have following actions:</p>
+<p><strong>Action 1:</strong><br>
+ASSIGN VARIABLE with below SQL to fetch the user who created the PO:<br>
+select max (ob.insert_user)<br>
+from report_log_parameter rlp,<br>
+view_shipment_order_release vsor,<br>
+order_release orl,<br>
+ob_order_base ob<br>
+where file_name = $gid<br>
+and parameter_name = &lsquo;P_SHIPMENT_ID&rsquo;<br>
+and parameter_value = vsor.shipment_gid<br>
+and vsor.order_release_gid = orl.order_release_gid<br>
+and orl.order_base_gid = ob.order_base_gid</p>
+<p>Note that REPORT_LOG_PARAMETER table has log of input parameter values and in this example we are fetching Shipment ID input parameter run time value and going to related PO details using that Shipment ID.</p>
+<p>You may need to create a new report definition for e-mail purposes because report definition with multiple other parameters apart from Shipment ID did not work for me. More analysis not done on this issue at this point.</p>
+<p><strong>Action 2:</strong> Use NOTIFY CONTACT action with:</p>
+<ol>
+<li>Contact value as variable(from Action 1 above)</li>
+<li>Communication Method = EMAIL. You can create Contact(Business Process Automation&gt; Communication Management &gt; Contacts) with Contact ID same as User ID for all the users who have PO Create access and wish to receive emails. On the contact record ensure flag &lsquo;Notification On&rsquo; is checked.</li>
+<li>Subject with $GID or other required variable for dynamic display like: &ldquo;Report - ShpRef#: $SHP_REF; SID=$GID&rdquo;
+<strong>4. Stylesheet profile with below settings:</strong> Business Process Automation &gt; Power Data &gt; Event Management &gt; Stylesheet Profiles:</li>
+</ol>
+<ul>
+<li>Template Name = workflow/DefaultReportEventHtml.xsl(Standard)</li>
+<li>Format = text/html</li>
+<li>Subject Property Key = {2}. This will ensure that subject for e-mail will be as per the definition mentioned in the NOTIFY CONTACT.</li>
+<li>Message direction =OUTBOUND</li>
+<li>Type=XSL</li>
+<li>Attachments=EMBED</li>
+</ul>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/report-development-sample-report/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>Report Development - Sample Report</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/report-workspaces/" class="flex align-center">
+      <span>Report Workspaces</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents"></nav>
+<div class="site-notice-sidebar">
+  Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+</div>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  <script>
+  
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (
+      e.key === 'c' || e.key === 'C' ||
+      e.key === 'a' || e.key === 'A' ||
+      e.key === 'u' || e.key === 'U' ||
+      e.key === 's' || e.key === 'S' ||
+      e.key === 'p' || e.key === 'P'
+    )) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

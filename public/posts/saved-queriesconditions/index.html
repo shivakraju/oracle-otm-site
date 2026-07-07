@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Saved Queries in OTM help to query specific records in a screen or add some conditions to your custom logic while creating an Agent, etc. They can be used in multiple other OTM features like recurring processes, business monitors etc.
+Below steps show how to create a simple Saved Query.
+If we need to find orders that have failed planning in OTM in this month, we can create a query as below:
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/saved-queriesconditions/">
+	<meta property="og:site_name" content="Learn Oracle OTM">
+	<meta property="og:title" content="Saved Queries/Conditions">
+	<meta property="og:description" content="Saved Queries in OTM help to query specific records in a screen or add some conditions to your custom logic while creating an Agent, etc. They can be used in multiple other OTM features like recurring processes, business monitors etc.
+Below steps show how to create a simple Saved Query.
+If we need to find orders that have failed planning in OTM in this month, we can create a query as below:">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2016-07-20T21:30:00+00:00">
+		<meta property="article:modified_time" content="2016-07-20T21:30:00+00:00">
+		<meta property="article:tag" content="User in Finder">
+		<meta property="article:tag" content="OTM">
+		<meta property="article:tag" content="Saved Condition">
+		<meta property="article:tag" content="Saved Query">
+
+
+	<meta itemprop="name" content="Saved Queries/Conditions">
+	<meta itemprop="description" content="Saved Queries in OTM help to query specific records in a screen or add some conditions to your custom logic while creating an Agent, etc. They can be used in multiple other OTM features like recurring processes, business monitors etc.
+Below steps show how to create a simple Saved Query.
+If we need to find orders that have failed planning in OTM in this month, we can create a query as below:">
+	<meta itemprop="datePublished" content="2016-07-20T21:30:00+00:00">
+	<meta itemprop="dateModified" content="2016-07-20T21:30:00+00:00">
+	<meta itemprop="wordCount" content="608">
+	<meta itemprop="keywords" content="User in Finder,OTM,Saved Condition,Saved Query">
+
+<title>Saved Queries/Conditions • Learn Oracle OTM</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/posts/saved-queriesconditions/">
+<link rel="stylesheet" href="/book.min.0bc2ccea40da58d619c260c3cbe79c1f9c2ba0b7dc521a7fb7987f26000c9757.css" integrity="sha256-C8LM6kDaWNYZwmDDy&#43;ecH5wroLfcUhp/t5h/JgAMl1c=" crossorigin="anonymous">
+
+
+  <script defer type="module" src="/en.search.min.16d05727d2808ad79a71df07fc9b22b467aae8da71e28126262f393ea7428605.js" integrity="sha256-FtBXJ9KAiteacd8H/JsitGeq6Npx4oEmJi85PqdChgU=" crossorigin="anonymous"></script>
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-posts">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Learn Oracle OTM</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/what-is-otm/" class="">
+      What is OTM ?</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-logistics-terminology/" class="">
+      Basic Logistics terminology</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-architecture-this-is-applicable-for-on-premise-installations/" class="">
+      OTM Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-inbound-integrations-xml/" class="">
+      OTM Inbound Integrations (XML)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-outbound-integrations/" class="">
+      OTM Outbound Integrations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/csv-data-uploads/" class="">
+      CSV Data Uploads</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/posting-data-to-otm-using-http-request/" class="">
+      Posting Data to OTM using HTTP request</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-domains-standard-schema-and-data-dictionary/" class="">
+      OTM Domains, Standard Schema and Data Dictionary</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-order-management-data-structure/" class="">
+      OTM Order Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-shipment-management-data-structure/" class="">
+      OTM Shipment Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-contract-rate-management-data-structure/" class="">
+      OTM Contract &amp; Rate Management Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-process-automation-data-structure/" class="">
+      Business Process Automation Data Structure</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/" class="">
+      01 - Domain, Items, Locations, and Equipment</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-02-itinerary/" class="">
+      02 - Itinerary</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-03-service-provider-and-rates/" class="">
+      03 - Service Provider and Rates</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-04-business-numbers-planning-parameter/" class="">
+      04 - Business Numbers, Planning Parameter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-05-bulk-plan/" class="">
+      05 - Bulk Plan</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-06-tender-process/" class="">
+      06 - Tender process</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-07-invoicing/" class="">
+      07 - Invoicing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/basic-otm-configurations-08-voucher-allocation/" class="">
+      08 - Voucher Allocation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/saved-queriesconditions/" class="active">
+      Saved Queries/Conditions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-frequently-used-actions/" class="">
+      Agents - Frequently Used Actions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-sample-agent-creation-steps/" class="">
+      Agents - Sample Agent Creation Steps</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agents-agent-event-restrictions/" class="">
+      Agents - Agent Event Restrictions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/agent-gates/" class="">
+      Agent Gates</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-monitors/" class="">
+      Business Monitors</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/business-numbers/" class="">
+      Business Numbers</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/report-development-sample-report/" class="">
+      Report Development - Sample Report</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/emailing-reports-to-users-on-a-business-event/" class="">
+      Emailing Reports to Users on a Business Event</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/report-workspaces/" class="">
+      Report Workspaces</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/manager-layouts-screen-sets-labels/" class="">
+      Manager Layouts, Screen Sets, Labels</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/flex-fields/" class="">
+      Flex fields</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/advanced-layouts/" class="">
+      Advanced Layouts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/workbenches/" class="">
+      Workbenches</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/user-roles-vpd-and-access-control-lists/" class="">
+      User Roles - VPD and Access Control Lists</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/user-menu-and-manage-user-access/" class="">
+      User Menu and Manage User Access</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/service-provider-user-login-creation/" class="">
+      Service Provider User Login creation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/refnums/" class="">
+      Refnums</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/status-types/" class="">
+      Status Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/action-checks/" class="">
+      Action Checks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/custom-actions-smart-links/" class="">
+      Custom Actions &amp; Smart Links</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/yard-management-and-appointment-scheduling/" class="">
+      Yard Management and Appointment Scheduling</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/otm-application-admin-notes/" class="">
+      OTM Application ADMIN Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/oracle-dba-notes/" class="">
+      Oracle DBA notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/posts/g-log-properties/" class="">
+      G-Log Properties</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sidebar-author">
+  <div class="sidebar-author-name">Shiva G (OTM Consultant)</div>
+  <img src="/images/author-profile.jpg" alt="Shiva G" class="sidebar-author-photo" />
+  <div class="sidebar-author-email">
+    <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+  </div>
+</div>
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Saved Queries/Conditions</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents"></nav>
+<div class="site-notice-sidebar">
+  Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+</div>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    Saved Queries/Conditions
+  </h1>
+  
+
+  <div class="book-post-content markdown-inner"><p>Saved Queries in OTM help to query specific records in a screen or add some conditions to your custom logic while creating an Agent, etc. They can be used in multiple other OTM features like recurring processes, business monitors etc.</p>
+<p>Below steps show how to create a simple Saved Query.</p>
+<p>If we need to find orders that have failed planning in OTM in this month, we can create a query as below:</p>
+<p><strong>Method1:</strong> Simple Query from the UI using Order Release Finder Screen</p>
+<p>Order Management &gt; Order Release&gt; Order Release</p>
+<p><strong>Enter Search Criteria:</strong></p>
+<p><img src="/images/saved-queriesconditions-img1-30bf48b186.png" alt="" /></p>
+<p><img src="/images/saved-queriesconditions-img2-13b34ec6ee.png" alt="" /></p>
+<p>Click Save button and give a name to your query.</p>
+<p><img src="/images/saved-queriesconditions-img3-5a733322dd.png" alt="" /></p>
+<p>You will see this query appearing in the Saved Query drop down list as shown below:</p>
+<p><img src="/images/saved-queriesconditions-img4-6c758e6dbc.png" alt="" /></p>
+<p>Click &lsquo;Execute Query&rsquo; button to see the results of the query.</p>
+<p><img src="/images/saved-queriesconditions-img5-23908464dd.png" alt="" /></p>
+<p>Please note that this query is saved in the application and can be executed any time.</p>
+<p><strong>You can review this query definition as below:</strong></p>
+<p>Business Process Automation &gt; Power Data &gt; Event Management &gt; Saved Query</p>
+<p><img src="/images/saved-queriesconditions-img6-8dd623a834.png" alt="" /><br>
+Enter the Query same that was provided earlier and &lsquo;Search&rsquo;.</p>
+<p>Select the Query and &lsquo;Edit&rsquo; to see the definition as below:</p>
+<p><img src="/images/saved-queriesconditions-img7-0cf28abb2d.png" alt="" /></p>
+<p>Note that &lsquo;Use in Finder&rsquo; is checked for this query as this is created from the Finder Screen.</p>
+<p><img src="/images/saved-queriesconditions-img8-9113c5fa7e.png" alt="" /></p>
+<p>You will review the criteria you have added while defining the query.</p>
+<p>You can also create query directly from this screen and add necessary criteria.</p>
+<p>For example, if you want to add another criteria/condition that &lsquo;Indicator = Red&rsquo;, you can select &lsquo;Indicator&rsquo; under Column drop down list. This will populate the possible list of value once you tab out of column. You can select &lsquo;Red&rsquo; as value and &lsquo;Save&rsquo;.</p>
+<p><img src="/images/saved-queriesconditions-img9-37ea3c479b.png" alt="" /></p>
+<p>This is a easy feature for functional consultants who are not familiar with SQL to write simple queries.</p>
+<p><strong>Method2:</strong> If you need to write complex SQL queries using Joins with multiple other object types(like Order Release to Shipment) or use SQL built-in functions like SUM etc, then you need to use below method.</p>
+<p><strong>Example:</strong> Check if an Order Release is split into multiple shipments while planning. This type of query/condition cannot be written from &lsquo;Finder Screen&rsquo; criteria.</p>
+<p><strong>We need to write a SQL for this as below:</strong></p>
+<p>select orl.order_release_gid<br>
+from order_release orl,<br>
+view_shipment_order_release vsor<br>
+where orl.order_release_gid = vsor.order_release_gid<br>
+and orl.order_release_gid = $gid<br>
+group by orl.order_release_gid<br>
+having count(*) &gt; 1</p>
+<p>Note that $gid is variable(primary key to identify order release) that is passed to query during execution time from the application. For example, if you use this query in &lsquo;ORDER RELEASE&rsquo; agent, then Order Release GID will be passed during agent run-time.</p>
+<p>These type of queries are normally used in Agents, Recurring Processes, Business Monitors, etc.</p>
+<p><strong>We define these queries in the system as below:</strong></p>
+<p>Business Process Automation &gt; Power Data &gt; Event Management &gt; Saved Queries</p>
+<p><img src="/images/saved-queriesconditions-img10-4451a43d6a.png" alt="" /></p>
+<p>Enter Query name, Object Type as &lsquo;ORDER RELEASE&rsquo;,Domain Name and click &lsquo;View/Define Query&rsquo;</p>
+<p><img src="/images/saved-queriesconditions-img11-ebad4cc20e.png" alt="" /></p>
+<p>Copy the query without any ending semi colon(;) in the &lsquo;Check one SQL&rsquo; and &lsquo;Find All SQL&rsquo; fields as shown above, click &lsquo;Finished&rsquo; button.</p>
+<p>If we need to use same query in an agent, we need to associate it to saved condition. Saved conditions are mostly used write IF condition logic in the Agents.</p>
+<p>Business Process Automation &gt; Power Data &gt; Event Management &gt; Saved Condition &gt; New:<br>
+<a href="https://draft.blogger.com/blogger.g?blogID=581121661120046731"></a><a href="https://draft.blogger.com/blogger.g?blogID=581121661120046731"></a><a href="https://draft.blogger.com/blogger.g?blogID=581121661120046731"></a><img src="/images/saved-queriesconditions-img12-61e25779cc.png" alt="" /></p>
+<p>Specify details as shown above to link Saved Query with Saved Condition.</p>
+<p>Saved Conditions will be true if all the Saved Queries mentioned in the list will return records.<br>
+<img src="/images/saved-queriesconditions-img13-7fa6ba4dda.png" alt="" /></p>
+<p><strong>Important Note:</strong> While writing saved queries using SQL, ensure entire query is written in single line(no line breaks). Line breaks will cause issues when you try to export this to csv and try to load in another environment.</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+  <div>
+  
+    <a href="/posts/basic-otm-configurations-08-voucher-allocation/" class="flex align-center">
+      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+      <span>08 - Voucher Allocation</span>
+    </a>
+  
+  </div>
+  <div>
+  
+    <a href="/posts/agents-frequently-used-actions/" class="flex align-center">
+      <span>Agents - Frequently Used Actions</span>
+      <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+    </a>
+  
+  </div>
+</div>
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents"></nav>
+<div class="site-notice-sidebar">
+  Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
+</div>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  <script>
+  
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (
+      e.key === 'c' || e.key === 'C' ||
+      e.key === 'a' || e.key === 'A' ||
+      e.key === 'u' || e.key === 'U' ||
+      e.key === 's' || e.key === 'S' ||
+      e.key === 'p' || e.key === 'P'
+    )) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

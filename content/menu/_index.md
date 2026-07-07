@@ -1,0 +1,55 @@
+﻿---
+headless: true
+---
+
+- **Topics List**
+  - [What is OTM?](/posts/what-is-otm/)
+  - [Basic Logistics Terminology](/posts/basic-logistics-terminology/)
+  - [OTM Architecture](/posts/otm-architecture-this-is-applicable-for-on-premise-installations/)
+  - [Inbound Integrations (XML)](/posts/otm-inbound-integrations-xml/)
+  - [Outbound Integrations](/posts/otm-outbound-integrations/)
+  - [CSV Data Uploads](/posts/csv-data-uploads/)
+  - [Post Data via HTTP Request](/posts/posting-data-to-otm-using-http-request/)
+  - [Domains, Schema & Data Dictionary](/posts/otm-domains-standard-schema-and-data-dictionary/)
+  - [Order Management Data Structure](/posts/otm-order-management-data-structure/)
+  - [Shipment Management Data Structure](/posts/otm-shipment-management-data-structure/)
+  - [Contract & Rate Management Data Structure](/posts/otm-contract-rate-management-data-structure/)
+  - [Business Process Automation Data Structure](/posts/business-process-automation-data-structure/)
+- **Basic OTM Configurations**
+  - [01 - Domain, Items, Locations](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)
+  - [02 - Itinerary](/posts/basic-otm-configurations-02-itinerary/)
+  - [03 - Service Provider & Rates](/posts/basic-otm-configurations-03-service-provider-and-rates/)
+  - [04 - Business Numbers](/posts/basic-otm-configurations-04-business-numbers-planning-parameter/)
+  - [05 - Bulk Plan](/posts/basic-otm-configurations-05-bulk-plan/)
+  - [06 - Tender Process](/posts/basic-otm-configurations-06-tender-process/)
+  - [07 - Invoicing](/posts/basic-otm-configurations-07-invoicing/)
+  - [08 - Voucher Allocation](/posts/basic-otm-configurations-08-voucher-allocation/)
+- **Agents & Automation**
+  - [Saved Queries / Conditions](/posts/saved-queriesconditions/)
+  - [Agents - Frequently Used Actions](/posts/agents-frequently-used-actions/)
+  - [Agents - Sample Agent Creation](/posts/agents-sample-agent-creation-steps/)
+  - [Agents - Agent Event Restrictions](/posts/agents-agent-event-restrictions/)
+  - [Agent Gates](/posts/agent-gates/)
+  - [Business Monitors](/posts/business-monitors/)
+  - [Business Numbers](/posts/business-numbers/)
+- **Reporting & UI**
+  - [Report Development - Sample Report](/posts/report-development-sample-report/)
+  - [Emailing Reports to Users](/posts/emailing-reports-to-users-on-a-business-event/)
+  - [Report Workspaces](/posts/report-workspaces/)
+  - [Manager Layouts, Screen Sets, Labels](/posts/manager-layouts-screen-sets-labels/)
+  - [Flex Fields](/posts/flex-fields/)
+  - [Advanced Layouts](/posts/advanced-layouts/)
+  - [Workbenches](/posts/workbenches/)
+- **Security & Access**
+  - [User Roles - VPD & Access Control](/posts/user-roles-vpd-and-access-control-lists/)
+  - [User Menu & Manage User Access](/posts/user-menu-and-manage-user-access/)
+  - [Service Provider User Login](/posts/service-provider-user-login-creation/)
+- **Reference**
+  - [Refnums](/posts/refnums/)
+  - [Status Types](/posts/status-types/)
+  - [Action Checks](/posts/action-checks/)
+  - [Custom Actions & Smart Links](/posts/custom-actions-smart-links/)
+  - [Yard Management & Appointment Scheduling](/posts/yard-management-and-appointment-scheduling/)
+  - [OTM Application Admin Notes](/posts/otm-application-admin-notes/)
+  - [Oracle DBA Notes](/posts/oracle-dba-notes/)
+  - [G-Log Properties](/posts/g-log-properties/)

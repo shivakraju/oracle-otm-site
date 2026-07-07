@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Glog.webserver.report.ReportWorkspaceServlet on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/glog.webserver.report.reportworkspaceservlet/</link>
+		<description>Recent content in Glog.webserver.report.ReportWorkspaceServlet on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 28 Jun 2017 21:03:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/glog.webserver.report.reportworkspaceservlet/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Report Workspaces</title>
+				<link>http://localhost:1313/posts/report-workspaces/</link>
+				<pubDate>Wed, 28 Jun 2017 21:03:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/report-workspaces/</guid>
+				<description>&lt;p&gt;If you want to restrict users to run or view only specific reports, you can use Report Workspace feature in OTM.&lt;/p&gt;&#xA;&lt;p&gt;You can restrict a list of reports to a particular user or user role by following below steps:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Step1:&lt;/strong&gt; Configuration and Administration &amp;gt; User Configuration &amp;gt; Manage User Access &amp;gt; Select &amp;lsquo;Report Workspace&amp;rsquo; as User Access Type &amp;gt; Select Role/User against which you want update this workspace &amp;gt; Edit User Access.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

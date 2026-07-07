@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>PickList on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/picklist/</link>
+		<description>Recent content in PickList on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 06 Apr 2017 22:10:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/picklist/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Flex fields</title>
+				<link>http://localhost:1313/posts/flex-fields/</link>
+				<pubDate>Thu, 06 Apr 2017 22:10:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/flex-fields/</guid>
+				<description>&lt;p&gt;OTM provides attribute fields(Char, Number, Date and currency) on each table to store custom data. Note that we can also use refnum/remarks to store this custom data but those entries are made in separate tables. So new versions of OTM introduced these attribute columns on almost all major transaction data tables like ORDER_RELEASE, SHIPMENT etc.&lt;/p&gt;&#xA;&lt;p&gt;We can define flex fields on these attribute columns and add these fields to required manager layouts so that users can enter data directly into these fields from UI.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

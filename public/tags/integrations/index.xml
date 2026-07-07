@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Integrations on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/integrations/</link>
+		<description>Recent content in Integrations on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 15 Apr 2016 20:21:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/integrations/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>OTM Inbound Integrations (XML)</title>
+				<link>http://localhost:1313/posts/otm-inbound-integrations-xml/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/otm-inbound-integrations-xml/</guid>
+				<description>&lt;p&gt;There are several ways of bringing in data into OTM system. Below are some of the methods:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;via XML that follows Glog XML schema posted from a middleware applications like Oracle SOA, webMethods, Mulesoft, etc&lt;/li&gt;&#xA;&lt;li&gt;Manaul XML uploads by OTM users&lt;/li&gt;&#xA;&lt;li&gt;CSV Uploads&lt;/li&gt;&#xA;&lt;li&gt;DB.XML Uploads&lt;/li&gt;&#xA;&lt;li&gt;REST-API Calls&lt;/li&gt;&#xA;&lt;li&gt;HTTP Post Requests from programming languages like PLSQL, etc&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;XML Inbound Integrations:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Most common way of receiving OTM Inbound data is via XML files from middleware applications. OTM can read XML files which are in the format specified by GlogXML Schema(OTM Standard XML Schema). You can download this schema from :&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>OTM Outbound Integrations</title>
+				<link>http://localhost:1313/posts/otm-outbound-integrations/</link>
+				<pubDate>Fri, 15 Apr 2016 20:21:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/otm-outbound-integrations/</guid>
+				<description>&lt;p&gt;OTM system can generate outbound XML data for any business object like &amp;lsquo;Order Release&amp;rsquo;, &amp;lsquo;Shipment&amp;rsquo; etc either manually(using Send Interface Transmission action) or programmatically using same action from OTM Agent(workflow). We will discuss about OTM Agents in further posts.&lt;/p&gt;&#xA;&lt;p&gt;For generating outbound XMLs from OTM you may follow below steps:&lt;/p&gt;&#xA;&lt;p&gt;1. Define an Out XML profile.&lt;/p&gt;&#xA;&lt;p&gt;Business Process Automation &amp;gt; Power Data &amp;gt; Integration &amp;gt; Out XML Profiles.&lt;/p&gt;&#xA;&lt;p&gt;Standard OTM XML for any object might have lot of data that might not be necessary or relevant to send it to the external systems. Also the file size for a complete XML would be in MB( for example Shipment XML might be 2 MB). In order to avoid generation of huge files and to control what data we generate in outbound XML we need to define an Out XML profile.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

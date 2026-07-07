@@ -1,0 +1,1487 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tags on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/</link>
+		<description>Recent content in Tags on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 04 Mar 2026 21:37:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>BEGIN_REQUEST</title>
+				<link>http://localhost:1313/tags/begin_request/</link>
+				<pubDate>Wed, 04 Mar 2026 21:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/begin_request/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>END_RESPONSE</title>
+				<link>http://localhost:1313/tags/end_response/</link>
+				<pubDate>Wed, 04 Mar 2026 21:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/end_response/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>PLSQL</title>
+				<link>http://localhost:1313/tags/plsql/</link>
+				<pubDate>Wed, 04 Mar 2026 21:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/plsql/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>READ_TEXT</title>
+				<link>http://localhost:1313/tags/read_text/</link>
+				<pubDate>Wed, 04 Mar 2026 21:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/read_text/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SET_HEADER</title>
+				<link>http://localhost:1313/tags/set_header/</link>
+				<pubDate>Wed, 04 Mar 2026 21:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/set_header/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>UTL_HTTP</title>
+				<link>http://localhost:1313/tags/utl_http/</link>
+				<pubDate>Wed, 04 Mar 2026 21:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/utl_http/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>UTL_HTTP.req</title>
+				<link>http://localhost:1313/tags/utl_http.req/</link>
+				<pubDate>Wed, 04 Mar 2026 21:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/utl_http.req/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>UTL_HTTP.resp</title>
+				<link>http://localhost:1313/tags/utl_http.resp/</link>
+				<pubDate>Wed, 04 Mar 2026 21:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/utl_http.resp/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>WRITE_TEXT</title>
+				<link>http://localhost:1313/tags/write_text/</link>
+				<pubDate>Wed, 04 Mar 2026 21:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/write_text/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>BN Rule</title>
+				<link>http://localhost:1313/tags/bn-rule/</link>
+				<pubDate>Sun, 15 Feb 2026 19:04:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/bn-rule/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Business Numbers</title>
+				<link>http://localhost:1313/tags/business-numbers/</link>
+				<pubDate>Sun, 15 Feb 2026 19:04:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/business-numbers/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Expressions</title>
+				<link>http://localhost:1313/tags/expressions/</link>
+				<pubDate>Sun, 15 Feb 2026 19:04:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/expressions/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Instructions</title>
+				<link>http://localhost:1313/tags/instructions/</link>
+				<pubDate>Sun, 15 Feb 2026 19:04:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/instructions/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Auto Refresh</title>
+				<link>http://localhost:1313/tags/auto-refresh/</link>
+				<pubDate>Sun, 15 Feb 2026 18:17:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/auto-refresh/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Business</title>
+				<link>http://localhost:1313/tags/business/</link>
+				<pubDate>Sun, 15 Feb 2026 18:17:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/business/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Business Monitor</title>
+				<link>http://localhost:1313/tags/business-monitor/</link>
+				<pubDate>Sun, 15 Feb 2026 18:17:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/business-monitor/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Business_monitor</title>
+				<link>http://localhost:1313/tags/business_monitor/</link>
+				<pubDate>Sun, 15 Feb 2026 18:17:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/business_monitor/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Monitor</title>
+				<link>http://localhost:1313/tags/monitor/</link>
+				<pubDate>Sun, 15 Feb 2026 18:17:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/monitor/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Agent Gates</title>
+				<link>http://localhost:1313/tags/agent-gates/</link>
+				<pubDate>Sun, 15 Feb 2026 17:29:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/agent-gates/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Condition Additive</title>
+				<link>http://localhost:1313/tags/condition-additive/</link>
+				<pubDate>Sun, 15 Feb 2026 17:29:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/condition-additive/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Functor</title>
+				<link>http://localhost:1313/tags/functor/</link>
+				<pubDate>Sun, 15 Feb 2026 17:29:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/functor/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Status Function</title>
+				<link>http://localhost:1313/tags/status-function/</link>
+				<pubDate>Sun, 15 Feb 2026 17:29:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/status-function/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Appointment</title>
+				<link>http://localhost:1313/tags/appointment/</link>
+				<pubDate>Sat, 14 Feb 2026 12:11:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/appointment/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dock</title>
+				<link>http://localhost:1313/tags/dock/</link>
+				<pubDate>Sat, 14 Feb 2026 12:11:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/dock/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>OTM</title>
+				<link>http://localhost:1313/tags/otm/</link>
+				<pubDate>Sat, 14 Feb 2026 12:11:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/otm/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Resource</title>
+				<link>http://localhost:1313/tags/resource/</link>
+				<pubDate>Sat, 14 Feb 2026 12:11:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/resource/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Rows</title>
+				<link>http://localhost:1313/tags/rows/</link>
+				<pubDate>Sat, 14 Feb 2026 12:11:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/rows/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Scheduling</title>
+				<link>http://localhost:1313/tags/scheduling/</link>
+				<pubDate>Sat, 14 Feb 2026 12:11:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/scheduling/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Slots</title>
+				<link>http://localhost:1313/tags/slots/</link>
+				<pubDate>Sat, 14 Feb 2026 12:11:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/slots/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Yard</title>
+				<link>http://localhost:1313/tags/yard/</link>
+				<pubDate>Sat, 14 Feb 2026 12:11:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/yard/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Domain</title>
+				<link>http://localhost:1313/tags/domain/</link>
+				<pubDate>Sat, 22 Aug 2020 05:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/domain/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Equipment</title>
+				<link>http://localhost:1313/tags/equipment/</link>
+				<pubDate>Sat, 22 Aug 2020 05:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/equipment/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Item</title>
+				<link>http://localhost:1313/tags/item/</link>
+				<pubDate>Sat, 22 Aug 2020 05:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/item/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Location</title>
+				<link>http://localhost:1313/tags/location/</link>
+				<pubDate>Sat, 22 Aug 2020 05:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/location/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Oracle</title>
+				<link>http://localhost:1313/tags/oracle/</link>
+				<pubDate>Sat, 22 Aug 2020 05:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/oracle/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Allocation</title>
+				<link>http://localhost:1313/tags/allocation/</link>
+				<pubDate>Sat, 22 Aug 2020 04:59:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/allocation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Voucher</title>
+				<link>http://localhost:1313/tags/voucher/</link>
+				<pubDate>Sat, 22 Aug 2020 04:59:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/voucher/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Invoice</title>
+				<link>http://localhost:1313/tags/invoice/</link>
+				<pubDate>Sat, 22 Aug 2020 04:57:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/invoice/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tender</title>
+				<link>http://localhost:1313/tags/tender/</link>
+				<pubDate>Sat, 22 Aug 2020 04:55:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/tender/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Bulk Plan</title>
+				<link>http://localhost:1313/tags/bulk-plan/</link>
+				<pubDate>Sat, 22 Aug 2020 04:52:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/bulk-plan/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Business Number</title>
+				<link>http://localhost:1313/tags/business-number/</link>
+				<pubDate>Sat, 22 Aug 2020 04:47:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/business-number/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Planning Parameter</title>
+				<link>http://localhost:1313/tags/planning-parameter/</link>
+				<pubDate>Sat, 22 Aug 2020 04:47:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/planning-parameter/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Rate Offering</title>
+				<link>http://localhost:1313/tags/rate-offering/</link>
+				<pubDate>Sat, 22 Aug 2020 04:43:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/rate-offering/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Rate Record</title>
+				<link>http://localhost:1313/tags/rate-record/</link>
+				<pubDate>Sat, 22 Aug 2020 04:43:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/rate-record/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Rate Service</title>
+				<link>http://localhost:1313/tags/rate-service/</link>
+				<pubDate>Sat, 22 Aug 2020 04:43:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/rate-service/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>RATE_GEO</title>
+				<link>http://localhost:1313/tags/rate_geo/</link>
+				<pubDate>Sat, 22 Aug 2020 04:43:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/rate_geo/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>RATE_OFFERING</title>
+				<link>http://localhost:1313/tags/rate_offering/</link>
+				<pubDate>Sat, 22 Aug 2020 04:43:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/rate_offering/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>RATE_SERVICE</title>
+				<link>http://localhost:1313/tags/rate_service/</link>
+				<pubDate>Sat, 22 Aug 2020 04:43:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/rate_service/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Rates</title>
+				<link>http://localhost:1313/tags/rates/</link>
+				<pubDate>Sat, 22 Aug 2020 04:43:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/rates/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Service Provider</title>
+				<link>http://localhost:1313/tags/service-provider/</link>
+				<pubDate>Sat, 22 Aug 2020 04:43:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/service-provider/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Itinerary</title>
+				<link>http://localhost:1313/tags/itinerary/</link>
+				<pubDate>Sat, 22 Aug 2020 04:32:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/itinerary/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Leg</title>
+				<link>http://localhost:1313/tags/leg/</link>
+				<pubDate>Sat, 22 Aug 2020 04:32:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/leg/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Multi-Leg</title>
+				<link>http://localhost:1313/tags/multi-leg/</link>
+				<pubDate>Sat, 22 Aug 2020 04:32:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/multi-leg/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Action Definition ID</title>
+				<link>http://localhost:1313/tags/action-definition-id/</link>
+				<pubDate>Fri, 21 Sep 2018 20:38:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/action-definition-id/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Actions</title>
+				<link>http://localhost:1313/tags/actions/</link>
+				<pubDate>Fri, 21 Sep 2018 20:38:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/actions/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Label</title>
+				<link>http://localhost:1313/tags/label/</link>
+				<pubDate>Fri, 21 Sep 2018 20:38:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/label/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Smart Links</title>
+				<link>http://localhost:1313/tags/smart-links/</link>
+				<pubDate>Fri, 21 Sep 2018 20:38:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/smart-links/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Action Checks</title>
+				<link>http://localhost:1313/tags/action-checks/</link>
+				<pubDate>Thu, 20 Sep 2018 18:06:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/action-checks/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Allow Condition</title>
+				<link>http://localhost:1313/tags/allow-condition/</link>
+				<pubDate>Thu, 20 Sep 2018 18:06:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/allow-condition/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Audit Action ID</title>
+				<link>http://localhost:1313/tags/audit-action-id/</link>
+				<pubDate>Thu, 20 Sep 2018 18:06:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/audit-action-id/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cause</title>
+				<link>http://localhost:1313/tags/cause/</link>
+				<pubDate>Thu, 20 Sep 2018 18:06:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/cause/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Post Action Check</title>
+				<link>http://localhost:1313/tags/post-action-check/</link>
+				<pubDate>Thu, 20 Sep 2018 18:06:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/post-action-check/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Carrier Login</title>
+				<link>http://localhost:1313/tags/carrier-login/</link>
+				<pubDate>Mon, 08 Jan 2018 22:53:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/carrier-login/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Manage Association</title>
+				<link>http://localhost:1313/tags/manage-association/</link>
+				<pubDate>Mon, 08 Jan 2018 22:53:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/manage-association/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SERPROV</title>
+				<link>http://localhost:1313/tags/serprov/</link>
+				<pubDate>Mon, 08 Jan 2018 22:53:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/serprov/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Service Provider Login</title>
+				<link>http://localhost:1313/tags/service-provider-login/</link>
+				<pubDate>Mon, 08 Jan 2018 22:53:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/service-provider-login/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Config</title>
+				<link>http://localhost:1313/tags/config/</link>
+				<pubDate>Sun, 13 Aug 2017 21:22:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/config/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>G-Log Properties</title>
+				<link>http://localhost:1313/tags/g-log-properties/</link>
+				<pubDate>Sun, 13 Aug 2017 21:22:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/g-log-properties/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Console.log</title>
+				<link>http://localhost:1313/tags/console.log/</link>
+				<pubDate>Sun, 13 Aug 2017 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/console.log/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Gc3env.sh</title>
+				<link>http://localhost:1313/tags/gc3env.sh/</link>
+				<pubDate>Sun, 13 Aug 2017 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/gc3env.sh/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Glogapp-Wl</title>
+				<link>http://localhost:1313/tags/glogapp-wl/</link>
+				<pubDate>Sun, 13 Aug 2017 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/glogapp-wl/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Glogweb-Wl</title>
+				<link>http://localhost:1313/tags/glogweb-wl/</link>
+				<pubDate>Sun, 13 Aug 2017 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/glogweb-wl/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Install</title>
+				<link>http://localhost:1313/tags/install/</link>
+				<pubDate>Sun, 13 Aug 2017 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/install/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ohs</title>
+				<link>http://localhost:1313/tags/ohs/</link>
+				<pubDate>Sun, 13 Aug 2017 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/ohs/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Oracle Patches</title>
+				<link>http://localhost:1313/tags/oracle-patches/</link>
+				<pubDate>Sun, 13 Aug 2017 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/oracle-patches/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tomcat</title>
+				<link>http://localhost:1313/tags/tomcat/</link>
+				<pubDate>Sun, 13 Aug 2017 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/tomcat/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Weblogic</title>
+				<link>http://localhost:1313/tags/weblogic/</link>
+				<pubDate>Sun, 13 Aug 2017 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/weblogic/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Alter Profile</title>
+				<link>http://localhost:1313/tags/alter-profile/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/alter-profile/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>ALTER USER</title>
+				<link>http://localhost:1313/tags/alter-user/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/alter-user/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>COMPILE_SCHEMA</title>
+				<link>http://localhost:1313/tags/compile_schema/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/compile_schema/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>DBA_DDL_LOCKS</title>
+				<link>http://localhost:1313/tags/dba_ddl_locks/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/dba_ddl_locks/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>EM Console</title>
+				<link>http://localhost:1313/tags/em-console/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/em-console/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Init.ora</title>
+				<link>http://localhost:1313/tags/init.ora/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/init.ora/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>INVALID Objects</title>
+				<link>http://localhost:1313/tags/invalid-objects/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/invalid-objects/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Lsnrctl</title>
+				<link>http://localhost:1313/tags/lsnrctl/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/lsnrctl/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Oracle DB</title>
+				<link>http://localhost:1313/tags/oracle-db/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/oracle-db/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SHUTDOWN IMMEDIATE</title>
+				<link>http://localhost:1313/tags/shutdown-immediate/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/shutdown-immediate/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>STARTUP</title>
+				<link>http://localhost:1313/tags/startup/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/startup/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tnsnames.ora</title>
+				<link>http://localhost:1313/tags/tnsnames.ora/</link>
+				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/tnsnames.ora/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>External Status</title>
+				<link>http://localhost:1313/tags/external-status/</link>
+				<pubDate>Fri, 07 Jul 2017 20:10:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/external-status/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Internal Status</title>
+				<link>http://localhost:1313/tags/internal-status/</link>
+				<pubDate>Fri, 07 Jul 2017 20:10:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/internal-status/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Status Type</title>
+				<link>http://localhost:1313/tags/status-type/</link>
+				<pubDate>Fri, 07 Jul 2017 20:10:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/status-type/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Qualifier</title>
+				<link>http://localhost:1313/tags/qualifier/</link>
+				<pubDate>Fri, 07 Jul 2017 18:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/qualifier/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Refnum</title>
+				<link>http://localhost:1313/tags/refnum/</link>
+				<pubDate>Fri, 07 Jul 2017 18:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/refnum/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Updates Allowed</title>
+				<link>http://localhost:1313/tags/updates-allowed/</link>
+				<pubDate>Fri, 07 Jul 2017 18:37:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/updates-allowed/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Glog.webserver.report.ReportWorkspaceServlet</title>
+				<link>http://localhost:1313/tags/glog.webserver.report.reportworkspaceservlet/</link>
+				<pubDate>Wed, 28 Jun 2017 21:03:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/glog.webserver.report.reportworkspaceservlet/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Report Workspace</title>
+				<link>http://localhost:1313/tags/report-workspace/</link>
+				<pubDate>Wed, 28 Jun 2017 21:03:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/report-workspace/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Flex Fields</title>
+				<link>http://localhost:1313/tags/flex-fields/</link>
+				<pubDate>Thu, 06 Apr 2017 22:10:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/flex-fields/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>FlexDropList</title>
+				<link>http://localhost:1313/tags/flexdroplist/</link>
+				<pubDate>Thu, 06 Apr 2017 22:10:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/flexdroplist/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>PickList</title>
+				<link>http://localhost:1313/tags/picklist/</link>
+				<pubDate>Thu, 06 Apr 2017 22:10:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/picklist/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Advanced Layout</title>
+				<link>http://localhost:1313/tags/advanced-layout/</link>
+				<pubDate>Thu, 06 Apr 2017 21:09:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/advanced-layout/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Panel Splitter</title>
+				<link>http://localhost:1313/tags/panel-splitter/</link>
+				<pubDate>Thu, 06 Apr 2017 21:09:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/panel-splitter/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Labels</title>
+				<link>http://localhost:1313/tags/labels/</link>
+				<pubDate>Thu, 06 Apr 2017 21:05:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/labels/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Manager Layouts</title>
+				<link>http://localhost:1313/tags/manager-layouts/</link>
+				<pubDate>Thu, 06 Apr 2017 21:05:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/manager-layouts/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Screen Sets</title>
+				<link>http://localhost:1313/tags/screen-sets/</link>
+				<pubDate>Thu, 06 Apr 2017 21:05:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/screen-sets/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Custom Menu</title>
+				<link>http://localhost:1313/tags/custom-menu/</link>
+				<pubDate>Wed, 05 Apr 2017 20:10:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/custom-menu/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Edit User Access</title>
+				<link>http://localhost:1313/tags/edit-user-access/</link>
+				<pubDate>Wed, 05 Apr 2017 20:10:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/edit-user-access/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Manage User Access</title>
+				<link>http://localhost:1313/tags/manage-user-access/</link>
+				<pubDate>Wed, 05 Apr 2017 20:10:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/manage-user-access/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>User Menu</title>
+				<link>http://localhost:1313/tags/user-menu/</link>
+				<pubDate>Wed, 05 Apr 2017 20:10:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/user-menu/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Access Control List</title>
+				<link>http://localhost:1313/tags/access-control-list/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/access-control-list/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>ACR_ROLE_ENTRY_POINT</title>
+				<link>http://localhost:1313/tags/acr_role_entry_point/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/acr_role_entry_point/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>ACR_ROLE_ROLE</title>
+				<link>http://localhost:1313/tags/acr_role_role/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/acr_role_role/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>COMMON</title>
+				<link>http://localhost:1313/tags/common/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/common/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Default Role</title>
+				<link>http://localhost:1313/tags/default-role/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/default-role/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>EXTERNAL_PREDICATE</title>
+				<link>http://localhost:1313/tags/external_predicate/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/external_predicate/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Grantee User Role</title>
+				<link>http://localhost:1313/tags/grantee-user-role/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/grantee-user-role/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Password</title>
+				<link>http://localhost:1313/tags/password/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/password/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SQL Servlet</title>
+				<link>http://localhost:1313/tags/sql-servlet/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/sql-servlet/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>User</title>
+				<link>http://localhost:1313/tags/user/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/user/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>User Role</title>
+				<link>http://localhost:1313/tags/user-role/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/user-role/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>USER_ROLE</title>
+				<link>http://localhost:1313/tags/user_role/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/user_role/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>USER_ROLE_ACR</title>
+				<link>http://localhost:1313/tags/user_role_acr/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/user_role_acr/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>VPD Profile</title>
+				<link>http://localhost:1313/tags/vpd-profile/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/vpd-profile/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>VPD_PROFILE</title>
+				<link>http://localhost:1313/tags/vpd_profile/</link>
+				<pubDate>Thu, 01 Dec 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/vpd_profile/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Email OTM Report</title>
+				<link>http://localhost:1313/tags/email-otm-report/</link>
+				<pubDate>Tue, 29 Nov 2016 20:57:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/email-otm-report/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>PRINT DOCUMENT</title>
+				<link>http://localhost:1313/tags/print-document/</link>
+				<pubDate>Tue, 29 Nov 2016 20:57:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/print-document/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>REPORT - READY</title>
+				<link>http://localhost:1313/tags/report---ready/</link>
+				<pubDate>Tue, 29 Nov 2016 20:57:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/report---ready/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>REPORT_LOG_PARAMETER</title>
+				<link>http://localhost:1313/tags/report_log_parameter/</link>
+				<pubDate>Tue, 29 Nov 2016 20:57:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/report_log_parameter/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>BI Publisher</title>
+				<link>http://localhost:1313/tags/bi-publisher/</link>
+				<pubDate>Sat, 22 Oct 2016 01:58:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/bi-publisher/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Format Template</title>
+				<link>http://localhost:1313/tags/format-template/</link>
+				<pubDate>Sat, 22 Oct 2016 01:58:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/format-template/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Query Template</title>
+				<link>http://localhost:1313/tags/query-template/</link>
+				<pubDate>Sat, 22 Oct 2016 01:58:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/query-template/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Report</title>
+				<link>http://localhost:1313/tags/report/</link>
+				<pubDate>Sat, 22 Oct 2016 01:58:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/report/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Agent Event Restrictions</title>
+				<link>http://localhost:1313/tags/agent-event-restrictions/</link>
+				<pubDate>Mon, 15 Aug 2016 16:53:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/agent-event-restrictions/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Before Persist</title>
+				<link>http://localhost:1313/tags/before-persist/</link>
+				<pubDate>Mon, 15 Aug 2016 16:53:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/before-persist/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Event Source</title>
+				<link>http://localhost:1313/tags/event-source/</link>
+				<pubDate>Mon, 15 Aug 2016 16:53:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/event-source/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>CALL</title>
+				<link>http://localhost:1313/tags/call/</link>
+				<pubDate>Fri, 05 Aug 2016 20:29:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/call/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>DATA TYPE ASSOCIATIONS</title>
+				<link>http://localhost:1313/tags/data-type-associations/</link>
+				<pubDate>Fri, 05 Aug 2016 20:29:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/data-type-associations/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>DIRECT SQL UPDATE</title>
+				<link>http://localhost:1313/tags/direct-sql-update/</link>
+				<pubDate>Fri, 05 Aug 2016 20:29:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/direct-sql-update/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>RAISE EVENT</title>
+				<link>http://localhost:1313/tags/raise-event/</link>
+				<pubDate>Fri, 05 Aug 2016 20:29:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/raise-event/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Agent</title>
+				<link>http://localhost:1313/tags/agent/</link>
+				<pubDate>Fri, 05 Aug 2016 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/agent/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Agent Actions</title>
+				<link>http://localhost:1313/tags/agent-actions/</link>
+				<pubDate>Fri, 05 Aug 2016 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/agent-actions/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Error Handler</title>
+				<link>http://localhost:1313/tags/error-handler/</link>
+				<pubDate>Fri, 05 Aug 2016 19:33:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/error-handler/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Saved Condition</title>
+				<link>http://localhost:1313/tags/saved-condition/</link>
+				<pubDate>Wed, 20 Jul 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/saved-condition/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Saved Query</title>
+				<link>http://localhost:1313/tags/saved-query/</link>
+				<pubDate>Wed, 20 Jul 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/saved-query/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>User in Finder</title>
+				<link>http://localhost:1313/tags/user-in-finder/</link>
+				<pubDate>Wed, 20 Jul 2016 21:30:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/user-in-finder/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Contacts</title>
+				<link>http://localhost:1313/tags/contacts/</link>
+				<pubDate>Fri, 06 May 2016 20:15:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/contacts/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>External System</title>
+				<link>http://localhost:1313/tags/external-system/</link>
+				<pubDate>Fri, 06 May 2016 20:15:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/external-system/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Integration</title>
+				<link>http://localhost:1313/tags/integration/</link>
+				<pubDate>Fri, 06 May 2016 20:15:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/integration/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Reports</title>
+				<link>http://localhost:1313/tags/reports/</link>
+				<pubDate>Fri, 06 May 2016 20:15:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/reports/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Rate Distance</title>
+				<link>http://localhost:1313/tags/rate-distance/</link>
+				<pubDate>Fri, 06 May 2016 17:29:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/rate-distance/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Shipment</title>
+				<link>http://localhost:1313/tags/shipment/</link>
+				<pubDate>Tue, 03 May 2016 20:01:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/shipment/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Shipment Ship Unit</title>
+				<link>http://localhost:1313/tags/shipment-ship-unit/</link>
+				<pubDate>Tue, 03 May 2016 20:01:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/shipment-ship-unit/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Shipment Stop</title>
+				<link>http://localhost:1313/tags/shipment-stop/</link>
+				<pubDate>Tue, 03 May 2016 20:01:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/shipment-stop/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Learn</title>
+				<link>http://localhost:1313/tags/learn/</link>
+				<pubDate>Tue, 03 May 2016 17:42:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/learn/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Order Base</title>
+				<link>http://localhost:1313/tags/order-base/</link>
+				<pubDate>Tue, 03 May 2016 17:42:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/order-base/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Order Movement</title>
+				<link>http://localhost:1313/tags/order-movement/</link>
+				<pubDate>Tue, 03 May 2016 17:42:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/order-movement/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Order Release</title>
+				<link>http://localhost:1313/tags/order-release/</link>
+				<pubDate>Tue, 03 May 2016 17:42:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/order-release/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Packaged Item</title>
+				<link>http://localhost:1313/tags/packaged-item/</link>
+				<pubDate>Tue, 03 May 2016 17:42:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/packaged-item/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Packaging Unit</title>
+				<link>http://localhost:1313/tags/packaging-unit/</link>
+				<pubDate>Tue, 03 May 2016 17:42:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/packaging-unit/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Purchase Order</title>
+				<link>http://localhost:1313/tags/purchase-order/</link>
+				<pubDate>Tue, 03 May 2016 17:42:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/purchase-order/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ship Unit Spec</title>
+				<link>http://localhost:1313/tags/ship-unit-spec/</link>
+				<pubDate>Tue, 03 May 2016 17:42:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/ship-unit-spec/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>DATA_DICT</title>
+				<link>http://localhost:1313/tags/data_dict/</link>
+				<pubDate>Mon, 02 May 2016 16:34:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/data_dict/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>GID</title>
+				<link>http://localhost:1313/tags/gid/</link>
+				<pubDate>Mon, 02 May 2016 16:34:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/gid/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>GLOGOWNER</title>
+				<link>http://localhost:1313/tags/glogowner/</link>
+				<pubDate>Mon, 02 May 2016 16:34:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/glogowner/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>REPORTOWNER</title>
+				<link>http://localhost:1313/tags/reportowner/</link>
+				<pubDate>Mon, 02 May 2016 16:34:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/reportowner/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Schema</title>
+				<link>http://localhost:1313/tags/schema/</link>
+				<pubDate>Mon, 02 May 2016 16:34:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/schema/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>XID</title>
+				<link>http://localhost:1313/tags/xid/</link>
+				<pubDate>Mon, 02 May 2016 16:34:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/xid/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>External</title>
+				<link>http://localhost:1313/tags/external/</link>
+				<pubDate>Fri, 15 Apr 2016 20:21:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/external/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Integrations</title>
+				<link>http://localhost:1313/tags/integrations/</link>
+				<pubDate>Fri, 15 Apr 2016 20:21:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/integrations/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>MIN</title>
+				<link>http://localhost:1313/tags/min/</link>
+				<pubDate>Fri, 15 Apr 2016 20:21:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/min/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Out XML Profile</title>
+				<link>http://localhost:1313/tags/out-xml-profile/</link>
+				<pubDate>Fri, 15 Apr 2016 20:21:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/out-xml-profile/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Outbound</title>
+				<link>http://localhost:1313/tags/outbound/</link>
+				<pubDate>Fri, 15 Apr 2016 20:21:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/outbound/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>System</title>
+				<link>http://localhost:1313/tags/system/</link>
+				<pubDate>Fri, 15 Apr 2016 20:21:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/system/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>API</title>
+				<link>http://localhost:1313/tags/api/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/api/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>CSV</title>
+				<link>http://localhost:1313/tags/csv/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/csv/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Example</title>
+				<link>http://localhost:1313/tags/example/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/example/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Glog</title>
+				<link>http://localhost:1313/tags/glog/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/glog/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>GlogXML</title>
+				<link>http://localhost:1313/tags/glogxml/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/glogxml/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Inbound</title>
+				<link>http://localhost:1313/tags/inbound/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/inbound/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Servlet</title>
+				<link>http://localhost:1313/tags/servlet/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/servlet/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Upload</title>
+				<link>http://localhost:1313/tags/upload/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/upload/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>XML</title>
+				<link>http://localhost:1313/tags/xml/</link>
+				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/xml/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>3 Tier</title>
+				<link>http://localhost:1313/tags/3-tier/</link>
+				<pubDate>Fri, 15 Apr 2016 14:54:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/3-tier/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Architecture</title>
+				<link>http://localhost:1313/tags/architecture/</link>
+				<pubDate>Fri, 15 Apr 2016 14:54:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/architecture/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Installation</title>
+				<link>http://localhost:1313/tags/installation/</link>
+				<pubDate>Fri, 15 Apr 2016 14:54:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/installation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Management</title>
+				<link>http://localhost:1313/tags/management/</link>
+				<pubDate>Fri, 15 Apr 2016 14:54:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/management/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Trasportation</title>
+				<link>http://localhost:1313/tags/trasportation/</link>
+				<pubDate>Fri, 15 Apr 2016 14:54:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/trasportation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>3PL</title>
+				<link>http://localhost:1313/tags/3pl/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/3pl/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Bill of Lading</title>
+				<link>http://localhost:1313/tags/bill-of-lading/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/bill-of-lading/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Carrier</title>
+				<link>http://localhost:1313/tags/carrier/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/carrier/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Carton</title>
+				<link>http://localhost:1313/tags/carton/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/carton/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Consignee</title>
+				<link>http://localhost:1313/tags/consignee/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/consignee/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Container</title>
+				<link>http://localhost:1313/tags/container/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/container/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Demurrage</title>
+				<link>http://localhost:1313/tags/demurrage/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/demurrage/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Diversion</title>
+				<link>http://localhost:1313/tags/diversion/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/diversion/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>FTL</title>
+				<link>http://localhost:1313/tags/ftl/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/ftl/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Inbound Shipping</title>
+				<link>http://localhost:1313/tags/inbound-shipping/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/inbound-shipping/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>INCOTERM</title>
+				<link>http://localhost:1313/tags/incoterm/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/incoterm/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>LTL</title>
+				<link>http://localhost:1313/tags/ltl/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/ltl/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Outbound Shipping</title>
+				<link>http://localhost:1313/tags/outbound-shipping/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/outbound-shipping/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Pallet</title>
+				<link>http://localhost:1313/tags/pallet/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/pallet/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Stopoff Charge</title>
+				<link>http://localhost:1313/tags/stopoff-charge/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/stopoff-charge/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Supplier</title>
+				<link>http://localhost:1313/tags/supplier/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/supplier/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>THU</title>
+				<link>http://localhost:1313/tags/thu/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/thu/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>TL</title>
+				<link>http://localhost:1313/tags/tl/</link>
+				<pubDate>Thu, 14 Apr 2016 23:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/tl/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Basics</title>
+				<link>http://localhost:1313/tags/basics/</link>
+				<pubDate>Thu, 14 Apr 2016 21:35:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/basics/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>G-Log</title>
+				<link>http://localhost:1313/tags/g-log/</link>
+				<pubDate>Thu, 14 Apr 2016 21:35:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/g-log/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Gottimukkala</title>
+				<link>http://localhost:1313/tags/gottimukkala/</link>
+				<pubDate>Thu, 14 Apr 2016 21:35:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/gottimukkala/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Introduction</title>
+				<link>http://localhost:1313/tags/introduction/</link>
+				<pubDate>Thu, 14 Apr 2016 21:35:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/introduction/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Shiva</title>
+				<link>http://localhost:1313/tags/shiva/</link>
+				<pubDate>Thu, 14 Apr 2016 21:35:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/shiva/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

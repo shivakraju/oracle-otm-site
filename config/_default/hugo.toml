@@ -1,0 +1,35 @@
+baseURL = "https://www.oracle-otm.com/"
+title = "Learn Oracle OTM"
+theme = "hugo-book"
+paginate = 15
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+enableGitInfo = false
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+[params]
+  BookTheme            = "light"
+  BookSearch           = true
+  BookComment          = false
+  BookToC              = true
+  BookFlatSection      = false
+  BookCollapseSection  = false
+  BookMenuBundle       = "menu"
+  BookRepo             = ""
+  BookDateFormat       = "January 2, 2006"
+  BookSection          = "posts"
+  description          = "Quick notes for Oracle Transportation Management Consultants(Beginners). Post corrections to learnotm@outlook.com"

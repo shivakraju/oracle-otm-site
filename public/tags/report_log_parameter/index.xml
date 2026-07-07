@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>REPORT_LOG_PARAMETER on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/report_log_parameter/</link>
+		<description>Recent content in REPORT_LOG_PARAMETER on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 29 Nov 2016 20:57:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/report_log_parameter/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Emailing Reports to Users on a Business Event</title>
+				<link>http://localhost:1313/posts/emailing-reports-to-users-on-a-business-event/</link>
+				<pubDate>Tue, 29 Nov 2016 20:57:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/emailing-reports-to-users-on-a-business-event/</guid>
+				<description>&lt;p&gt;There can be requirements where we want to send report as attachment to a user. We can configure that with below steps in OTM.&lt;/p&gt;&#xA;&lt;p&gt;In this example, suppose that we want to generate a custom report after shipment tender is accepted and send this report to contact on the PO or user who created the PO.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; Create a Report Set and include your report.&lt;br&gt;&#xA;Business Process Automation &amp;gt; Reporting &amp;gt; Report Manager &amp;gt; Report Set Manager&lt;br&gt;&#xA;You may add multiple report to the report set as required.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

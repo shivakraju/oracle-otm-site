@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Rate Offering on Learn Oracle OTM</title>
+		<link>http://localhost:1313/tags/rate-offering/</link>
+		<description>Recent content in Rate Offering on Learn Oracle OTM</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 22 Aug 2020 04:43:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/rate-offering/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>OTM Contract &amp; Rate Management Data Structure</title>
+				<link>http://localhost:1313/posts/otm-contract-rate-management-data-structure/</link>
+				<pubDate>Fri, 06 May 2016 17:29:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/otm-contract-rate-management-data-structure/</guid>
+				<description>&lt;p&gt;Service Provider&lt;/p&gt;&#xA;&lt;p&gt;Service Provider/Carrier is the party who provides transportation services. Service Providers typically own the trucks, equipment(containers), trailers, other resources like drivers, etc. They receive tender offer request from customers specifying the freight details(source location, destination location, weight and volume, shipment date ranges - start time, end time, etc). Once shipment is delivered, they issue invoice to the customer for freight cost settlements.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Tables:&lt;/strong&gt;&lt;br&gt;&#xA;SCAC - every Service Provider in OTM should be associated with a SCAC code - usually a four letter code standard code associated with that Carrier&lt;br&gt;&#xA;SERVPROV - Service Provider details like Service Provider name, SCAC code, transport modes, cost allocation rules, invoice approval rules, etc. A LOCATION record is also created for every SERVPROV record.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>03 - Service Provider and Rates</title>
+				<link>http://localhost:1313/posts/basic-otm-configurations-03-service-provider-and-rates/</link>
+				<pubDate>Sat, 22 Aug 2020 04:43:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/basic-otm-configurations-03-service-provider-and-rates/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/&#34;&gt;01 - Domain, Items, Locations, and Equipment&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Service Provider (Carrier):&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Define two service providers with their SCAC codes and country code as USA as shown below:&lt;/p&gt;&#xA;&lt;p&gt;Contract and Rate Management &amp;gt; Service Provider Manager:&lt;/p&gt;&#xA;&lt;blockquote class=&#39;book-hint &#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/basic-otm-configurations-03-se-img1-d84a74c0db.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;&lt;strong&gt;Rates:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Create new Rate Offering that details high level contract details between your organization and service providers like type of offering(TL,LTL, PARCEL, etc.), Rate Service, Rate Distance, etc.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
