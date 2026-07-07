@@ -1,24 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Agent Gates on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/agent-gates/</link>
-		<description>Recent content in Agent Gates on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sun, 15 Feb 2026 17:29:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/agent-gates/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Agent Gates</title>
-				<link>http://localhost:1313/posts/agent-gates/</link>
-				<pubDate>Sun, 15 Feb 2026 17:29:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/agent-gates/</guid>
-				<description>&lt;p&gt;&lt;strong&gt;Navigation:&lt;/strong&gt; Business Process Automation &amp;gt; Power Data &amp;gt; Event Management &amp;gt; Agent Gates&lt;/p&gt;&#xA;&lt;p&gt;Agent Gates can be used to add custom conditions via saved query to control standard OTM events/worfklows. Agent Gates work at domain level.&lt;/p&gt;&#xA;&lt;p&gt;Validation can be either used to extend standard validations or completely replace standard validations. If validation fails, standard workflow stops.&lt;/p&gt;&#xA;&lt;p&gt;For example, you can stop tender worklfow for specific transport modes using below configurations:&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Agent Gates on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/agent-gates/</link><description>Recent content in Agent Gates on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 15 Feb 2026 17:29:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/agent-gates/index.xml" rel="self" type="application/rss+xml"/><item><title>Agent Gates</title><link>https://shivakraju.github.io/oracle-otm-site/posts/agent-gates/</link><pubDate>Sun, 15 Feb 2026 17:29:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/agent-gates/</guid><description>&lt;p&gt;&lt;strong&gt;Navigation:&lt;/strong&gt; Business Process Automation &amp;gt; Power Data &amp;gt; Event Management &amp;gt; Agent Gates&lt;/p&gt;
+&lt;p&gt;Agent Gates can be used to add custom conditions via saved query to control standard OTM events/worfklows. Agent Gates work at domain level.&lt;/p&gt;
+&lt;p&gt;Validation can be either used to extend standard validations or completely replace standard validations. If validation fails, standard workflow stops.&lt;/p&gt;
+&lt;p&gt;For example, you can stop tender worklfow for specific transport modes using below configurations:&lt;/p&gt;</description></item></channel></rss>

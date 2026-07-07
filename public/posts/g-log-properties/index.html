@@ -1,1222 +1,323 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Note: This post is applicable for OTM ver 6.x and below.
+<!doctype html><html lang=en dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Note: This post is applicable for OTM ver 6.x and below.
 G-Log Properties on the OTM App and Web server have the configurations that control the interactions between OTM App, Web and Database tiers. They also have configurable properties for the application like number of results to display on search screens, etc.
 Always take backup of current file, before changing these properties because this file is critical and used by the application during re-boot. Any corruption to this file would result in issues with application behavior.
-">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/g-log-properties/">
-	<meta property="og:site_name" content="Learn Oracle OTM">
-	<meta property="og:title" content="G-Log Properties">
-	<meta property="og:description" content="Note: This post is applicable for OTM ver 6.x and below.
+"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#2e3440"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://shivakraju.github.io/oracle-otm-site/posts/g-log-properties/"><meta property="og:site_name" content="Learn Oracle OTM"><meta property="og:title" content="G-Log Properties"><meta property="og:description" content="Note: This post is applicable for OTM ver 6.x and below.
 G-Log Properties on the OTM App and Web server have the configurations that control the interactions between OTM App, Web and Database tiers. They also have configurable properties for the application like number of results to display on search screens, etc.
-Always take backup of current file, before changing these properties because this file is critical and used by the application during re-boot. Any corruption to this file would result in issues with application behavior.">
-	<meta property="og:locale" content="en">
-	<meta property="og:type" content="article">
-		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2017-08-13T21:22:00+00:00">
-		<meta property="article:modified_time" content="2017-08-13T21:22:00+00:00">
-		<meta property="article:tag" content="G-Log Properties">
-		<meta property="article:tag" content="Config">
-
-
-	<meta itemprop="name" content="G-Log Properties">
-	<meta itemprop="description" content="Note: This post is applicable for OTM ver 6.x and below.
+Always take backup of current file, before changing these properties because this file is critical and used by the application during re-boot. Any corruption to this file would result in issues with application behavior."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-08-13T21:22:00+00:00"><meta property="article:modified_time" content="2017-08-13T21:22:00+00:00"><meta property="article:tag" content="G-Log Properties"><meta property="article:tag" content="Config"><meta itemprop=name content="G-Log Properties"><meta itemprop=description content="Note: This post is applicable for OTM ver 6.x and below.
 G-Log Properties on the OTM App and Web server have the configurations that control the interactions between OTM App, Web and Database tiers. They also have configurable properties for the application like number of results to display on search screens, etc.
-Always take backup of current file, before changing these properties because this file is critical and used by the application during re-boot. Any corruption to this file would result in issues with application behavior.">
-	<meta itemprop="datePublished" content="2017-08-13T21:22:00+00:00">
-	<meta itemprop="dateModified" content="2017-08-13T21:22:00+00:00">
-	<meta itemprop="wordCount" content="1297">
-	<meta itemprop="keywords" content="G-Log Properties,Config">
-
-<title>G-Log Properties • Learn Oracle OTM</title>
-<link rel="icon" href="/favicon.png" >
-<link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/posts/g-log-properties/">
-<link rel="stylesheet" href="/book.min.0bc2ccea40da58d619c260c3cbe79c1f9c2ba0b7dc521a7fb7987f26000c9757.css" integrity="sha256-C8LM6kDaWNYZwmDDy&#43;ecH5wroLfcUhp/t5h/JgAMl1c=" crossorigin="anonymous">
-
-
-  <script defer type="module" src="/en.search.min.16d05727d2808ad79a71df07fc9b22b467aae8da71e28126262f393ea7428605.js" integrity="sha256-FtBXJ9KAiteacd8H/JsitGeq6Npx4oEmJi85PqdChgU=" crossorigin="anonymous"></script>
-
-  
-</head>
-<body dir="ltr" class="book-kind-page book-type-posts">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
-    
-<aside class="book-menu">
-  <div class="book-menu-content">
-    
-  <nav>
-<h2 class="book-brand">
-  <a class="flex align-center" href="/"><span>Learn Oracle OTM</span>
-  </a>
-</h2>
-
-
-<div class="book-search hidden">
-  <input id="book-search-input" type="text" 
-    placeholder="Search"
-    aria-label="Search"
-    maxlength="64" />
-  <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-<script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
-
-
-
-
-
-
-
-
-
-  
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/what-is-otm/" class="">
-      What is OTM ?</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-logistics-terminology/" class="">
-      Basic Logistics terminology</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-architecture-this-is-applicable-for-on-premise-installations/" class="">
-      OTM Architecture</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-inbound-integrations-xml/" class="">
-      OTM Inbound Integrations (XML)</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-outbound-integrations/" class="">
-      OTM Outbound Integrations</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/csv-data-uploads/" class="">
-      CSV Data Uploads</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/posting-data-to-otm-using-http-request/" class="">
-      Posting Data to OTM using HTTP request</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-domains-standard-schema-and-data-dictionary/" class="">
-      OTM Domains, Standard Schema and Data Dictionary</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-order-management-data-structure/" class="">
-      OTM Order Management Data Structure</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-shipment-management-data-structure/" class="">
-      OTM Shipment Management Data Structure</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-contract-rate-management-data-structure/" class="">
-      OTM Contract &amp; Rate Management Data Structure</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/business-process-automation-data-structure/" class="">
-      Business Process Automation Data Structure</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/" class="">
-      01 - Domain, Items, Locations, and Equipment</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-02-itinerary/" class="">
-      02 - Itinerary</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-03-service-provider-and-rates/" class="">
-      03 - Service Provider and Rates</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-04-business-numbers-planning-parameter/" class="">
-      04 - Business Numbers, Planning Parameter</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-05-bulk-plan/" class="">
-      05 - Bulk Plan</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-06-tender-process/" class="">
-      06 - Tender process</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-07-invoicing/" class="">
-      07 - Invoicing</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-08-voucher-allocation/" class="">
-      08 - Voucher Allocation</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/saved-queriesconditions/" class="">
-      Saved Queries/Conditions</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/agents-frequently-used-actions/" class="">
-      Agents - Frequently Used Actions</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/agents-sample-agent-creation-steps/" class="">
-      Agents - Sample Agent Creation Steps</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/agents-agent-event-restrictions/" class="">
-      Agents - Agent Event Restrictions</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/agent-gates/" class="">
-      Agent Gates</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/business-monitors/" class="">
-      Business Monitors</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/business-numbers/" class="">
-      Business Numbers</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/report-development-sample-report/" class="">
-      Report Development - Sample Report</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/emailing-reports-to-users-on-a-business-event/" class="">
-      Emailing Reports to Users on a Business Event</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/report-workspaces/" class="">
-      Report Workspaces</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/manager-layouts-screen-sets-labels/" class="">
-      Manager Layouts, Screen Sets, Labels</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/flex-fields/" class="">
-      Flex fields</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/advanced-layouts/" class="">
-      Advanced Layouts</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/workbenches/" class="">
-      Workbenches</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/user-roles-vpd-and-access-control-lists/" class="">
-      User Roles - VPD and Access Control Lists</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/user-menu-and-manage-user-access/" class="">
-      User Menu and Manage User Access</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/service-provider-user-login-creation/" class="">
-      Service Provider User Login creation</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/refnums/" class="">
-      Refnums</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/status-types/" class="">
-      Status Types</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/action-checks/" class="">
-      Action Checks</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/custom-actions-smart-links/" class="">
-      Custom Actions &amp; Smart Links</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/yard-management-and-appointment-scheduling/" class="">
-      Yard Management and Appointment Scheduling</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-application-admin-notes/" class="">
-      OTM Application ADMIN Notes</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/oracle-dba-notes/" class="">
-      Oracle DBA notes</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/g-log-properties/" class="active">
-      G-Log Properties</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="sidebar-author">
-  <div class="sidebar-author-name">Shiva G (OTM Consultant)</div>
-  <img src="/images/author-profile.jpg" alt="Shiva G" class="sidebar-author-photo" />
-  <div class="sidebar-author-email">
-    <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
-  </div>
-</div>
-
-</nav>
-
-
-
-
-  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
-
-
-
-  </div>
-</aside>
- 
-
-    <div class="book-page">
-      <header class="book-header hidden">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
-  </label>
-
-  <h3>G-Log Properties</h3>
-
-  <label for="toc-control">
-    
-    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
-    
-  </label>
-</div>
-
-
-  
-  <aside class="hidden">
-    
-  
-<nav id="TableOfContents"></nav>
-<div class="site-notice-sidebar">
-  Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
-</div>
-
-
-
-  </aside>
-  
- 
-      </header>
-
-      
-      
-<article class="markdown book-post">
-  <h1>
-    G-Log Properties
-  </h1>
-  
-
-  <div class="book-post-content markdown-inner"><p><strong>Note:</strong> This post is applicable for OTM ver 6.x and below.</p>
-<p>G-Log Properties on the OTM App and Web server have the configurations that control the interactions between OTM App, Web and Database tiers. They also have configurable properties for the application like number of results to display on search screens, etc.</p>
-<p>Always take backup of current file, before changing these properties because this file is critical and used by the application during re-boot. Any corruption to this file would result in issues with application behavior.</p>
-<p><strong>To view the current properties from application:</strong></p>
-<p>Login to OTM application and in the URL use servlet &ldquo;glog.webserver.properties.PropertiesServlet&rdquo; as shown below:</p>
-<p>http://otm-server:7777/GC3/glog.webserver.properties.PropertiesServlet</p>
-<p>Click &lsquo;List&rsquo; button and you will see the current properties.</p>
-<p><strong>To modify the properties file:</strong></p>
-<p>On the app and web server switch to base folder($OTM_HOME) where OTM is installed and you find the file in below folder:</p>
-<p>$cd $OTM_HOME/glog/config</p>
-<p>Take backup of current file and update changes. You need to apply changes on both app and web server and restart the application for new changes to take effect.</p>
-<p>Sample file with important properties marked in RED:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#75715e">#####################################################################  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># G-Log Properties File for Both Web and App Server  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This property file holds the configurable settings for the  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># G-Log Web and App Servers (running on the same box). These  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># settings will override any settings in glog.webserver.properties,  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># glog.appserver.properties, glog.common.properties, and  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># glog.base.properties. These properties are initially set  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># by the install scripts, but can be modified to work with  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># your specific server. All G-Log property changes should be  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># made to this file, rather than the webserver, appserver,  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># common, or base property files.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#####################################################################  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># !!!!!!!!!!!!!!!!!!!!!!!!!!! IMPORTANT !!!!!!!!!!!!!!!!!!!!!!!!!!!!  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#-------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place all thread settings changes in the Custom Thread Properties  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># section at the end of this file.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#-------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place all other changes, new properties, and custom properties in  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># the Custom Properties section near the end of this file.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#-------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># These sections will be used by future installers during upgrades.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Properties that are outside this section will not be migrated.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#####################################################################  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Base Install Settings  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># GC3 version  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.software.version</span><span style="color:#f92672">=</span><span style="color:#e6db74">Otmv634  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.software.patch.version</span><span style="color:#f92672">=</span><span style="color:#e6db74">OTMv6.3.4  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.software.installtype</span><span style="color:#f92672">=</span><span style="color:#e6db74">WebAppServer  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.software.instancetype</span><span style="color:#f92672">=</span><span style="color:#e6db74">OTM  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># installation paths  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">gc3.dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/oracle/otm  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">gc3.config.dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">$gc3.dir$/glog/config  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">temp.dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">$gc3.dir$/temp  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># application server URL and port  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">appserver</span><span style="color:#f92672">=</span><span style="color:#e6db74">OTM-SERVER  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">appserver.port</span><span style="color:#f92672">=</span><span style="color:#e6db74">7001  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># application server type  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.app.server.name</span><span style="color:#f92672">=</span><span style="color:#e6db74">weblogic  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">appserver.protocol</span><span style="color:#f92672">=</span><span style="color:#e6db74">t3://  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># web server URL and port  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">webserver</span><span style="color:#f92672">=</span><span style="color:#e6db74">OTM-SERVER  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">webserver.port</span><span style="color:#f92672">=</span><span style="color:#e6db74">7777  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># web URL prefix - should be blank unless web server is behind a reverse-proxy server  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.webserver.urlprefix</span><span style="color:#f92672">=</span>  
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># web server URL (may differ from server name)  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.webserver.URL</span><span style="color:#f92672">=</span><span style="color:#e6db74">http://OTM-SERVER:7777$glog.webserver.urlprefix$  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## this should only be uncommented if running In-Memory Logistics Command Center  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.includes.lc2=true  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># db server URL and information  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">dbserver</span><span style="color:#f92672">=</span><span style="color:#e6db74">127.0.0.1  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.database.sid</span><span style="color:#f92672">=</span><span style="color:#e6db74">otmdb  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.database.connectstring</span><span style="color:#f92672">=</span><span style="color:#e6db74">otmdb  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.database.port</span><span style="color:#f92672">=</span><span style="color:#e6db74">1521  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.database.schema</span><span style="color:#f92672">=</span><span style="color:#e6db74">glogowner  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># LCC Controller only  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.otm.database.server=lccdb.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.otm.database.port=1521  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.otm.database.service=lccdb  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.otm.database.schema=lc2dba  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.otm.database.password={e  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.otm.database.commonPassword={e  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># the following should only be used as directed by OTM Support:  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#otm.db.url=   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">!includeIfSet $otm.db.url$,glog.rac.properties  </span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># db users and passwords  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">otm.db.user</span><span style="color:#f92672">=</span><span style="color:#e6db74">glogdba  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">otm.db.password</span><span style="color:#f92672">=</span><span style="color:#e6db74">{eR0xPR0RCQQ==  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.database.load.user</span><span style="color:#f92672">=</span><span style="color:#e6db74">glogload  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.database.load.password</span><span style="color:#f92672">=</span><span style="color:#e6db74">{eR0xPR0xPQUQ=  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># oracle driver type should be &#34;Oracle&#34; for thin drivers or &#34;weblogic&#34; for oci drivers  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.database.default.poolDriver</span><span style="color:#f92672">=</span><span style="color:#e6db74">Oracle  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># default password storage setting (Encrypt/Text) - Note, changing this option also requires db changes  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.crypto.password.mode</span><span style="color:#f92672">=</span><span style="color:#e6db74">Encrypt  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># App-to-Web authentication  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.signedServlet.password</span><span style="color:#f92672">=</span><span style="color:#e6db74">{eQ0hBTkdFTUU=  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Log Settings  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># turn logging on or off  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.log.on</span><span style="color:#f92672">=</span><span style="color:#e6db74">false  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># path to log file(s)  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.log.dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">$gc3.dir$/logs  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.log.file.defaultLog.filepath</span><span style="color:#f92672">=</span><span style="color:#e6db74">$gc3.dir$/logs/glog.default.log  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># maximum size of log files (bytes)  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.log.maxsize</span><span style="color:#f92672">=</span><span style="color:#e6db74">10000000  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># maximum number of log backup files  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.log.backups</span><span style="color:#f92672">=</span><span style="color:#e6db74">10  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Web Server Settings  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">document.root</span><span style="color:#f92672">=</span><span style="color:#e6db74">$gc3.dir$/web/htdocs  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># maximum number of results returned by port/airport finder, optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.webserver.portresults.count</span><span style="color:#f92672">=</span><span style="color:#e6db74">100  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># maximum number of results returned by giv, optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.webserver.givresults.count</span><span style="color:#f92672">=</span><span style="color:#e6db74">100   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># webservices  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">appserver.port.webservice.weblogic</span><span style="color:#f92672">=</span><span style="color:#e6db74">$appserver.port$  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># OHS settings  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ohs.config.dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/oracle/Middleware/Oracle_WT1/instances/instance1/config/OHS/ohs1  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ohs.diagnostics.dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/oracle/Middleware/Oracle_WT1/instances/instance1/diagnostics/logs/OHS/ohs1  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Replicated Operational Database (ROD) - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#ods_feature=true  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.ods.dbserver=otmodsdb.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.database.ods.sid=otmodsdb  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.ods.connectstring=otmodsdb  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.ods.database.port=1521  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.database.ods.schema=glogowner  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Fusion Transportation Intelligence (FTI) - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#aa_webserver=http://otmfti.company.com:7001  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#ALLOW_ADVANCED_ANALYTICS=true  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.fti.dbserver=otmftidb.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.fti.database.port=1521  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.fti.database.schema=hdowner  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.database.fti.sid=otmrod01  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.database.fti.user=hdowner  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.database.fti.password={e  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.fti.connectstring=jdbc:oracle:thin:@$glog.fti.dbserver$:$glog.fti.database.port$  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.security.userSession.enabled=true  </span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Oracle Data Integrator (ODI); for use with FTI - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.odi.agent.server=otmodiagent.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.odi.agent.port=20910  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.odi.password={e  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.odi.work.repository.code=FTI_WORK  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Oracle MapViewer server  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.mapServer=mapviewer.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.map.service_name=elocation_mercator  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.map.basemap=elocation_mercator.world_map  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Oracle Spatial server  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#OracleSpatial.host=spatial.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#OracleSpatial.port=7777  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#OracleSpatial.US_Canada.routeServlet=/routeserver/servlet/RouteServerServlet   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#OracleSpatial.WesternEurope.routeServlet=/routeserver_eu/servlet/RouteServerServlet   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#OracleSpatial.geocodeServlet=/geocoder/gcserver  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## URLStreamHandler Class for Outbound HTTPS - uncomment for AIX or WebSphere  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.https.urlStreamHandlerClass=com.ibm.net.ssl.www.protocol.https.Handler  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## LCC Analytics  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.obiee.analytics.server.protocol=http  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.obiee.analytics.server.host=lccanalytics.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.obiee.analytics.server.port=9704  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.odi.agent.server=lccodi.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.odi.agent.port=20910  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.odi.password={e  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#lc2.odi.work.repository.code=LC2_WORK  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## LCC Pool Server SSO  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.security.sso=true  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.security.sso.appUidLocation=3  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># App Server Settings  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># scalability settings  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.scalability.on</span><span style="color:#f92672">=</span><span style="color:#e6db74">false  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.log.ID.JMS.on</span><span style="color:#f92672">=</span><span style="color:#e6db74">false  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.log.ID.Scalability.on</span><span style="color:#f92672">=</span><span style="color:#e6db74">false  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.scalability.thisTarget</span><span style="color:#f92672">=</span><span style="color:#e6db74">gc3-OTM-SERVER  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.scalability.thisMachine</span><span style="color:#f92672">=</span><span style="color:#e6db74">DEFAULT  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.scalability.thisMachineURL</span><span style="color:#f92672">=</span><span style="color:#e6db74">$appserver.protocol$$appserver$:$appserver.port$  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.scalability.defaultServer</span><span style="color:#f92672">=</span><span style="color:#e6db74">DEFAULT  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.scalability.defaultMachineURL</span><span style="color:#f92672">=</span><span style="color:#e6db74">$appserver.protocol$$appserver$:$appserver.port$  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.scalability.defaultMachine</span><span style="color:#f92672">=</span><span style="color:#e6db74">DEFAULT  </span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># list of avaliable app servers to poll for network topology - used only by web server. one per line.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">!remove glog.scalability.topologyMachineURL  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.scalability.topologyMachineURL</span><span style="color:#f92672">=</span><span style="color:#e6db74">$appserver.protocol$$appserver$:$appserver.port$  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.scalability.topologyMachineURL=&lt;additional app server&gt;  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># list of available web servers  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">!remove glog.scalability.web.topologyMachineURL  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.scalability.web.topologyMachineURL</span><span style="color:#f92672">=</span><span style="color:#e6db74">http://$webserver$:$webserver.port$  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.scalability.web.topologyMachineURL=&lt;additional web server&gt;  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># mail settings  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.mail.smtp.host</span><span style="color:#f92672">=</span><span style="color:#e6db74">mail.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.workflow.notify.defaultSmtphost</span><span style="color:#f92672">=</span><span style="color:#e6db74">mail.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.mail.images</span><span style="color:#f92672">=</span><span style="color:#e6db74">$glog.webserver.URL$/images/mail  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># settings for fixed property change log  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.properties.log.file</span><span style="color:#f92672">=</span><span style="color:#e6db74">$glog.log.dir$/properties.log  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># mail settings for property change notifications (these properties are   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># reserved and cannot be changed via the Property Set Manager  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.properties.log.email.host</span><span style="color:#f92672">=</span><span style="color:#e6db74">mail.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.properties.log.email.from</span><span style="color:#f92672">=</span><span style="color:#e6db74">OtmAdvisor@company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># workflow settings  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.workflow.notify.advisor.name</span><span style="color:#f92672">=</span><span style="color:#e6db74">G-Log Advisor  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.workflow.notify.advisor.email</span><span style="color:#f92672">=</span><span style="color:#e6db74">OtmAdvisor@company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.workflow.notify.advisor.fax</span><span style="color:#f92672">=</span><span style="color:#e6db74">555-555-1212  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## FaxMaker Settings - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.workflow.notify.faxmaker.email=fax@company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## RightFax Settings - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.fax.defaultHandler.routingMode=to  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.fax.defaultHandler.routingPicture=/name={lastName},{firstName}/fax={rawPhone}/  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.fax.email=fax@company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## external integration settings  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.URLtoSendBills=http://&lt;server_name&gt;/servlets/&lt;ClassNameOfServletThatReceivesFinancialRelatedXML&gt;  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.URLtoSendVouchers=http://&lt;server_name&gt;/servlets/&lt;ClassNameOfServletThatReceivesFinancialRelatedXML&gt;  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## external SMC Rateware - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.RatingEngine.Rateware.URL=rateware.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.RatingEngine.Rateware.Port=23700  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## external SMC RateWare Version 1.2.325 (or later) or SMC Carrier Connect  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.RatingEngine.Rateware.NewAPI=true  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## external SMC RatewareXL - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.RatingEngine.RatewareXL.Username=  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.RatingEngine.RatewareXL.Password=  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.RatingEngine.RatewareXL.License=  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## external PCMiler/PCMiler Streets - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#pcmiler.host=pcmiler.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#pcmiler.port=8145  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## external PCMiler Rail - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#pcmiler.rail.host=pcmiler-rail.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#pcmiler.rail.port=2001  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## external Rand McNally - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#intelliroute.host=127.0.0.1  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#intelliroute.port=1998  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#intelliroute.user=otm  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#intelliroute.password=changeme  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#intelliroute.location=company  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## external MileMaker - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#milemaker.host=milemaker.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#milemaker.port=1031  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## external Kewill FlagShip - optional  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.RatingEngine.Kewill.URL=kewill.company.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.RatingEngine.Kewill.Port=1200  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.RatingEngine.Kewill.RefnumQual=KEWILL_CUST_NUM   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Transmission Error properties -- can help in debugging inbound  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># transmission errors  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This property specifies if the response is a StackTrace or TransmissionAck  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.servlet.TransmissionStageError.elementName = StackTrace  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This property indicates if the full Transmission is sent back  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.servlet.TransmissionStageError.includeTransmissionText = false  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This controls how the elements are formatted [comment|CDATA|normal]  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.schema.element.StackTrace = comment  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.schema.element.TransmissionText = comment  </span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># The following properties specify if an email should be sent and to whom  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.servlet.TransmissionStageError.sendErrorEmail = false  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.servlet.TransmissionStageError.errorEmailTo =  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.servlet.TransmissionStageError.errorEmailFrom =  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.servlet.TransmissionStageError.errorEmailSubject = Transmission XML Stage Error  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.servlet.TransmissionStageError.errorEmailSmtpHost =  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Custom Properties - Beginning  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place all changes, new properties, and custom properties here.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This section will be used during GC3 Upgrades  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Note that Property Sets WEB_CUSTOM, APP_CUSTOM and APP_WORKFLOW_THREADING  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># can be used to specify custom properties via the OTM Property Set Manager  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># screen. Only changes to reserved properties must be entered here.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This property should be uncommented and repeated for every e-mail   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># requiring notification of property changes.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.properties.log.email.recipients=recipient1@domain.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.properties.log.email.recipients=recipient2@domain.com  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Custom Properties - End  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Default EBS Properties  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#!include ebs.properties  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Default E1 Intergration Properties  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.enableCaseChange=true  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.integration.printXmlDeclaration=true  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.workflow.topic.OrderLatestEstDeliveryDateSync.suppresslifetime=false   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Default Web Server Properties  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This directive allows for the use of Property Set WEB_CUSTOM to manage   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># custom properties for the web-tier. This property set is stored in the   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># OTM database and is accessible through the Property Set manager within OTM.   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Comment this out to disable this data-driven property set  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">!propertySet WEB_CUSTOM,sibling   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">!include glog.webserver.properties  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Default App Server Properties  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This directive allows for the use of Property Set APP_CUSTOM to manage   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># custom properties for the application tier. This property set is stored in the   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># OTM database and is accessible through the Property Set manager within OTM.   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Comment this out to disable this data-driven property set.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">!propertySet APP_CUSTOM,sibling  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">!include glog.appserver.properties  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Turn off Workflow persistence  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.workflow.persistent.reboot</span><span style="color:#f92672">=</span><span style="color:#e6db74">false  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">!remove glog.workflow.persistent.classes  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Thread model (should only be set to &#39;on&#39; for WebSphere installs)  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">glog.util.commonj.threadModel.appServer</span><span style="color:#f92672">=</span><span style="color:#e6db74">off  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># compensate for WebSphere issues  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#glog.vpd.cacheMode.profileTagging=pool  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Custom Thread Properties - Beginning  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Place all thread changes and properties here.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This section will be used during GC3 Upgrades  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This directive allows for the use of Property Set APP_WORKFLOW_THREADING to manage   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># workflow groups and their thread counts. This property set is stored in the   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># OTM database and is accessible through the Property Set manager within OTM.   </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Comment this out to disable this data-driven property set.  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">!propertySet APP_WORKFLOW_THREADING,sibling  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Custom Thread Properties - End  </span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#--------------------------------------------------------------------</span></span></span></code></pre></div></div>
-</article>
- 
-      
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-  <div>
-  
-    <a href="/posts/oracle-dba-notes/" class="flex align-center">
-      <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
-      <span>Oracle DBA notes</span>
-    </a>
-  
-  </div>
-  <div>
-  
-  </div>
-</div>
- 
-        
-  
-  <div class="book-comments">
-
-</div>
-  
- 
-        
-        
-  
- 
-        
-  
-    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
-  
-
-      </footer>
-
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
-
-    
-  
-  <aside class="book-toc">
-    <div class="book-toc-content">
-      
-  
-<nav id="TableOfContents"></nav>
-<div class="site-notice-sidebar">
-  Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
-</div>
-
-
-
-    </div>
-  </aside>
-  
- 
-  </main>
-
-  <script>
-  
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  
-  document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && (
-      e.key === 'c' || e.key === 'C' ||
-      e.key === 'a' || e.key === 'A' ||
-      e.key === 'u' || e.key === 'U' ||
-      e.key === 's' || e.key === 'S' ||
-      e.key === 'p' || e.key === 'P'
-    )) {
-      e.preventDefault();
-    }
-  });
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Always take backup of current file, before changing these properties because this file is critical and used by the application during re-boot. Any corruption to this file would result in issues with application behavior."><meta itemprop=datePublished content="2017-08-13T21:22:00+00:00"><meta itemprop=dateModified content="2017-08-13T21:22:00+00:00"><meta itemprop=wordCount content="1297"><meta itemprop=keywords content="G-Log Properties,Config"><title>G-Log Properties • Learn Oracle OTM</title><link rel=icon href=/oracle-otm-site/favicon.png><link rel=manifest href=/oracle-otm-site/manifest.json><link rel=canonical href=https://shivakraju.github.io/oracle-otm-site/posts/g-log-properties/><link rel=stylesheet href=/oracle-otm-site/book.min.0bc2ccea40da58d619c260c3cbe79c1f9c2ba0b7dc521a7fb7987f26000c9757.css integrity="sha256-C8LM6kDaWNYZwmDDy+ecH5wroLfcUhp/t5h/JgAMl1c=" crossorigin=anonymous><script defer type=module src=/oracle-otm-site/en.search.min.09aeb41c7f6f02dbe96e4062f834a366b509b19a0e31a2ec0653b2099fd9d0a2.js integrity="sha256-Ca60HH9vAtvpbkBi+DSjZrUJsZoOMaLsBlOyCZ/Z0KI=" crossorigin=anonymous></script></head><body dir=ltr class="book-kind-page book-type-posts"><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/oracle-otm-site/><span>Learn Oracle OTM</span></a></h2><div class="book-search hidden"><input id=book-search-input type=text placeholder=Search aria-label=Search maxlength=64><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><a href=/oracle-otm-site/posts/what-is-otm/>What is OTM ?</a></li><li><a href=/oracle-otm-site/posts/basic-logistics-terminology/>Basic Logistics terminology</a></li><li><a href=/oracle-otm-site/posts/otm-architecture-this-is-applicable-for-on-premise-installations/>OTM Architecture</a></li><li><a href=/oracle-otm-site/posts/otm-inbound-integrations-xml/>OTM Inbound Integrations (XML)</a></li><li><a href=/oracle-otm-site/posts/otm-outbound-integrations/>OTM Outbound Integrations</a></li><li><a href=/oracle-otm-site/posts/csv-data-uploads/>CSV Data Uploads</a></li><li><a href=/oracle-otm-site/posts/posting-data-to-otm-using-http-request/>Posting Data to OTM using HTTP request</a></li><li><a href=/oracle-otm-site/posts/otm-domains-standard-schema-and-data-dictionary/>OTM Domains, Standard Schema and Data Dictionary</a></li><li><a href=/oracle-otm-site/posts/otm-order-management-data-structure/>OTM Order Management Data Structure</a></li><li><a href=/oracle-otm-site/posts/otm-shipment-management-data-structure/>OTM Shipment Management Data Structure</a></li><li><a href=/oracle-otm-site/posts/otm-contract-rate-management-data-structure/>OTM Contract & Rate Management Data Structure</a></li><li><a href=/oracle-otm-site/posts/business-process-automation-data-structure/>Business Process Automation Data Structure</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/>01 - Domain, Items, Locations, and Equipment</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-02-itinerary/>02 - Itinerary</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-03-service-provider-and-rates/>03 - Service Provider and Rates</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-04-business-numbers-planning-parameter/>04 - Business Numbers, Planning Parameter</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-05-bulk-plan/>05 - Bulk Plan</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-06-tender-process/>06 - Tender process</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-07-invoicing/>07 - Invoicing</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-08-voucher-allocation/>08 - Voucher Allocation</a></li><li><a href=/oracle-otm-site/posts/saved-queriesconditions/>Saved Queries/Conditions</a></li><li><a href=/oracle-otm-site/posts/agents-frequently-used-actions/>Agents - Frequently Used Actions</a></li><li><a href=/oracle-otm-site/posts/agents-sample-agent-creation-steps/>Agents - Sample Agent Creation Steps</a></li><li><a href=/oracle-otm-site/posts/agents-agent-event-restrictions/>Agents - Agent Event Restrictions</a></li><li><a href=/oracle-otm-site/posts/agent-gates/>Agent Gates</a></li><li><a href=/oracle-otm-site/posts/business-monitors/>Business Monitors</a></li><li><a href=/oracle-otm-site/posts/business-numbers/>Business Numbers</a></li><li><a href=/oracle-otm-site/posts/report-development-sample-report/>Report Development - Sample Report</a></li><li><a href=/oracle-otm-site/posts/emailing-reports-to-users-on-a-business-event/>Emailing Reports to Users on a Business Event</a></li><li><a href=/oracle-otm-site/posts/report-workspaces/>Report Workspaces</a></li><li><a href=/oracle-otm-site/posts/manager-layouts-screen-sets-labels/>Manager Layouts, Screen Sets, Labels</a></li><li><a href=/oracle-otm-site/posts/flex-fields/>Flex fields</a></li><li><a href=/oracle-otm-site/posts/advanced-layouts/>Advanced Layouts</a></li><li><a href=/oracle-otm-site/posts/workbenches/>Workbenches</a></li><li><a href=/oracle-otm-site/posts/user-roles-vpd-and-access-control-lists/>User Roles - VPD and Access Control Lists</a></li><li><a href=/oracle-otm-site/posts/user-menu-and-manage-user-access/>User Menu and Manage User Access</a></li><li><a href=/oracle-otm-site/posts/service-provider-user-login-creation/>Service Provider User Login creation</a></li><li><a href=/oracle-otm-site/posts/refnums/>Refnums</a></li><li><a href=/oracle-otm-site/posts/status-types/>Status Types</a></li><li><a href=/oracle-otm-site/posts/action-checks/>Action Checks</a></li><li><a href=/oracle-otm-site/posts/custom-actions-smart-links/>Custom Actions & Smart Links</a></li><li><a href=/oracle-otm-site/posts/yard-management-and-appointment-scheduling/>Yard Management and Appointment Scheduling</a></li><li><a href=/oracle-otm-site/posts/otm-application-admin-notes/>OTM Application ADMIN Notes</a></li><li><a href=/oracle-otm-site/posts/oracle-dba-notes/>Oracle DBA notes</a></li><li><a href=/oracle-otm-site/posts/g-log-properties/ class=active>G-Log Properties</a></li></ul><div class=sidebar-author><div class=sidebar-author-name>Shiva G (OTM Consultant)</div><img src=/images/author-profile.jpg alt="Shiva G" class=sidebar-author-photo><div class=sidebar-author-email><a href=mailto:learnotm@outlook.com>learnotm@outlook.com</a></div></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class="book-header hidden"><div class="flex align-center justify-between"><label for=menu-control><img src=/oracle-otm-site/icons/menu.svg class=book-icon alt=Menu></label><h3>G-Log Properties</h3><label for=toc-control><img src=/oracle-otm-site/icons/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class=hidden><nav id=TableOfContents></nav><div class=site-notice-sidebar>Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href=mailto:learnotm@outlook.com>learnotm@outlook.com</a></div></aside></header><article class="markdown book-post"><h1>G-Log Properties</h1><div class="book-post-content markdown-inner"><p><strong>Note:</strong> This post is applicable for OTM ver 6.x and below.</p><p>G-Log Properties on the OTM App and Web server have the configurations that control the interactions between OTM App, Web and Database tiers. They also have configurable properties for the application like number of results to display on search screens, etc.</p><p>Always take backup of current file, before changing these properties because this file is critical and used by the application during re-boot. Any corruption to this file would result in issues with application behavior.</p><p><strong>To view the current properties from application:</strong></p><p>Login to OTM application and in the URL use servlet &ldquo;glog.webserver.properties.PropertiesServlet&rdquo; as shown below:</p><p>http://otm-server:7777/GC3/glog.webserver.properties.PropertiesServlet</p><p>Click &lsquo;List&rsquo; button and you will see the current properties.</p><p><strong>To modify the properties file:</strong></p><p>On the app and web server switch to base folder($OTM_HOME) where OTM is installed and you find the file in below folder:</p><p>$cd $OTM_HOME/glog/config</p><p>Take backup of current file and update changes. You need to apply changes on both app and web server and restart the application for new changes to take effect.</p><p>Sample file with important properties marked in RED:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-properties data-lang=properties><span style=display:flex><span><span style=color:#75715e>#####################################################################  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># G-Log Properties File for Both Web and App Server  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># This property file holds the configurable settings for the  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># G-Log Web and App Servers (running on the same box). These  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># settings will override any settings in glog.webserver.properties,  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># glog.appserver.properties, glog.common.properties, and  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># glog.base.properties. These properties are initially set  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># by the install scripts, but can be modified to work with  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># your specific server. All G-Log property changes should be  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># made to this file, rather than the webserver, appserver,  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># common, or base property files.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#####################################################################  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># !!!!!!!!!!!!!!!!!!!!!!!!!!! IMPORTANT !!!!!!!!!!!!!!!!!!!!!!!!!!!!  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#-------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Place all thread settings changes in the Custom Thread Properties  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># section at the end of this file.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#-------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Place all other changes, new properties, and custom properties in  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># the Custom Properties section near the end of this file.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#-------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># These sections will be used by future installers during upgrades.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Properties that are outside this section will not be migrated.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#####################################################################  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Base Install Settings  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># GC3 version  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.software.version</span><span style=color:#f92672>=</span><span style=color:#e6db74>Otmv634  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.software.patch.version</span><span style=color:#f92672>=</span><span style=color:#e6db74>OTMv6.3.4  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.software.installtype</span><span style=color:#f92672>=</span><span style=color:#e6db74>WebAppServer  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.software.instancetype</span><span style=color:#f92672>=</span><span style=color:#e6db74>OTM  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># installation paths  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>gc3.dir</span><span style=color:#f92672>=</span><span style=color:#e6db74>/home/oracle/otm  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>gc3.config.dir</span><span style=color:#f92672>=</span><span style=color:#e6db74>$gc3.dir$/glog/config  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>temp.dir</span><span style=color:#f92672>=</span><span style=color:#e6db74>$gc3.dir$/temp  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># application server URL and port  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>appserver</span><span style=color:#f92672>=</span><span style=color:#e6db74>OTM-SERVER  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>appserver.port</span><span style=color:#f92672>=</span><span style=color:#e6db74>7001  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># application server type  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.app.server.name</span><span style=color:#f92672>=</span><span style=color:#e6db74>weblogic  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>appserver.protocol</span><span style=color:#f92672>=</span><span style=color:#e6db74>t3://  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># web server URL and port  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>webserver</span><span style=color:#f92672>=</span><span style=color:#e6db74>OTM-SERVER  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>webserver.port</span><span style=color:#f92672>=</span><span style=color:#e6db74>7777  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># web URL prefix - should be blank unless web server is behind a reverse-proxy server  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.webserver.urlprefix</span><span style=color:#f92672>=</span>  
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># web server URL (may differ from server name)  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.webserver.URL</span><span style=color:#f92672>=</span><span style=color:#e6db74>http://OTM-SERVER:7777$glog.webserver.urlprefix$  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## this should only be uncommented if running In-Memory Logistics Command Center  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.includes.lc2=true  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># db server URL and information  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>dbserver</span><span style=color:#f92672>=</span><span style=color:#e6db74>127.0.0.1  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.database.sid</span><span style=color:#f92672>=</span><span style=color:#e6db74>otmdb  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.database.connectstring</span><span style=color:#f92672>=</span><span style=color:#e6db74>otmdb  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.database.port</span><span style=color:#f92672>=</span><span style=color:#e6db74>1521  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.database.schema</span><span style=color:#f92672>=</span><span style=color:#e6db74>glogowner  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># LCC Controller only  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.otm.database.server=lccdb.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.otm.database.port=1521  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.otm.database.service=lccdb  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.otm.database.schema=lc2dba  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.otm.database.password={e  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.otm.database.commonPassword={e  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># the following should only be used as directed by OTM Support:  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#otm.db.url=   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>!includeIfSet $otm.db.url$,glog.rac.properties  </span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># db users and passwords  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>otm.db.user</span><span style=color:#f92672>=</span><span style=color:#e6db74>glogdba  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>otm.db.password</span><span style=color:#f92672>=</span><span style=color:#e6db74>{eR0xPR0RCQQ==  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.database.load.user</span><span style=color:#f92672>=</span><span style=color:#e6db74>glogload  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.database.load.password</span><span style=color:#f92672>=</span><span style=color:#e6db74>{eR0xPR0xPQUQ=  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># oracle driver type should be &#34;Oracle&#34; for thin drivers or &#34;weblogic&#34; for oci drivers  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.database.default.poolDriver</span><span style=color:#f92672>=</span><span style=color:#e6db74>Oracle  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># default password storage setting (Encrypt/Text) - Note, changing this option also requires db changes  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.crypto.password.mode</span><span style=color:#f92672>=</span><span style=color:#e6db74>Encrypt  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># App-to-Web authentication  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.signedServlet.password</span><span style=color:#f92672>=</span><span style=color:#e6db74>{eQ0hBTkdFTUU=  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Log Settings  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># turn logging on or off  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.log.on</span><span style=color:#f92672>=</span><span style=color:#e6db74>false  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># path to log file(s)  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.log.dir</span><span style=color:#f92672>=</span><span style=color:#e6db74>$gc3.dir$/logs  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.log.file.defaultLog.filepath</span><span style=color:#f92672>=</span><span style=color:#e6db74>$gc3.dir$/logs/glog.default.log  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># maximum size of log files (bytes)  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.log.maxsize</span><span style=color:#f92672>=</span><span style=color:#e6db74>10000000  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># maximum number of log backup files  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.log.backups</span><span style=color:#f92672>=</span><span style=color:#e6db74>10  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Web Server Settings  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>document.root</span><span style=color:#f92672>=</span><span style=color:#e6db74>$gc3.dir$/web/htdocs  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># maximum number of results returned by port/airport finder, optional  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.webserver.portresults.count</span><span style=color:#f92672>=</span><span style=color:#e6db74>100  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># maximum number of results returned by giv, optional  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.webserver.givresults.count</span><span style=color:#f92672>=</span><span style=color:#e6db74>100   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># webservices  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>appserver.port.webservice.weblogic</span><span style=color:#f92672>=</span><span style=color:#e6db74>$appserver.port$  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># OHS settings  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ohs.config.dir</span><span style=color:#f92672>=</span><span style=color:#e6db74>/home/oracle/Middleware/Oracle_WT1/instances/instance1/config/OHS/ohs1  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>ohs.diagnostics.dir</span><span style=color:#f92672>=</span><span style=color:#e6db74>/home/oracle/Middleware/Oracle_WT1/instances/instance1/diagnostics/logs/OHS/ohs1  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Replicated Operational Database (ROD) - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#ods_feature=true  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.ods.dbserver=otmodsdb.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.database.ods.sid=otmodsdb  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.ods.connectstring=otmodsdb  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.ods.database.port=1521  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.database.ods.schema=glogowner  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Fusion Transportation Intelligence (FTI) - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#aa_webserver=http://otmfti.company.com:7001  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#ALLOW_ADVANCED_ANALYTICS=true  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.fti.dbserver=otmftidb.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.fti.database.port=1521  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.fti.database.schema=hdowner  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.database.fti.sid=otmrod01  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.database.fti.user=hdowner  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.database.fti.password={e  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.fti.connectstring=jdbc:oracle:thin:@$glog.fti.dbserver$:$glog.fti.database.port$  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.security.userSession.enabled=true  </span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Oracle Data Integrator (ODI); for use with FTI - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.odi.agent.server=otmodiagent.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.odi.agent.port=20910  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.odi.password={e  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.odi.work.repository.code=FTI_WORK  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Oracle MapViewer server  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.mapServer=mapviewer.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.map.service_name=elocation_mercator  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.map.basemap=elocation_mercator.world_map  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Oracle Spatial server  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#OracleSpatial.host=spatial.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#OracleSpatial.port=7777  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#OracleSpatial.US_Canada.routeServlet=/routeserver/servlet/RouteServerServlet   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#OracleSpatial.WesternEurope.routeServlet=/routeserver_eu/servlet/RouteServerServlet   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#OracleSpatial.geocodeServlet=/geocoder/gcserver  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## URLStreamHandler Class for Outbound HTTPS - uncomment for AIX or WebSphere  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.https.urlStreamHandlerClass=com.ibm.net.ssl.www.protocol.https.Handler  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## LCC Analytics  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.obiee.analytics.server.protocol=http  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.obiee.analytics.server.host=lccanalytics.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.obiee.analytics.server.port=9704  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.odi.agent.server=lccodi.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.odi.agent.port=20910  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.odi.password={e  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#lc2.odi.work.repository.code=LC2_WORK  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## LCC Pool Server SSO  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.security.sso=true  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.security.sso.appUidLocation=3  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># App Server Settings  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># scalability settings  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.scalability.on</span><span style=color:#f92672>=</span><span style=color:#e6db74>false  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.log.ID.JMS.on</span><span style=color:#f92672>=</span><span style=color:#e6db74>false  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.log.ID.Scalability.on</span><span style=color:#f92672>=</span><span style=color:#e6db74>false  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.scalability.thisTarget</span><span style=color:#f92672>=</span><span style=color:#e6db74>gc3-OTM-SERVER  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.scalability.thisMachine</span><span style=color:#f92672>=</span><span style=color:#e6db74>DEFAULT  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.scalability.thisMachineURL</span><span style=color:#f92672>=</span><span style=color:#e6db74>$appserver.protocol$$appserver$:$appserver.port$  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.scalability.defaultServer</span><span style=color:#f92672>=</span><span style=color:#e6db74>DEFAULT  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.scalability.defaultMachineURL</span><span style=color:#f92672>=</span><span style=color:#e6db74>$appserver.protocol$$appserver$:$appserver.port$  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.scalability.defaultMachine</span><span style=color:#f92672>=</span><span style=color:#e6db74>DEFAULT  </span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># list of avaliable app servers to poll for network topology - used only by web server. one per line.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>!remove glog.scalability.topologyMachineURL  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.scalability.topologyMachineURL</span><span style=color:#f92672>=</span><span style=color:#e6db74>$appserver.protocol$$appserver$:$appserver.port$  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.scalability.topologyMachineURL=&lt;additional app server&gt;  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># list of available web servers  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>!remove glog.scalability.web.topologyMachineURL  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.scalability.web.topologyMachineURL</span><span style=color:#f92672>=</span><span style=color:#e6db74>http://$webserver$:$webserver.port$  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.scalability.web.topologyMachineURL=&lt;additional web server&gt;  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># mail settings  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.mail.smtp.host</span><span style=color:#f92672>=</span><span style=color:#e6db74>mail.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.workflow.notify.defaultSmtphost</span><span style=color:#f92672>=</span><span style=color:#e6db74>mail.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.mail.images</span><span style=color:#f92672>=</span><span style=color:#e6db74>$glog.webserver.URL$/images/mail  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># settings for fixed property change log  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.properties.log.file</span><span style=color:#f92672>=</span><span style=color:#e6db74>$glog.log.dir$/properties.log  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># mail settings for property change notifications (these properties are   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># reserved and cannot be changed via the Property Set Manager  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.properties.log.email.host</span><span style=color:#f92672>=</span><span style=color:#e6db74>mail.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.properties.log.email.from</span><span style=color:#f92672>=</span><span style=color:#e6db74>OtmAdvisor@company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># workflow settings  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.workflow.notify.advisor.name</span><span style=color:#f92672>=</span><span style=color:#e6db74>G-Log Advisor  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.workflow.notify.advisor.email</span><span style=color:#f92672>=</span><span style=color:#e6db74>OtmAdvisor@company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.workflow.notify.advisor.fax</span><span style=color:#f92672>=</span><span style=color:#e6db74>555-555-1212  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## FaxMaker Settings - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.workflow.notify.faxmaker.email=fax@company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## RightFax Settings - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.fax.defaultHandler.routingMode=to  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.fax.defaultHandler.routingPicture=/name={lastName},{firstName}/fax={rawPhone}/  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.fax.email=fax@company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## external integration settings  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.URLtoSendBills=http://&lt;server_name&gt;/servlets/&lt;ClassNameOfServletThatReceivesFinancialRelatedXML&gt;  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.URLtoSendVouchers=http://&lt;server_name&gt;/servlets/&lt;ClassNameOfServletThatReceivesFinancialRelatedXML&gt;  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## external SMC Rateware - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.RatingEngine.Rateware.URL=rateware.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.RatingEngine.Rateware.Port=23700  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## external SMC RateWare Version 1.2.325 (or later) or SMC Carrier Connect  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.RatingEngine.Rateware.NewAPI=true  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## external SMC RatewareXL - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.RatingEngine.RatewareXL.Username=  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.RatingEngine.RatewareXL.Password=  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.RatingEngine.RatewareXL.License=  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## external PCMiler/PCMiler Streets - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#pcmiler.host=pcmiler.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#pcmiler.port=8145  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## external PCMiler Rail - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#pcmiler.rail.host=pcmiler-rail.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#pcmiler.rail.port=2001  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## external Rand McNally - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#intelliroute.host=127.0.0.1  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#intelliroute.port=1998  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#intelliroute.user=otm  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#intelliroute.password=changeme  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#intelliroute.location=company  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## external MileMaker - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#milemaker.host=milemaker.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#milemaker.port=1031  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## external Kewill FlagShip - optional  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.RatingEngine.Kewill.URL=kewill.company.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.RatingEngine.Kewill.Port=1200  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.RatingEngine.Kewill.RefnumQual=KEWILL_CUST_NUM   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Transmission Error properties -- can help in debugging inbound  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># transmission errors  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># This property specifies if the response is a StackTrace or TransmissionAck  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.servlet.TransmissionStageError.elementName = StackTrace  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># This property indicates if the full Transmission is sent back  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.servlet.TransmissionStageError.includeTransmissionText = false  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># This controls how the elements are formatted [comment|CDATA|normal]  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.schema.element.StackTrace = comment  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.schema.element.TransmissionText = comment  </span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># The following properties specify if an email should be sent and to whom  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.servlet.TransmissionStageError.sendErrorEmail = false  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.servlet.TransmissionStageError.errorEmailTo =  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.servlet.TransmissionStageError.errorEmailFrom =  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.servlet.TransmissionStageError.errorEmailSubject = Transmission XML Stage Error  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.servlet.TransmissionStageError.errorEmailSmtpHost =  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Custom Properties - Beginning  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Place all changes, new properties, and custom properties here.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># This section will be used during GC3 Upgrades  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Note that Property Sets WEB_CUSTOM, APP_CUSTOM and APP_WORKFLOW_THREADING  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># can be used to specify custom properties via the OTM Property Set Manager  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># screen. Only changes to reserved properties must be entered here.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># This property should be uncommented and repeated for every e-mail   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># requiring notification of property changes.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.properties.log.email.recipients=recipient1@domain.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.properties.log.email.recipients=recipient2@domain.com  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Custom Properties - End  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Default EBS Properties  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#!include ebs.properties  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Default E1 Intergration Properties  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.enableCaseChange=true  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.integration.printXmlDeclaration=true  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.workflow.topic.OrderLatestEstDeliveryDateSync.suppresslifetime=false   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Default Web Server Properties  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># This directive allows for the use of Property Set WEB_CUSTOM to manage   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># custom properties for the web-tier. This property set is stored in the   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># OTM database and is accessible through the Property Set manager within OTM.   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Comment this out to disable this data-driven property set  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>!propertySet WEB_CUSTOM,sibling   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>!include glog.webserver.properties  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Default App Server Properties  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># This directive allows for the use of Property Set APP_CUSTOM to manage   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># custom properties for the application tier. This property set is stored in the   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># OTM database and is accessible through the Property Set manager within OTM.   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Comment this out to disable this data-driven property set.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>!propertySet APP_CUSTOM,sibling  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>!include glog.appserver.properties  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Turn off Workflow persistence  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.workflow.persistent.reboot</span><span style=color:#f92672>=</span><span style=color:#e6db74>false  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>!remove glog.workflow.persistent.classes  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Thread model (should only be set to &#39;on&#39; for WebSphere installs)  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>glog.util.commonj.threadModel.appServer</span><span style=color:#f92672>=</span><span style=color:#e6db74>off  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># compensate for WebSphere issues  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#glog.vpd.cacheMode.profileTagging=pool  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Custom Thread Properties - Beginning  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Place all thread changes and properties here.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># This section will be used during GC3 Upgrades  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># This directive allows for the use of Property Set APP_WORKFLOW_THREADING to manage   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># workflow groups and their thread counts. This property set is stored in the   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># OTM database and is accessible through the Property Set manager within OTM.   </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Comment this out to disable this data-driven property set.  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>!propertySet APP_WORKFLOW_THREADING,sibling  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Custom Thread Properties - End  </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#--------------------------------------------------------------------</span></span></span></code></pre></div></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a href=/oracle-otm-site/posts/oracle-dba-notes/ class="flex align-center"><img src=/oracle-otm-site/icons/backward.svg class=book-icon alt=Backward>
+<span>Oracle DBA notes</span></a></div><div></div></div><div class=book-comments></div><script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents></nav><div class=site-notice-sidebar>Quick notes for Oracle Transportation Management Consultants(Beginners). See topics on left side of the page. Post corrections and feedback to <a href=mailto:learnotm@outlook.com>learnotm@outlook.com</a></div></div></aside></main><script>document.addEventListener("contextmenu",function(e){e.preventDefault()}),document.addEventListener("keydown",function(e){e.ctrlKey&&(e.key==="c"||e.key==="C"||e.key==="a"||e.key==="A"||e.key==="u"||e.key==="U"||e.key==="s"||e.key==="S"||e.key==="p"||e.key==="P")&&e.preventDefault()})</script></body></html>

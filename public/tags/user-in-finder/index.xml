@@ -1,24 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>User in Finder on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/user-in-finder/</link>
-		<description>Recent content in User in Finder on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Wed, 20 Jul 2016 21:30:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/user-in-finder/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Saved Queries/Conditions</title>
-				<link>http://localhost:1313/posts/saved-queriesconditions/</link>
-				<pubDate>Wed, 20 Jul 2016 21:30:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/saved-queriesconditions/</guid>
-				<description>&lt;p&gt;Saved Queries in OTM help to query specific records in a screen or add some conditions to your custom logic while creating an Agent, etc. They can be used in multiple other OTM features like recurring processes, business monitors etc.&lt;/p&gt;&#xA;&lt;p&gt;Below steps show how to create a simple Saved Query.&lt;/p&gt;&#xA;&lt;p&gt;If we need to find orders that have failed planning in OTM in this month, we can create a query as below:&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>User in Finder on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/user-in-finder/</link><description>Recent content in User in Finder on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 20 Jul 2016 21:30:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/user-in-finder/index.xml" rel="self" type="application/rss+xml"/><item><title>Saved Queries/Conditions</title><link>https://shivakraju.github.io/oracle-otm-site/posts/saved-queriesconditions/</link><pubDate>Wed, 20 Jul 2016 21:30:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/saved-queriesconditions/</guid><description>&lt;p&gt;Saved Queries in OTM help to query specific records in a screen or add some conditions to your custom logic while creating an Agent, etc. They can be used in multiple other OTM features like recurring processes, business monitors etc.&lt;/p&gt;
+&lt;p&gt;Below steps show how to create a simple Saved Query.&lt;/p&gt;
+&lt;p&gt;If we need to find orders that have failed planning in OTM in this month, we can create a query as below:&lt;/p&gt;</description></item></channel></rss>

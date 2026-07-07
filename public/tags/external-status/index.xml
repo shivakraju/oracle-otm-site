@@ -1,24 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>External Status on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/external-status/</link>
-		<description>Recent content in External Status on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Fri, 07 Jul 2017 20:10:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/external-status/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Status Types</title>
-				<link>http://localhost:1313/posts/status-types/</link>
-				<pubDate>Fri, 07 Jul 2017 20:10:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/status-types/</guid>
-				<description>&lt;p&gt;In OTM, transactions objects like Order Release, Shipment, etc have &amp;lsquo;Status&amp;rsquo; button on the header screen that will have values to give information about current status of that object in the transaction life cycle.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyZIuy1FIKevdXODmirYkeJjss-0wovLYjzR_D9RF4vtHOQPEk6Up7mHHhNOI6ht5-ZlMpJQrB5haqynxRvGIFCNvQDj8z0fH8wbM0-9a9GY1dyHmju3AjsMoZ9VLwe1Up135RFsVkoEs/s1600/Capture0707_002.JPG&#34;&gt;&lt;img src=&#34;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyZIuy1FIKevdXODmirYkeJjss-0wovLYjzR_D9RF4vtHOQPEk6Up7mHHhNOI6ht5-ZlMpJQrB5haqynxRvGIFCNvQDj8z0fH8wbM0-9a9GY1dyHmju3AjsMoZ9VLwe1Up135RFsVkoEs/s640/Capture0707_002.JPG&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;For example, if you want to track the tender status of a shipment, you can review shipment status &amp;lsquo;SECURE RESOURCES&amp;rsquo; and it&amp;rsquo;s values at each stage in the tender life cycle to track the progress. When shipment is originally created, it might have status like &amp;lsquo;SECURE RESOURCES_NOT STARTED&amp;rsquo;. Once we tender it to carrier, this status changes to &amp;lsquo;SECURE RESOURCES_TENDERED&amp;rsquo;. Once carrier accepts tender, status changes to &amp;lsquo;SECURE RESOURCES_ACCEPTED&amp;rsquo; and so on. So these status values give good information to the user on what are next actions to be taken on that transaction.&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>External Status on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/external-status/</link><description>Recent content in External Status on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 07 Jul 2017 20:10:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/external-status/index.xml" rel="self" type="application/rss+xml"/><item><title>Status Types</title><link>https://shivakraju.github.io/oracle-otm-site/posts/status-types/</link><pubDate>Fri, 07 Jul 2017 20:10:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/status-types/</guid><description>&lt;p&gt;In OTM, transactions objects like Order Release, Shipment, etc have &amp;lsquo;Status&amp;rsquo; button on the header screen that will have values to give information about current status of that object in the transaction life cycle.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyZIuy1FIKevdXODmirYkeJjss-0wovLYjzR_D9RF4vtHOQPEk6Up7mHHhNOI6ht5-ZlMpJQrB5haqynxRvGIFCNvQDj8z0fH8wbM0-9a9GY1dyHmju3AjsMoZ9VLwe1Up135RFsVkoEs/s1600/Capture0707_002.JPG"&gt;&lt;img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyZIuy1FIKevdXODmirYkeJjss-0wovLYjzR_D9RF4vtHOQPEk6Up7mHHhNOI6ht5-ZlMpJQrB5haqynxRvGIFCNvQDj8z0fH8wbM0-9a9GY1dyHmju3AjsMoZ9VLwe1Up135RFsVkoEs/s640/Capture0707_002.JPG" alt="" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For example, if you want to track the tender status of a shipment, you can review shipment status &amp;lsquo;SECURE RESOURCES&amp;rsquo; and it&amp;rsquo;s values at each stage in the tender life cycle to track the progress. When shipment is originally created, it might have status like &amp;lsquo;SECURE RESOURCES_NOT STARTED&amp;rsquo;. Once we tender it to carrier, this status changes to &amp;lsquo;SECURE RESOURCES_TENDERED&amp;rsquo;. Once carrier accepts tender, status changes to &amp;lsquo;SECURE RESOURCES_ACCEPTED&amp;rsquo; and so on. So these status values give good information to the user on what are next actions to be taken on that transaction.&lt;/p&gt;</description></item></channel></rss>

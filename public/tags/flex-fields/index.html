@@ -1,3000 +1,422 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/tags/flex-fields/">
-	<meta property="og:site_name" content="Learn Oracle OTM">
-	<meta property="og:title" content="Flex Fields">
-	<meta property="og:description" content="Quick notes for Oracle Transportation Management Consultants(Beginners). Post corrections to learnotm@outlook.com">
-	<meta property="og:locale" content="en">
-	<meta property="og:type" content="website">
-
-
-	<meta itemprop="name" content="Flex Fields">
-	<meta itemprop="description" content="Quick notes for Oracle Transportation Management Consultants(Beginners). Post corrections to learnotm@outlook.com">
-	<meta itemprop="datePublished" content="2017-04-06T22:10:00+00:00">
-	<meta itemprop="dateModified" content="2017-04-06T22:10:00+00:00">
-
-<title>Flex Fields • Learn Oracle OTM</title>
-<link rel="icon" href="/favicon.png" >
-<link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/tags/flex-fields/">
-<link rel="stylesheet" href="/book.min.0bc2ccea40da58d619c260c3cbe79c1f9c2ba0b7dc521a7fb7987f26000c9757.css" integrity="sha256-C8LM6kDaWNYZwmDDy&#43;ecH5wroLfcUhp/t5h/JgAMl1c=" crossorigin="anonymous">
-
-
-  <script defer type="module" src="/en.search.min.16d05727d2808ad79a71df07fc9b22b467aae8da71e28126262f393ea7428605.js" integrity="sha256-FtBXJ9KAiteacd8H/JsitGeq6Npx4oEmJi85PqdChgU=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/flex-fields/index.xml" title="Flex Fields" />
-
-  
-</head>
-<body dir="ltr" class="book-kind-term book-type-tags">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
-    
-<aside class="book-menu">
-  <div class="book-menu-content">
-    
-  <nav>
-<h2 class="book-brand">
-  <a class="flex align-center" href="/"><span>Learn Oracle OTM</span>
-  </a>
-</h2>
-
-
-<div class="book-search hidden">
-  <input id="book-search-input" type="text" 
-    placeholder="Search"
-    aria-label="Search"
-    maxlength="64" />
-  <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-<script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
-
-
-
-
-
-
-
-
-
-  
-  <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/what-is-otm/" class="">
-      What is OTM ?</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-logistics-terminology/" class="">
-      Basic Logistics terminology</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-architecture-this-is-applicable-for-on-premise-installations/" class="">
-      OTM Architecture</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-inbound-integrations-xml/" class="">
-      OTM Inbound Integrations (XML)</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-outbound-integrations/" class="">
-      OTM Outbound Integrations</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/csv-data-uploads/" class="">
-      CSV Data Uploads</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/posting-data-to-otm-using-http-request/" class="">
-      Posting Data to OTM using HTTP request</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-domains-standard-schema-and-data-dictionary/" class="">
-      OTM Domains, Standard Schema and Data Dictionary</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-order-management-data-structure/" class="">
-      OTM Order Management Data Structure</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-shipment-management-data-structure/" class="">
-      OTM Shipment Management Data Structure</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-contract-rate-management-data-structure/" class="">
-      OTM Contract &amp; Rate Management Data Structure</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/business-process-automation-data-structure/" class="">
-      Business Process Automation Data Structure</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/" class="">
-      01 - Domain, Items, Locations, and Equipment</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-02-itinerary/" class="">
-      02 - Itinerary</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-03-service-provider-and-rates/" class="">
-      03 - Service Provider and Rates</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-04-business-numbers-planning-parameter/" class="">
-      04 - Business Numbers, Planning Parameter</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-05-bulk-plan/" class="">
-      05 - Bulk Plan</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-06-tender-process/" class="">
-      06 - Tender process</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-07-invoicing/" class="">
-      07 - Invoicing</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/basic-otm-configurations-08-voucher-allocation/" class="">
-      08 - Voucher Allocation</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/saved-queriesconditions/" class="">
-      Saved Queries/Conditions</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/agents-frequently-used-actions/" class="">
-      Agents - Frequently Used Actions</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/agents-sample-agent-creation-steps/" class="">
-      Agents - Sample Agent Creation Steps</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/agents-agent-event-restrictions/" class="">
-      Agents - Agent Event Restrictions</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/agent-gates/" class="">
-      Agent Gates</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/business-monitors/" class="">
-      Business Monitors</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/business-numbers/" class="">
-      Business Numbers</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/report-development-sample-report/" class="">
-      Report Development - Sample Report</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/emailing-reports-to-users-on-a-business-event/" class="">
-      Emailing Reports to Users on a Business Event</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/report-workspaces/" class="">
-      Report Workspaces</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/manager-layouts-screen-sets-labels/" class="">
-      Manager Layouts, Screen Sets, Labels</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/flex-fields/" class="">
-      Flex fields</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/advanced-layouts/" class="">
-      Advanced Layouts</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/workbenches/" class="">
-      Workbenches</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/user-roles-vpd-and-access-control-lists/" class="">
-      User Roles - VPD and Access Control Lists</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/user-menu-and-manage-user-access/" class="">
-      User Menu and Manage User Access</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/service-provider-user-login-creation/" class="">
-      Service Provider User Login creation</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/refnums/" class="">
-      Refnums</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/status-types/" class="">
-      Status Types</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/action-checks/" class="">
-      Action Checks</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/custom-actions-smart-links/" class="">
-      Custom Actions &amp; Smart Links</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/yard-management-and-appointment-scheduling/" class="">
-      Yard Management and Appointment Scheduling</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/otm-application-admin-notes/" class="">
-      OTM Application ADMIN Notes</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/oracle-dba-notes/" class="">
-      Oracle DBA notes</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/posts/g-log-properties/" class="">
-      G-Log Properties</a>
-  
-
-        </li>
-      
-    
-  </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="sidebar-author">
-  <div class="sidebar-author-name">Shiva G (OTM Consultant)</div>
-  <img src="/images/author-profile.jpg" alt="Shiva G" class="sidebar-author-photo" />
-  <div class="sidebar-author-email">
-    <a href="mailto:learnotm@outlook.com">learnotm@outlook.com</a>
-  </div>
-</div>
-
-</nav>
-
-
-
-
-  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
-
-
-
-  </div>
-</aside>
- 
-
-    <div class="book-page">
-      <header class="book-header hidden">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
-  </label>
-
-  <h3>Flex Fields</h3>
-
-  <label for="toc-control">
-    
-    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
-    
-  </label>
-</div>
-
-
-  
-  <aside class="hidden">
-    
-  <nav>
-  <ul>
-  
-    
-    <li class="book-section-flat">
-      <a>Tags</a>
-      <ul>
-      
-        <li class="flex align-center">
-          <a href="/tags/begin_request/">BEGIN_REQUEST</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/end_response/">END_RESPONSE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/plsql/">PLSQL</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/read_text/">READ_TEXT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/set_header/">SET_HEADER</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/utl_http/">UTL_HTTP</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/utl_http.req/">UTL_HTTP.req</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/utl_http.resp/">UTL_HTTP.resp</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/write_text/">WRITE_TEXT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/bn-rule/">BN Rule</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/business-numbers/">Business Numbers</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/expressions/">Expressions</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/instructions/">Instructions</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/auto-refresh/">Auto Refresh</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/business/">Business</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/business-monitor/">Business Monitor</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/business_monitor/">Business_monitor</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/monitor/">Monitor</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/agent-gates/">Agent Gates</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/condition-additive/">Condition Additive</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/functor/">Functor</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/status-function/">Status Function</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/appointment/">Appointment</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/dock/">Dock</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/otm/">OTM</a>
-          <span>14</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/resource/">Resource</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rows/">Rows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/scheduling/">Scheduling</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/slots/">Slots</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/yard/">Yard</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/domain/">Domain</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/equipment/">Equipment</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/item/">Item</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/location/">Location</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/oracle/">Oracle</a>
-          <span>11</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/allocation/">Allocation</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/voucher/">Voucher</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/invoice/">Invoice</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/tender/">Tender</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/bulk-plan/">Bulk Plan</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/business-number/">Business Number</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/planning-parameter/">Planning Parameter</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate-offering/">Rate Offering</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate-record/">Rate Record</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate-service/">Rate Service</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate_geo/">RATE_GEO</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate_offering/">RATE_OFFERING</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate_service/">RATE_SERVICE</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rates/">Rates</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/service-provider/">Service Provider</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/itinerary/">Itinerary</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/leg/">Leg</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/multi-leg/">Multi-Leg</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/action-definition-id/">Action Definition ID</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/actions/">Actions</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/label/">Label</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/smart-links/">Smart Links</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/action-checks/">Action Checks</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/allow-condition/">Allow Condition</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/audit-action-id/">Audit Action ID</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/cause/">Cause</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/post-action-check/">Post Action Check</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/carrier-login/">Carrier Login</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/manage-association/">Manage Association</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/serprov/">SERPROV</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/service-provider-login/">Service Provider Login</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/config/">Config</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/g-log-properties/">G-Log Properties</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/console.log/">Console.log</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/gc3env.sh/">Gc3env.sh</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glogapp-wl/">Glogapp-Wl</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glogweb-wl/">Glogweb-Wl</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/install/">Install</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/ohs/">Ohs</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/oracle-patches/">Oracle Patches</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/tomcat/">Tomcat</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/weblogic/">Weblogic</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/alter-profile/">Alter Profile</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/alter-user/">ALTER USER</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/compile_schema/">COMPILE_SCHEMA</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/dba_ddl_locks/">DBA_DDL_LOCKS</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/em-console/">EM Console</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/init.ora/">Init.ora</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/invalid-objects/">INVALID Objects</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/lsnrctl/">Lsnrctl</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/oracle-db/">Oracle DB</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/shutdown-immediate/">SHUTDOWN IMMEDIATE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/startup/">STARTUP</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/tnsnames.ora/">Tnsnames.ora</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/external-status/">External Status</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/internal-status/">Internal Status</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/status-type/">Status Type</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/qualifier/">Qualifier</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/refnum/">Refnum</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/updates-allowed/">Updates Allowed</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glog.webserver.report.reportworkspaceservlet/">Glog.webserver.report.ReportWorkspaceServlet</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/report-workspace/">Report Workspace</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/flex-fields/">Flex Fields</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/flexdroplist/">FlexDropList</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/picklist/">PickList</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/advanced-layout/">Advanced Layout</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/panel-splitter/">Panel Splitter</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/labels/">Labels</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/manager-layouts/">Manager Layouts</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/screen-sets/">Screen Sets</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/custom-menu/">Custom Menu</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/edit-user-access/">Edit User Access</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/manage-user-access/">Manage User Access</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user-menu/">User Menu</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/access-control-list/">Access Control List</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/acr_role_entry_point/">ACR_ROLE_ENTRY_POINT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/acr_role_role/">ACR_ROLE_ROLE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/common/">COMMON</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/default-role/">Default Role</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/external_predicate/">EXTERNAL_PREDICATE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/grantee-user-role/">Grantee User Role</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/password/">Password</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/sql-servlet/">SQL Servlet</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user/">User</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user-role/">User Role</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user_role/">USER_ROLE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user_role_acr/">USER_ROLE_ACR</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/vpd-profile/">VPD Profile</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/vpd_profile/">VPD_PROFILE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/email-otm-report/">Email OTM Report</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/print-document/">PRINT DOCUMENT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/report---ready/">REPORT - READY</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/report_log_parameter/">REPORT_LOG_PARAMETER</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/bi-publisher/">BI Publisher</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/format-template/">Format Template</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/query-template/">Query Template</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/report/">Report</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/agent-event-restrictions/">Agent Event Restrictions</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/before-persist/">Before Persist</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/event-source/">Event Source</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/call/">CALL</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/data-type-associations/">DATA TYPE ASSOCIATIONS</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/direct-sql-update/">DIRECT SQL UPDATE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/raise-event/">RAISE EVENT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/agent/">Agent</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/agent-actions/">Agent Actions</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/error-handler/">Error Handler</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/saved-condition/">Saved Condition</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/saved-query/">Saved Query</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user-in-finder/">User in Finder</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/contacts/">Contacts</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/external-system/">External System</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/integration/">Integration</a>
-          <span>3</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/reports/">Reports</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate-distance/">Rate Distance</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/shipment/">Shipment</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/shipment-ship-unit/">Shipment Ship Unit</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/shipment-stop/">Shipment Stop</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/learn/">Learn</a>
-          <span>5</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/order-base/">Order Base</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/order-movement/">Order Movement</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/order-release/">Order Release</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/packaged-item/">Packaged Item</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/packaging-unit/">Packaging Unit</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/purchase-order/">Purchase Order</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/ship-unit-spec/">Ship Unit Spec</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/data_dict/">DATA_DICT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/gid/">GID</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glogowner/">GLOGOWNER</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/reportowner/">REPORTOWNER</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/schema/">Schema</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/xid/">XID</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/external/">External</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/integrations/">Integrations</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/min/">MIN</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/out-xml-profile/">Out XML Profile</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/outbound/">Outbound</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/system/">System</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/api/">API</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/csv/">CSV</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/example/">Example</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glog/">Glog</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glogxml/">GlogXML</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/inbound/">Inbound</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/servlet/">Servlet</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/upload/">Upload</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/xml/">XML</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/3-tier/">3 Tier</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/architecture/">Architecture</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/installation/">Installation</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/management/">Management</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/trasportation/">Trasportation</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/3pl/">3PL</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/bill-of-lading/">Bill of Lading</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/carrier/">Carrier</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/carton/">Carton</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/consignee/">Consignee</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/container/">Container</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/demurrage/">Demurrage</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/diversion/">Diversion</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/ftl/">FTL</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/inbound-shipping/">Inbound Shipping</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/incoterm/">INCOTERM</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/ltl/">LTL</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/outbound-shipping/">Outbound Shipping</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/pallet/">Pallet</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/stopoff-charge/">Stopoff Charge</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/supplier/">Supplier</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/thu/">THU</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/tl/">TL</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/basics/">Basics</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/g-log/">G-Log</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/gottimukkala/">Gottimukkala</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/introduction/">Introduction</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/shiva/">Shiva</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
-
-
-  </aside>
-  
- 
-      </header>
-
-      
-      
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/flex-fields/">Flex fields</a>
-    </h2>
-    
-
-    <div class="book-post-content"><p>OTM provides attribute fields(Char, Number, Date and currency) on each table to store custom data. Note that we can also use refnum/remarks to store this custom data but those entries are made in separate tables. So new versions of OTM introduced these attribute columns on almost all major transaction data tables like ORDER_RELEASE, SHIPMENT etc.</p>
-<p>We can define flex fields on these attribute columns and add these fields to required manager layouts so that users can enter data directly into these fields from UI.</p></div>
-  </article>
-  
-
-  
- 
-      
-
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
-
-<div>
-
-</div>
-
-<div>
-
-</div>
-
-</div>
-
-
-
- 
-        
-  
- 
-        
-        
-  
- 
-        
-  
-    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
-  
-
-      </footer>
-
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
-    </div>
-
-    
-<aside class="book-toc">
-  <div class="book-toc-content">
-    
-  <nav>
-  <ul>
-  
-    
-    <li class="book-section-flat">
-      <a>Tags</a>
-      <ul>
-      
-        <li class="flex align-center">
-          <a href="/tags/begin_request/">BEGIN_REQUEST</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/end_response/">END_RESPONSE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/plsql/">PLSQL</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/read_text/">READ_TEXT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/set_header/">SET_HEADER</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/utl_http/">UTL_HTTP</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/utl_http.req/">UTL_HTTP.req</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/utl_http.resp/">UTL_HTTP.resp</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/write_text/">WRITE_TEXT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/bn-rule/">BN Rule</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/business-numbers/">Business Numbers</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/expressions/">Expressions</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/instructions/">Instructions</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/auto-refresh/">Auto Refresh</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/business/">Business</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/business-monitor/">Business Monitor</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/business_monitor/">Business_monitor</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/monitor/">Monitor</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/agent-gates/">Agent Gates</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/condition-additive/">Condition Additive</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/functor/">Functor</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/status-function/">Status Function</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/appointment/">Appointment</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/dock/">Dock</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/otm/">OTM</a>
-          <span>14</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/resource/">Resource</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rows/">Rows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/scheduling/">Scheduling</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/slots/">Slots</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/yard/">Yard</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/domain/">Domain</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/equipment/">Equipment</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/item/">Item</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/location/">Location</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/oracle/">Oracle</a>
-          <span>11</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/allocation/">Allocation</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/voucher/">Voucher</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/invoice/">Invoice</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/tender/">Tender</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/bulk-plan/">Bulk Plan</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/business-number/">Business Number</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/planning-parameter/">Planning Parameter</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate-offering/">Rate Offering</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate-record/">Rate Record</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate-service/">Rate Service</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate_geo/">RATE_GEO</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate_offering/">RATE_OFFERING</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate_service/">RATE_SERVICE</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rates/">Rates</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/service-provider/">Service Provider</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/itinerary/">Itinerary</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/leg/">Leg</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/multi-leg/">Multi-Leg</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/action-definition-id/">Action Definition ID</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/actions/">Actions</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/label/">Label</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/smart-links/">Smart Links</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/action-checks/">Action Checks</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/allow-condition/">Allow Condition</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/audit-action-id/">Audit Action ID</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/cause/">Cause</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/post-action-check/">Post Action Check</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/carrier-login/">Carrier Login</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/manage-association/">Manage Association</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/serprov/">SERPROV</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/service-provider-login/">Service Provider Login</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/config/">Config</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/g-log-properties/">G-Log Properties</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/console.log/">Console.log</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/gc3env.sh/">Gc3env.sh</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glogapp-wl/">Glogapp-Wl</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glogweb-wl/">Glogweb-Wl</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/install/">Install</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/ohs/">Ohs</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/oracle-patches/">Oracle Patches</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/tomcat/">Tomcat</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/weblogic/">Weblogic</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/alter-profile/">Alter Profile</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/alter-user/">ALTER USER</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/compile_schema/">COMPILE_SCHEMA</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/dba_ddl_locks/">DBA_DDL_LOCKS</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/em-console/">EM Console</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/init.ora/">Init.ora</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/invalid-objects/">INVALID Objects</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/lsnrctl/">Lsnrctl</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/oracle-db/">Oracle DB</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/shutdown-immediate/">SHUTDOWN IMMEDIATE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/startup/">STARTUP</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/tnsnames.ora/">Tnsnames.ora</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/external-status/">External Status</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/internal-status/">Internal Status</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/status-type/">Status Type</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/qualifier/">Qualifier</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/refnum/">Refnum</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/updates-allowed/">Updates Allowed</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glog.webserver.report.reportworkspaceservlet/">Glog.webserver.report.ReportWorkspaceServlet</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/report-workspace/">Report Workspace</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/flex-fields/">Flex Fields</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/flexdroplist/">FlexDropList</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/picklist/">PickList</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/advanced-layout/">Advanced Layout</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/panel-splitter/">Panel Splitter</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/labels/">Labels</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/manager-layouts/">Manager Layouts</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/screen-sets/">Screen Sets</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/custom-menu/">Custom Menu</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/edit-user-access/">Edit User Access</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/manage-user-access/">Manage User Access</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user-menu/">User Menu</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/access-control-list/">Access Control List</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/acr_role_entry_point/">ACR_ROLE_ENTRY_POINT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/acr_role_role/">ACR_ROLE_ROLE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/common/">COMMON</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/default-role/">Default Role</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/external_predicate/">EXTERNAL_PREDICATE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/grantee-user-role/">Grantee User Role</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/password/">Password</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/sql-servlet/">SQL Servlet</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user/">User</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user-role/">User Role</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user_role/">USER_ROLE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user_role_acr/">USER_ROLE_ACR</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/vpd-profile/">VPD Profile</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/vpd_profile/">VPD_PROFILE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/email-otm-report/">Email OTM Report</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/print-document/">PRINT DOCUMENT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/report---ready/">REPORT - READY</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/report_log_parameter/">REPORT_LOG_PARAMETER</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/bi-publisher/">BI Publisher</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/format-template/">Format Template</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/query-template/">Query Template</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/report/">Report</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/agent-event-restrictions/">Agent Event Restrictions</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/before-persist/">Before Persist</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/event-source/">Event Source</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/call/">CALL</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/data-type-associations/">DATA TYPE ASSOCIATIONS</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/direct-sql-update/">DIRECT SQL UPDATE</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/raise-event/">RAISE EVENT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/agent/">Agent</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/agent-actions/">Agent Actions</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/error-handler/">Error Handler</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/saved-condition/">Saved Condition</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/saved-query/">Saved Query</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/user-in-finder/">User in Finder</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/contacts/">Contacts</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/external-system/">External System</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/integration/">Integration</a>
-          <span>3</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/reports/">Reports</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/rate-distance/">Rate Distance</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/shipment/">Shipment</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/shipment-ship-unit/">Shipment Ship Unit</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/shipment-stop/">Shipment Stop</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/learn/">Learn</a>
-          <span>5</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/order-base/">Order Base</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/order-movement/">Order Movement</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/order-release/">Order Release</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/packaged-item/">Packaged Item</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/packaging-unit/">Packaging Unit</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/purchase-order/">Purchase Order</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/ship-unit-spec/">Ship Unit Spec</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/data_dict/">DATA_DICT</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/gid/">GID</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glogowner/">GLOGOWNER</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/reportowner/">REPORTOWNER</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/schema/">Schema</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/xid/">XID</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/external/">External</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/integrations/">Integrations</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/min/">MIN</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/out-xml-profile/">Out XML Profile</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/outbound/">Outbound</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/system/">System</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/api/">API</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/csv/">CSV</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/example/">Example</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glog/">Glog</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/glogxml/">GlogXML</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/inbound/">Inbound</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/servlet/">Servlet</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/upload/">Upload</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/xml/">XML</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/3-tier/">3 Tier</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/architecture/">Architecture</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/installation/">Installation</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/management/">Management</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/trasportation/">Trasportation</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/3pl/">3PL</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/bill-of-lading/">Bill of Lading</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/carrier/">Carrier</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/carton/">Carton</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/consignee/">Consignee</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/container/">Container</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/demurrage/">Demurrage</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/diversion/">Diversion</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/ftl/">FTL</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/inbound-shipping/">Inbound Shipping</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/incoterm/">INCOTERM</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/ltl/">LTL</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/outbound-shipping/">Outbound Shipping</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/pallet/">Pallet</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/stopoff-charge/">Stopoff Charge</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/supplier/">Supplier</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/thu/">THU</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/tl/">TL</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/basics/">Basics</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/g-log/">G-Log</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/gottimukkala/">Gottimukkala</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/introduction/">Introduction</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex align-center">
-          <a href="/tags/shiva/">Shiva</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
-
-
-  </div>
-</aside>
- 
-  </main>
-
-  <script>
-  
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  
-  document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && (
-      e.key === 'c' || e.key === 'C' ||
-      e.key === 'a' || e.key === 'A' ||
-      e.key === 'u' || e.key === 'U' ||
-      e.key === 's' || e.key === 'S' ||
-      e.key === 'p' || e.key === 'P'
-    )) {
-      e.preventDefault();
-    }
-  });
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!doctype html><html lang=en dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#2e3440"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://shivakraju.github.io/oracle-otm-site/tags/flex-fields/"><meta property="og:site_name" content="Learn Oracle OTM"><meta property="og:title" content="Flex Fields"><meta property="og:description" content="Quick notes for Oracle Transportation Management Consultants(Beginners). Post corrections to learnotm@outlook.com"><meta property="og:locale" content="en"><meta property="og:type" content="website"><meta itemprop=name content="Flex Fields"><meta itemprop=description content="Quick notes for Oracle Transportation Management Consultants(Beginners). Post corrections to learnotm@outlook.com"><meta itemprop=datePublished content="2017-04-06T22:10:00+00:00"><meta itemprop=dateModified content="2017-04-06T22:10:00+00:00"><title>Flex Fields • Learn Oracle OTM</title><link rel=icon href=/oracle-otm-site/favicon.png><link rel=manifest href=/oracle-otm-site/manifest.json><link rel=canonical href=https://shivakraju.github.io/oracle-otm-site/tags/flex-fields/><link rel=stylesheet href=/oracle-otm-site/book.min.0bc2ccea40da58d619c260c3cbe79c1f9c2ba0b7dc521a7fb7987f26000c9757.css integrity="sha256-C8LM6kDaWNYZwmDDy+ecH5wroLfcUhp/t5h/JgAMl1c=" crossorigin=anonymous><script defer type=module src=/oracle-otm-site/en.search.min.09aeb41c7f6f02dbe96e4062f834a366b509b19a0e31a2ec0653b2099fd9d0a2.js integrity="sha256-Ca60HH9vAtvpbkBi+DSjZrUJsZoOMaLsBlOyCZ/Z0KI=" crossorigin=anonymous></script><link rel=alternate type=application/rss+xml href=https://shivakraju.github.io/oracle-otm-site/tags/flex-fields/index.xml title="Flex Fields"></head><body dir=ltr class="book-kind-term book-type-tags"><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/oracle-otm-site/><span>Learn Oracle OTM</span></a></h2><div class="book-search hidden"><input id=book-search-input type=text placeholder=Search aria-label=Search maxlength=64><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><a href=/oracle-otm-site/posts/what-is-otm/>What is OTM ?</a></li><li><a href=/oracle-otm-site/posts/basic-logistics-terminology/>Basic Logistics terminology</a></li><li><a href=/oracle-otm-site/posts/otm-architecture-this-is-applicable-for-on-premise-installations/>OTM Architecture</a></li><li><a href=/oracle-otm-site/posts/otm-inbound-integrations-xml/>OTM Inbound Integrations (XML)</a></li><li><a href=/oracle-otm-site/posts/otm-outbound-integrations/>OTM Outbound Integrations</a></li><li><a href=/oracle-otm-site/posts/csv-data-uploads/>CSV Data Uploads</a></li><li><a href=/oracle-otm-site/posts/posting-data-to-otm-using-http-request/>Posting Data to OTM using HTTP request</a></li><li><a href=/oracle-otm-site/posts/otm-domains-standard-schema-and-data-dictionary/>OTM Domains, Standard Schema and Data Dictionary</a></li><li><a href=/oracle-otm-site/posts/otm-order-management-data-structure/>OTM Order Management Data Structure</a></li><li><a href=/oracle-otm-site/posts/otm-shipment-management-data-structure/>OTM Shipment Management Data Structure</a></li><li><a href=/oracle-otm-site/posts/otm-contract-rate-management-data-structure/>OTM Contract & Rate Management Data Structure</a></li><li><a href=/oracle-otm-site/posts/business-process-automation-data-structure/>Business Process Automation Data Structure</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/>01 - Domain, Items, Locations, and Equipment</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-02-itinerary/>02 - Itinerary</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-03-service-provider-and-rates/>03 - Service Provider and Rates</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-04-business-numbers-planning-parameter/>04 - Business Numbers, Planning Parameter</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-05-bulk-plan/>05 - Bulk Plan</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-06-tender-process/>06 - Tender process</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-07-invoicing/>07 - Invoicing</a></li><li><a href=/oracle-otm-site/posts/basic-otm-configurations-08-voucher-allocation/>08 - Voucher Allocation</a></li><li><a href=/oracle-otm-site/posts/saved-queriesconditions/>Saved Queries/Conditions</a></li><li><a href=/oracle-otm-site/posts/agents-frequently-used-actions/>Agents - Frequently Used Actions</a></li><li><a href=/oracle-otm-site/posts/agents-sample-agent-creation-steps/>Agents - Sample Agent Creation Steps</a></li><li><a href=/oracle-otm-site/posts/agents-agent-event-restrictions/>Agents - Agent Event Restrictions</a></li><li><a href=/oracle-otm-site/posts/agent-gates/>Agent Gates</a></li><li><a href=/oracle-otm-site/posts/business-monitors/>Business Monitors</a></li><li><a href=/oracle-otm-site/posts/business-numbers/>Business Numbers</a></li><li><a href=/oracle-otm-site/posts/report-development-sample-report/>Report Development - Sample Report</a></li><li><a href=/oracle-otm-site/posts/emailing-reports-to-users-on-a-business-event/>Emailing Reports to Users on a Business Event</a></li><li><a href=/oracle-otm-site/posts/report-workspaces/>Report Workspaces</a></li><li><a href=/oracle-otm-site/posts/manager-layouts-screen-sets-labels/>Manager Layouts, Screen Sets, Labels</a></li><li><a href=/oracle-otm-site/posts/flex-fields/>Flex fields</a></li><li><a href=/oracle-otm-site/posts/advanced-layouts/>Advanced Layouts</a></li><li><a href=/oracle-otm-site/posts/workbenches/>Workbenches</a></li><li><a href=/oracle-otm-site/posts/user-roles-vpd-and-access-control-lists/>User Roles - VPD and Access Control Lists</a></li><li><a href=/oracle-otm-site/posts/user-menu-and-manage-user-access/>User Menu and Manage User Access</a></li><li><a href=/oracle-otm-site/posts/service-provider-user-login-creation/>Service Provider User Login creation</a></li><li><a href=/oracle-otm-site/posts/refnums/>Refnums</a></li><li><a href=/oracle-otm-site/posts/status-types/>Status Types</a></li><li><a href=/oracle-otm-site/posts/action-checks/>Action Checks</a></li><li><a href=/oracle-otm-site/posts/custom-actions-smart-links/>Custom Actions & Smart Links</a></li><li><a href=/oracle-otm-site/posts/yard-management-and-appointment-scheduling/>Yard Management and Appointment Scheduling</a></li><li><a href=/oracle-otm-site/posts/otm-application-admin-notes/>OTM Application ADMIN Notes</a></li><li><a href=/oracle-otm-site/posts/oracle-dba-notes/>Oracle DBA notes</a></li><li><a href=/oracle-otm-site/posts/g-log-properties/>G-Log Properties</a></li></ul><div class=sidebar-author><div class=sidebar-author-name>Shiva G (OTM Consultant)</div><img src=/images/author-profile.jpg alt="Shiva G" class=sidebar-author-photo><div class=sidebar-author-email><a href=mailto:learnotm@outlook.com>learnotm@outlook.com</a></div></div></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class="book-header hidden"><div class="flex align-center justify-between"><label for=menu-control><img src=/oracle-otm-site/icons/menu.svg class=book-icon alt=Menu></label><h3>Flex Fields</h3><label for=toc-control><img src=/oracle-otm-site/icons/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class=hidden><nav><ul><li class=book-section-flat><a>Tags</a><ul><li class="flex align-center"><a href=/oracle-otm-site/tags/begin_request/>BEGIN_REQUEST</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/end_response/>END_RESPONSE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/plsql/>PLSQL</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/read_text/>READ_TEXT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/set_header/>SET_HEADER</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/utl_http/>UTL_HTTP</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/utl_http.req/>UTL_HTTP.req</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/utl_http.resp/>UTL_HTTP.resp</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/write_text/>WRITE_TEXT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/bn-rule/>BN Rule</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/business-numbers/>Business Numbers</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/expressions/>Expressions</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/instructions/>Instructions</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/auto-refresh/>Auto Refresh</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/business/>Business</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/business-monitor/>Business Monitor</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/business_monitor/>Business_monitor</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/monitor/>Monitor</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/agent-gates/>Agent Gates</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/condition-additive/>Condition Additive</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/functor/>Functor</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/status-function/>Status Function</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/appointment/>Appointment</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/dock/>Dock</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/otm/>OTM</a>
+<span>14</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/resource/>Resource</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rows/>Rows</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/scheduling/>Scheduling</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/slots/>Slots</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/yard/>Yard</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/domain/>Domain</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/equipment/>Equipment</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/item/>Item</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/location/>Location</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/oracle/>Oracle</a>
+<span>11</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/allocation/>Allocation</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/voucher/>Voucher</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/invoice/>Invoice</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/tender/>Tender</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/bulk-plan/>Bulk Plan</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/business-number/>Business Number</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/planning-parameter/>Planning Parameter</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate-offering/>Rate Offering</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate-record/>Rate Record</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate-service/>Rate Service</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate_geo/>RATE_GEO</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate_offering/>RATE_OFFERING</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate_service/>RATE_SERVICE</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rates/>Rates</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/service-provider/>Service Provider</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/itinerary/>Itinerary</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/leg/>Leg</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/multi-leg/>Multi-Leg</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/action-definition-id/>Action Definition ID</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/actions/>Actions</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/label/>Label</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/smart-links/>Smart Links</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/action-checks/>Action Checks</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/allow-condition/>Allow Condition</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/audit-action-id/>Audit Action ID</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/cause/>Cause</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/post-action-check/>Post Action Check</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/carrier-login/>Carrier Login</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/manage-association/>Manage Association</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/serprov/>SERPROV</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/service-provider-login/>Service Provider Login</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/config/>Config</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/g-log-properties/>G-Log Properties</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/console.log/>Console.log</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/gc3env.sh/>Gc3env.sh</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glogapp-wl/>Glogapp-Wl</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glogweb-wl/>Glogweb-Wl</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/install/>Install</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/ohs/>Ohs</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/oracle-patches/>Oracle Patches</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/tomcat/>Tomcat</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/weblogic/>Weblogic</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/alter-profile/>Alter Profile</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/alter-user/>ALTER USER</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/compile_schema/>COMPILE_SCHEMA</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/dba_ddl_locks/>DBA_DDL_LOCKS</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/em-console/>EM Console</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/init.ora/>Init.ora</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/invalid-objects/>INVALID Objects</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/lsnrctl/>Lsnrctl</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/oracle-db/>Oracle DB</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/shutdown-immediate/>SHUTDOWN IMMEDIATE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/startup/>STARTUP</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/tnsnames.ora/>Tnsnames.ora</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/external-status/>External Status</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/internal-status/>Internal Status</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/status-type/>Status Type</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/qualifier/>Qualifier</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/refnum/>Refnum</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/updates-allowed/>Updates Allowed</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glog.webserver.report.reportworkspaceservlet/>Glog.webserver.report.ReportWorkspaceServlet</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/report-workspace/>Report Workspace</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/flex-fields/>Flex Fields</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/flexdroplist/>FlexDropList</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/picklist/>PickList</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/advanced-layout/>Advanced Layout</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/panel-splitter/>Panel Splitter</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/labels/>Labels</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/manager-layouts/>Manager Layouts</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/screen-sets/>Screen Sets</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/custom-menu/>Custom Menu</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/edit-user-access/>Edit User Access</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/manage-user-access/>Manage User Access</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user-menu/>User Menu</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/access-control-list/>Access Control List</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/acr_role_entry_point/>ACR_ROLE_ENTRY_POINT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/acr_role_role/>ACR_ROLE_ROLE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/common/>COMMON</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/default-role/>Default Role</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/external_predicate/>EXTERNAL_PREDICATE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/grantee-user-role/>Grantee User Role</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/password/>Password</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/sql-servlet/>SQL Servlet</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user/>User</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user-role/>User Role</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user_role/>USER_ROLE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user_role_acr/>USER_ROLE_ACR</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/vpd-profile/>VPD Profile</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/vpd_profile/>VPD_PROFILE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/email-otm-report/>Email OTM Report</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/print-document/>PRINT DOCUMENT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/report---ready/>REPORT - READY</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/report_log_parameter/>REPORT_LOG_PARAMETER</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/bi-publisher/>BI Publisher</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/format-template/>Format Template</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/query-template/>Query Template</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/report/>Report</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/agent-event-restrictions/>Agent Event Restrictions</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/before-persist/>Before Persist</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/event-source/>Event Source</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/call/>CALL</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/data-type-associations/>DATA TYPE ASSOCIATIONS</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/direct-sql-update/>DIRECT SQL UPDATE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/raise-event/>RAISE EVENT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/agent/>Agent</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/agent-actions/>Agent Actions</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/error-handler/>Error Handler</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/saved-condition/>Saved Condition</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/saved-query/>Saved Query</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user-in-finder/>User in Finder</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/contacts/>Contacts</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/external-system/>External System</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/integration/>Integration</a>
+<span>3</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/reports/>Reports</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate-distance/>Rate Distance</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/shipment/>Shipment</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/shipment-ship-unit/>Shipment Ship Unit</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/shipment-stop/>Shipment Stop</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/learn/>Learn</a>
+<span>5</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/order-base/>Order Base</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/order-movement/>Order Movement</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/order-release/>Order Release</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/packaged-item/>Packaged Item</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/packaging-unit/>Packaging Unit</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/purchase-order/>Purchase Order</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/ship-unit-spec/>Ship Unit Spec</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/data_dict/>DATA_DICT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/gid/>GID</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glogowner/>GLOGOWNER</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/reportowner/>REPORTOWNER</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/schema/>Schema</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/xid/>XID</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/external/>External</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/integrations/>Integrations</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/min/>MIN</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/out-xml-profile/>Out XML Profile</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/outbound/>Outbound</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/system/>System</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/api/>API</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/csv/>CSV</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/example/>Example</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glog/>Glog</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glogxml/>GlogXML</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/inbound/>Inbound</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/servlet/>Servlet</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/upload/>Upload</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/xml/>XML</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/3-tier/>3 Tier</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/architecture/>Architecture</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/installation/>Installation</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/management/>Management</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/trasportation/>Trasportation</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/3pl/>3PL</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/bill-of-lading/>Bill of Lading</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/carrier/>Carrier</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/carton/>Carton</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/consignee/>Consignee</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/container/>Container</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/demurrage/>Demurrage</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/diversion/>Diversion</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/ftl/>FTL</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/inbound-shipping/>Inbound Shipping</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/incoterm/>INCOTERM</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/ltl/>LTL</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/outbound-shipping/>Outbound Shipping</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/pallet/>Pallet</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/stopoff-charge/>Stopoff Charge</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/supplier/>Supplier</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/thu/>THU</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/tl/>TL</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/basics/>Basics</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/g-log/>G-Log</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/gottimukkala/>Gottimukkala</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/introduction/>Introduction</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/shiva/>Shiva</a>
+<span>1</span></li></ul></li></ul></nav></aside></header><article class="markdown book-post"><h2><a href=/oracle-otm-site/posts/flex-fields/>Flex fields</a></h2><div class=book-post-content><p>OTM provides attribute fields(Char, Number, Date and currency) on each table to store custom data. Note that we can also use refnum/remarks to store this custom data but those entries are made in separate tables. So new versions of OTM introduced these attribute columns on almost all major transaction data tables like ORDER_RELEASE, SHIPMENT etc.</p><p>We can define flex fields on these attribute columns and add these fields to required manager layouts so that users can enter data directly into these fields from UI.</p></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav><ul><li class=book-section-flat><a>Tags</a><ul><li class="flex align-center"><a href=/oracle-otm-site/tags/begin_request/>BEGIN_REQUEST</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/end_response/>END_RESPONSE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/plsql/>PLSQL</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/read_text/>READ_TEXT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/set_header/>SET_HEADER</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/utl_http/>UTL_HTTP</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/utl_http.req/>UTL_HTTP.req</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/utl_http.resp/>UTL_HTTP.resp</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/write_text/>WRITE_TEXT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/bn-rule/>BN Rule</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/business-numbers/>Business Numbers</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/expressions/>Expressions</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/instructions/>Instructions</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/auto-refresh/>Auto Refresh</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/business/>Business</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/business-monitor/>Business Monitor</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/business_monitor/>Business_monitor</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/monitor/>Monitor</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/agent-gates/>Agent Gates</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/condition-additive/>Condition Additive</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/functor/>Functor</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/status-function/>Status Function</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/appointment/>Appointment</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/dock/>Dock</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/otm/>OTM</a>
+<span>14</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/resource/>Resource</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rows/>Rows</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/scheduling/>Scheduling</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/slots/>Slots</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/yard/>Yard</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/domain/>Domain</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/equipment/>Equipment</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/item/>Item</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/location/>Location</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/oracle/>Oracle</a>
+<span>11</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/allocation/>Allocation</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/voucher/>Voucher</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/invoice/>Invoice</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/tender/>Tender</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/bulk-plan/>Bulk Plan</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/business-number/>Business Number</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/planning-parameter/>Planning Parameter</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate-offering/>Rate Offering</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate-record/>Rate Record</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate-service/>Rate Service</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate_geo/>RATE_GEO</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate_offering/>RATE_OFFERING</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate_service/>RATE_SERVICE</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rates/>Rates</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/service-provider/>Service Provider</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/itinerary/>Itinerary</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/leg/>Leg</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/multi-leg/>Multi-Leg</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/action-definition-id/>Action Definition ID</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/actions/>Actions</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/label/>Label</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/smart-links/>Smart Links</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/action-checks/>Action Checks</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/allow-condition/>Allow Condition</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/audit-action-id/>Audit Action ID</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/cause/>Cause</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/post-action-check/>Post Action Check</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/carrier-login/>Carrier Login</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/manage-association/>Manage Association</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/serprov/>SERPROV</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/service-provider-login/>Service Provider Login</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/config/>Config</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/g-log-properties/>G-Log Properties</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/console.log/>Console.log</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/gc3env.sh/>Gc3env.sh</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glogapp-wl/>Glogapp-Wl</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glogweb-wl/>Glogweb-Wl</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/install/>Install</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/ohs/>Ohs</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/oracle-patches/>Oracle Patches</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/tomcat/>Tomcat</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/weblogic/>Weblogic</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/alter-profile/>Alter Profile</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/alter-user/>ALTER USER</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/compile_schema/>COMPILE_SCHEMA</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/dba_ddl_locks/>DBA_DDL_LOCKS</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/em-console/>EM Console</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/init.ora/>Init.ora</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/invalid-objects/>INVALID Objects</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/lsnrctl/>Lsnrctl</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/oracle-db/>Oracle DB</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/shutdown-immediate/>SHUTDOWN IMMEDIATE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/startup/>STARTUP</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/tnsnames.ora/>Tnsnames.ora</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/external-status/>External Status</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/internal-status/>Internal Status</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/status-type/>Status Type</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/qualifier/>Qualifier</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/refnum/>Refnum</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/updates-allowed/>Updates Allowed</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glog.webserver.report.reportworkspaceservlet/>Glog.webserver.report.ReportWorkspaceServlet</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/report-workspace/>Report Workspace</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/flex-fields/>Flex Fields</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/flexdroplist/>FlexDropList</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/picklist/>PickList</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/advanced-layout/>Advanced Layout</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/panel-splitter/>Panel Splitter</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/labels/>Labels</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/manager-layouts/>Manager Layouts</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/screen-sets/>Screen Sets</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/custom-menu/>Custom Menu</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/edit-user-access/>Edit User Access</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/manage-user-access/>Manage User Access</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user-menu/>User Menu</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/access-control-list/>Access Control List</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/acr_role_entry_point/>ACR_ROLE_ENTRY_POINT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/acr_role_role/>ACR_ROLE_ROLE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/common/>COMMON</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/default-role/>Default Role</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/external_predicate/>EXTERNAL_PREDICATE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/grantee-user-role/>Grantee User Role</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/password/>Password</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/sql-servlet/>SQL Servlet</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user/>User</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user-role/>User Role</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user_role/>USER_ROLE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user_role_acr/>USER_ROLE_ACR</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/vpd-profile/>VPD Profile</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/vpd_profile/>VPD_PROFILE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/email-otm-report/>Email OTM Report</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/print-document/>PRINT DOCUMENT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/report---ready/>REPORT - READY</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/report_log_parameter/>REPORT_LOG_PARAMETER</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/bi-publisher/>BI Publisher</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/format-template/>Format Template</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/query-template/>Query Template</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/report/>Report</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/agent-event-restrictions/>Agent Event Restrictions</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/before-persist/>Before Persist</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/event-source/>Event Source</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/call/>CALL</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/data-type-associations/>DATA TYPE ASSOCIATIONS</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/direct-sql-update/>DIRECT SQL UPDATE</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/raise-event/>RAISE EVENT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/agent/>Agent</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/agent-actions/>Agent Actions</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/error-handler/>Error Handler</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/saved-condition/>Saved Condition</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/saved-query/>Saved Query</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/user-in-finder/>User in Finder</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/contacts/>Contacts</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/external-system/>External System</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/integration/>Integration</a>
+<span>3</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/reports/>Reports</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/rate-distance/>Rate Distance</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/shipment/>Shipment</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/shipment-ship-unit/>Shipment Ship Unit</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/shipment-stop/>Shipment Stop</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/learn/>Learn</a>
+<span>5</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/order-base/>Order Base</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/order-movement/>Order Movement</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/order-release/>Order Release</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/packaged-item/>Packaged Item</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/packaging-unit/>Packaging Unit</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/purchase-order/>Purchase Order</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/ship-unit-spec/>Ship Unit Spec</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/data_dict/>DATA_DICT</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/gid/>GID</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glogowner/>GLOGOWNER</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/reportowner/>REPORTOWNER</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/schema/>Schema</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/xid/>XID</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/external/>External</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/integrations/>Integrations</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/min/>MIN</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/out-xml-profile/>Out XML Profile</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/outbound/>Outbound</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/system/>System</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/api/>API</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/csv/>CSV</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/example/>Example</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glog/>Glog</a>
+<span>2</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/glogxml/>GlogXML</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/inbound/>Inbound</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/servlet/>Servlet</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/upload/>Upload</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/xml/>XML</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/3-tier/>3 Tier</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/architecture/>Architecture</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/installation/>Installation</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/management/>Management</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/trasportation/>Trasportation</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/3pl/>3PL</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/bill-of-lading/>Bill of Lading</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/carrier/>Carrier</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/carton/>Carton</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/consignee/>Consignee</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/container/>Container</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/demurrage/>Demurrage</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/diversion/>Diversion</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/ftl/>FTL</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/inbound-shipping/>Inbound Shipping</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/incoterm/>INCOTERM</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/ltl/>LTL</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/outbound-shipping/>Outbound Shipping</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/pallet/>Pallet</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/stopoff-charge/>Stopoff Charge</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/supplier/>Supplier</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/thu/>THU</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/tl/>TL</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/basics/>Basics</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/g-log/>G-Log</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/gottimukkala/>Gottimukkala</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/introduction/>Introduction</a>
+<span>1</span></li><li class="flex align-center"><a href=/oracle-otm-site/tags/shiva/>Shiva</a>
+<span>1</span></li></ul></li></ul></nav></div></aside></main><script>document.addEventListener("contextmenu",function(e){e.preventDefault()}),document.addEventListener("keydown",function(e){e.ctrlKey&&(e.key==="c"||e.key==="C"||e.key==="a"||e.key==="A"||e.key==="u"||e.key==="U"||e.key==="s"||e.key==="S"||e.key==="p"||e.key==="P")&&e.preventDefault()})</script></body></html>

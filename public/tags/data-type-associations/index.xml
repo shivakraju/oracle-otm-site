@@ -1,24 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>DATA TYPE ASSOCIATIONS on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/data-type-associations/</link>
-		<description>Recent content in DATA TYPE ASSOCIATIONS on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Fri, 05 Aug 2016 20:29:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/data-type-associations/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Agents - Frequently Used Actions</title>
-				<link>http://localhost:1313/posts/agents-frequently-used-actions/</link>
-				<pubDate>Fri, 05 Aug 2016 20:29:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/agents-frequently-used-actions/</guid>
-				<description>&lt;p&gt;DIRECT SQL UPDATE&lt;/p&gt;&#xA;&lt;p&gt;This is very useful action in writing a DML statement or to call an PLSQL procedure.&lt;/p&gt;&#xA;&lt;p&gt;While using the Action, there are specific formats for DML statements or calling Procedures:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Insert Statement format:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;INSERT INTO order_release_refnum (order_release_gid,&lt;br&gt;&#xA;ORDER_RELEASE_REFNUM_QUAL_GID,&lt;br&gt;&#xA;ORDER_RELEASE_REFNUM_VALUE,&lt;br&gt;&#xA;DOMAIN_NAME)&lt;br&gt;&#xA;SELECT orr.order_release_gid,&lt;br&gt;&#xA;&amp;lsquo;SO_NUM&amp;rsquo;,&lt;br&gt;&#xA;orlr.orl_refnum_value,&lt;br&gt;&#xA;orlr.domain_name&lt;br&gt;&#xA;FROM order_release orr,&lt;br&gt;&#xA;order_release_line orl,&lt;br&gt;&#xA;order_release_line_refnum orlr&lt;br&gt;&#xA;WHERE orr.order_release_gid = orl.order_release_gid&lt;br&gt;&#xA;AND orl.order_release_line_gid = orlr.order_release_line_gid&lt;br&gt;&#xA;AND orlr.ORDER_RELEASE_REFNUM_QUAL_GID = &amp;lsquo;SO_NUM&amp;rsquo;&lt;br&gt;&#xA;AND ROWNUM = 1&lt;br&gt;&#xA;AND NOT EXISTS&lt;br&gt;&#xA;(SELECT 1&lt;br&gt;&#xA;FROM order_release_refnum oref&lt;br&gt;&#xA;WHERE oref.order_release_gid =&lt;br&gt;&#xA;orr.order_release_gid&lt;br&gt;&#xA;AND oref.order_release_refnum_qual_gid =&lt;br&gt;&#xA;&amp;lsquo;SO_NUM&amp;rsquo;)&lt;br&gt;&#xA;AND orr.order_release_gid = $gid&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DATA TYPE ASSOCIATIONS on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/data-type-associations/</link><description>Recent content in DATA TYPE ASSOCIATIONS on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 05 Aug 2016 20:29:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/data-type-associations/index.xml" rel="self" type="application/rss+xml"/><item><title>Agents - Frequently Used Actions</title><link>https://shivakraju.github.io/oracle-otm-site/posts/agents-frequently-used-actions/</link><pubDate>Fri, 05 Aug 2016 20:29:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/agents-frequently-used-actions/</guid><description>&lt;p&gt;DIRECT SQL UPDATE&lt;/p&gt;
+&lt;p&gt;This is very useful action in writing a DML statement or to call an PLSQL procedure.&lt;/p&gt;
+&lt;p&gt;While using the Action, there are specific formats for DML statements or calling Procedures:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Insert Statement format:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;INSERT INTO order_release_refnum (order_release_gid,&lt;br&gt;
+ORDER_RELEASE_REFNUM_QUAL_GID,&lt;br&gt;
+ORDER_RELEASE_REFNUM_VALUE,&lt;br&gt;
+DOMAIN_NAME)&lt;br&gt;
+SELECT orr.order_release_gid,&lt;br&gt;
+&amp;lsquo;SO_NUM&amp;rsquo;,&lt;br&gt;
+orlr.orl_refnum_value,&lt;br&gt;
+orlr.domain_name&lt;br&gt;
+FROM order_release orr,&lt;br&gt;
+order_release_line orl,&lt;br&gt;
+order_release_line_refnum orlr&lt;br&gt;
+WHERE orr.order_release_gid = orl.order_release_gid&lt;br&gt;
+AND orl.order_release_line_gid = orlr.order_release_line_gid&lt;br&gt;
+AND orlr.ORDER_RELEASE_REFNUM_QUAL_GID = &amp;lsquo;SO_NUM&amp;rsquo;&lt;br&gt;
+AND ROWNUM = 1&lt;br&gt;
+AND NOT EXISTS&lt;br&gt;
+(SELECT 1&lt;br&gt;
+FROM order_release_refnum oref&lt;br&gt;
+WHERE oref.order_release_gid =&lt;br&gt;
+orr.order_release_gid&lt;br&gt;
+AND oref.order_release_refnum_qual_gid =&lt;br&gt;
+&amp;lsquo;SO_NUM&amp;rsquo;)&lt;br&gt;
+AND orr.order_release_gid = $gid&lt;/p&gt;</description></item></channel></rss>

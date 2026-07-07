@@ -1,24 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Architecture on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/architecture/</link>
-		<description>Recent content in Architecture on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Fri, 15 Apr 2016 14:54:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>OTM Architecture</title>
-				<link>http://localhost:1313/posts/otm-architecture-this-is-applicable-for-on-premise-installations/</link>
-				<pubDate>Fri, 15 Apr 2016 14:54:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/otm-architecture-this-is-applicable-for-on-premise-installations/</guid>
-				<description>&lt;p&gt;OTM application has a typical three tier architecture. It has web tier, app tier and oracle database as third tier. These three components can be installed on separate servers (Linux/Windows) or they may be installed on the same server. Usually for lower environment like DEV or TEST they are installed on same server.&lt;/p&gt;&#xA;&lt;p&gt;At a high level, this OTM product can be installed with below software:&lt;/p&gt;&#xA;&lt;p&gt;1. Install Oracle Enterprise Linux - Operating System on the base servers. Note that OTM can be installed either on Linux server or Windows Server.&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Architecture on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/architecture/</link><description>Recent content in Architecture on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 15 Apr 2016 14:54:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>OTM Architecture</title><link>https://shivakraju.github.io/oracle-otm-site/posts/otm-architecture-this-is-applicable-for-on-premise-installations/</link><pubDate>Fri, 15 Apr 2016 14:54:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/otm-architecture-this-is-applicable-for-on-premise-installations/</guid><description>&lt;p&gt;OTM application has a typical three tier architecture. It has web tier, app tier and oracle database as third tier. These three components can be installed on separate servers (Linux/Windows) or they may be installed on the same server. Usually for lower environment like DEV or TEST they are installed on same server.&lt;/p&gt;
+&lt;p&gt;At a high level, this OTM product can be installed with below software:&lt;/p&gt;
+&lt;p&gt;1. Install Oracle Enterprise Linux - Operating System on the base servers. Note that OTM can be installed either on Linux server or Windows Server.&lt;/p&gt;</description></item></channel></rss>

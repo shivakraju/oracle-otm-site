@@ -1,24 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Scheduling on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/scheduling/</link>
-		<description>Recent content in Scheduling on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sat, 14 Feb 2026 12:11:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/scheduling/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Yard Management and Appointment Scheduling</title>
-				<link>http://localhost:1313/posts/yard-management-and-appointment-scheduling/</link>
-				<pubDate>Sat, 14 Feb 2026 12:11:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/yard-management-and-appointment-scheduling/</guid>
-				<description>&lt;p&gt;&lt;strong&gt;Yard Management:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;A warehouse usually has - Parking Yard and Dock Doors. Yard will have Rows and Each Row has some defined number of slots. Container will first be placed in the Yard slot. Users at warehouse will pull the container from Yard Slot to Door for unloading. Usually, responsibility of the carrier is to bring the container from port to yard. To move a container from Port to Yard – we can have a custom container ranking algorithm based on certain parameters (like PO priority, delivery dates, etc.) to give ranking to containers. Users at warehouse can use this rank to identify what containers they need to pull to the door at the earliest.&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scheduling on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/scheduling/</link><description>Recent content in Scheduling on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 14 Feb 2026 12:11:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/scheduling/index.xml" rel="self" type="application/rss+xml"/><item><title>Yard Management and Appointment Scheduling</title><link>https://shivakraju.github.io/oracle-otm-site/posts/yard-management-and-appointment-scheduling/</link><pubDate>Sat, 14 Feb 2026 12:11:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/yard-management-and-appointment-scheduling/</guid><description>&lt;p&gt;&lt;strong&gt;Yard Management:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A warehouse usually has - Parking Yard and Dock Doors. Yard will have Rows and Each Row has some defined number of slots. Container will first be placed in the Yard slot. Users at warehouse will pull the container from Yard Slot to Door for unloading. Usually, responsibility of the carrier is to bring the container from port to yard. To move a container from Port to Yard – we can have a custom container ranking algorithm based on certain parameters (like PO priority, delivery dates, etc.) to give ranking to containers. Users at warehouse can use this rank to identify what containers they need to pull to the door at the earliest.&lt;/p&gt;</description></item></channel></rss>

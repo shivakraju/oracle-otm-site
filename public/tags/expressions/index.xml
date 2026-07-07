@@ -1,24 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Expressions on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/expressions/</link>
-		<description>Recent content in Expressions on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sun, 15 Feb 2026 19:04:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/expressions/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Business Numbers</title>
-				<link>http://localhost:1313/posts/business-numbers/</link>
-				<pubDate>Sun, 15 Feb 2026 19:04:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/business-numbers/</guid>
-				<description>&lt;p&gt;&lt;strong&gt;Navigation:&lt;/strong&gt; Business Process Automation &amp;gt; Power Data &amp;gt; Business Numbers &amp;gt; Business Number Rule&lt;/p&gt;&#xA;&lt;p&gt;OTM provides default XID sequences for all the business objects likes order bases, order releases, shipments, invoices, etc. However if we need to change the default sequences based on business specific requirements, we can create custom business number rules.&lt;/p&gt;&#xA;&lt;p&gt;Every rule definition consists of one or more instructions, which are set in braces, { }. Literal text, if any, appears outside the braces. For example, this is the default rule definition for the invoice ID:&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Expressions on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/expressions/</link><description>Recent content in Expressions on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 15 Feb 2026 19:04:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/expressions/index.xml" rel="self" type="application/rss+xml"/><item><title>Business Numbers</title><link>https://shivakraju.github.io/oracle-otm-site/posts/business-numbers/</link><pubDate>Sun, 15 Feb 2026 19:04:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/business-numbers/</guid><description>&lt;p&gt;&lt;strong&gt;Navigation:&lt;/strong&gt; Business Process Automation &amp;gt; Power Data &amp;gt; Business Numbers &amp;gt; Business Number Rule&lt;/p&gt;
+&lt;p&gt;OTM provides default XID sequences for all the business objects likes order bases, order releases, shipments, invoices, etc. However if we need to change the default sequences based on business specific requirements, we can create custom business number rules.&lt;/p&gt;
+&lt;p&gt;Every rule definition consists of one or more instructions, which are set in braces, { }. Literal text, if any, appears outside the braces. For example, this is the default rule definition for the invoice ID:&lt;/p&gt;</description></item></channel></rss>

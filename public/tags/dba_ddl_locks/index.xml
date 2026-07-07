@@ -1,24 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>DBA_DDL_LOCKS on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/dba_ddl_locks/</link>
-		<description>Recent content in DBA_DDL_LOCKS on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sun, 13 Aug 2017 15:25:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/dba_ddl_locks/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Oracle DBA notes</title>
-				<link>http://localhost:1313/posts/oracle-dba-notes/</link>
-				<pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/oracle-dba-notes/</guid>
-				<description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post is applicable for OTM ver 6.x and below.&lt;/p&gt;&#xA;&lt;p&gt;To maintain Oracle OTM Database, below quick notes are useful. Note that usually DBA takes care of below activities.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Start the Database after OS reboot:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Login to OS as super user and start the Oracle Listener process. This process receives request from the client and manages traffic to the database server. You can do this with below command:&lt;/p&gt;&#xA;&lt;p&gt;$lsnrctl start;&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DBA_DDL_LOCKS on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/dba_ddl_locks/</link><description>Recent content in DBA_DDL_LOCKS on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 13 Aug 2017 15:25:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/dba_ddl_locks/index.xml" rel="self" type="application/rss+xml"/><item><title>Oracle DBA notes</title><link>https://shivakraju.github.io/oracle-otm-site/posts/oracle-dba-notes/</link><pubDate>Sun, 13 Aug 2017 15:25:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/oracle-dba-notes/</guid><description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post is applicable for OTM ver 6.x and below.&lt;/p&gt;
+&lt;p&gt;To maintain Oracle OTM Database, below quick notes are useful. Note that usually DBA takes care of below activities.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Start the Database after OS reboot:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Login to OS as super user and start the Oracle Listener process. This process receives request from the client and manages traffic to the database server. You can do this with below command:&lt;/p&gt;
+&lt;p&gt;$lsnrctl start;&lt;/p&gt;</description></item></channel></rss>

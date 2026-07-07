@@ -1,24 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>BI Publisher on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/bi-publisher/</link>
-		<description>Recent content in BI Publisher on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sat, 22 Oct 2016 01:58:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/bi-publisher/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Report Development - Sample Report</title>
-				<link>http://localhost:1313/posts/report-development-sample-report/</link>
-				<pubDate>Sat, 22 Oct 2016 01:58:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/report-development-sample-report/</guid>
-				<description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post is applicable for OTM ver 6.x - Query and Format template based reports.&lt;/p&gt;&#xA;&lt;p&gt;In OTM, you can develop a report with basic knowledge of SQL, PLSQL and Oracle BI Publisher. Reports Developer need to install Oracle BI Publisher Desktop version from Oracle Technology network.&lt;/p&gt;&#xA;&lt;p&gt;Once BI Publisher is installed, Word document menu appears as below with &amp;lsquo;Add-Ins&amp;rsquo; option:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/report-development-sample-repo-img1-2fe34ce33e.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;Below are the report development steps for typical BI Publisher report in OTM.&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BI Publisher on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/bi-publisher/</link><description>Recent content in BI Publisher on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 22 Oct 2016 01:58:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/bi-publisher/index.xml" rel="self" type="application/rss+xml"/><item><title>Report Development - Sample Report</title><link>https://shivakraju.github.io/oracle-otm-site/posts/report-development-sample-report/</link><pubDate>Sat, 22 Oct 2016 01:58:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/report-development-sample-report/</guid><description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post is applicable for OTM ver 6.x - Query and Format template based reports.&lt;/p&gt;
+&lt;p&gt;In OTM, you can develop a report with basic knowledge of SQL, PLSQL and Oracle BI Publisher. Reports Developer need to install Oracle BI Publisher Desktop version from Oracle Technology network.&lt;/p&gt;
+&lt;p&gt;Once BI Publisher is installed, Word document menu appears as below with &amp;lsquo;Add-Ins&amp;rsquo; option:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://shivakraju.github.io/oracle-otm-site/images/report-development-sample-repo-img1-2fe34ce33e.png" alt="" /&gt;&lt;/p&gt;
+&lt;p&gt;Below are the report development steps for typical BI Publisher report in OTM.&lt;/p&gt;</description></item></channel></rss>

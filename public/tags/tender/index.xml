@@ -1,24 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Tender on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/tender/</link>
-		<description>Recent content in Tender on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sat, 22 Aug 2020 04:55:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/tender/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>06 - Tender process</title>
-				<link>http://localhost:1313/posts/basic-otm-configurations-06-tender-process/</link>
-				<pubDate>Sat, 22 Aug 2020 04:55:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/basic-otm-configurations-06-tender-process/</guid>
-				<description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/&#34;&gt;01 - Domain, Items, Locations, and Equipment&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Tender Process&lt;/p&gt;&#xA;&lt;p&gt;When shipments are created, note that status on these shipments is SECURE RESOURCES_NOT STARTED.&lt;/p&gt;&#xA;&lt;blockquote class=&#39;book-hint &#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/basic-otm-configurations-06-te-img1-70d35394c8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;At this point, we need to notify carrier about the shipment information like pickup time and location. This can be done using:&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tender on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/tender/</link><description>Recent content in Tender on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 22 Aug 2020 04:55:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/tender/index.xml" rel="self" type="application/rss+xml"/><item><title>06 - Tender process</title><link>https://shivakraju.github.io/oracle-otm-site/posts/basic-otm-configurations-06-tender-process/</link><pubDate>Sat, 22 Aug 2020 04:55:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/basic-otm-configurations-06-tender-process/</guid><description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://shivakraju.github.io/oracle-otm-site/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/"&gt;01 - Domain, Items, Locations, and Equipment&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tender Process&lt;/p&gt;
+&lt;p&gt;When shipments are created, note that status on these shipments is SECURE RESOURCES_NOT STARTED.&lt;/p&gt;
+&lt;blockquote class='book-hint '&gt;
+&lt;p&gt;&lt;img src="https://shivakraju.github.io/oracle-otm-site/images/basic-otm-configurations-06-te-img1-70d35394c8.png" alt="" /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;At this point, we need to notify carrier about the shipment information like pickup time and location. This can be done using:&lt;/p&gt;</description></item></channel></rss>

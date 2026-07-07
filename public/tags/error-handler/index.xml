@@ -1,24 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Error Handler on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/error-handler/</link>
-		<description>Recent content in Error Handler on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Fri, 05 Aug 2016 19:33:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/error-handler/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Agents - Sample Agent Creation Steps</title>
-				<link>http://localhost:1313/posts/agents-sample-agent-creation-steps/</link>
-				<pubDate>Fri, 05 Aug 2016 19:33:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/agents-sample-agent-creation-steps/</guid>
-				<description>&lt;p&gt;Agents in OTM are workflow processes that listen to specific events happening in the system and trigger actions. These are similar to database triggers that trigger code based on DML events occurring in the database layer.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Let us try to understand more with below example:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Requirement:&lt;/strong&gt; Send a notification to specific user when shipment is created from bulk plan with total volume less than 100 cubic feet.&lt;/p&gt;&#xA;&lt;p&gt;For this, you need to follow below steps(high level):&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Error Handler on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/error-handler/</link><description>Recent content in Error Handler on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 05 Aug 2016 19:33:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/error-handler/index.xml" rel="self" type="application/rss+xml"/><item><title>Agents - Sample Agent Creation Steps</title><link>https://shivakraju.github.io/oracle-otm-site/posts/agents-sample-agent-creation-steps/</link><pubDate>Fri, 05 Aug 2016 19:33:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/agents-sample-agent-creation-steps/</guid><description>&lt;p&gt;Agents in OTM are workflow processes that listen to specific events happening in the system and trigger actions. These are similar to database triggers that trigger code based on DML events occurring in the database layer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Let us try to understand more with below example:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Requirement:&lt;/strong&gt; Send a notification to specific user when shipment is created from bulk plan with total volume less than 100 cubic feet.&lt;/p&gt;
+&lt;p&gt;For this, you need to follow below steps(high level):&lt;/p&gt;</description></item></channel></rss>

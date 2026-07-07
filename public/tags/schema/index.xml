@@ -1,31 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Schema on Learn Oracle OTM</title>
-		<link>http://localhost:1313/tags/schema/</link>
-		<description>Recent content in Schema on Learn Oracle OTM</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Mon, 02 May 2016 16:34:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/schema/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>OTM Inbound Integrations (XML)</title>
-				<link>http://localhost:1313/posts/otm-inbound-integrations-xml/</link>
-				<pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/otm-inbound-integrations-xml/</guid>
-				<description>&lt;p&gt;There are several ways of bringing in data into OTM system. Below are some of the methods:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;via XML that follows Glog XML schema posted from a middleware applications like Oracle SOA, webMethods, Mulesoft, etc&lt;/li&gt;&#xA;&lt;li&gt;Manaul XML uploads by OTM users&lt;/li&gt;&#xA;&lt;li&gt;CSV Uploads&lt;/li&gt;&#xA;&lt;li&gt;DB.XML Uploads&lt;/li&gt;&#xA;&lt;li&gt;REST-API Calls&lt;/li&gt;&#xA;&lt;li&gt;HTTP Post Requests from programming languages like PLSQL, etc&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;XML Inbound Integrations:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Most common way of receiving OTM Inbound data is via XML files from middleware applications. OTM can read XML files which are in the format specified by GlogXML Schema(OTM Standard XML Schema). You can download this schema from :&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>OTM Domains, Standard Schema and Data Dictionary</title>
-				<link>http://localhost:1313/posts/otm-domains-standard-schema-and-data-dictionary/</link>
-				<pubDate>Mon, 02 May 2016 16:34:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/otm-domains-standard-schema-and-data-dictionary/</guid>
-				<description>&lt;p&gt;&lt;strong&gt;Domains:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;OTM Data is organized into domains. Each domain is like grouping of data / business transactions based on the different business units with in the same organization.&lt;/p&gt;&#xA;&lt;p&gt;If there is a corporation with logistics requirements across various business units like &amp;ldquo;Merchandise Shipping&amp;rdquo;, &amp;ldquo;Food and Beverages&amp;rdquo;, etc - you typically create one domain for each of these business units so that users and their roles can be tied to each business unit. User/role tied to a particular domain can only access data for their specific domain/business unit. Also advantage with domains is that customization specific to a business unit can be better controlled/maintained. For example, OTM Agents(workflows) with custom code can be developed specific to each domain so they they trigger only for transactions within that domain.&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Schema on Learn Oracle OTM</title><link>https://shivakraju.github.io/oracle-otm-site/tags/schema/</link><description>Recent content in Schema on Learn Oracle OTM</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 02 May 2016 16:34:00 +0000</lastBuildDate><atom:link href="https://shivakraju.github.io/oracle-otm-site/tags/schema/index.xml" rel="self" type="application/rss+xml"/><item><title>OTM Inbound Integrations (XML)</title><link>https://shivakraju.github.io/oracle-otm-site/posts/otm-inbound-integrations-xml/</link><pubDate>Fri, 15 Apr 2016 18:20:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/otm-inbound-integrations-xml/</guid><description>&lt;p&gt;There are several ways of bringing in data into OTM system. Below are some of the methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;via XML that follows Glog XML schema posted from a middleware applications like Oracle SOA, webMethods, Mulesoft, etc&lt;/li&gt;
+&lt;li&gt;Manaul XML uploads by OTM users&lt;/li&gt;
+&lt;li&gt;CSV Uploads&lt;/li&gt;
+&lt;li&gt;DB.XML Uploads&lt;/li&gt;
+&lt;li&gt;REST-API Calls&lt;/li&gt;
+&lt;li&gt;HTTP Post Requests from programming languages like PLSQL, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;XML Inbound Integrations:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Most common way of receiving OTM Inbound data is via XML files from middleware applications. OTM can read XML files which are in the format specified by GlogXML Schema(OTM Standard XML Schema). You can download this schema from :&lt;/p&gt;</description></item><item><title>OTM Domains, Standard Schema and Data Dictionary</title><link>https://shivakraju.github.io/oracle-otm-site/posts/otm-domains-standard-schema-and-data-dictionary/</link><pubDate>Mon, 02 May 2016 16:34:00 +0000</pubDate><guid>https://shivakraju.github.io/oracle-otm-site/posts/otm-domains-standard-schema-and-data-dictionary/</guid><description>&lt;p&gt;&lt;strong&gt;Domains:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;OTM Data is organized into domains. Each domain is like grouping of data / business transactions based on the different business units with in the same organization.&lt;/p&gt;
+&lt;p&gt;If there is a corporation with logistics requirements across various business units like &amp;ldquo;Merchandise Shipping&amp;rdquo;, &amp;ldquo;Food and Beverages&amp;rdquo;, etc - you typically create one domain for each of these business units so that users and their roles can be tied to each business unit. User/role tied to a particular domain can only access data for their specific domain/business unit. Also advantage with domains is that customization specific to a business unit can be better controlled/maintained. For example, OTM Agents(workflows) with custom code can be developed specific to each domain so they they trigger only for transactions within that domain.&lt;/p&gt;</description></item></channel></rss>
