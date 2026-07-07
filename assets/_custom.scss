@@ -1,10 +1,15 @@
 // Custom styles for Learn Oracle OTM
 
 // Logo size in header
-.book-brand .book-logo {
-  height: 70px !important;
-  width: auto !important;
-  vertical-align: middle;
+.book-brand {
+  text-align: center;
+  a {
+    justify-content: center;
+  }
+  .book-logo {
+    height: 110px !important;
+    width: auto !important;
+  }
 }
 
 // Oracle red brand color in logo
