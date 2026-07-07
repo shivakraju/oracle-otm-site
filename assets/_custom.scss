@@ -1,12 +1,17 @@
 // Custom styles for Learn Oracle OTM
 
+// Oracle red brand color in logo
+.oracle-red {
+  color: #c74634;
+}
+
 // Post page title (h1) — refined style
 .book-page h1 {
   font-size: 1.6rem !important;
   font-weight: 600 !important;
   letter-spacing: -0.01em;
   color: #1e293b;
-  border-bottom: 2px solid var(--color-accent-default);
+  border-bottom: 2px solid #c74634;
   padding-bottom: 0.4rem;
   margin-bottom: 1.2rem;
 }
