@@ -6,7 +6,7 @@
 }
 
 // Post page title (h1) — refined style
-.book-page h1 {
+.book-page h1, .markdown h1 {
   font-size: 1.6rem !important;
   font-weight: 600 !important;
   letter-spacing: -0.01em;
