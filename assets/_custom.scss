@@ -1,14 +1,29 @@
 // Custom styles for Learn Oracle OTM
 
-// Logo in right sidebar
-.sidebar-logo {
+// Logo in left sidebar
+h2.book-brand {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.book-brand {
   text-align: center;
-  margin-bottom: 1rem;
-  img {
-    width: 100%;
-    height: auto;
-    max-width: 200px;
+  padding: 0.5rem 0;
+  background: none !important;
+  border: none !important;
+  a {
+    justify-content: center;
+    background: none !important;
+    border: none !important;
+  }
+  .book-logo {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 220px;
     object-fit: contain;
+    background: none !important;
+    border: none !important;
   }
 }
 
