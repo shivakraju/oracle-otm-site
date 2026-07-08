@@ -8,15 +8,12 @@
   box-shadow: none !important;
   background: none !important;
   img {
-    width: 100%;
-    height: auto;
-    max-width: 140px;
+    width: 120px !important;
+    height: 120px !important;
     object-fit: contain;
     border: none !important;
     box-shadow: none !important;
     mix-blend-mode: multiply;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
   }
 }
 
