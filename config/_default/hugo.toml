@@ -32,5 +32,4 @@ enableGitInfo = false
   BookRepo             = ""
   BookDateFormat       = "January 2, 2006"
   BookSection          = "posts"
-  BookLogo             = "/images/logo.png"
   description          = "Quick notes for Oracle Transportation Management Consultants(Beginners). Post corrections to learnotm@outlook.com"
