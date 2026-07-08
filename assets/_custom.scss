@@ -1,17 +1,30 @@
 // Custom styles for Learn Oracle OTM
 
 // Logo size in header
+h2.book-brand {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
 .book-brand {
   text-align: center;
   padding: 0.5rem 0;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
   a {
     justify-content: center;
+    background: none !important;
+    border: none !important;
   }
   .book-logo {
     width: 100% !important;
     height: auto !important;
     max-width: 220px;
     object-fit: contain;
+    background: none !important;
+    border: none !important;
   }
 }
 
