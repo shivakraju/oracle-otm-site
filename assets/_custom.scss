@@ -3,12 +3,14 @@
 // Logo size in header
 .book-brand {
   text-align: center;
+  padding: 0.5rem 0;
   a {
     justify-content: center;
   }
   .book-logo {
-    height: 100px !important;
-    width: 100px !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 220px;
     object-fit: contain;
   }
 }
