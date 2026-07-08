@@ -2,18 +2,21 @@
 
 // Logo in right sidebar
 .sidebar-logo {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1rem;
   border: none !important;
   box-shadow: none !important;
   background: none !important;
   img {
     width: 120px !important;
-    height: 120px !important;
-    object-fit: contain;
+    height: auto !important;
+    display: block;
     border: none !important;
     box-shadow: none !important;
     mix-blend-mode: multiply;
+    image-rendering: auto;
   }
 }
 
