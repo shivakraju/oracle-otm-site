@@ -25,6 +25,9 @@
   border: none !important;
   box-shadow: none !important;
   outline: none !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 // Oracle red brand color in logo
