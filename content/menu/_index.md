@@ -24,6 +24,7 @@ headless: true
   - [06 - Tender Process](/posts/basic-otm-configurations-06-tender-process/)
   - [07 - Invoicing](/posts/basic-otm-configurations-07-invoicing/)
   - [08 - Voucher Allocation](/posts/basic-otm-configurations-08-voucher-allocation/)
+  - [Multi-Stop Shipments](/posts/configuring-multi-stop-shipments-in-otm/)
 - **Agents & Automation**
   - [Saved Queries / Conditions](/posts/saved-queriesconditions/)
   - [Agents - Frequently Used Actions](/posts/agents-frequently-used-actions/)
