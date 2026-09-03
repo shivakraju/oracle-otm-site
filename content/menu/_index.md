@@ -50,7 +50,7 @@ headless: true
   - [Action Checks](/posts/action-checks/)
   - [Custom Actions & Smart Links](/posts/custom-actions-smart-links/)
   - [Yard Management & Appointment Scheduling](/posts/yard-management-and-appointment-scheduling/)
-  - [Multi-Stop Shipments](/posts/configuring-multi-stop-shipments-in-otm/)
   - [OTM Application Admin Notes](/posts/otm-application-admin-notes/)
   - [Oracle DBA Notes](/posts/oracle-dba-notes/)
   - [G-Log Properties](/posts/g-log-properties/)
+  - [Multi-Stop Shipments](/posts/configuring-multi-stop-shipments-in-otm/)

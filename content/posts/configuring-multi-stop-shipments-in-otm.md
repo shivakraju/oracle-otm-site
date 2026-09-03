@@ -2,7 +2,7 @@
 title: "Configuring Multi-Stop Shipments in OTM"
 date: 2026-09-03T00:00:00+00:00
 draft: false
-weight: 215
+weight: 999
 tags:
   - "Multi-Stop"
   - "Bulk Plan"
