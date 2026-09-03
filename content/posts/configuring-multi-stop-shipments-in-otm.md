@@ -10,6 +10,21 @@ tags:
   - "Rate Offering"
   - "Distance Lookup"
   - "OTM"
+keywords:
+  - "Oracle OTM multi-stop shipment configuration"
+  - "OTM bulk plan multi-stop"
+  - "Oracle Transportation Management multi-stop"
+  - "OTM logic configuration MULTISTOP"
+  - "multi-stop shipment setup OTM"
+  - "OTM configure multiple stops"
+  - "bulk plan consolidation multi-stop"
+  - "OTM itinerary multi-stop"
+  - "MULTISTOP CONFIG ID parameter set"
+  - "OTM distance lookup multi-stop"
+  - "Oracle OTM rate offering stop count"
+  - "OTM auto consolidation type MULTISTOP INTO ONE EQUIP"
+  - "Oracle TMS multi-stop configuration"
+description: "Step-by-step guide to configuring multi-stop shipments in Oracle OTM. Covers Logic Configuration, Bulk Plan Parameter Sets, Itinerary setup, Rate Offering stop count limits, and Distance Lookup configuration."
 ---
 
 In OTM, a **multi-stop shipment** is a single shipment that picks up or delivers freight at more than one location. For example, a truck may pick up goods from one warehouse and deliver them to multiple customer locations in sequence — all on the same shipment.
