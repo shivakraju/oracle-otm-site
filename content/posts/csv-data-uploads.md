@@ -67,7 +67,6 @@ Business Process Automation > Data Export > CSV Export
 On the CSV Export screen, set **Table Name** to `LOCATION` and paste the WHERE clause from Step 2 into the WHERE clause field. Click **Run**.
 </div>
 
-> ![CSV Export — selecting LOCATION table with WHERE clause](/images/csv-export-table-select.png)
 
 <div class="step-box">
 <strong>Step 5 — Save the output as a CSV file</strong>
