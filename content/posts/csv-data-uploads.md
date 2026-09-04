@@ -19,44 +19,98 @@ keywords:
 description: "Step-by-step guide to loading data into Oracle OTM using CSV uploads, demonstrated with the Location object, covering the CSV Export screen, WHERE clause setup, and the resulting import file format."
 ---
 
-We can load data to OTM is using CSV files. You can follow below steps to load location into OTM using CSV upload. Note that same steps are applicable to any OTM object like order release,shipment, invoice, etc.
+OTM supports loading data using CSV (comma-separated values) files. This is a practical method for bulk data uploads during initial implementation or data migrations — especially when the source data is available in spreadsheet form.
 
-1\. Create a sample location manually in OTM with requirement information.  
+The approach works by first exporting a sample record from OTM in CSV format, which gives you the exact column structure OTM expects. You then populate that template with your data and upload it back. The steps below use a Location record as an example — the same process applies to any OTM business object such as Order Release, Shipment, Service Provider, Invoice, and more.
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi59aQDCW9K0M4nW9jR1R4VjcCsmIkowgc9bnC7DztULfJ24FFFoDl3yf-YEpSVwsP0hxDR2ACfu8grfQ8pS93uHg4z2ngQ4vABzMh15Q9_kYgsrG7MDtfeFu1de_yyCFuPR2zVac5Ce2M/s1600/OTM_Location.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi59aQDCW9K0M4nW9jR1R4VjcCsmIkowgc9bnC7DztULfJ24FFFoDl3yf-YEpSVwsP0hxDR2ACfu8grfQ8pS93uHg4z2ngQ4vABzMh15Q9_kYgsrG7MDtfeFu1de_yyCFuPR2zVac5Ce2M/s1600/OTM_Location.png)
+**Step by Step — Load a Location via CSV:**
 
-2\. Query for this location from back end table as follows:  
-  
+<div class="step-box">
+<strong>Step 1 — Create a sample Location in OTM manually</strong>
 
-select * from location where location_xid = 'TEST SH CORPORATION-45769'
+Log in to OTM and create one sample Location record with all the fields you plan to load via CSV. This sample record will be used in the next step to generate the correct CSV template.
 
-  
-3\. Note down the WHERE clause from the query.  
-4\. Goto Business Process Automation > Data Export > CSV Export  
-  
-![](/images/csv-data-uploads-img1-80b819bdb1.png)  
-  
-  
+<p>Navigate to:</p>
 
-  
+Shipment Management > Location Manager > New
 
-5.
+Fill in the required fields — Location GID, Name, Address — and save the record.
+</div>
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEg5_oszH_mTbaed3D2S08SF-d7CTgbLoGE-z3yuXNvFMXEZJXW6Z83BrTq_p8jlZJVy1Lbt9fvIYvvIHvDFBok7oRmX_SZyQw5KzgdNRGRFGqgFtR5LvY9I3xAG9QxwbciJkegHjEuCphri_zPIolVqamdUwZbzWsqemGHp4ocmVo883qLwmKvPttxRIFE)  
-Select Table Name as 'LOCATION' and copy the WHERE clause that you have noted down in earlier step.  
-6\. Click 'Run' and you will have following output:  
+> ![OTM Location Manager showing a sample location record](/images/csv-otm-location-record.png)
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiMEL8SIaYV2g2_IasZKirtNzb5EIfKGfIoWRrV-7Rn8BNxPs4zVQO1hwYKImg0QML0DzzsrYFzEi-yO7JvcnEZqnXK0aMNyhyKUxg2C1_rx_mYufjmmDyozMkliLfq3gdZeG9-NfYyBk/s1600/CSVUploadResult.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiMEL8SIaYV2g2_IasZKirtNzb5EIfKGfIoWRrV-7Rn8BNxPs4zVQO1hwYKImg0QML0DzzsrYFzEi-yO7JvcnEZqnXK0aMNyhyKUxg2C1_rx_mYufjmmDyozMkliLfq3gdZeG9-NfYyBk/s1600/CSVUploadResult.png)
+<div class="step-box">
+<strong>Step 2 — Find the backend table name and WHERE clause</strong>
 
-7\. Select the grey text which is location data and save it in .txt file.   
-Open this .txt file using Microsoft xls application and select comma as delimiter. Save this file as .csv file. To verify the .csv has data is correct format open the file using textpad and you should see data with comma separated values. 8\. Now upload the file using Business Process Automation -> Integration -> Integration Manager -> Upload XML/CSV Transmission:  
-  
-  
-![](/images/csv-data-uploads-img2-7f6b9b4bab.png)   
-![](/images/csv-data-uploads-img3-f36c44c247.png)   
-  
-**Important Note:**  
-Ensure that date columns will follow the NLS Date Format mentioned in line 2 of the csv file.The results screen is something like this. Note that Process Count and Error Count values are populated in the result.  
-  
+OTM stores Location data in the `LOCATION` table. To export just your sample record, you need a WHERE clause that identifies it. The Location GID's Xid maps to `LOCATION_XID`:
+</div>
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDKW3LF0KTVpdM9h8uOFRsvkgjiRLGAlkdOn4HcOnAManxyXtV1PyZyoaxW6DCt0_YzkPSlIuFIOWKWOdhj7B_BLB36iLg24DOpK0Xxmgbd0dliCejlboo4xSNyOG_IVgFQozdCxarruA/s1600/UplaodResult2.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDKW3LF0KTVpdM9h8uOFRsvkgjiRLGAlkdOn4HcOnAManxyXtV1PyZyoaxW6DCt0_YzkPSlIuFIOWKWOdhj7B_BLB36iLg24DOpK0Xxmgbd0dliCejlboo4xSNyOG_IVgFQozdCxarruA/s1600/UplaodResult2.png)
+```sql
+SELECT * FROM location WHERE location_xid = 'YOUR-LOCATION-XID'
+```
+
+Note down the `LOCATION_XID` value — you will enter this as the WHERE clause in the next step.
+
+<div class="step-box">
+<strong>Step 3 — Export the sample record as CSV from OTM</strong>
+
+Navigate to:
+
+Business Process Automation > Data Export > CSV Export
+</div>
+
+> ![OTM CSV Export screen](/images/csv-data-uploads-img1-80b819bdb1.png)
+
+<div class="step-box">
+<strong>Step 4 — Select table and run the export</strong>
+
+On the CSV Export screen, set **Table Name** to `LOCATION` and paste the WHERE clause from Step 2 into the WHERE clause field. Click **Run**.
+</div>
+
+> ![CSV Export — selecting LOCATION table with WHERE clause](/images/csv-export-table-select.png)
+
+<div class="step-box">
+<strong>Step 5 — Save the output as a CSV file</strong>
+
+OTM displays the exported data as grey text. Select all of that text and save it as a `.txt` file. Then open the `.txt` file in Microsoft Excel — when prompted, choose **comma** as the delimiter. Save the result as a `.csv` file.
+
+To verify the file is correctly formatted, open it in a text editor (Notepad or TextPad) — you should see values separated by commas, with the column headers in the first line and the NLS date format in line 2.
+</div>
+
+> ![OTM CSV export output showing comma-separated data](/images/CSVUploadResult.png)
+
+<div class="step-box">
+<strong>Step 6 — Populate the CSV template with your data</strong>
+
+Add your actual records to the CSV file, following the same column structure as the exported sample row. Each row represents one Location (or whichever object you are loading). Do not change the column order or the header rows.
+</div>
+
+<div class="step-box">
+<strong>Step 7 — Upload the CSV file to OTM</strong>
+
+Navigate to:
+
+Business Process Automation > Integration > Integration Manager > Upload XML/CSV Transmission
+
+Browse for your `.csv` file and click **Upload**.
+</div>
+
+> ![OTM Integration Manager upload screen](/images/csv-data-uploads-img2-7f6b9b4bab.png)
+
+<div class="step-box">
+<strong>Step 8 — Verify the result</strong>
+
+After the upload, OTM displays a results screen showing **Process Count** and **Error Count**. A non-zero Error Count means some records failed — click the error details to review.
+</div>
+
+> ![OTM CSV upload result showing Process Count and Error Count](/images/csv-upload-result2.png)
+
+> ![OTM CSV upload confirmation screen](/images/csv-data-uploads-img3-f36c44c247.png)
+
+<div class="note-box"><strong>Important:</strong> Date columns in your CSV file must follow the NLS Date Format specified in line 2 of the exported CSV. If the date format does not match, OTM will reject those rows with a format error.</div>
+
+**What's Next:**
+
+Now that you have seen the main methods for loading data into OTM — XML uploads, HTTP POST from PL/SQL, and CSV uploads — the next topic covers OTM Outbound Integrations: how OTM sends data out to external systems such as carrier platforms, ERP applications, and middleware.
+
+Next Topic: [Outbound Integrations](/posts/otm-outbound-integrations/)
