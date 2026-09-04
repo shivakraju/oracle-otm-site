@@ -164,6 +164,6 @@ Query for the transmission number. The status should show as **PROCESSED**. If t
 
 **What's Next:**
 
-The next topic covers OTM Outbound Integrations — how OTM sends data to external systems such as carrier platforms, ERP applications, and middleware.
+Another simple way to load data into OTM without middleware is using CSV files — useful when your source data is in spreadsheet form. The next topic covers how to export a CSV template from OTM, populate it, and upload it back.
 
-Next Topic: [Outbound Integrations](/posts/otm-outbound-integrations/)
+Next Topic: [CSV Data Uploads](/posts/csv-data-uploads/)
