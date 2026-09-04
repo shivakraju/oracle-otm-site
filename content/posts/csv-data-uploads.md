@@ -96,6 +96,14 @@ Browse for your `.csv` file and click **Upload**.
 
 > ![OTM Integration Manager upload screen](/images/csv-data-uploads-img2-7f6b9b4bab.png)
 
+The **Command** field on the upload screen controls how OTM handles each record in the CSV:
+
+<div class="field-box"><strong>i (Insert):</strong> Inserts new records only. If a record with the same GID already exists in OTM, the row will error out.</div>
+
+<div class="field-box"><strong>iu (Insert or Update):</strong> Inserts the record if it does not exist, or updates it if it does. This is the safest option for most data loads.</div>
+
+<div class="field-box"><strong>d (Delete):</strong> Deletes the matching record from OTM. Use with caution — deleted records cannot be recovered from this screen.</div>
+
 <div class="step-box">
 <strong>Step 8 — Verify the result</strong>
 
