@@ -1,70 +1,70 @@
-﻿---
-title: "OTM Architecture"
+---
+title: "OTM Product Architecture"
 date: 2016-04-15T14:54:00+00:00
 draft: false
 weight: 35
 tags:
-  - "Installation"
   - "Architecture"
   - "OTM"
-  - "Learn"
-  - "Management"
-  - "Oracle"
-  - "Trasportation"
-  - "Glog"
   - "3 tier"
+  - "Oracle"
+  - "WebLogic"
 aliases:
   - "/2016/04/otm-architecture.html"
 keywords:
-  - "Oracle OTM on-premise architecture"
+  - "Oracle OTM product architecture"
   - "OTM three tier architecture"
-  - "OTM WebLogic app tier installation"
-  - "Oracle OTM web tier app tier database"
-  - "OTM Oracle HTTP Server setup"
-  - "Oracle OTM installation steps on-premise"
-  - "OTM Oracle Database 11g setup"
-  - "OTM Enterprise Linux installation"
-  - "Oracle Transportation Management server architecture"
-  - "OTM GC3 application server"
-  - "Oracle OTM infrastructure setup"
-description: "Explains the three-tier on-premise architecture of Oracle OTM, covering the web tier (Oracle HTTP Server), app tier (WebLogic), and Oracle Database, including installation sequence and server configuration notes."
+  - "Oracle OTM web tier app tier database tier"
+  - "OTM Oracle HTTP Server OHS"
+  - "OTM WebLogic application server"
+  - "OTM mod_wl_ohs connector"
+  - "Oracle OTM UI component business component"
+  - "OTM GLOGOWNER REPORTOWNER schema"
+  - "Oracle Transportation Management architecture overview"
+  - "OTM on-premise SaaS architecture"
+  - "OTM JDBC database connection"
+  - "Oracle OTM GC3 application tier"
+description: "An overview of Oracle OTM's three-tier product architecture — covering the Web Tier (Oracle HTTP Server), Application Tier (Oracle WebLogic with UI and Business components), and Database Tier (Oracle Database with GLOGOWNER and REPORTOWNER schemas)."
 ---
 
-OTM application has a typical three tier architecture. It has web tier, app tier and oracle database as third tier. These three components can be installed on separate servers (Linux/Windows) or they may be installed on the same server. Usually for lower environment like DEV or TEST they are installed on same server.  
+OTM follows a standard **three-tier architecture** — a widely used design in enterprise software where the application is split into three distinct layers: Web Tier, Application Tier, and Database Tier. Each tier has a specific responsibility, and together they allow OTM to scale, be maintained, and support many users simultaneously.
 
-  
-At a high level, this OTM product can be installed with below software:  
-  
-1\. Install Oracle Enterprise Linux - Operating System on the base servers. Note that OTM can be installed either on Linux server or Windows Server.  
-  
-2\. Install Oracle Database 11g Enterprise Edition - Database Software from Oracle.   
-  
-3\. Install Oracle Weblogic Server 11g(software on which OTM App tier runs)  
-This is where OTM App Tier(part of OTM software) is installed. OTM App tier has the business logic like standard OTM algorithms, OTM Agents(workflows), etc   
-  
-4\. Install Oracle HTTP Server(software on which OTM Web tier runs). This is where OTM Web Tier(part of OTM software) is installed. OTM Web Tier has static content like OTM Help pages, labels, etc  
-  
-5\. Install OTM software. OTM Installation steps would basically have below configurations:  
+Depending on the deployment model — on-premise or SaaS — the underlying infrastructure differs, but the three-tier concept remains the same. In on-premise deployments, your organization manages each tier on its own servers. In SaaS (cloud) deployments, Oracle manages the infrastructure and these tiers are hosted and maintained by Oracle.
 
-  * Base Path on the servers(app and web) where you want to install OTM. 
-  * Configuring OTM Web tier with Web Server IP address and Port(Note that you can have multiple application/programs running on the same server and by knowing IP address request can hit the server and by knowing the port it will hit specific program/application running on the server)
-  * Configuring OTM App tier with App Server IP address and Port.
-  * Configuring OTM Database with DB Server IP address and Port. 
-  * After OTM is installed successfully, on the OTM database run standard scripts provided by OTM to configure OTM Tablespaces, OTM Database Schema(like GLOGOWNER, REPORTOWNER, etc) 
+**The Three Tiers:**
 
-See below diagram that shows software names that are installed on each server. In this example, assume that we are using three different servers - one for OTM web tier software components, one for OTM app tier software components and one for Oracle Database software.  
+> **Web Tier (Presentation Layer):** Runs on Oracle HTTP Server (OHS). It receives browser requests from end users. Static content such as OTM help pages, labels, and JavaScript files are served directly from this tier. Dynamic requests (such as running Bulk Plan or searching for shipments) are forwarded to the Application Tier via the **mod_wl_ohs** connector.
+>
+> **Application Tier (Business Logic Layer):** Runs on Oracle WebLogic Application Server. It has two logical components — the **UI Component**, which is a servlet container that renders dynamic HTML pages back to the user, and the **Business Component**, which contains all OTM business logic including the Bulk Plan algorithm, OTM Agents (workflows), rating, tender processing, and invoice handling. The tiers communicate using JNDI and RMI calls internally, and JDBC to connect to the database.
+>
+> **Database Tier (Data Layer):** Oracle Database stores all OTM data and is accessed from the Application Tier via JDBC. It has two primary schemas — **GLOGOWNER**, which is the main OTM schema containing orders, shipments, and configuration data, and **REPORTOWNER**, which holds reporting and reference data such as rates, locations, and carriers.
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWtbxKM5vgfxIAYWbwnrRQ_0U76Dexpb1Utvy4lfUaC7FM87CcGRjTnB6vVf4aCWyxi1lCrRNmLhmzHeoFdJ6UQMOycLkiZ6PUK2Xlg18la_sireahVRfjwEtXKX6_XqwI7u7HJ1ueVmE/s640/OTMArcihtecture.png) ](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWtbxKM5vgfxIAYWbwnrRQ_0U76Dexpb1Utvy4lfUaC7FM87CcGRjTnB6vVf4aCWyxi1lCrRNmLhmzHeoFdJ6UQMOycLkiZ6PUK2Xlg18la_sireahVRfjwEtXKX6_XqwI7u7HJ1ueVmE/s1600/OTMArcihtecture.png)
+**OTM Product Architecture — Three-Tier Overview:**
 
-  
+> ![OTM Product Architecture Diagram](/images/OTMArcihtecture.png)
 
-A typical data flow between these servers can be understood as below:  
-End User of the OTM application will start a browser like IE, Firefox on their local desktop(PC) which is referred to a "Client" machine. User will launch the OTM application(installed on server machine as explained above) using URL having host name and port number for the OTM Web tier. User will login and start performing actions in the OTM application.Each action will have an REQUEST("Client" to "Server") and RESPONSE("Server" to "Client"). There can be several users working simultaneously on the application. Google topics related to "Client Server Architecture" for more details.  
-  
-If you look at above diagram, user will send an HTTP request(in the form of actions) to OTM Web tier. If the request is for a static content (like some OTM help page topics,etc.) web tier will directly send this information back to the user. But, if the request requires some complex business logic processing (like bulk planning of orders into shipments), web tier will send the request to app tier that has all the software components like Bulk Plan alogoriths, etc and App tier will process the request(sometimes by fetching required data from Database tier) and send information back to web server. Web server will present this information to end user.  
-  
-OTM Web tier is just a information presentation layer. Web tier primarily takes care of User Interface functions. App tier takes care of all business logic/application logic functions.    
-  
-Also, you see that external applications(utilities) like SMC Rateware, PC Miler, SMTP server etc can be installed separately on a different server(Windows, etc) and OTM App tier can be configured to communicate with these applications. We will talk more about these external applications used by OTM and related configurations in future posts.  
-  
-**Note:** Please post corrections to 'learnotm@outlook.com'
+**How Data Flows:**
+
+When a user opens OTM in a browser, they are connecting to the **Web Tier**. Every action the user takes — such as searching for a shipment or running Bulk Plan — sends a request from the browser to the Web Tier. If the request is for static content (like a help page), the Web Tier (OHS) responds directly. If the request requires business processing, OHS proxies it to the **Application Tier** via the mod_wl_ohs connector. The UI Component receives the request and passes it to the Business Component for processing. The Business Component executes the required logic (sometimes reading or writing to the Database Tier via JDBC) and returns the result back through the UI Component and Web Tier to the user's browser.
+
+**Server Setup:**
+
+Each of the three tiers can be deployed on separate servers or combined on a single server, depending on the environment:
+
+> **Production environments** typically use separate servers for each tier to ensure performance, scalability, and reliability.
+>
+> **Lower environments** (Development, Test, UAT) often run all three tiers on a single server to reduce infrastructure costs.
+>
+> **SaaS deployments** — Oracle manages all server infrastructure. You access OTM through a URL provided by Oracle and do not need to manage or install any tiers.
+
+**External Systems:**
+
+The Application Tier can be configured to communicate with external systems that extend OTM's capabilities:
+
+- **Mileage Engines** (e.g. PC\*MILER, MileMaker) — for calculating distances between locations
+- **LTL Rate Engines** (e.g. SMC³ RateWare XL) — for dynamically fetching carrier rates
+- **ERP Systems** (e.g. Oracle E-Business Suite, SAP) — for exchanging orders and cost data
+- **Middleware / Integration Platforms** (e.g. MuleSoft, Oracle BPEL) — for translating OTM XML to carrier EDI formats and vice versa
+- **SMTP Mail Server** — for sending email notifications from OTM Agents
+
+**Note:** For on-premise deployments, the specific software versions for the database, application server, and web server depend on the OTM version being installed. Always refer to the Oracle certification matrix for your OTM version to confirm compatible software versions.
