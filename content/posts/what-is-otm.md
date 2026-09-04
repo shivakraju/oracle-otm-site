@@ -9,9 +9,7 @@ tags:
   - "Basics"
   - "OTM"
   - "Learn"
-  - "Gottimukkala"
   - "Oracle"
-  - "Shiva"
 aliases:
   - "/2016/04/introduction-to-oracle.html"
 keywords:
@@ -27,25 +25,42 @@ keywords:
   - "Oracle OTM order management introduction"
   - "OTM carrier freight consolidation"
   - "Oracle Transportation Management consultant guide"
-description: "An introduction to Oracle Transportation Management (OTM), covering its origins as G-log, core capabilities like order management, bulk planning, tendering, and invoicing, and how it integrates with ERP systems via GlogXML."
+description: "An introduction to Oracle Transportation Management (OTM), covering its origins as G-Log, core capabilities like order management, bulk planning, tendering, and invoicing, and how it integrates with ERP systems via GlogXML."
 ---
 
-OTM stands for Oracle Transportation Management and it is a software product designed to automate various logistics business processes like receiving orders from source ERP systems for freight consolidation, optimizing routes and shipping costs, sending tender requests to service providers(carriers), receiving shipment tracking revents from carriers, recieving and processing invoices from carriers, allocate freight costs to orders, and similar other functions which we will further discuss in future posts.
+OTM stands for **Oracle Transportation Management**. It is a software product designed to automate various logistics business processes — receiving orders from source ERP systems for freight consolidation, optimizing routes and shipping costs, sending tender requests to carriers, receiving shipment tracking events, processing invoices, allocating freight costs to orders, and more.
 
-  
-This product is designed such a way that it can be easily configured and customized by IT Consultants for various client specific business needs with minimal technical expertise. IT Technical consultants would need basic Oracle SQL and XML knowledge for customizing the product and Functional consultants would need basic logistics domain knowledge to configure(setup) the product based on the documentation and use cases provided by Oracle. Latest OTM SaaS versions make it easier for clients to just focus on core business configurations to fast track product implementation timelines while Oracle provides necessary infrastructure and application maintainance for all the standard (out of the box) OTM features.  
-  
-This product is originally developed by a company with name "Global Logistics Technologies, Inc" (also known as G-log). G-log was acquired by Oracle around 2005 and was renamed as OTM - Oracle Transportation Management.   
-  
-OTM has in-built integration with Oracle E-Business Suite of applications like Oracle Shipping(WSH). OTM can integrate with any external system by posting and receiving XML files based on GlogXML.xsd (product defined schema/data structure). Latest versions of OTM also support REST-API call based integrations. Note that OTM is not an application/module within the Oracle E-Business Suite of applications. OTM requires a separate installation - web, application and database tiers for on-premise configurations. Please see the next topic "OTM Architecuture" for these details.  
-  
-At a high level, few core capabilities of OTM are mentioned here:  
+**Some of the Core Capabilities of OTM:**
 
-  * Receiving Purchase Orders(Order Base) from source ERP systems/legacy systems 
-  * Processing Order Release s(bookings) from the Purchase Orders for partial quantity or complete quantity with manual or automated release instructions
-  * Plan/consolidate Order Releases with common source and destination locations or into multi-stop shipments based on standard Bulk Plan algorithm that is configurable for client specific requirements. Bulk Plan involves identifying Itinerary(route), least cost Service Provider or Carrier (based on pre-uploaded rates), optimize loading of items into containers(equipments), calculating shipment in-transit times based on setups, etc. 
-  * OTM can dynamically fetch LTL rates from third party applications like 'SMC Rateware' and also distances between zip codes using third party applications like 'MILEMAKER', 'PCMILER', etc
-  * Send Tender Offer requests to Service Providers identified during planning. Note that if Carrier cannot accept XML tender files, we need to use Middleware tools like Web Methods, Mulesoft, Oracle BPEL etc to translate OTM outbound XML files to carrier readable formats like EDI files.
-  * Receive T ender Offer response and update the shipment
-  * Receive Shipment Tracking updates from Service Providers and update the shipment
-  * Receive/process invoices from Service Providers, match the invoice costs with planned costs for invoice approvals, create vouchers for approved invoices, allocate the costs against customer orders, etc.
+- **Order Management:** Receive Purchase Orders (Order Base) from source ERP or legacy systems and create Order Releases (Bookings) for full or partial quantities, either manually or through automated release rules.
+
+- **Bulk Planning:** Consolidate Order Releases (Bookings) with common source and destination locations, or build multi-stop shipments. The Bulk Plan algorithm identifies the optimal route (Itinerary), selects the least-cost carrier based on pre-configured rates, optimizes loading of items into equipment, and calculates in-transit times.
+
+- **Third-Party Rate and Distance Engines:** OTM can dynamically fetch LTL rates from third-party engines such as **SMC³ RateWare XL**, and calculate distances between locations using mileage engines such as **PC\*MILER** or **MileMaker**.
+
+- **Tendering:** Send Tender Offer requests to the carriers identified during planning. If a carrier cannot accept XML tender files directly, middleware tools such as MuleSoft, Oracle BPEL, or similar integration platforms can be used to translate OTM outbound XML to carrier-readable formats such as EDI.
+
+- **Tender Response:** Receive and process carrier tender responses and update the shipment accordingly.
+
+- **Shipment Tracking:** Receive shipment tracking updates from carriers and update shipment status in OTM.
+
+- **Invoicing:** Receive and process invoices from carriers, match invoice costs against planned costs for approval, create vouchers for approved invoices, and allocate freight costs back to customer orders.
+
+**Ease of Implementation:**
+
+OTM is designed to be configured and customized by consultants for client-specific business needs with minimal technical expertise.
+
+- **Functional consultants** need basic logistics domain knowledge to configure the product based on the business requirements and Oracle documentation.
+- **IT/Technical consultants** need basic Oracle SQL and XML knowledge for customizations and integrations.
+
+Latest OTM SaaS versions allow clients to focus purely on core business configurations, while Oracle manages the infrastructure, upgrades, and maintenance of all standard out-of-the-box features.
+
+**History:**
+
+OTM was originally developed by a company called **Global Logistics Technologies, Inc.** (also known as G-Log). Oracle acquired G-Log in 2005 and rebranded the product as OTM — Oracle Transportation Management.
+
+**Integration:**
+
+OTM has built-in integrations with Oracle E-Business Suite applications such as Oracle Shipping (WSH). It can also integrate with any external system by exchanging XML files based on **GlogXML.xsd** — Oracle's product-defined XML schema. Newer versions of OTM additionally support REST API-based integrations.
+
+**Note:** OTM is not a module within Oracle E-Business Suite. It is a standalone product that requires its own installation — web, application, and database tiers for on-premise deployments. See the next topic [OTM Architecture](/posts/otm-architecture-this-is-applicable-for-on-premise-installations/) for details.
