@@ -33,11 +33,17 @@ Depending on the deployment model — on-premise or SaaS — the underlying infr
 
 **The Three Tiers:**
 
-> **Web Tier (Presentation Layer):** Runs on Oracle HTTP Server (OHS). It receives browser requests from end users. Static content such as OTM help pages, labels, and JavaScript files are served directly from this tier. Dynamic requests (such as running Bulk Plan or searching for shipments) are forwarded to the Application Tier via the **mod_wl_ohs** connector.
->
-> **Application Tier (Business Logic Layer):** Runs on Oracle WebLogic Application Server. It has two logical components — the **UI Component**, which is a servlet container that renders dynamic HTML pages back to the user, and the **Business Component**, which contains all OTM business logic including the Bulk Plan algorithm, OTM Agents (workflows), rating, tender processing, and invoice handling. The tiers communicate using JNDI and RMI calls internally, and JDBC to connect to the database.
->
-> **Database Tier (Data Layer):** Oracle Database stores all OTM data and is accessed from the Application Tier via JDBC. It has two primary schemas — **GLOGOWNER**, which is the main OTM schema containing orders, shipments, and configuration data, and **REPORTOWNER**, which holds reporting and reference data such as rates, locations, and carriers.
+<div style="border-left: 4px solid #c74634; background:#fff7f6; padding: 12px 16px; margin: 8px 0; border-radius: 0 6px 6px 0;">
+<strong style="color:#c74634;">Web Tier (Presentation Layer):</strong> Runs on Oracle HTTP Server (OHS). It receives browser requests from end users. Static content such as OTM help pages, labels, and JavaScript files are served directly from this tier. Dynamic requests (such as running Bulk Plan or searching for shipments) are forwarded to the Application Tier via the <strong>mod_wl_ohs</strong> connector.
+</div>
+
+<div style="border-left: 4px solid #0ea5e9; background:#f0f9ff; padding: 12px 16px; margin: 8px 0; border-radius: 0 6px 6px 0;">
+<strong style="color:#0369a1;">Application Tier (Business Logic Layer):</strong> Runs on Oracle WebLogic Application Server. It has two logical components — the <strong>UI Component</strong>, which is a servlet container that renders dynamic HTML pages back to the user, and the <strong>Business Component</strong>, which contains all OTM business logic including the Bulk Plan algorithm, OTM Agents (workflows), rating, tender processing, and invoice handling. The tiers communicate using JNDI and RMI calls internally, and JDBC to connect to the database.
+</div>
+
+<div style="border-left: 4px solid #16a34a; background:#f0fdf4; padding: 12px 16px; margin: 8px 0; border-radius: 0 6px 6px 0;">
+<strong style="color:#15803d;">Database Tier (Data Layer):</strong> Oracle Database stores all OTM data and is accessed from the Application Tier via JDBC. It has two primary schemas — <strong>GLOGOWNER</strong>, which is the main OTM schema containing orders, shipments, and configuration data, and <strong>REPORTOWNER</strong>, which holds reporting and reference data such as rates, locations, and carriers.
+</div>
 
 **OTM Product Architecture — Three-Tier Overview:**
 
@@ -51,11 +57,17 @@ When a user opens OTM in a browser, they are connecting to the **Web Tier**. Eve
 
 Each of the three tiers can be deployed on separate servers or combined on a single server, depending on the environment:
 
-> **Production environments** typically use separate servers for each tier to ensure performance, scalability, and reliability.
->
-> **Lower environments** (Development, Test, UAT) often run all three tiers on a single server to reduce infrastructure costs.
->
-> **SaaS deployments** — Oracle manages all server infrastructure. You access OTM through a URL provided by Oracle and do not need to manage or install any tiers.
+<div style="border-left: 4px solid #6366f1; background:#f5f3ff; padding: 12px 16px; margin: 8px 0; border-radius: 0 6px 6px 0;">
+<strong>Production environments</strong> typically use separate servers for each tier to ensure performance, scalability, and reliability.
+</div>
+
+<div style="border-left: 4px solid #6366f1; background:#f5f3ff; padding: 12px 16px; margin: 8px 0; border-radius: 0 6px 6px 0;">
+<strong>Lower environments</strong> (Development, Test, UAT) often run all three tiers on a single server to reduce infrastructure costs.
+</div>
+
+<div style="border-left: 4px solid #6366f1; background:#f5f3ff; padding: 12px 16px; margin: 8px 0; border-radius: 0 6px 6px 0;">
+<strong>SaaS deployments</strong> — Oracle manages all server infrastructure. You access OTM through a URL provided by Oracle and do not need to manage or install any tiers.
+</div>
 
 **External Systems:**
 
