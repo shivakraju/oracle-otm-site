@@ -41,7 +41,7 @@ Depending on the deployment model — on-premise or SaaS — the underlying infr
 
 **OTM Product Architecture — Three-Tier Overview:**
 
-> ![OTM Product Architecture Diagram](/images/OTMArcihtecture.png)
+> ![OTM Product Architecture Diagram](/images/otm-product-architecture.svg)
 
 **How Data Flows:**
 
