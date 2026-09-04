@@ -37,283 +37,206 @@ keywords:
 description: "Covers the multiple methods for loading data into Oracle OTM, including GlogXML posts via middleware, manual XML uploads, CSV uploads, DB.XML uploads, REST-API calls, and PLSQL HTTP requests."
 ---
 
-There are several ways of bringing in data into OTM system. Below are some of the methods:
+OTM supports several methods for receiving data from external systems. This topic covers XML-based integrations, which are the most common approach in OTM implementations.
 
-  * via XML that follows Glog XML schema posted from a middleware applications like Oracle SOA, webMethods, Mulesoft, etc
-  * Manaul XML uploads by OTM users
-  * CSV Uploads
-  * DB.XML Uploads
-  * REST-API Calls
-  * HTTP Post Requests from programming languages like PLSQL, etc
+**Integration Methods Overview:**
 
-**XML Inbound Integrations:**
+<div class="field-box"><strong>GlogXML via Middleware:</strong> XML files following the GlogXML schema, posted to OTM from middleware platforms such as Oracle SOA/BPEL, webMethods, or MuleSoft. This is the most common approach for production integrations.</div>
 
-  
+<div class="field-box"><strong>Manual XML Upload:</strong> OTM users manually upload a GlogXML-formatted XML file through the OTM Integration Manager screen. Useful for testing, one-time loads, or small data corrections.</div>
 
-Most common way of receiving OTM Inbound data is via XML files from middleware applications. OTM can read XML files which are in the format specified by GlogXML Schema(OTM Standard XML Schema). You can download this schema from :  
-  
-Business Process Automation > Integration > Integration Manager > Retrieve Schemas > GlogXML.xsd  
-  
-This file will describe the data structure for each OTM element like 'Location', 'Order Release', 'Shipment', etc along with some documentation.  
-  
-Say, if we want to upload a new location to OTM, you follow below steps:  
-  
-1\. Read the GlogXML.xsd and identify the XML structure for element "Location". Once you map your input data values to OTM XML elements, you will end up coming with XML file similar to one below:  
+<div class="field-box"><strong>CSV Upload:</strong> Uploading data using comma-separated value files for supported OTM entities. See the <a href="/posts/csv-data-uploads/">CSV Data Uploads</a> topic for details.</div>
 
-  * <Transmission>  
-<TransmissionHeader>  
-<UserName>DBA.ADMIN</UserName>  
-<Password>CHANGEME</Password>  
-<IsProcessInSequence>Y</IsProcessInSequence>  
-</TransmissionHeader>  
-<TransmissionBody>  
-<GLogXMLElement>  
-<Location>  
-<TransactionCode>IU</TransactionCode>  
-<LocationGid>  
-<Gid>  
-<DomainName>ABC</DomainName>  
-<Xid>TEST SH OTM CORPORATION-45769</Xid>  
-</Gid>  
-</LocationGid>  
-<LocationName>TEST SH OTM COR,CLUTE,TX,USA</LocationName>  
-<Address>  
-<AddressLines>  
-<SequenceNumber>1</SequenceNumber>  
-<AddressLine>1039 EAST PLANTATION</AddressLine>  
-</AddressLines>  
-<City>CLUTE</City>  
-<ProvinceCode>TX</ProvinceCode>  
-<PostalCode>32830</PostalCode>  
-<CountryCode3Gid>  
-<Gid>  
-<Xid>USA</Xid>  
-</Gid>  
-</CountryCode3Gid>  
-</Address>  
-<LocationRefnum>  
-<LocationRefnumQualifierGid>  
-<Gid>  
-<Xid>ORIGIN</Xid>  
-</Gid>  
-</LocationRefnumQualifierGid>  
-<LocationRefnumValue>CUSTOMER</LocationRefnumValue>  
-</LocationRefnum>  
-<LocationRefnum>  
-<LocationRefnumQualifierGid>  
-<Gid>  
-<Xid>CUSID</Xid>  
-</Gid>  
-</LocationRefnumQualifierGid>  
-<LocationRefnumValue>1130</LocationRefnumValue>  
-</LocationRefnum>  
-<LocationRefnum>  
-<LocationRefnumQualifierGid>  
-<Gid>  
-<Xid>CUSNM</Xid>  
-</Gid>  
-</LocationRefnumQualifierGid>  
-<LocationRefnumValue>MOORE SUPPLY CO</LocationRefnumValue>  
-</LocationRefnum>  
-<LocationRole>  
-<LocationRoleGid>  
-<Gid>  
-<Xid>CUSTOMER</Xid>  
-</Gid>  
-</LocationRoleGid>  
-</LocationRole>  
-<Corporation>  
-<CorporationName>OTM CORPORATION</CorporationName>  
-</Corporation>  
-</Location>  
-</GLogXMLElement>  
-</TransmissionBody>  
-</Transmission>
+<div class="field-box"><strong>DB.XML Upload:</strong> A method for loading data directly using database-level XML files, typically used in implementations or data migrations.</div>
 
-2. Save this file with extension '.xml'  
+<div class="field-box"><strong>REST API:</strong> Newer versions of OTM support REST API-based integrations for querying and updating OTM data without using GlogXML format.</div>
 
-3. Once you have XML ready, you can upload to OTM as below: Goto Business Process Automation -> Integration -> Integration Manager -> Upload XML/CSV Transmission and Browse XML File. 
+<div class="field-box"><strong>HTTP Post from Code:</strong> Custom programs written in PL/SQL, Java, or other languages can post GlogXML directly to the OTM WMServlet endpoint. See the <a href="/posts/posting-data-to-otm-using-http-request/">Post Data via HTTP Request</a> topic for details.</div>
 
-4. Click Upload.
+**GlogXML Schema:**
 
-  
-  
+OTM's standard XML format is defined by the **GlogXML schema** (`GlogXML.xsd`). This schema describes the XML structure for every OTM entity — Location, Order Release, Shipment, Service Provider, Rate Offering, and more — along with field-level documentation. You can download the schema from inside OTM at:
 
-**5. You will see following log:**
+Shipment Management > Business Process Automation > Integration > Integration Manager > Retrieve Schemas > GlogXML.xsd
 
-  
+Open the downloaded XSD file in any XML or text editor to look up the structure for the entity you want to load.
 
-![](/images/otm-inbound-integrations-xml-img1-364ef35ae6.png)
+**Manual XML Upload — Step by Step:**
 
-  
+The following example shows how to manually upload a Location record to OTM using a GlogXML XML file. Location is used here as an example — the same approach applies to any other OTM business object such as Order Base, Order Release, Shipment, Service Provider, Rate Offering, Invoice, and more. The only difference is the GLogXMLElement you choose inside the transmission body.
 
-6. Note the transmission number from the log
+<div class="step-box">
+<strong>Step 1 — Build your XML file</strong>
 
-7. Navigate to Business Process Automation -> Integration -> Transmission Manager
+Read `GlogXML.xsd` and identify the XML structure for the entity you want to load (e.g. `Location`). Map your source data values to the OTM XML fields. A sample Location XML file looks like this:
+</div>
 
-8. Query for transmission and you should see transmission status as ‘PROCESSED’. 
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8yx-abkjdZ-Dk5gx-oYVUSbER84jrRRqwdd5lYEM4YKwWV3xKTSeiv6DJt0Rz3iVKmfob3T68LFVX6_QfHGjVamEjedqI1O8y78akuyDqVzutH8Rq68QAhS5Kcs9GhgylAUbACAT1SdU/s1600/Transmission.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8yx-abkjdZ-Dk5gx-oYVUSbER84jrRRqwdd5lYEM4YKwWV3xKTSeiv6DJt0Rz3iVKmfob3T68LFVX6_QfHGjVamEjedqI1O8y78akuyDqVzutH8Rq68QAhS5Kcs9GhgylAUbACAT1SdU/s1600/Transmission.png)
-
-  
-
-In case of errors Report button displays error reasons like foreign key reference missing etc.
-
-  
-
-Posting XML from Other middleware applications like Oracle SOA/BPEL, webMethods, Mulesoft, etc
-
-Middleware applications can post XML using below details:
-
-  
-
-**Method:** POST
-
-**OTM Servlet:** https://<OTM Application URL>/GC3/glog.integration.servlet.WMServlet
-
-**Body Type:** Raw
-
-**File format:** XML
-
-**Authorization:** Basic Auth (Get domain INTEGRATION username and password credentials from OTM Admin)
-
-  
-
-**Sample Payload to update VOUCHER status:**
-
-  
-
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <Transmission xmlns="http://xmlns.oracle.com/apps/otm/transmission/v6.4">
-
-<TransmissionHeader>
-
-<AckSpec>
-
-<ComMethodGid>
-
-<Gid>
-
-<Xid>HTTPPOST</Xid>
-
-</Gid>
-
-</ComMethodGid>
-
-<AckOption>ERROR</AckOption>
-
-</AckSpec>
-
-</TransmissionHeader>
-
-<TransmissionBody>
-
-<GLogXMLElement>
-
-<GenericStatusUpdate>
-
-<GenericStatusObjectType>VOUCHER</GenericStatusObjectType>
-
-<Gid>
-
-<DomainName>DPSCM</DomainName>
-
-<Xid>20240823-00001310</Xid>
-
-</Gid>
-
-<TransactionCode>IU</TransactionCode>
-
-<Status>
-
-<StatusTypeGid>
-
-<Gid>
-
-<DomainName>DPSCM</DomainName>
-
-<Xid>PAYMENT STATUS</Xid>
-
-</Gid>
-
-</StatusTypeGid>
-
-<StatusValueGid>
-
-<Gid>
-
-<DomainName>DPSCM</DomainName>
-
-<Xid>PAYMENT_RECEIVED</Xid>
-
-</Gid>
-
-</StatusValueGid>
-
-</Status>
-
-</GenericStatusUpdate>
-
-</GLogXMLElement>
-
-</TransmissionBody>
-
+  <TransmissionHeader>
+    <UserName>DBA.ADMIN</UserName>
+    <Password>CHANGEME</Password>
+    <IsProcessInSequence>Y</IsProcessInSequence>
+  </TransmissionHeader>
+  <TransmissionBody>
+    <GLogXMLElement>
+      <Location>
+        <TransactionCode>IU</TransactionCode>
+        <LocationGid>
+          <Gid>
+            <DomainName>ABC</DomainName>
+            <Xid>TEST-LOCATION-001</Xid>
+          </Gid>
+        </LocationGid>
+        <LocationName>Test Location, Houston, TX, USA</LocationName>
+        <Address>
+          <AddressLines>
+            <SequenceNumber>1</SequenceNumber>
+            <AddressLine>1039 East Plantation Drive</AddressLine>
+          </AddressLines>
+          <City>CLUTE</City>
+          <ProvinceCode>TX</ProvinceCode>
+          <PostalCode>77531</PostalCode>
+          <CountryCode3Gid>
+            <Gid><Xid>USA</Xid></Gid>
+          </CountryCode3Gid>
+        </Address>
+        <LocationRefnum>
+          <LocationRefnumQualifierGid>
+            <Gid><Xid>ORIGIN</Xid></Gid>
+          </LocationRefnumQualifierGid>
+          <LocationRefnumValue>CUSTOMER</LocationRefnumValue>
+        </LocationRefnum>
+        <LocationRole>
+          <LocationRoleGid>
+            <Gid><Xid>CUSTOMER</Xid></Gid>
+          </LocationRoleGid>
+        </LocationRole>
+      </Location>
+    </GLogXMLElement>
+  </TransmissionBody>
 </Transmission>
+```
 
-  
+<div class="note-box"><strong>Note:</strong> <code>TransactionCode</code> IU means Insert or Update — OTM will insert the record if it does not exist, or update it if the GID already exists. Use <code>D</code> to delete a record.</div>
 
-**Sample Response from OTM for above request:**
+<div class="step-box">
+<strong>Step 2 — Upload the XML file in OTM</strong>
 
-  
+Navigate to:
 
-<otm:TransmissionAck xmlns:otm="http://xmlns.oracle.com/apps/otm/transmission/v6.4" xmlns:gtm="http://xmlns.oracle.com/apps/gtm/transmission/v6.4">
+Business Process Automation > Integration > Integration Manager > Upload XML/CSV Transmission
 
-<otm:EchoedTransmissionHeader>
+Browse for your XML file and click **Upload**.
+</div>
 
-<otm:TransmissionHeader>
+<div class="step-box">
+<strong>Step 3 — Check the upload log</strong>
 
-<otm:ReferenceTransmissionNo>311245595</otm:ReferenceTransmissionNo>
+After clicking Upload, OTM displays a log showing the transmission number and initial processing status. Note the **Transmission Number** — you will need it to verify the final processing status.
+</div>
 
-<otm:AckSpec>
+> ![OTM Integration Manager upload log showing transmission number](/images/otm-inbound-integrations-xml-img1-364ef35ae6.png)
 
-<otm:ComMethodGid>
+<div class="step-box">
+<strong>Step 4 — Verify in Transmission Manager</strong>
 
-<otm:Gid>
+Navigate to:
 
-<otm:Xid>HTTPPOST</otm:Xid>
+Business Process Automation > Integration > Transmission Manager
 
-</otm:Gid>
+Query for your transmission number. The status should show as **PROCESSED**. If there are errors, click the **Report** button to see the error details — common errors include missing foreign key references (e.g. a Domain or Location that does not yet exist in OTM).
+</div>
 
-</otm:ComMethodGid>
+> ![OTM Transmission Manager showing PROCESSED status](/images/otm-inbound-transmission-manager.png)
 
-<otm:AckOption>ERROR</otm:AckOption>
+**Posting XML via Middleware:**
 
-</otm:AckSpec>
+Middleware platforms (Oracle SOA/BPEL, webMethods, MuleSoft, etc.) post GlogXML directly to the OTM WMServlet endpoint using an HTTP POST request.
 
-</otm:TransmissionHeader>
+<div class="field-box"><strong>Method:</strong> POST</div>
 
-</otm:EchoedTransmissionHeader>
+<div class="field-box"><strong>URL:</strong> <code>https://&lt;OTM-Application-URL&gt;/GC3/glog.integration.servlet.WMServlet</code></div>
 
+<div class="field-box"><strong>Body Type:</strong> Raw XML</div>
+
+<div class="field-box"><strong>Authorization:</strong> Basic Auth — use the INTEGRATION domain username and password from your OTM Admin.</div>
+
+<div class="note-box"><strong>Note:</strong> For SaaS OTM, the WMServlet URL and credentials are provided by Oracle. The path structure remains the same but the hostname will be Oracle-managed.</div>
+
+**Sample Payload — Update Voucher Status:**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Transmission xmlns="http://xmlns.oracle.com/apps/otm/transmission/v6.4">
+  <TransmissionHeader>
+    <AckSpec>
+      <ComMethodGid>
+        <Gid><Xid>HTTPPOST</Xid></Gid>
+      </ComMethodGid>
+      <AckOption>ERROR</AckOption>
+    </AckSpec>
+  </TransmissionHeader>
+  <TransmissionBody>
+    <GLogXMLElement>
+      <GenericStatusUpdate>
+        <GenericStatusObjectType>VOUCHER</GenericStatusObjectType>
+        <Gid>
+          <DomainName>YOURDOMAIN</DomainName>
+          <Xid>20240823-00001310</Xid>
+        </Gid>
+        <TransactionCode>IU</TransactionCode>
+        <Status>
+          <StatusTypeGid>
+            <Gid>
+              <DomainName>YOURDOMAIN</DomainName>
+              <Xid>PAYMENT STATUS</Xid>
+            </Gid>
+          </StatusTypeGid>
+          <StatusValueGid>
+            <Gid>
+              <DomainName>YOURDOMAIN</DomainName>
+              <Xid>PAYMENT_RECEIVED</Xid>
+            </Gid>
+          </StatusValueGid>
+        </Status>
+      </GenericStatusUpdate>
+    </GLogXMLElement>
+  </TransmissionBody>
+</Transmission>
+```
+
+**Sample OTM Response (success — no errors):**
+
+```xml
+<otm:TransmissionAck xmlns:otm="http://xmlns.oracle.com/apps/otm/transmission/v6.4">
+  <otm:EchoedTransmissionHeader>
+    <otm:TransmissionHeader>
+      <otm:ReferenceTransmissionNo>311245595</otm:ReferenceTransmissionNo>
+      <otm:AckSpec>
+        <otm:ComMethodGid>
+          <otm:Gid><otm:Xid>HTTPPOST</otm:Xid></otm:Gid>
+        </otm:ComMethodGid>
+        <otm:AckOption>ERROR</otm:AckOption>
+      </otm:AckSpec>
+    </otm:TransmissionHeader>
+  </otm:EchoedTransmissionHeader>
 </otm:TransmissionAck>
+```
 
-  
+When `AckOption` is set to `ERROR`, OTM only returns a response if there is an error — a response like the above (with no error element) confirms the transmission was accepted. Use the `ReferenceTransmissionNo` to query the Transmission Manager and confirm the record was processed successfully.
 
-Using Reference Transmission Number, you can query OTM transmission screen to see if the message is posted to OTM without any errors.
+<div class="note-box"><strong>Note:</strong> If you need OTM to always return a response (not just on error), set <code>AckOption</code> to <code>ALWAYS</code> in the TransmissionHeader.</div>
 
-  
+**Posting via PL/SQL (UTL_HTTP):**
 
-**Other methods:**
+If your source system is Oracle E-Business Suite or another Oracle database, you can post GlogXML directly from PL/SQL using the `UTL_HTTP` package — no middleware required. This is useful for simple, direct integrations without a middleware layer.
 
-  
+See the full PL/SQL code example in the dedicated topic: [Post Data to OTM via HTTP Request](/posts/posting-data-to-otm-using-http-request/)
 
-Review below topics for loading data into OTM using other methods:
+**What's Next:**
 
-  
+The next topic covers OTM Outbound Integrations — how OTM sends data to external systems such as carrier systems, ERP applications, and middleware platforms.
 
-https://www.oracle-otm.com/2026/03/csv-data-uploads.html
-
-  
-
-https://www.oracle-otm.com/2026/03/posting-data-to-otm-using-http-request.html
-
-  
-**Note:** Please post corrections(if any) to 'learnotm@outlook.com'
+Next Topic: [Outbound Integrations](/posts/otm-outbound-integrations/)
