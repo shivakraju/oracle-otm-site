@@ -79,4 +79,6 @@ The Application Tier can be configured to communicate with external systems that
 - **Middleware / Integration Platforms** (e.g. MuleSoft, Oracle BPEL) — for translating OTM XML to carrier EDI formats and vice versa
 - **SMTP Mail Server** — for sending email notifications from OTM Agents
 
-**Note:** For on-premise deployments, the specific software versions for the database, application server, and web server depend on the OTM version being installed. Always refer to the Oracle certification matrix for your OTM version to confirm compatible software versions.
+<div class="note-box">
+<strong>Note:</strong> For on-premise deployments, the specific software versions for the database, application server, and web server depend on the OTM version being installed. Always refer to the Oracle certification matrix for your OTM version to confirm compatible software versions.
+</div>
