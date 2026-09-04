@@ -82,3 +82,9 @@ The Application Tier can be configured to communicate with external systems that
 <div class="note-box">
 <strong>Note:</strong> For on-premise deployments, the specific software versions for the database, application server, and web server depend on the OTM version being installed. Always refer to the Oracle certification matrix for your OTM version to confirm compatible software versions.
 </div>
+
+**What's Next:**
+
+Before diving into OTM configuration topics, it helps to be familiar with common logistics terms you will encounter throughout the product — such as Bill of Lading, LTL, TL, 3PL, Incoterms, and more. These terms are used throughout OTM screens, documentation, and day-to-day consulting work.
+
+Next Topic: [Basic Logistics Terminology](/posts/basic-logistics-terminology/)
