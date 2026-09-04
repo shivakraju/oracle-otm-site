@@ -1,5 +1,5 @@
 ---
-title: "Basic Logistics terminology"
+title: "Basic Logistics Terminology"
 date: 2016-04-14T23:00:00+00:00
 draft: false
 weight: 40
@@ -42,76 +42,98 @@ keywords:
 description: "A quick-reference glossary of basic logistics terms — carrier, SCAC code, LTL, TL, Bill of Lading, INCOTERM, demurrage, and more — written for OTM developers and consultants without a freight background."
 ---
 
-If you are a developer and not having logistics domain knowledge and want to quickly gain some insight, here are some basic logistics terms that you need to be familiar with.  
-  
-**Carrier:** Carrier is the service provider(SP) for freight movement from one location to another. These are transportation service companies that typically own transportation equipment like trucks, cargo planes, vessel ships, etc. Each carrier has four letter SCAC code (Standard Carrier Alpha Code) that is used on all the shipping documents.  
+If you are new to logistics or coming from a purely technical background, here are the key terms you will encounter in OTM and day-to-day freight operations.
 
-**Supplier:** Supplier/Seller is a party who will receive the Purchase Order from your company(Buyer) and either manufactures the items or procures from another third party vendor and ships them to your company warehouse. 
+**Parties Involved in Freight:**
 
-**Consignee:** Consignee is the party receiving the freight.  
+<div class="field-box"><strong>Carrier:</strong> A transportation service company that moves freight from one location to another. Carriers typically own or operate trucks, cargo planes, vessels, or rail cars. Each carrier is identified by a four-letter <strong>SCAC code</strong> (Standard Carrier Alpha Code) used on all shipping documents.</div>
 
-**3PL:** Third Party Logistics(3PL) company is a party to which transportation services are outsourced by the Buyer. Buyer sends a purchase order(PO) to Supplier and approved PO to 3PL company. 3PL company then co-ordinates with Supplier in collecting the goods, consolidating them with other freight(if any), negotiate cheaper rates with carriers, and ships them to Buyer. Once shipment is delivered, 3PL company would send freight invoice to Buyer and Buyer will settle the amount with the 3PL and 3PL would send payments to carriers who provided the services.
+<div class="field-box"><strong>Supplier / Seller:</strong> The party that receives a Purchase Order from your company (the Buyer), manufactures or sources the goods, and ships them to your warehouse.</div>
 
-**Freight Forwarder:** A freight forwarder focuses on moving goods from one point to another, whereas a 3PL handles the entire logistics process, including warehousing and order fulfillment. Freight forwarders typically handle international transportation and customs.
+<div class="field-box"><strong>Consignee:</strong> The party receiving the freight at the destination.</div>
 
-**Inbound Shipping:** This refers to movement of goods from suppliers to company maintained warehouses.  
-  
-**Outbound Shipping:** This refers to movement of goods from company maintained warehouses to customers or another warehouse.
+<div class="field-box"><strong>3PL (Third Party Logistics):</strong> A company to which the Buyer outsources transportation management. The Buyer sends a Purchase Order to the Supplier and a copy to the 3PL. The 3PL coordinates with the Supplier to collect goods, consolidates freight where possible, negotiates rates with carriers, and arranges shipment to the Buyer. After delivery, the 3PL invoices the Buyer for freight costs and pays the carriers.</div>
 
-**SKU:** Stock Keeping Unit refers to individual items that go in boxes(Cartons).
+<div class="field-box"><strong>Freight Forwarder:</strong> A specialist that focuses on moving goods internationally — arranging transportation, handling customs clearance, and managing documentation. Unlike a 3PL, a freight forwarder typically does not handle warehousing or order fulfillment.</div>
 
-**Carton:** Carton is a cardboard box where you place the individual items for shipping  
-  
-**Pallet/THU:** Pallet or Transportation Handling Unit is the flat wooden structure you see in any warehouse where the cartons/items are placed and moved from one point to another point within the warehouse. They are also loaded/unloaded directly from a truck.
+**Shipment Types & Transport Modes:**
 
-**Shipping Container:** Container is the large re-usable steel box that you see on the trailer of a truck which holds all the cartons/pallets. Intermodal freight containers are the boxes with standard dimensions defined by international standard ISO 6346. Term 'Intermodal' means that same container sealed at source location can go on various transport modes like OCEAN VESSEL, TRUCK, RAIL, etc before it reaches destination location.
+<div class="field-box"><strong>Inbound Shipping:</strong> Movement of goods from suppliers into company-maintained warehouses.</div>
 
-**TL/FTL:** Truck Load or Full Truck Load is when carrier arranges complete truck for a single customer from one point to another. TL shipments are charged usually by distance and size of the equipment.  
-  
-**LTL:** Less than Truck Load is when carrier reserves only partial space/weight in the truck for each customer based on the freight that needs to be shipped for each customer. Customers will be charged by weigh/volume for these LTL shipments.  
-  
-**PARCEL:** Parcel is transport mode typically used for boxes that weigh less than 150 LB. They are shipped individually and tracked with Tracking Number provided by the carrier on receiving the package. Example : UPS and FedX packages.
+<div class="field-box"><strong>Outbound Shipping:</strong> Movement of goods from company-maintained warehouses to customers or other warehouse locations.</div>
 
-**INCOTERMS:** These are terms between buyer and seller of goods that specify - at what shipping point(location) buyer would take the responsibility of the goods(freight) from the supplier. For example term 'FOB'(Free on Board) refers to Buyer taking responsibility once the Seller loads the items into the truck/vessel shipment arranged by the Buyer.  
-  
-**Bill of Lading (BOL):** BOL is a document issued by carrier to the party from whom goods are picked up. This is like a receipt issued by carrier stating they received the goods for transport. Carrier will then be responsible to ship the goods to the destination location specified by receiving party.  
+<div class="field-box"><strong>TL / FTL (Truck Load / Full Truck Load):</strong> The carrier dedicates an entire truck to a single customer's freight moving from one point to another. Charges are typically based on distance and equipment size.</div>
 
-**Fuel Surcharge:** A variable fee added to shipment cost to offset volatile fuel costs.
+<div class="field-box"><strong>LTL (Less than Truck Load):</strong> The carrier allocates only part of a truck's space or weight capacity to each customer. Multiple customers share the truck. Charges are based on weight and volume.</div>
 
-**NFMC:** National Motor Freight Classification codes are assigned to items being transported to estimate accurate freight costs across the industry.
+<div class="field-box"><strong>Parcel:</strong> A transport mode used for individual packages weighing less than 150 lb. Each package is tracked individually using a tracking number issued by the carrier. Examples: UPS and FedEx packages.</div>
 
-**TEU/FEU:** Twenty-foot Equivalent Unit, Forty-foot equivalent units are used to measure vessel load or capacity in units of containers. For example a 3PL company might request an OCEAN carrier to reserve 2000 TEU space on their next voyage/vessel.  
-  
-**Reefer:** A refrigerated container that might be required to transport perishable goods like food and beverages, medicine, etc. These Reefer equipments or containers are classified by temperature ranges.  
-  
-**Pro Number:** Progressive number is assigned to TL/LTL shipments for tracking purpose. It is similar to UPS/FedX tracking number.  
-  
-**Drayage:** Drayage refers to movement of freight over short distances like port to truck pickup location, etc. Drayage freight charges are usually paid in local currency.  
-  
-**Demurrage/Detention:** These are penalty charges levied by Carrier on the consignee for holding the transportation equipments(containers, trailers, etc) at the Carrier facility longer than negotiated time period.  
-  
-**Stopoff Charges:** These charges are levied by carrier on the shipper if they request to unload/load the freight at various stops(locations) between source and destination locations.   
-  
-**Diversion:** Diversion refers to changing the destination location by the shipper/3PL company while freight is in-transit. They will notify the carrier prior to arrival of freight at the destination location.   
-  
-**Yard:** Yard is a parking area for containers in the warehouse with rows and columns(slots). Containers coming from a port to warehouse might be initially parked in the "Yard Slot" and later moved to the "Dock door" based on availability of the "Dock door" or resources for loading/unloading the items.  
-  
-**Loading Dock:** These are doors in the warehouse that would align with back door of the trucks so that items can be loaded/unloaded from the staging area(near the docks)
+<div class="field-box"><strong>Drayage:</strong> Short-distance freight movement — for example, moving a container from a port to a nearby truck pickup location. Drayage charges are typically paid in local currency.</div>
 
-**FCL:** Full Container Load
+**Packaging & Equipment:**
 
-**LCL:** Less than Container Load
+<div class="field-box"><strong>SKU (Stock Keeping Unit):</strong> An individual item or product unit placed inside cartons for shipping.</div>
 
-**CY:** Container Yard
+<div class="field-box"><strong>Carton:</strong> A cardboard box used to package individual items for shipping.</div>
 
-**CFS:** Container Freight Station  
-  
-**CY/CY:** Move type Container Yard to Container Yard. This is for FCL shipments.
+<div class="field-box"><strong>Pallet / THU (Transportation Handling Unit):</strong> A flat wooden platform used to stack and move cartons within a warehouse. Pallets are also loaded directly into trucks. In OTM, these are referred to as THUs.</div>
 
-**CFS/CFS:** This move type is generally for LCL shipments.
+<div class="field-box"><strong>Shipping Container:</strong> A large, reusable steel box that holds cartons and pallets during transport. Intermodal containers follow standard dimensions defined by ISO 6346, meaning the same sealed container can travel across multiple transport modes — ocean vessel, truck, and rail — without being opened.</div>
 
-**CY/CFS:** These are shipments with multiple consignees. They are also referred to as FCL/LCL shipments.
+<div class="field-box"><strong>Reefer:</strong> A refrigerated container used for perishable goods such as food, beverages, and pharmaceuticals. Reefer equipment is classified by temperature range.</div>
 
-**CFS/CY:** These are shipments with multiple sellers but a single consignee also referred to as LCL/FCL shipments.
+**Ocean Freight Terms:**
 
-**FCR — Forwarder's Cargo Receipt:** Document issues by freight forwarder to shipper upon receipt of cargo. This is also referred to Forwarder's Certificate of Receipt.
+<div class="field-box"><strong>FCL (Full Container Load):</strong> A single customer's freight fills an entire shipping container.</div>
+
+<div class="field-box"><strong>LCL (Less than Container Load):</strong> Multiple customers share space in a single shipping container.</div>
+
+<div class="field-box"><strong>TEU / FEU:</strong> Twenty-foot Equivalent Unit and Forty-foot Equivalent Unit — standard measures of container capacity. For example, a 3PL might request an ocean carrier to reserve 2,000 TEU of space on a vessel voyage.</div>
+
+<div class="field-box"><strong>CY (Container Yard):</strong> A storage area at a port or warehouse where containers are staged before loading or after unloading.</div>
+
+<div class="field-box"><strong>CFS (Container Freight Station):</strong> A facility where LCL cargo is consolidated into containers (at origin) or broken down (at destination).</div>
+
+<div class="field-box"><strong>CY/CY:</strong> Container Yard to Container Yard move — used for FCL shipments where a single shipper's container moves intact from origin to destination.</div>
+
+<div class="field-box"><strong>CFS/CFS:</strong> Container Freight Station to Container Freight Station — used for LCL shipments where freight is consolidated at origin and deconsolidated at destination.</div>
+
+<div class="field-box"><strong>CY/CFS:</strong> FCL at origin, broken down at destination. Used for shipments going to multiple consignees (also referred to as FCL/LCL).</div>
+
+<div class="field-box"><strong>CFS/CY:</strong> Multiple sellers consolidated at origin, single consignee at destination (also referred to as LCL/FCL).</div>
+
+**Documents:**
+
+<div class="field-box"><strong>Bill of Lading (BOL):</strong> A document issued by the carrier to the party handing over the goods for transport. It serves as a receipt confirming the carrier has accepted the freight and specifies the destination. The carrier is then responsible for delivering the goods to that location.</div>
+
+<div class="field-box"><strong>INCOTERMS:</strong> Internationally recognized trade terms agreed between buyer and seller that define at which point in the journey the buyer takes on responsibility and risk for the goods. For example, <strong>FOB (Free on Board)</strong> means the buyer assumes responsibility once the seller has loaded the goods onto the vessel or truck arranged by the buyer.</div>
+
+<div class="field-box"><strong>NMFC (National Motor Freight Classification):</strong> Classification codes assigned to freight items to standardize and estimate accurate freight costs across the trucking industry.</div>
+
+<div class="field-box"><strong>FCR (Forwarder's Cargo Receipt):</strong> A document issued by a freight forwarder to the shipper upon receipt of cargo — also referred to as Forwarder's Certificate of Receipt.</div>
+
+<div class="field-box"><strong>Pro Number:</strong> A progressive tracking number assigned by the carrier to TL and LTL shipments, similar to a UPS or FedEx tracking number.</div>
+
+**Freight Charges:**
+
+<div class="field-box"><strong>Fuel Surcharge:</strong> A variable fee added to shipment costs to offset fluctuating fuel prices. Typically calculated as a percentage of the base freight charge and updated periodically.</div>
+
+<div class="field-box"><strong>Demurrage / Detention:</strong> Penalty charges levied by the carrier on the consignee for holding transportation equipment (containers, trailers) beyond the agreed free-time period at a carrier or port facility.</div>
+
+<div class="field-box"><strong>Stopoff Charges:</strong> Charges levied by the carrier when the shipper requests the truck to stop and load or unload at locations between the origin and final destination — i.e., on a multi-stop shipment.</div>
+
+**Warehouse & Yard Operations:**
+
+<div class="field-box"><strong>Yard:</strong> A designated parking area at a warehouse or distribution center, organized into rows and slots, where trailers and containers are staged before being moved to a dock door for loading or unloading.</div>
+
+<div class="field-box"><strong>Loading Dock:</strong> A door in the warehouse building that aligns with the rear of a truck so goods can be loaded or unloaded directly between the truck and the warehouse staging area.</div>
+
+<div class="field-box"><strong>Diversion:</strong> Changing the destination of a shipment while it is already in transit. The shipper or 3PL notifies the carrier of the new destination before the freight reaches the original delivery point.</div>
+
+<div class="note-box"><strong>Note:</strong> In OTM, you will encounter most of these terms in screen field names, rate configurations, shipment records, and integration documents. Familiarity with these terms will make it significantly easier to understand OTM's data model and configuration options.</div>
+
+**What's Next:**
+
+Now that you are familiar with core logistics terminology, the next topic covers how external systems send data into OTM using XML — the primary integration method for feeding orders, locations, and reference data into OTM from ERP and other source systems.
+
+Next Topic: [Inbound Integrations (XML)](/posts/otm-inbound-integrations-xml/)
