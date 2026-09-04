@@ -229,14 +229,8 @@ When `AckOption` is set to `ERROR`, OTM only returns a response if there is an e
 
 <div class="note-box"><strong>Note:</strong> If you need OTM to always return a response (not just on error), set <code>AckOption</code> to <code>ALWAYS</code> in the TransmissionHeader.</div>
 
-**Posting via PL/SQL (UTL_HTTP):**
-
-If your source system is Oracle E-Business Suite or another Oracle database, you can post GlogXML directly from PL/SQL using the `UTL_HTTP` package — no middleware required. This is useful for simple, direct integrations without a middleware layer.
-
-See the full PL/SQL code example in the dedicated topic: [Post Data to OTM via HTTP Request](/posts/posting-data-to-otm-using-http-request/)
-
 **What's Next:**
 
-If your source system is an Oracle database such as EBS, you can post GlogXML directly to OTM from PL/SQL using the `UTL_HTTP` package — no middleware required. The next topic walks through a complete working example.
+If your source system is Oracle E-Business Suite or another Oracle database, you can post GlogXML directly from PL/SQL using the `UTL_HTTP` package — no middleware required. The next topic walks through a complete working example.
 
 Next Topic: [Post Data to OTM via HTTP Request](/posts/posting-data-to-otm-using-http-request/)
