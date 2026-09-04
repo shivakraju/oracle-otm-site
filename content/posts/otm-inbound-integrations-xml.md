@@ -237,6 +237,6 @@ See the full PL/SQL code example in the dedicated topic: [Post Data to OTM via H
 
 **What's Next:**
 
-The next topic covers OTM Outbound Integrations — how OTM sends data to external systems such as carrier systems, ERP applications, and middleware platforms.
+If your source system is an Oracle database such as EBS, you can post GlogXML directly to OTM from PL/SQL using the `UTL_HTTP` package — no middleware required. The next topic walks through a complete working example.
 
-Next Topic: [Outbound Integrations](/posts/otm-outbound-integrations/)
+Next Topic: [Post Data to OTM via HTTP Request](/posts/posting-data-to-otm-using-http-request/)
