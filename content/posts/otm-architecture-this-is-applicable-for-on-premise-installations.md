@@ -1,8 +1,8 @@
----
+﻿---
 title: "OTM Architecture"
 date: 2016-04-15T14:54:00+00:00
 draft: false
-weight: 50
+weight: 35
 tags:
   - "Installation"
   - "Architecture"

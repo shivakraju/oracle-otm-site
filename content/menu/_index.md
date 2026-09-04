@@ -4,8 +4,8 @@ headless: true
 
 - **Topics List**
   - [What is OTM?](/posts/what-is-otm/)
-  - [Basic Logistics Terminology](/posts/basic-logistics-terminology/)
   - [OTM Architecture](/posts/otm-architecture-this-is-applicable-for-on-premise-installations/)
+  - [Basic Logistics Terminology](/posts/basic-logistics-terminology/)
   - [Inbound Integrations (XML)](/posts/otm-inbound-integrations-xml/)
   - [Outbound Integrations](/posts/otm-outbound-integrations/)
   - [CSV Data Uploads](/posts/csv-data-uploads/)
