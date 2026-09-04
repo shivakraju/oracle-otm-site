@@ -2,7 +2,7 @@
 title: "Post Data to OTM via HTTP Request"
 date: 2026-03-04T21:37:00+00:00
 draft: false
-weight: 90
+weight: 65
 tags:
   - "UTL_HTTP"
   - "PLSQL"
