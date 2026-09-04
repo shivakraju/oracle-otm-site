@@ -10,6 +10,18 @@ tags:
   - "RAISE EVENT"
 aliases:
   - "/2016/08/agents-frequently-used-actions.html"
+keywords:
+  - "Oracle OTM agent actions list"
+  - "OTM agent direct SQL update action"
+  - "Oracle OTM RAISE EVENT agent action"
+  - "OTM agent CALL action PLSQL"
+  - "Oracle OTM DATA TYPE ASSOCIATIONS agent"
+  - "OTM agent insert statement format"
+  - "Oracle OTM agent SQL DML action"
+  - "OTM agent assign variable action"
+  - "Oracle Transportation Management agent action types"
+  - "OTM agent PLSQL procedure call"
+description: "Reference guide to frequently used Oracle OTM agent actions including Direct SQL Update, Raise Event, Call (PLSQL), and Data Type Associations, with syntax examples for DML statements and procedure calls."
 ---
 
 DIRECT SQL UPDATE  

@@ -9,6 +9,18 @@ tags:
   - "internal status"
 aliases:
   - "/2017/07/status-types.html"
+keywords:
+  - "Oracle OTM status types configuration"
+  - "OTM external status internal status"
+  - "Oracle OTM custom status type setup"
+  - "OTM shipment SECURE_RESOURCES status"
+  - "Oracle OTM status type initial value"
+  - "OTM order release status values"
+  - "Oracle Transportation Management status configuration"
+  - "OTM external status object type"
+  - "Oracle OTM transaction lifecycle status"
+  - "OTM custom status type agent SQL"
+description: "Explains Oracle OTM Status Types, the difference between internal statuses (managed by OTM code) and external statuses (custom), and how to define new external status types with initial values for shipments and orders."
 ---
 
 In OTM, transactions objects like Order Release, Shipment, etc have 'Status' button on the header screen that will have values to give information about current status of that object in the transaction life cycle.  

@@ -11,6 +11,19 @@ tags:
   - "External System"
 aliases:
   - "/2016/05/business-process-automation-data.html"
+keywords:
+  - "Oracle OTM business process automation data structure"
+  - "OTM contacts external system tables"
+  - "Oracle OTM CONTACT table"
+  - "OTM external system outbound XML"
+  - "Oracle OTM agent workflow data model"
+  - "OTM CONTACT_COM_METHOD table"
+  - "Oracle OTM BPA module configuration"
+  - "OTM integration contacts setup"
+  - "Oracle Transportation Management automation tables"
+  - "OTM notify contact agent action"
+  - "Oracle OTM reports data structure"
+description: "Describes the Oracle OTM Business Process Automation data structures, including Contacts, External Systems, and Agent configurations used for system-to-user and system-to-system communication."
 ---
 
 As the name suggests, this module in OTM mainly deals with technical configurations that can be done in OTM for various client specific requirements.  

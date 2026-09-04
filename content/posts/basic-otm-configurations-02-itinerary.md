@@ -9,6 +9,18 @@ tags:
   - "Leg"
 aliases:
   - "/2020/08/basic-otm-configurations-02-itinerary.html"
+keywords:
+  - "Oracle OTM itinerary configuration"
+  - "OTM multi-leg itinerary setup"
+  - "Oracle OTM route itinerary definition"
+  - "OTM leg source destination configuration"
+  - "Oracle Transportation Management itinerary setup"
+  - "OTM itinerary bulk plan configuration"
+  - "Oracle OTM lane itinerary definition"
+  - "OTM itinerary leg sequence"
+  - "Oracle OTM basic configuration itinerary"
+  - "OTM route configuration steps"
+description: "Explains how to define itineraries in Oracle OTM as part of the basic configuration series, including setting up source-to-destination legs used during bulk plan route optimization."
 ---
 
 **Itinerary:**

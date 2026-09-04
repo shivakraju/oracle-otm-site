@@ -5,6 +5,18 @@ draft: false
 weight: 80
 aliases:
   - "/2026/03/csv-data-uploads.html"
+keywords:
+  - "Oracle OTM CSV data upload"
+  - "OTM CSV export import locations"
+  - "Oracle OTM bulk data load CSV"
+  - "OTM CSV upload order release shipment"
+  - "Oracle OTM Data Export CSV Export"
+  - "OTM mass data upload technique"
+  - "Oracle Transportation Management CSV loading"
+  - "OTM location CSV upload steps"
+  - "Oracle OTM GLOGOWNER table CSV"
+  - "OTM data migration CSV method"
+description: "Step-by-step guide to loading data into Oracle OTM using CSV uploads, demonstrated with the Location object, covering the CSV Export screen, WHERE clause setup, and the resulting import file format."
 ---
 
 We can load data to OTM is using CSV files. You can follow below steps to load location into OTM using CSV upload. Note that same steps are applicable to any OTM object like order release,shipment, invoice, etc.

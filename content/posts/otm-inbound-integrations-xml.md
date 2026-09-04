@@ -22,6 +22,19 @@ tags:
   - "Glog"
 aliases:
   - "/2016/04/otm-inbound-integrations.html"
+keywords:
+  - "Oracle OTM inbound integration GlogXML"
+  - "OTM XML upload WMServlet"
+  - "Oracle OTM GlogXML schema inbound"
+  - "OTM integration via Oracle SOA webMethods Mulesoft"
+  - "Oracle OTM CSV upload integration"
+  - "OTM DB.XML upload"
+  - "Oracle OTM REST API integration"
+  - "OTM PLSQL HTTP post integration"
+  - "Oracle Transportation Management data loading methods"
+  - "OTM manual XML upload process"
+  - "GlogXML inbound data structure OTM"
+description: "Covers the multiple methods for loading data into Oracle OTM, including GlogXML posts via middleware, manual XML uploads, CSV uploads, DB.XML uploads, REST-API calls, and PLSQL HTTP requests."
 ---
 
 There are several ways of bringing in data into OTM system. Below are some of the methods:

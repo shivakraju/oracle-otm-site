@@ -16,6 +16,19 @@ tags:
   - "Out XML profile"
 aliases:
   - "/2016/04/otm-outbound-integrations.html"
+keywords:
+  - "Oracle OTM outbound integration setup"
+  - "OTM Out XML Profile configuration"
+  - "Oracle OTM send interface transmission"
+  - "OTM outbound GlogXML generation"
+  - "Oracle OTM external system integration"
+  - "OTM MIN mode XML profile"
+  - "Oracle OTM agent outbound XML"
+  - "OTM shipment outbound XML"
+  - "Oracle Transportation Management outbound file setup"
+  - "OTM integration middleware webMethods"
+  - "Oracle OTM XPath Out XML Profile"
+description: "Step-by-step guide to configuring Oracle OTM outbound integrations using Out XML Profiles and the Send Interface Transmission action, including how to control output data with MIN mode and XPath filters."
 ---
 
 OTM system can generate outbound XML data for any business object like 'Order Release', 'Shipment' etc either manually(using Send Interface Transmission action) or programmatically using same action from OTM Agent(workflow). We will discuss about OTM Agents in further posts.  

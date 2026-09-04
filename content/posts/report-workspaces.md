@@ -8,6 +8,18 @@ tags:
   - "Report Workspace"
 aliases:
   - "/2017/06/report.html"
+keywords:
+  - "Oracle OTM report workspace configuration"
+  - "OTM restrict reports by user role"
+  - "Oracle OTM ReportWorkspaceServlet setup"
+  - "OTM report workspace menu link"
+  - "Oracle OTM manage user access report workspace"
+  - "OTM user role report access control"
+  - "Oracle Transportation Management report restriction"
+  - "OTM report workspace role assignment"
+  - "Oracle OTM report ID restrict visibility"
+  - "OTM custom menu report workspace"
+description: "Explains how to configure Report Workspaces in Oracle OTM to restrict report access by user or role, including adding the workspace to the menu using the ReportWorkspaceServlet URL."
 ---
 
 If you want to restrict users to run or view only specific reports, you can use Report Workspace feature in OTM.  

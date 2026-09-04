@@ -14,6 +14,19 @@ tags:
   - "GLOGOWNER"
 aliases:
   - "/2016/05/otm-data-structure.html"
+keywords:
+  - "Oracle OTM domain structure explained"
+  - "OTM GLOGOWNER schema tables"
+  - "Oracle OTM GID XID columns"
+  - "OTM REPORTOWNER schema"
+  - "Oracle OTM data dictionary"
+  - "OTM domain hierarchy parent child"
+  - "Oracle OTM database schema overview"
+  - "OTM domain name column tables"
+  - "Oracle Transportation Management data structure"
+  - "OTM ORDER_BASE_GID explained"
+  - "Oracle OTM standard schema GLOGOWNER REPORTOWNER"
+description: "Explains Oracle OTM's domain-based data organization, the GLOGOWNER and REPORTOWNER schemas, and how GID/XID columns uniquely identify business objects like purchase orders and shipments across domains."
 ---
 
 **Domains:**   

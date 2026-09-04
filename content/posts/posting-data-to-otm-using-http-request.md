@@ -15,6 +15,18 @@ tags:
   - "UTL_HTTP.resp"
 aliases:
   - "/2026/03/posting-data-to-otm-using-http-request.html"
+keywords:
+  - "Oracle OTM HTTP POST integration PLSQL"
+  - "OTM WMServlet HTTP request"
+  - "Oracle OTM UTL_HTTP post XML"
+  - "OTM PLSQL inbound integration"
+  - "Oracle OTM GC3 WMServlet endpoint"
+  - "OTM UTL_HTTP.req UTL_HTTP.resp"
+  - "Oracle OTM post location via HTTP"
+  - "OTM EBS SAP integration HTTP post"
+  - "Oracle Transportation Management REST HTTP integration"
+  - "OTM programmatic XML post from Oracle DB"
+description: "Shows how to post GlogXML data to Oracle OTM using a PLSQL UTL_HTTP program targeting the WMServlet endpoint, with a complete working code example for loading a Location record."
 ---
 
 Any external system like EBS, SAP can frame this XML structure programatically and 'POST' this xml to OTM Integration servlet: glog.integration.servlet.WMServlet

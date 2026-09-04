@@ -10,6 +10,18 @@ tags:
   - "Saved Query"
 aliases:
   - "/2016/07/saved-queriesconditions.html"
+keywords:
+  - "Oracle OTM saved query configuration"
+  - "OTM saved condition setup"
+  - "Oracle OTM order release finder saved query"
+  - "OTM saved query in agent condition"
+  - "Oracle OTM business monitor saved query"
+  - "OTM recurring process saved condition"
+  - "Oracle Transportation Management query builder"
+  - "OTM saved query SQL condition"
+  - "Oracle OTM custom search criteria"
+  - "OTM finder screen save query"
+description: "Shows how to create and save queries in Oracle OTM using the Order Release Finder and custom SQL conditions, which can then be reused in agents, business monitors, and recurring processes."
 ---
 
 Saved Queries in OTM help to query specific records in a screen or add some conditions to your custom logic while creating an Agent, etc. They can be used in multiple other OTM features like recurring processes, business monitors etc.  

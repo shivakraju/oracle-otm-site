@@ -10,6 +10,18 @@ tags:
   - "custom menu"
 aliases:
   - "/2017/04/user-menu-and-manage-user-access.html"
+keywords:
+  - "Oracle OTM user menu configuration"
+  - "OTM custom menu creation steps"
+  - "Oracle OTM manage user access setup"
+  - "OTM user role menu restriction"
+  - "Oracle OTM user manager configuration"
+  - "OTM menu element screen set link"
+  - "Oracle Transportation Management user access control"
+  - "OTM user login role assignment"
+  - "Oracle OTM domain admin menu setup"
+  - "OTM restrict user to specific screens"
+description: "Explains how to create custom menus in Oracle OTM and restrict user access to specific screens by assigning the menu to a user or role through the User Manager and Manage User Access screens."
 ---
 
 Once a user logins to application, they we will have access to OTM functions based on the role associated to their user record.  

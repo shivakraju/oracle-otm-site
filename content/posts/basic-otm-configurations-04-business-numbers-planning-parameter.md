@@ -10,6 +10,18 @@ tags:
   - "Oracle"
 aliases:
   - "/2020/08/basic-otm-configurations-04-business.html"
+keywords:
+  - "Oracle OTM business number rule configuration"
+  - "OTM shipment number sequence setup"
+  - "Oracle OTM planning parameter configuration"
+  - "OTM business number XID rule"
+  - "Oracle OTM bulk plan planning parameter"
+  - "OTM custom shipment ID configuration"
+  - "Oracle Transportation Management numbering setup"
+  - "OTM business number rule TCRP domain"
+  - "Oracle OTM planning parameter setup steps"
+  - "OTM default business number override"
+description: "Explains how to configure custom Business Number rules and Planning Parameters in Oracle OTM to control how shipment and order IDs are generated during bulk planning."
 ---
 
 **Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:

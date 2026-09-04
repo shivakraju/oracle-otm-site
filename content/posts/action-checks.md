@@ -11,6 +11,18 @@ tags:
   - "Action Checks"
 aliases:
   - "/2018/09/action-checks.html"
+keywords:
+  - "Oracle OTM action checks configuration"
+  - "OTM post action check validation"
+  - "Oracle OTM allow condition action check"
+  - "OTM audit action ID action checks"
+  - "Oracle OTM manager layout validation"
+  - "OTM action check cause message"
+  - "Oracle OTM custom validation before save"
+  - "OTM action checks user role setup"
+  - "Oracle Transportation Management UI validation"
+  - "OTM ADD ORDER BASE action check"
+description: "Explains Oracle OTM Action Checks, a configuration feature for adding custom pre-save validations on manager layouts, illustrated with an example that validates destination location data before a purchase order is created."
 ---
 
 If you have custom manager layout and want to perform some validations before data is saved to the DB, you can use this feature.  

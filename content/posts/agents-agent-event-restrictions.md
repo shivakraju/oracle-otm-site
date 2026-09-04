@@ -9,6 +9,18 @@ tags:
   - "Agent Event Restrictions"
 aliases:
   - "/2016/08/agents-agent-event-restrictions.html"
+keywords:
+  - "Oracle OTM agent event restrictions"
+  - "OTM agent source INTEGRATION INTERNAL USER"
+  - "Oracle OTM before persist agent validation"
+  - "OTM agent event source restriction"
+  - "Oracle OTM agent inbound XML validation"
+  - "OTM before persist pre-commit validation"
+  - "Oracle OTM agent trigger control"
+  - "OTM agent GlogXML event source"
+  - "Oracle Transportation Management agent event filter"
+  - "OTM agent event restriction configuration"
+description: "Explains Oracle OTM Agent Event Restrictions, covering the INTEGRATION, INTERNAL, and USER source options and the Before Persist setting for pre-commit validation of inbound XML transactions."
 ---
 
 In Agents, "Event Restrictions" give us more control on what type of transactions agent should be triggered and also perform some pre- transaction commit validations(if required) on inbound XML transactions.  

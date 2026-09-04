@@ -9,6 +9,18 @@ tags:
   - "Error Handler"
 aliases:
   - "/2016/08/agents-sample-agent-creation-steps.html"
+keywords:
+  - "Oracle OTM agent creation steps"
+  - "OTM agent workflow configuration"
+  - "Oracle OTM shipment agent setup"
+  - "OTM agent event action configuration"
+  - "Oracle OTM agent notify contact"
+  - "OTM agent condition shipment volume"
+  - "Oracle Transportation Management workflow agent"
+  - "OTM agent error handler setup"
+  - "Oracle OTM agent trigger shipment created"
+  - "OTM business process automation agent"
+description: "Step-by-step guide to creating an Oracle OTM agent, covering how to select the business object, choose the trigger event, define conditions, configure actions, and set up error handling."
 ---
 
 Agents in OTM are workflow processes that listen to specific events happening in the system and trigger actions. These are similar to database triggers that trigger code based on DML events occurring in the database layer.  

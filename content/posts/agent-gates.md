@@ -10,6 +10,18 @@ tags:
   - "Condition Additive"
 aliases:
   - "/2026/02/agent-gates.html"
+keywords:
+  - "Oracle OTM agent gates configuration"
+  - "OTM agent gate status function"
+  - "Oracle OTM agent gate saved condition"
+  - "OTM WKFLW_TENDER agent gate"
+  - "Oracle OTM custom workflow validation"
+  - "OTM agent gate condition additive"
+  - "Oracle OTM shipment tender gate"
+  - "OTM functor class agent gate"
+  - "Oracle Transportation Management workflow gate"
+  - "OTM domain level agent gate control"
+description: "Covers Oracle OTM Agent Gates, which allow consultants to add saved-query conditions to standard OTM events and workflows — such as blocking the tender workflow for specific transport modes — at the domain level."
 ---
 
 **Navigation:** Business Process Automation > Power Data > Event Management > Agent Gates

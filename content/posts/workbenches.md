@@ -5,6 +5,18 @@ draft: false
 weight: 370
 aliases:
   - "/2026/05/workbenches.html"
+keywords:
+  - "Oracle OTM workbench configuration"
+  - "OTM workbench layout setup"
+  - "Oracle OTM multi-object workbench"
+  - "OTM workbench order base order release shipment"
+  - "Oracle OTM workbench hierarchy display"
+  - "OTM workbench screenset layout"
+  - "Oracle Transportation Management workbench"
+  - "OTM workbench parent child content"
+  - "Oracle OTM workbench default query"
+  - "OTM workbench buy shipments order release"
+description: "Explains how to create Oracle OTM Workbenches that display multiple related business objects in a hierarchical view — for example, Purchase Orders linked to Order Releases and Shipments — on a single screen."
 ---
 
 Workbenches provided easy way for users to view data across multiple object types on the same screen and also load data using some default criteria (query) as soon as workbench is launched.

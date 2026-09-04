@@ -14,6 +14,20 @@ tags:
   - "Shiva"
 aliases:
   - "/2016/04/introduction-to-oracle.html"
+keywords:
+  - "Oracle Transportation Management OTM overview"
+  - "what is Oracle OTM"
+  - "OTM software introduction"
+  - "Oracle OTM G-log history"
+  - "OTM freight management system"
+  - "Oracle OTM SaaS vs on-premise"
+  - "OTM GlogXML integration overview"
+  - "Oracle OTM bulk plan overview"
+  - "OTM tender process overview"
+  - "Oracle OTM order management introduction"
+  - "OTM carrier freight consolidation"
+  - "Oracle Transportation Management consultant guide"
+description: "An introduction to Oracle Transportation Management (OTM), covering its origins as G-log, core capabilities like order management, bulk planning, tendering, and invoicing, and how it integrates with ERP systems via GlogXML."
 ---
 
 OTM stands for Oracle Transportation Management and it is a software product designed to automate various logistics business processes like receiving orders from source ERP systems for freight consolidation, optimizing routes and shipping costs, sending tender requests to service providers(carriers), receiving shipment tracking revents from carriers, recieving and processing invoices from carriers, allocate freight costs to orders, and similar other functions which we will further discuss in future posts.

@@ -15,6 +15,19 @@ tags:
   - "3 tier"
 aliases:
   - "/2016/04/otm-architecture.html"
+keywords:
+  - "Oracle OTM on-premise architecture"
+  - "OTM three tier architecture"
+  - "OTM WebLogic app tier installation"
+  - "Oracle OTM web tier app tier database"
+  - "OTM Oracle HTTP Server setup"
+  - "Oracle OTM installation steps on-premise"
+  - "OTM Oracle Database 11g setup"
+  - "OTM Enterprise Linux installation"
+  - "Oracle Transportation Management server architecture"
+  - "OTM GC3 application server"
+  - "Oracle OTM infrastructure setup"
+description: "Explains the three-tier on-premise architecture of Oracle OTM, covering the web tier (Oracle HTTP Server), app tier (WebLogic), and Oracle Database, including installation sequence and server configuration notes."
 ---
 
 OTM application has a typical three tier architecture. It has web tier, app tier and oracle database as third tier. These three components can be installed on separate servers (Linux/Windows) or they may be installed on the same server. Usually for lower environment like DEV or TEST they are installed on same server.  

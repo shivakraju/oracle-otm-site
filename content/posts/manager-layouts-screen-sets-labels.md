@@ -9,6 +9,18 @@ tags:
   - "Screen sets"
 aliases:
   - "/2017/04/manager-layouts-screen-sets-labels.html"
+keywords:
+  - "Oracle OTM manager layout configuration"
+  - "OTM screen set custom layout"
+  - "Oracle OTM custom screen set creation"
+  - "OTM manager layout data elements sections"
+  - "Oracle OTM label manager configuration"
+  - "OTM screen set finder results actions"
+  - "Oracle Transportation Management UI customization"
+  - "OTM copy manager layout steps"
+  - "Oracle OTM view edit query layout"
+  - "OTM screen customization user role"
+description: "Covers how to create and customize Manager Layouts and Screen Sets in Oracle OTM to control which data elements appear in query, results, and edit screens for specific users or roles."
 ---
 
 OTM comes with a variety of screens for each business object like Shipment, Order Release, etc and some of them can be copied and customized to ensure that they show only data elements required for that particular user/role.  

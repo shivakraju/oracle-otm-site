@@ -10,6 +10,18 @@ tags:
   - "REPORT - READY"
 aliases:
   - "/2016/11/emailing-reports-to-users.html"
+keywords:
+  - "Oracle OTM email report on business event"
+  - "OTM PRINT DOCUMENT agent action"
+  - "Oracle OTM REPORT-READY event agent"
+  - "OTM shipment tender accepted email report"
+  - "Oracle OTM report set email attachment"
+  - "OTM agent email report PDF"
+  - "Oracle OTM REPORT_LOG_PARAMETER"
+  - "OTM notify contact email report"
+  - "Oracle Transportation Management automated report email"
+  - "OTM agent send report on tender acceptance"
+description: "Shows how to configure Oracle OTM to automatically email a report as a PDF attachment when a shipment tender is accepted, using the PRINT DOCUMENT agent action and the REPORT-READY event."
 ---
 
 There can be requirements where we want to send report as attachment to a user. We can configure that with below steps in OTM.  

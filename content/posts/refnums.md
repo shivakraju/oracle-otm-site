@@ -9,6 +9,18 @@ tags:
   - "Refnum"
 aliases:
   - "/2017/07/refnums.html"
+keywords:
+  - "Oracle OTM refnum configuration"
+  - "OTM reference number qualifier setup"
+  - "Oracle OTM shipment refnum qualifier"
+  - "OTM refnum updates allowed options"
+  - "Oracle OTM order release reference number"
+  - "OTM custom attribute refnum qualifier"
+  - "Oracle Transportation Management refnum setup"
+  - "OTM refnum GlogXML inbound XML"
+  - "Oracle OTM order base refnum"
+  - "OTM refnum one update many options"
+description: "Explains Oracle OTM Reference Numbers (Refnums), how to define qualifier IDs for storing custom values on shipments, orders, and other objects, and how to control update behavior and populate values via inbound XML."
 ---
 
 OTM gives flexibility to associate custom attributes(also called refnums) to every transaction object like Order Base, Order Release, Shipment, etc.  

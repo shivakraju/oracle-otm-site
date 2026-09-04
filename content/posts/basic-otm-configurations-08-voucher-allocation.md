@@ -10,6 +10,18 @@ tags:
   - "Voucher"
 aliases:
   - "/2020/08/basic-otm-configurations-08-voucher.html"
+keywords:
+  - "Oracle OTM voucher allocation configuration"
+  - "OTM voucher allocation invoice approved"
+  - "Oracle OTM freight cost allocation voucher"
+  - "OTM ALLOCATION_VOUCHER status"
+  - "Oracle OTM voucher not allocated status"
+  - "OTM cost allocation order release"
+  - "Oracle Transportation Management voucher setup"
+  - "OTM freight voucher allocation steps"
+  - "Oracle OTM invoice voucher record"
+  - "OTM allocate freight cost to PO"
+description: "Covers the Oracle OTM voucher allocation process that runs after invoice approval, distributing freight costs to order releases and updating the ALLOCATION_VOUCHER status."
 ---
 
 **Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:

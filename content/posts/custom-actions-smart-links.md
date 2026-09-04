@@ -10,6 +10,18 @@ tags:
   - "Smart Links"
 aliases:
   - "/2018/09/custom-actions.html"
+keywords:
+  - "Oracle OTM custom actions configuration"
+  - "OTM smart links setup"
+  - "Oracle OTM action definition ID RUN_AGENT"
+  - "OTM custom action label manager"
+  - "Oracle OTM actions manager screen set"
+  - "OTM trigger agent from UI action"
+  - "Oracle Transportation Management custom action"
+  - "OTM smart link configuration"
+  - "Oracle OTM reprocess invoice custom action"
+  - "OTM action manager DBA admin setup"
+description: "Explains how to create Custom Actions and Smart Links in Oracle OTM, enabling users to trigger agents or navigate to related records directly from the UI, with a worked example for reprocessing invoices."
 ---
 
 Actions  

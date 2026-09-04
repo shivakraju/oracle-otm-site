@@ -11,6 +11,19 @@ tags:
   - "Equipment"
 aliases:
   - "/2016/05/otm-shipment-management-data-structure.html"
+keywords:
+  - "Oracle OTM shipment management tables"
+  - "OTM shipment ship unit data structure"
+  - "Oracle OTM shipment stop tables"
+  - "OTM shipment equipment assignment"
+  - "Oracle OTM shipment ship unit line"
+  - "OTM secondary shipment primary shipment"
+  - "Oracle OTM ASN inbound shipment"
+  - "OTM CIN qualifier ship unit line"
+  - "Oracle Transportation Management shipment schema"
+  - "OTM bulk plan shipment split equipment"
+  - "Oracle OTM itinerary shipment data model"
+description: "Describes the Oracle OTM shipment management data structure, including how shipments relate to equipment, ship units, and order release lines, and how bulk plan splits quantities across containers."
 ---
 
 Shipments

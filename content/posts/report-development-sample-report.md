@@ -10,6 +10,18 @@ tags:
   - "Report"
 aliases:
   - "/2016/10/report-development-sample-report_21.html"
+keywords:
+  - "Oracle OTM report development BI Publisher"
+  - "OTM query template format template report"
+  - "Oracle OTM REPORTOWNER schema report"
+  - "OTM BI Publisher report setup steps"
+  - "Oracle OTM PLSQL report package"
+  - "OTM custom report development guide"
+  - "Oracle Transportation Management report creation"
+  - "OTM report definition input parameters"
+  - "Oracle OTM SQL report query template"
+  - "OTM BI Publisher Word format template"
+description: "Step-by-step guide to developing a custom Oracle OTM report using BI Publisher, covering the PLSQL package in REPORTOWNER, query template, format template in Word, and report definition setup in OTM."
 ---
 
 **Note:** This post is applicable for OTM ver 6.x - Query and Format template based reports.

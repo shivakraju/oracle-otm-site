@@ -9,6 +9,18 @@ tags:
   - "Oracle"
 aliases:
   - "/2020/08/basic-otm-configurations-05-bulk-plan.html"
+keywords:
+  - "Oracle OTM bulk plan configuration steps"
+  - "OTM bulk plan run order release"
+  - "Oracle OTM purchase order bulk plan"
+  - "OTM bulk plan shipment creation"
+  - "Oracle OTM order base bulk plan"
+  - "OTM ONE_TO_ONE order configuration"
+  - "Oracle Transportation Management bulk plan walkthrough"
+  - "OTM bulk plan planning parameter setup"
+  - "Oracle OTM freight consolidation bulk plan"
+  - "OTM DC source location bulk plan"
+description: "Walks through creating a purchase order and running Bulk Plan in Oracle OTM to generate shipments, as part of the basic end-to-end configuration series."
 ---
 
 **Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:

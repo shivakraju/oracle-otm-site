@@ -17,6 +17,19 @@ tags:
   - "Oracle"
 aliases:
   - "/2016/05/otm-order-management-data-structure.html"
+keywords:
+  - "Oracle OTM order management tables"
+  - "OTM OB_ORDER_BASE table structure"
+  - "Oracle OTM purchase order data model"
+  - "OTM order release data structure"
+  - "Oracle OTM order base order release tables"
+  - "OTM packaged item ship unit spec"
+  - "Oracle OTM order movement tables"
+  - "OTM OB_LINE table explained"
+  - "Oracle Transportation Management order schema"
+  - "OTM packaging unit data structure"
+  - "Oracle OTM GLOGOWNER order tables"
+description: "Details the Oracle OTM order management database structure, covering OB_ORDER_BASE, OB_LINE, Order Release, Packaging Unit, and Ship Unit Spec tables used to model purchase orders and bookings."
 ---
 
 Purchase Order   

@@ -13,6 +13,18 @@ tags:
 aliases:
   - "/2020/08/basic-otm-configurations-01-domain.html"
   - "/2020/06/basic-otm-configurations.html"
+keywords:
+  - "Oracle OTM basic configuration domain setup"
+  - "OTM domain item location equipment configuration"
+  - "Oracle OTM location setup steps"
+  - "OTM item master configuration"
+  - "Oracle OTM equipment type setup"
+  - "OTM end-to-end transaction configuration guide"
+  - "Oracle Transportation Management initial setup"
+  - "OTM domain creation configuration"
+  - "Oracle OTM consultant configuration walkthrough"
+  - "OTM basic setup domain items locations"
+description: "First in a series of end-to-end OTM configuration posts, covering how to set up a domain, define items, create locations, and configure equipment types as the foundation for a working OTM transaction flow."
 ---
 
 **Note:** These posts are numbered to cover a typical end to end transaction flow that happens in OTM at a very high level. 

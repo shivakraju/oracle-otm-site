@@ -21,6 +21,18 @@ tags:
   - "Password"
 aliases:
   - "/2016/12/user-roles-vpd-and-access-control-lists.html"
+keywords:
+  - "Oracle OTM user roles VPD access control"
+  - "OTM VPD profile data visibility"
+  - "Oracle OTM ACL access control list setup"
+  - "OTM USER_ROLE table configuration"
+  - "Oracle OTM role based data access"
+  - "OTM VPD_PROFILE external predicate"
+  - "Oracle OTM ACR_ROLE_ENTRY_POINT"
+  - "OTM user role grantee configuration"
+  - "Oracle Transportation Management user security setup"
+  - "OTM domain level user access control"
+description: "Explains Oracle OTM role-based security, covering how VPD profiles control data visibility and Access Control Lists (ACLs) govern UI screen access for each user role."
 ---
 
 OTM application users will be grouped/classified based on their daily functions they perform in their organization. Each such group of users will be assigned a "Role" in OTM.   

@@ -26,6 +26,20 @@ tags:
   - "FTL"
 aliases:
   - "/2016/05/otm-basic-terminology.html"
+keywords:
+  - "logistics terminology for OTM consultants"
+  - "carrier SCAC code logistics"
+  - "LTL TL FTL freight terms"
+  - "Bill of Lading definition logistics"
+  - "INCOTERM explanation freight"
+  - "3PL third party logistics definition"
+  - "consignee shipper logistics terms"
+  - "demurrage detention freight charges"
+  - "freight consolidation terminology"
+  - "OTM basic logistics glossary"
+  - "Oracle OTM domain knowledge prerequisites"
+  - "stopoff charge logistics definition"
+description: "A quick-reference glossary of basic logistics terms — carrier, SCAC code, LTL, TL, Bill of Lading, INCOTERM, demurrage, and more — written for OTM developers and consultants without a freight background."
 ---
 
 If you are a developer and not having logistics domain knowledge and want to quickly gain some insight, here are some basic logistics terms that you need to be familiar with.  

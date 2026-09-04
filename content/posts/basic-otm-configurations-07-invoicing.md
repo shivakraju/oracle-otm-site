@@ -9,6 +9,18 @@ tags:
   - "Oracle"
 aliases:
   - "/2020/08/basic-otm-configurations-07-invoicing.html"
+keywords:
+  - "Oracle OTM invoicing configuration"
+  - "OTM carrier invoice match rule"
+  - "Oracle OTM invoice approval rule"
+  - "OTM invoice shipment cost matching"
+  - "Oracle OTM freight invoice processing"
+  - "OTM invoice allocation order release"
+  - "Oracle Transportation Management invoice setup"
+  - "OTM invoice match approve allocate"
+  - "Oracle OTM freight cost settlement"
+  - "OTM carrier invoice validation"
+description: "Explains how Oracle OTM processes carrier invoices by matching them to shipments, applying approval rules, and allocating freight costs to order releases and purchase orders."
 ---
 
 **Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:

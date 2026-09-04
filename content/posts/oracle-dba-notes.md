@@ -18,6 +18,18 @@ tags:
   - "tnsnames.ora"
 aliases:
   - "/2017/08/oracle-dba-notes.html"
+keywords:
+  - "Oracle OTM DBA notes database maintenance"
+  - "OTM Oracle database startup shutdown"
+  - "Oracle lsnrctl start listener OTM"
+  - "OTM tnsnames.ora configuration"
+  - "Oracle OTM invalid objects compile schema"
+  - "OTM alter profile password"
+  - "Oracle OTM DBA_DDL_LOCKS"
+  - "OTM Oracle database 11g maintenance"
+  - "Oracle OTM GLOGOWNER schema DBA"
+  - "OTM database SHUTDOWN IMMEDIATE STARTUP"
+description: "DBA quick-reference notes for Oracle OTM on-premise installations, covering database startup and shutdown, listener management, tnsnames.ora, invalid object recompilation, and common database maintenance tasks."
 ---
 
 **Note:** This post is applicable for OTM ver 6.x and below.

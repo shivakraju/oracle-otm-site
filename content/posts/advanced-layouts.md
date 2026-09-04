@@ -8,6 +8,18 @@ tags:
   - "Panel splitter"
 aliases:
   - "/2017/04/advanced-layouts.html"
+keywords:
+  - "Oracle OTM advanced layout configuration"
+  - "OTM panel splitter layout setup"
+  - "Oracle OTM multi-object screen layout"
+  - "OTM advanced layout saved query"
+  - "Oracle OTM parent child panel layout"
+  - "OTM advanced layout shipment order release"
+  - "Oracle Transportation Management advanced screen"
+  - "OTM advanced layout table panel"
+  - "Oracle OTM complex query layout"
+  - "OTM split panel screen configuration"
+description: "Explains how to create Oracle OTM Advanced Layouts with panel splitters to display multiple related business objects on the same screen, linked by parent-child relationships and populated via saved queries."
 ---
 
 There can be requirements like show shipments based on some complex query criteria(which cannot be written using simple default query criteria provided in screen sets) and also show related order releases for selected shipment in same screen, etc.  

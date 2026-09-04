@@ -14,6 +14,19 @@ tags:
   - "Rate Offering"
 aliases:
   - "/2016/05/otm-contract-rate-management-data.html"
+keywords:
+  - "Oracle OTM rate management data structure"
+  - "OTM RATE_OFFERING table"
+  - "Oracle OTM rate service rate record setup"
+  - "OTM SERVPROV table structure"
+  - "Oracle OTM carrier contract rate setup"
+  - "OTM RATE_GEO lane configuration"
+  - "Oracle OTM service provider SCAC code"
+  - "OTM rate distance table"
+  - "Oracle Transportation Management carrier rate tables"
+  - "OTM contract rate offering configuration"
+  - "Oracle OTM LTL TL parcel rate setup"
+description: "Covers the Oracle OTM contract and rate management data model, including the SERVPROV, RATE_OFFERING, RATE_SERVICE, RATE_GEO, and Rate Record tables used to store carrier contracts and freight rates."
 ---
 
 Service Provider  

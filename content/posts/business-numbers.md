@@ -10,6 +10,18 @@ tags:
   - "expressions"
 aliases:
   - "/2026/02/business-numbers.html"
+keywords:
+  - "Oracle OTM business number rule"
+  - "OTM business number sequence configuration"
+  - "Oracle OTM custom ID generation rule"
+  - "OTM business number expression format"
+  - "Oracle OTM invoice shipment number rule"
+  - "OTM BN rule instruction definition"
+  - "Oracle Transportation Management numbering"
+  - "OTM business number date format expression"
+  - "Oracle OTM default XID sequence override"
+  - "OTM business number rule edit steps"
+description: "Explains Oracle OTM Business Number Rules and how to create custom ID sequences for business objects like shipments and invoices using expression syntax with date tokens and numeric range definitions."
 ---
 
 **Navigation:** Business Process Automation > Power Data > Business Numbers > Business Number Rule

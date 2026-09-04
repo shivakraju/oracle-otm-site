@@ -14,6 +14,18 @@ tags:
   - "scheduling"
 aliases:
   - "/2026/02/yard-management.html"
+keywords:
+  - "Oracle OTM yard management configuration"
+  - "OTM dock appointment scheduling"
+  - "Oracle OTM location resource yard setup"
+  - "OTM yard slot row configuration"
+  - "Oracle OTM appointment scheduling dock door"
+  - "OTM drayage carrier tender EDI 204"
+  - "Oracle Transportation Management yard management"
+  - "OTM container yard slot assignment"
+  - "Oracle OTM warehouse dock scheduling"
+  - "OTM yard manager screen configuration"
+description: "Describes Oracle OTM Yard Management and Appointment Scheduling, including how to configure location resources for yard rows and dock slots, schedule container appointments, and trigger drayage carrier notifications via EDI 204."
 ---
 
 **Yard Management:** 

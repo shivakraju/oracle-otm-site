@@ -9,6 +9,18 @@ tags:
   - "Tender"
 aliases:
   - "/2020/08/basic-otm-configurations-06-tender.html"
+keywords:
+  - "Oracle OTM tender process configuration"
+  - "OTM secure resources tender shipment"
+  - "Oracle OTM tender carrier notification"
+  - "OTM shipment tender accepted status"
+  - "Oracle OTM tender offer to carrier"
+  - "OTM SECURE_RESOURCES_NOT_STARTED status"
+  - "Oracle Transportation Management tender workflow"
+  - "OTM tender process steps"
+  - "Oracle OTM shipment management tender"
+  - "OTM carrier tender EDI XML"
+description: "Demonstrates the Oracle OTM tender process, showing how to notify a carrier about a shipment using the Secure Resources action, and how shipment statuses change through the tender lifecycle."
 ---
 
 **Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:

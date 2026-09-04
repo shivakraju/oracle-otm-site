@@ -10,6 +10,18 @@ tags:
   - "Manage Association"
 aliases:
   - "/2018/01/service-provider-user-login-creation.html"
+keywords:
+  - "Oracle OTM service provider user login"
+  - "OTM carrier user login creation"
+  - "Oracle OTM SERVPROV user setup"
+  - "OTM manage association service provider user"
+  - "Oracle OTM carrier tender login"
+  - "OTM SERVPROV.ADMIN default password"
+  - "Oracle OTM user association configuration"
+  - "OTM carrier user access tender"
+  - "Oracle Transportation Management carrier login setup"
+  - "OTM USER_ASSOCIATION table GLOGOWNER"
+description: "Explains how to create and configure carrier (service provider) user logins in Oracle OTM, including the Manage Association setup that links a user ID to a specific service provider so they can only access their own tender and shipment data."
 ---
 
 In this article we will discuss how we can configure OTM system to handle users from your service providers to login to OTM and perform actions like accepting tenders, etc.  

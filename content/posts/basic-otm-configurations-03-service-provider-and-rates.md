@@ -14,6 +14,18 @@ tags:
   - "Rate Offering"
 aliases:
   - "/2020/08/basic-otm-configurations-03-service.html"
+keywords:
+  - "Oracle OTM service provider setup"
+  - "OTM carrier rate configuration"
+  - "Oracle OTM rate offering rate service setup"
+  - "OTM SCAC code service provider"
+  - "Oracle OTM rate record configuration"
+  - "OTM RATE_GEO lane rate setup"
+  - "Oracle OTM carrier contract rate entry"
+  - "OTM service provider SCAC country code"
+  - "Oracle Transportation Management rate setup steps"
+  - "OTM basic configuration carrier rates"
+description: "Covers how to define service providers with SCAC codes and configure rate offerings, rate services, and rate records in Oracle OTM as part of the basic end-to-end configuration series."
 ---
 
 **Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:

@@ -15,6 +15,18 @@ tags:
   - "glogapp-wl"
 aliases:
   - "/2017/08/otm-application-admin-notes.html"
+keywords:
+  - "Oracle OTM application admin notes"
+  - "OTM installation path gc3.dir"
+  - "Oracle OTM WebLogic server admin"
+  - "OTM gc3env.sh configuration"
+  - "Oracle OTM glogapp-wl glogweb-wl"
+  - "OTM application restart WebLogic tomcat"
+  - "Oracle OTM Oracle patches apply"
+  - "OTM admin console log"
+  - "Oracle Transportation Management admin maintenance"
+  - "OTM server directory structure"
+description: "Quick-reference notes for Oracle OTM application administrators covering installation paths, key directories, WebLogic management, patch application, and server restart procedures."
 ---
 
 Below are useful notes for OTM ADMIN to maintain the application.

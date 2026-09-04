@@ -8,6 +8,18 @@ tags:
   - "config"
 aliases:
   - "/2017/08/g-log-properties.html"
+keywords:
+  - "Oracle OTM g-log properties configuration"
+  - "OTM glog properties file location"
+  - "Oracle OTM PropertiesServlet view properties"
+  - "OTM glog.config properties file"
+  - "Oracle OTM application properties app tier"
+  - "OTM gc3.dir OTM_HOME property"
+  - "Oracle OTM property configuration file"
+  - "OTM glog properties backup update"
+  - "Oracle Transportation Management server properties"
+  - "OTM app web tier properties restart"
+description: "Describes the G-Log Properties file in Oracle OTM 6.x, how to view current properties via the PropertiesServlet, and the process for safely editing and applying changes to the configuration file on app and web servers."
 ---
 
 **Note:** This post is applicable for OTM ver 6.x and below.

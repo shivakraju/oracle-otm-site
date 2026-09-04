@@ -11,6 +11,18 @@ tags:
   - "auto refresh"
 aliases:
   - "/2026/02/business-monitors.html"
+keywords:
+  - "Oracle OTM business monitor configuration"
+  - "OTM business monitor setup steps"
+  - "Oracle OTM monitor bulk plan failed orders"
+  - "OTM business monitor refresh interval"
+  - "Oracle OTM manage business monitors"
+  - "OTM business monitor user role"
+  - "Oracle Transportation Management monitor setup"
+  - "OTM business monitor saved query screen set"
+  - "Oracle OTM auto refresh monitor"
+  - "OTM planner business monitor"
+description: "Covers how to create and configure Business Monitors in Oracle OTM to give planners and other users real-time visibility into critical transactions like failed bulk plan orders, with configurable auto-refresh intervals."
 ---
 
 The Business Monitor as the name suggests is designed to monitor critical business functions associated to the role or specific user. For example, if a planner wants to review bulk plan failed orders, define a query identify such orders and a screen to display these orders and add them to business monitor. Business monitor can then be attached to user or role evel.

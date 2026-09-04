@@ -9,6 +9,18 @@ tags:
   - "Flex fields"
 aliases:
   - "/2017/04/flex-fields.html"
+keywords:
+  - "Oracle OTM flex field configuration"
+  - "OTM FlexDropList PickList flex field"
+  - "Oracle OTM custom attribute columns"
+  - "OTM flex field definition manager layout"
+  - "Oracle OTM order release custom field"
+  - "OTM flex field query list of values"
+  - "Oracle Transportation Management attribute fields"
+  - "OTM flex field CONTACT table query"
+  - "Oracle OTM custom data fields setup"
+  - "OTM flex field char number date currency"
+description: "Explains Oracle OTM Flex Fields, how to define FlexDropList and PickList field types on attribute columns, and how to add them to Manager Layouts so users can enter custom data from the UI."
 ---
 
 OTM provides attribute fields(Char, Number, Date and currency) on each table to store custom data. Note that we can also use refnum/remarks to store this custom data but those entries are made in separate tables. So new versions of OTM introduced these attribute columns on almost all major transaction data tables like ORDER_RELEASE, SHIPMENT etc.  
