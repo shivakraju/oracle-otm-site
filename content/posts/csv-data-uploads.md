@@ -2,7 +2,7 @@
 title: "CSV Data Uploads"
 date: 2026-03-04T21:48:00+00:00
 draft: false
-weight: 80
+weight: 68
 aliases:
   - "/2026/03/csv-data-uploads.html"
 keywords:
