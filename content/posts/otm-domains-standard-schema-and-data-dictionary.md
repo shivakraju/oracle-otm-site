@@ -65,6 +65,6 @@ The Data Dictionary is built into OTM and documents every table and column in th
 
 **What's Next:**
 
-The next topic covers Basic OTM Configurations — the foundational setup steps every OTM implementation requires, starting with Domain Items, Locations, and Equipment Groups.
+The next topic covers the Order Management Data Structure — how OTM organises purchase orders and order releases in the database, and how they relate to shipments.
 
-Next Topic: [Basic OTM Configurations — Domain Items, Locations and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)
+Next Topic: [Order Management Data Structure](/posts/otm-order-management-data-structure/)
