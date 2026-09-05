@@ -1,5 +1,5 @@
 ---
-title: "OTM Inbound Integrations (XML)"
+title: "Inbound Integrations (XML)"
 date: 2016-04-15T18:20:00+00:00
 draft: false
 weight: 60
