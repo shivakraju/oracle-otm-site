@@ -8,6 +8,7 @@ tags:
   - "Oracle"
   - "Tender"
 aliases:
+  - "/posts/basic-otm-configurations-06-tender-process/"
   - "/2020/08/basic-otm-configurations-06-tender.html"
 keywords:
   - "Oracle OTM tender process configuration"

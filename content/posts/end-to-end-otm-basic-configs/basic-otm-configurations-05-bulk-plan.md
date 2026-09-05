@@ -8,6 +8,7 @@ tags:
   - "Bulk Plan"
   - "Oracle"
 aliases:
+  - "/posts/basic-otm-configurations-05-bulk-plan/"
   - "/2020/08/basic-otm-configurations-05-bulk-plan.html"
 keywords:
   - "Oracle OTM bulk plan configuration steps"

@@ -8,6 +8,7 @@ tags:
   - "Itinerary"
   - "Leg"
 aliases:
+  - "/posts/basic-otm-configurations-02-itinerary/"
   - "/2020/08/basic-otm-configurations-02-itinerary.html"
 keywords:
   - "Oracle OTM itinerary configuration"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Domain, Items, Locations, and Equipment"
 date: 2020-08-22T05:25:00+00:00
 draft: false
@@ -11,6 +11,7 @@ tags:
   - "Oracle"
   - "Location"
 aliases:
+  - "/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/"
   - "/2020/08/basic-otm-configurations-01-domain.html"
   - "/2020/06/basic-otm-configurations.html"
 keywords:

@@ -9,6 +9,7 @@ tags:
   - "OTM"
   - "Oracle"
 aliases:
+  - "/posts/basic-otm-configurations-04-business-numbers-planning-parameter/"
   - "/2020/08/basic-otm-configurations-04-business.html"
 keywords:
   - "Oracle OTM business number rule configuration"

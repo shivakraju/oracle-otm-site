@@ -9,6 +9,7 @@ tags:
   - "Oracle"
   - "Voucher"
 aliases:
+  - "/posts/basic-otm-configurations-08-voucher-allocation/"
   - "/2020/08/basic-otm-configurations-08-voucher.html"
 keywords:
   - "Oracle OTM voucher allocation configuration"

@@ -13,6 +13,7 @@ tags:
   - "RATE_GEO"
   - "Rate Offering"
 aliases:
+  - "/posts/basic-otm-configurations-03-service-provider-and-rates/"
   - "/2020/08/basic-otm-configurations-03-service.html"
 keywords:
   - "Oracle OTM service provider setup"

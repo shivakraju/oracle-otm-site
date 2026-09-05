@@ -8,6 +8,7 @@ tags:
   - "OTM"
   - "Oracle"
 aliases:
+  - "/posts/basic-otm-configurations-07-invoicing/"
   - "/2020/08/basic-otm-configurations-07-invoicing.html"
 keywords:
   - "Oracle OTM invoicing configuration"
