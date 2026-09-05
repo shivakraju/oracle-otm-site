@@ -1,5 +1,5 @@
 ﻿---
-title: "03 - Service Provider and Rates"
+title: "Service Provider and Rates"
 date: 2020-08-22T04:43:00+00:00
 draft: false
 weight: 180
@@ -109,3 +109,7 @@ Open Rate Offering > Actions > Create Rate Record > Enter below data:
 ![](/images/basic-otm-configurations-03-se-img3-bae23963e6.png)
 
 ![](/images/basic-otm-configurations-03-se-img4-1e8cf7b957.png)
+
+**Basic OTM Configurations:**
+
+[← Itinerary](/posts/basic-otm-configurations-02-itinerary/)  |  [Business Numbers, Planning Parameter →](/posts/basic-otm-configurations-04-business-numbers-planning-parameter/)

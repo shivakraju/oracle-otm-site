@@ -1,5 +1,5 @@
 ﻿---
-title: "05 - Bulk Plan"
+title: "Bulk Plan"
 date: 2020-08-22T04:52:00+00:00
 draft: false
 weight: 200
@@ -121,3 +121,7 @@ Now if you do a bulk plan on this order release, it should select ITIN_D(least c
   
 
 Note that OTM has identified the carrier for each leg. Next step is to notify/send tender to those carriers with these pickup date/time and location details.
+
+**Basic OTM Configurations:**
+
+[← Business Numbers, Planning Parameter](/posts/basic-otm-configurations-04-business-numbers-planning-parameter/)  |  [Tender Process →](/posts/basic-otm-configurations-06-tender-process/)

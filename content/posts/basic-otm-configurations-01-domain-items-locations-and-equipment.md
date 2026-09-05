@@ -1,5 +1,5 @@
 ﻿---
-title: "01 - Domain, Items, Locations, and Equipment"
+title: "Domain, Items, Locations, and Equipment"
 date: 2020-08-22T05:25:00+00:00
 draft: false
 weight: 160
@@ -172,3 +172,7 @@ Shipment Management > Equipment Management > Equipment Group Profile:
 ![](/images/basic-otm-configurations-01-do-img14-504d5e728e.png)
 
 ![](/images/basic-otm-configurations-01-do-img15-032b315090.png)
+
+**Basic OTM Configurations:**
+
+[Itinerary →](/posts/basic-otm-configurations-02-itinerary/)

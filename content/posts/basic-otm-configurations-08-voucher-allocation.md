@@ -1,5 +1,5 @@
 ﻿---
-title: "08 - Voucher Allocation"
+title: "Voucher Allocation"
 date: 2020-08-22T04:59:00+00:00
 draft: false
 weight: 230
@@ -71,3 +71,7 @@ After the voucher is allocated, then we can see the Order Release in View mode t
 ![](/images/basic-otm-configurations-08-vo-img6-dd1dde4b1d.png)
 
 This information or freight cost allocated to PO level or Order Release Line level is critical because incase where you have multiple POs from different vendors on the same shipment and you want to allocate or identify vendor level shipping costs, use this allocation feature.
+
+**Basic OTM Configurations:**
+
+[← Invoicing](/posts/basic-otm-configurations-07-invoicing/)

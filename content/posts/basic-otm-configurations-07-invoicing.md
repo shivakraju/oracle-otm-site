@@ -1,5 +1,5 @@
 ﻿---
-title: "07 - Invoicing"
+title: "Invoicing"
 date: 2020-08-22T04:57:00+00:00
 draft: false
 weight: 220
@@ -104,3 +104,7 @@ Once Shipment execution is completed, carrier sends invoice and OTM can:
   
 
 ![](/images/basic-otm-configurations-07-in-img7-d217d23638.png)
+
+**Basic OTM Configurations:**
+
+[← Tender Process](/posts/basic-otm-configurations-06-tender-process/)  |  [Voucher Allocation →](/posts/basic-otm-configurations-08-voucher-allocation/)

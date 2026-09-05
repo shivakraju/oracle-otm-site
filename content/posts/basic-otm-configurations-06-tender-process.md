@@ -1,5 +1,5 @@
 ﻿---
-title: "06 - Tender process"
+title: "Tender Process"
 date: 2020-08-22T04:55:00+00:00
 draft: false
 weight: 210
@@ -106,3 +106,7 @@ Now we login as SERVPROV.TCRP-SGTM to see this new tender for first leg.
 Accept this tender. Now we can see both the shipments are show tender as accepted.
 
 ![](/images/basic-otm-configurations-06-te-img8-8c7043a964.png)
+
+**Basic OTM Configurations:**
+
+[← Bulk Plan](/posts/basic-otm-configurations-05-bulk-plan/)  |  [Invoicing →](/posts/basic-otm-configurations-07-invoicing/)

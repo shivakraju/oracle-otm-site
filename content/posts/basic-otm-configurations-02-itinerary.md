@@ -1,5 +1,5 @@
 ﻿---
-title: "02 - Itinerary"
+title: "Itinerary"
 date: 2020-08-22T04:32:00+00:00
 draft: false
 weight: 170
@@ -92,3 +92,7 @@ Note that lane defintion above shows source location and final destination only.
   
 
 ![](/images/basic-otm-configurations-02-it-img12-770a4132df.png)
+
+**Basic OTM Configurations:**
+
+[← Domain, Items, Locations, and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)  |  [Service Provider and Rates →](/posts/basic-otm-configurations-03-service-provider-and-rates/)

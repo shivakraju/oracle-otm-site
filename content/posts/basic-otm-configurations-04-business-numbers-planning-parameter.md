@@ -1,5 +1,5 @@
 ﻿---
-title: "04 - Business Numbers, Planning Parameter"
+title: "Business Numbers, Planning Parameter"
 date: 2020-08-22T04:47:00+00:00
 draft: false
 weight: 190
@@ -91,3 +91,7 @@ Now let us set this parameter as default planning parameter for domain TCRP.
 Configuration and Administration > Domain Management > Domain Settings > Search > Select TCRP record and Edit > Change Parameter Set ID=TCRP_PLAN > Finished.
 
 Now while submitting bulk plan, this new parameter comes up as default parameter.
+
+**Basic OTM Configurations:**
+
+[← Service Provider and Rates](/posts/basic-otm-configurations-03-service-provider-and-rates/)  |  [Bulk Plan →](/posts/basic-otm-configurations-05-bulk-plan/)
