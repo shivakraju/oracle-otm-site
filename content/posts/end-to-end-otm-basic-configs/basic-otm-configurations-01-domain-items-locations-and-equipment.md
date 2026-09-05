@@ -34,7 +34,58 @@ This is the first in a series of eight posts that walk through a complete OTM en
 
 Toys Corporation (TCRP) has one DC/Warehouse and three store locations in different cities. The DC distributes three items (Item A, Item B, Item C) to those stores. TCRP has contracts with two carriers (SGTM, PNDP) who use 20 ft, 40 ft, and 53 ft equipment. TCRP wants to use OTM Bulk Plan to optimise transport costs and settle carrier invoices.
 
-![Overview diagram showing DC in Indianapolis distributing to three store locations](/images/basic-otm-configurations-01-do-img1-d2cb92713c.png)
+<div style="background:#f0f4f8;border:1px solid #d1dce8;border-radius:8px;padding:16px 20px;margin:16px 0;font-family:'Consolas','Courier New',monospace;">
+<div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px;">
+  <div style="background:#fff;border:1px solid #d1dce8;border-radius:6px;padding:10px 16px;">
+    <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#64748b;margin-bottom:6px;">Carriers</div>
+    <div style="display:flex;gap:8px;"><span style="background:#e8f0f8;border:1px solid #b8d0e8;border-radius:4px;padding:2px 10px;font-size:12px;font-weight:600;color:#1c3557;">SGTM</span><span style="background:#e8f0f8;border:1px solid #b8d0e8;border-radius:4px;padding:2px 10px;font-size:12px;font-weight:600;color:#1c3557;">PNDP</span></div>
+  </div>
+  <div style="background:#fff;border:1px solid #d1dce8;border-radius:6px;padding:10px 16px;">
+    <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#64748b;margin-bottom:6px;">Equipment Types</div>
+    <div style="display:flex;gap:8px;"><span style="background:#e8f0f8;border:1px solid #b8d0e8;border-radius:4px;padding:2px 10px;font-size:12px;font-weight:600;color:#1c3557;">20-FT</span><span style="background:#e8f0f8;border:1px solid #b8d0e8;border-radius:4px;padding:2px 10px;font-size:12px;font-weight:600;color:#1c3557;">40-FT</span><span style="background:#e8f0f8;border:1px solid #b8d0e8;border-radius:4px;padding:2px 10px;font-size:12px;font-weight:600;color:#1c3557;">53-FT</span></div>
+  </div>
+</div>
+<svg viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;display:block;margin:0 auto;">
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4a8bb5"/>
+    </marker>
+  </defs>
+  <line x1="268" y1="90" x2="168" y2="248" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr2)"/>
+  <line x1="320" y1="97" x2="320" y2="248" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr2)"/>
+  <line x1="372" y1="84" x2="490" y2="198" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr2)"/>
+  <line x1="214" y1="272" x2="282" y2="272" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr2)"/>
+  <text x="196" y="162" fill="#64748b" font-size="11" text-anchor="middle" font-family="Consolas,monospace">50 miles</text>
+  <text x="196" y="174" fill="#1c64a0" font-size="10" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">Eqp: 20/40-FT</text>
+  <text x="344" y="178" fill="#64748b" font-size="11" font-family="Consolas,monospace">75 miles</text>
+  <text x="344" y="190" fill="#1c64a0" font-size="10" font-weight="bold" font-family="Consolas,monospace">Eqp: 53-FT</text>
+  <text x="408" y="108" fill="#64748b" font-size="11" text-anchor="middle" font-family="Consolas,monospace">100 miles</text>
+  <text x="408" y="120" fill="#1c64a0" font-size="10" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">Eqp: 40-FT</text>
+  <text x="248" y="296" fill="#64748b" font-size="11" text-anchor="middle" font-family="Consolas,monospace">50 miles</text>
+  <text x="248" y="308" fill="#1c64a0" font-size="10" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">Eqp: 20/40-FT</text>
+  <rect x="282" y="52" width="76" height="36" rx="6" fill="#1c3557"/>
+  <text x="320" y="75" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">DC</text>
+  <rect x="120" y="254" width="88" height="36" rx="6" fill="#fff" stroke="#1c3557" stroke-width="1.8"/>
+  <text x="164" y="277" fill="#1c3557" font-size="12" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">LOC-A</text>
+  <rect x="282" y="254" width="76" height="36" rx="6" fill="#fff" stroke="#1c3557" stroke-width="1.8"/>
+  <text x="320" y="277" fill="#1c3557" font-size="12" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">LOC-C</text>
+  <rect x="460" y="200" width="88" height="36" rx="6" fill="#fff" stroke="#1c3557" stroke-width="1.8"/>
+  <text x="504" y="223" fill="#1c3557" font-size="12" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">LOC-B</text>
+</svg>
+<table style="width:100%;border-collapse:collapse;margin-top:16px;font-size:13px;">
+  <thead><tr style="background:#e8f0f8;">
+    <th style="padding:8px 12px;text-align:left;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#64748b;border-bottom:1px solid #d1dce8;">Itinerary</th>
+    <th style="padding:8px 12px;text-align:left;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#64748b;border-bottom:1px solid #d1dce8;">Route</th>
+    <th style="padding:8px 12px;text-align:left;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#64748b;border-bottom:1px solid #d1dce8;">Carriers</th>
+  </tr></thead>
+  <tbody>
+    <tr><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-weight:600;color:#1c3557;">ITIN-A</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;color:#1c64a0;">DC → LOC-B</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">SGTM, PNDP</td></tr>
+    <tr><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-weight:600;color:#1c3557;">ITIN-B</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;color:#1c64a0;">DC → LOC-C</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">SGTM</td></tr>
+    <tr><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-weight:600;color:#1c3557;">ITIN-C</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;color:#1c64a0;">DC → LOC-A</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">SGTM, PNDP</td></tr>
+    <tr><td style="padding:8px 12px;font-weight:600;color:#1c3557;">ITIN-D</td><td style="padding:8px 12px;color:#1c64a0;">DC → LOC-A → LOC-B</td><td style="padding:8px 12px;">SGTM, PNDP</td></tr>
+  </tbody>
+</table>
+</div>
 
 The locations map to real addresses:
 
