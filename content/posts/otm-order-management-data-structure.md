@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Order Management Data Structure"
 date: 2016-05-03T17:42:00+00:00
 draft: false
@@ -32,117 +32,100 @@ keywords:
 description: "Details the Oracle OTM order management database structure, covering OB_ORDER_BASE, OB_LINE, Order Release, Packaging Unit, and Ship Unit Spec tables used to model purchase orders and bookings."
 ---
 
-Purchase Order   
-  
-PO record will have the basic details like source location, destination location, INCO terms, Item number, Qty etc. Note that PO might not have exact weight/volume details that might be required for planning orders. Usually POs are created in the ERP systems well ahead of time and sent to OTM.   
-  
-**PO tables:**  
-  
-OB_ORDER_BASE - PO Header  
-OB_REFNUM - PO Header Reference number details  
-OB_REMARK - PO Header remarks  
-OB_ORDER_BASE_STATUS - PO Header status values  
-OB_INVOLVED_PARTY - PO involved party details  
-OB_LINE - PO Line  
-OB_LINE_REFNUM - PO Line reference numbers  
-OB_LINE_REMARK - PO Line level remarks  
-OB_LINE_STATUS - PO Line level status values  
-  
-**Order Release:**  
-  
-Order Release(booking) in most cases is like a confirmed order for movement of items/goods from Point A to Point B on a specific date(date range) and this should also have the exact weight/volume of each ship unit required for transportation planning. On the Order Release we can also have constraints defined by business like specific carrier request, itinerary request etc.   
-  
-ORDER_RELEASE - Order Header  
-ORDER_RELEASE_REFNUM - Order Header Refnum  
-ORDER_RELEASE_REMARK - Order Header Remarks  
-ORDER_RELEASE_STATUS - Order Header Status  
-ORDER_RELEASE_INV_PARTY - Order Involved Party records  
-ORDER_RELEASE_LINE - Order Line with item details  
-ORDER_RELEASE_LINE_REFNUM - Order Line reference numbers  
-ORDER_RELEASE_LINE_REMARK - Order Line level remarks  
-  
-SHIP_UNIT - Order Ship Unit  
-SHIP_UNIT_LINE - Order Ship Unit Line  
-SHIP_UNIT_LINE_REFNUM - Ship Unit level reference numbers  
-SHIP_UNIT_LINE_REMARK - Ship Unit level remarks  
-  
-Note that Order Ship Units are different from Shipment Ship Units. Order Ship Units are created from Order Release Line information based on 'Order Type' configuration on the Order Release. Most implementations have one to one mapping between order release line and order release ship unit. But in some cases like rainbow pallets etc. multiple items can go into single pallet(single ship unit). In this case we might see multiple ship unit lines under a single ship unit. Ship Unit is like a pallet that is actually planned to a shipment. Planning considers the weight and volume that exists against the order release ship units.  
-  
-  
+OTM models order management across three levels: the **Purchase Order** (what was ordered), the **Order Release** (a confirmed booking for movement), and **Order Movements** (the planned legs of that movement). Understanding this hierarchy and the underlying tables is essential for integration work and troubleshooting.
 
-Order Movements
+**Purchase Order (Order Base):**
 
-  
+A Purchase Order represents the commercial transaction — what items are being moved, from where, to where, and under what terms. POs are typically created in an ERP system (e.g. Oracle E-Business Suite) and sent to OTM via inbound integration. Note that POs often lack exact weight and volume details, which are required for shipment planning — those are defined on the Order Release.
 
-Order Movements are created from order releases and they honor the constraints put on the Order Release. One shipment is created for each Order Movement.
+**PO Header tables:**
 
-They can be created using ORDER RELEASE action or from the UI using Order Release > Actions menu.
+<div class="field-box"><strong>OB_ORDER_BASE</strong> — PO header. Stores source/destination locations, INCO terms, and overall PO attributes.</div>
 
-![](/images/otm-order-management-data-stru-img1-1c11f626db.png)
+<div class="field-box"><strong>OB_REFNUM</strong> — PO header reference numbers (e.g. buyer PO number, vendor reference).</div>
 
-Order Movements can be used to plan the different legs of the Order say Source location to HUB, HUB to final destination etc on different days by the planner. Say on Day1, planner want to consolidate all the orders coming from supplier to HUB location and on Day2 planner want to plan/consolidate different shipments going from HUB to inbound warehouses or customers.
+<div class="field-box"><strong>OB_REMARK</strong> — Free-text remarks at PO header level.</div>
 
-  
+<div class="field-box"><strong>OB_ORDER_BASE_STATUS</strong> — Status values attached to the PO header.</div>
 
-**Business use case:** In XXX company, when supplier books the order, order release is created. If Items on the order release is having â€˜DAYS ON HANDâ€™ refnum value less than 14 days, then Agent will update the Itinerary as DIRECT Itinerary instead of HUB Itinerary. Difference between Direct and HUB Itinieraray is that HUB itinerary will have two legs â€“ source location to HUB(California HUB etc), California HUB to Destination location etc. Since this constraint is updated on the order release, once we call standard action â€˜CREATE ORDER MOVEMENTSâ€™ it will create two order movements in case of HUB Itinerary and users can plan these order movements. This will have better control of planning.
+<div class="field-box"><strong>OB_INVOLVED_PARTY</strong> — Parties involved in the PO (e.g. buyer, seller, freight payer).</div>
 
-  
+**PO Line tables:**
 
-**Below are the Order Movement related tables:**
+<div class="field-box"><strong>OB_LINE</strong> — PO line. One row per item on the PO, with item number, quantity, and unit of measure.</div>
 
-ORDER_MOVEMENT
+<div class="field-box"><strong>OB_LINE_REFNUM</strong> — Reference numbers at PO line level.</div>
 
-ORDER_MOVEMENT_STATUS
+<div class="field-box"><strong>OB_LINE_REMARK</strong> — Remarks at PO line level.</div>
 
-ORDER_MOVEMENT_REFNUM
+<div class="field-box"><strong>OB_LINE_STATUS</strong> — Status values at PO line level.</div>
 
-ORDER_MOVEMENT_REMARK
+**Order Release:**
 
-ORDER_MOVEMENT_INV_PARTY  
-  
-Items  
-  
-Item is like an individual unit that is sold by a manufacturer like a pencil box.  
-  
+An Order Release (booking) is a confirmed request for transportation — it specifies the exact weight, volume, and ship units required for planning. Unlike a PO, an Order Release has enough detail for OTM to plan and tender a shipment. Business constraints such as carrier preference or itinerary can be set directly on the Order Release.
 
-**Table:**
+**Order Release tables:**
 
-ITEM
+<div class="field-box"><strong>ORDER_RELEASE</strong> — Order Release header.</div>
 
-  
+<div class="field-box"><strong>ORDER_RELEASE_REFNUM</strong> — Reference numbers at header level.</div>
 
-Ship Unit Spec(Packaging Unit)
+<div class="field-box"><strong>ORDER_RELEASE_REMARK</strong> — Remarks at header level.</div>
 
-  
+<div class="field-box"><strong>ORDER_RELEASE_STATUS</strong> — Status values at header level.</div>
 
-Ship Unit Spec - also referred to as Pallet or Transportation Handling Unit(THU) or Carton is similar to a box with specific dimensions - LxWxH. This is linked to the Ship Unit on an order. This is the unit that will be physically shipped and whose dimensions are critical for Order Planning.
+<div class="field-box"><strong>ORDER_RELEASE_INV_PARTY</strong> — Involved party records on the order release.</div>
 
-  
+<div class="field-box"><strong>ORDER_RELEASE_LINE</strong> — Order Release line with item details and quantity.</div>
 
-**Table:**
+<div class="field-box"><strong>ORDER_RELEASE_LINE_REFNUM</strong> — Reference numbers at line level.</div>
 
-SHIP_UNIT_SPEC
+<div class="field-box"><strong>ORDER_RELEASE_LINE_REMARK</strong> — Remarks at line level.</div>
 
-  
+**Ship Unit tables:**
 
-**Packaged Item:**
+<div class="field-box"><strong>SHIP_UNIT</strong> — A physical handling unit (e.g. pallet) derived from the Order Release line. This is what OTM plans to a shipment — weight and volume on the Ship Unit drive planning.</div>
 
-  
+<div class="field-box"><strong>SHIP_UNIT_LINE</strong> — Items within the Ship Unit. Most implementations have a one-to-one mapping between Order Release Line and Ship Unit, but multi-item pallets (rainbow pallets) can have multiple Ship Unit Lines under one Ship Unit.</div>
 
-Packaged item links your item to ship unit spec(pallet). Packaged Item is the entity mentioned on the Order Base(PO), Order Release, etc  
-  
-**This will have information like:**
+<div class="field-box"><strong>SHIP_UNIT_LINE_REFNUM</strong> — Reference numbers at Ship Unit Line level.</div>
 
-  * Item ID
-  * Packaging Unit( which is Ship Unit Spec defined above in most cases)
-  * Package dimensions
-  * Ti/High â€“ This term is used in logistic business to indicate number of cartons per layer(Ti) and number of layer(High) used on the pallet.
+<div class="field-box"><strong>SHIP_UNIT_LINE_REMARK</strong> — Remarks at Ship Unit Line level.</div>
 
-**Table:** 
+<div class="note-box"><strong>Note:</strong> Order Ship Units and Shipment Ship Units are separate entities. Order Ship Units are created from Order Release Lines based on the Order Type configuration on the Order Release. Shipment Ship Units are created when OTM assigns the order to a shipment during planning.</div>
 
-PACKAGED_ITEM  
-  
-**Notes:** Items > Packaged Items > Ship Unit Spec > Equipment/Container > Shipment would be packaging hierarchy. But most implementations will have Item ID same as Packaged Item ID and use Ship Unit spec like a CARTON(box) with Ship Unit dimensions same as Ship Unit Spec dimensions. Ship Units go in Equipment.
+**Order Movements:**
 
-  
-**Note:** Please post corrections(if any) to 'learnotm@outlook.com'
+Order Movements are created from Order Releases and represent the individual legs of transportation. One shipment is created per Order Movement. They honour any constraints set on the Order Release (carrier, itinerary, date windows).
+
+Order Movements are created either via the **Create Order Movements** action on the Order Release, or automatically by an OTM Agent. A HUB itinerary generates two Order Movements — one from origin to hub, one from hub to destination — allowing planners to consolidate and plan each leg independently.
+
+![OTM Order Movement screen](/images/otm-order-management-data-stru-img1-1c11f626db.png)
+
+**Order Movement tables:**
+
+<div class="field-box"><strong>ORDER_MOVEMENT</strong> — One row per planned leg.</div>
+
+<div class="field-box"><strong>ORDER_MOVEMENT_STATUS</strong> — Status values on the Order Movement.</div>
+
+<div class="field-box"><strong>ORDER_MOVEMENT_REFNUM</strong> — Reference numbers on the Order Movement.</div>
+
+<div class="field-box"><strong>ORDER_MOVEMENT_REMARK</strong> — Remarks on the Order Movement.</div>
+
+<div class="field-box"><strong>ORDER_MOVEMENT_INV_PARTY</strong> — Involved parties on the Order Movement.</div>
+
+**Items, Packaged Items, and Ship Unit Specs:**
+
+<div class="field-box"><strong>ITEM</strong> — Represents an individual product SKU (e.g. a pencil box). Items are the base unit of inventory in OTM.</div>
+
+<div class="field-box"><strong>SHIP_UNIT_SPEC</strong> — Also known as a Packaging Unit or Transportation Handling Unit (THU). Defines the physical dimensions (L x W x H) of a container such as a pallet or carton. This is linked to Ship Units on the order and drives planning calculations.</div>
+
+<div class="field-box"><strong>PACKAGED_ITEM</strong> — Links an Item to a Ship Unit Spec. This is the entity referenced on the Order Base, Order Release, and other transactions. It carries Item ID, Packaging Unit, package dimensions, and Ti/High values (Ti = cartons per layer, High = number of layers on a pallet).</div>
+
+<div class="note-box"><strong>Packaging hierarchy:</strong> Items > Packaged Items > Ship Unit Spec > Equipment/Container > Shipment. In most implementations, Item ID and Packaged Item ID are the same, and the Ship Unit Spec is a CARTON whose dimensions match the Ship Unit dimensions. Ship Units are loaded into Equipment for planning.</div>
+
+**What's Next:**
+
+The next topic covers the Shipment Management Data Structure — how OTM organises shipments, stops, ship units, and status events in the database.
+
+Next Topic: [Shipment Management Data Structure](/posts/otm-shipment-management-data-structure/)
