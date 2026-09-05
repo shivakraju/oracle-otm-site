@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!sel || sel.rangeCount === 0) return;
     var node = sel.getRangeAt(0).commonAncestorContainer;
     var el = node.nodeType === 3 ? node.parentElement : node;
-    if (!el.closest('pre, code, .chroma, .field-box strong, .step-box code, .note-box code')) {
+    if (!el.closest('pre, code, .chroma, .field-box, .step-box, .note-box')) {
       e.preventDefault();
     }
   });
