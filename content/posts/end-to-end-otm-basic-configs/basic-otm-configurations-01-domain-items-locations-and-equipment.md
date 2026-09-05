@@ -59,8 +59,8 @@ Toys Corporation (TCRP) has one DC/Warehouse and three store locations in differ
   <text x="196" y="174" fill="#1c64a0" font-size="10" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">Eqp: 20/40-FT</text>
   <text x="344" y="178" fill="#64748b" font-size="11" font-family="Consolas,monospace">75 miles</text>
   <text x="344" y="190" fill="#1c64a0" font-size="10" font-weight="bold" font-family="Consolas,monospace">Eqp: 53-FT</text>
-  <text x="408" y="108" fill="#64748b" font-size="11" text-anchor="middle" font-family="Consolas,monospace">100 miles</text>
-  <text x="408" y="120" fill="#1c64a0" font-size="10" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">Eqp: 40-FT</text>
+  <text x="448" y="143" fill="#64748b" font-size="11" text-anchor="start" font-family="Consolas,monospace">100 miles</text>
+  <text x="448" y="155" fill="#1c64a0" font-size="10" font-weight="bold" text-anchor="start" font-family="Consolas,monospace">Eqp: 40-FT</text>
   <text x="248" y="296" fill="#64748b" font-size="11" text-anchor="middle" font-family="Consolas,monospace">50 miles</text>
   <text x="248" y="308" fill="#1c64a0" font-size="10" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">Eqp: 20/40-FT</text>
   <rect x="282" y="52" width="76" height="36" rx="6" fill="#1c3557"/>
