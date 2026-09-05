@@ -2,7 +2,7 @@
 title: "Domains, Standard Schema and Data Dictionary"
 date: 2016-05-02T16:34:00+00:00
 draft: false
-weight: 100
+weight: 75
 tags:
   - "DATA_DICT"
   - "XID"
@@ -26,38 +26,45 @@ keywords:
   - "Oracle Transportation Management data structure"
   - "OTM ORDER_BASE_GID explained"
   - "Oracle OTM standard schema GLOGOWNER REPORTOWNER"
-description: "Explains Oracle OTM's domain-based data organization, the GLOGOWNER and REPORTOWNER schemas, and how GID/XID columns uniquely identify business objects like purchase orders and shipments across domains."
+description: "Explains Oracle OTM's domain-based data organisation, the GLOGOWNER and REPORTOWNER schemas, and how GID/XID columns uniquely identify business objects like purchase orders and shipments across domains."
 ---
 
-**Domains:**   
-  
-OTM Data is organized into domains. Each domain is like grouping of data / business transactions based on the different business units with in the same organization.  
-  
-If there is a corporation with logistics requirements across various business units like "Merchandise Shipping", "Food and Beverages", etc - you typically create one domain for each of these business units so that users and their roles can be tied to each business unit. User/role tied to a particular domain can only access data for their specific domain/business unit. Also advantage with domains is that customization specific to a business unit can be better controlled/maintained. For example, OTM Agents(workflows) with custom code can be developed specific to each domain so they they trigger only for transactions within that domain.  
-  
-Domains can be created in hierarchical manner - like one parent domain at corporation level and child domains at business unit level under the same parent domain. With this structure you can maintain customization/features common to both the child domains at parent domain level. For example, you may define Item Numbers at parent domain level these items can be used on both the child domain transactions.  
-  
-Each table in OTM will have DOMAIN_NAME as column to distinguish both setup/transactional data between domains. Also each table will have GID/XID columns for each business object. For example a PO will have ORDER_BASE_GID and ORDER_BASE_XID:  
+OTM organises all of its data using a **domain** model. Understanding domains, the database schema, and how business objects are identified is foundational for anyone working with OTM data — whether you are building integrations, writing reports, or troubleshooting transactions.
 
-  * ORDER_BASE_GID to represent a unique system generated/user entered identifier(primary key in most cases) that takes format "Domain Name"."PO Number" (For example, DMN.12345 would be ORDER_BASE_GID value where DMN is the domain name and 12345 is the PO Number) 
-  * ORDER_BASE_XID to represent actual PO number that can be recognized by business users like free text value. Most of the cases business users might use same value for both these GID/XID columns.
+**Domains:**
 
-**Standard OTM Schema:**  
-  
-**GLOGOWNER Schema:** This schema is used to maintain all the transnational data like PO Data, Order Release data, Shipment data, etc.  
-  
-**REPORT OWNER Schema:** This schema is used to store report definitions, oracle stored procedures that will be used by BI Publisher Query templates, etc. For objects created in this schema we should create a public synonym to make the object accessible to OTM application.  
-  
-OTM Data Dictionary  
-  
-Once you know the table name for a business object you can get more details from OTM Data Dictionary. In the OTM URL place "html/data_dict" next to "GC3" to access data dictionary  
-  
-**Example:** www.otm-oracle.com/GC3/html/data_dict/  
-  
-**Note:** There is '*' against the columns to represent primary key combination and next to each column is Foreign Key information within the brackets.  
-  
-Below example says - SHIP_UNIT_LINE table has SHIP_UNIT_GID, SHIP_UNIT_LINE_NO as primary key combination and SHIP_UNIT_LINE.SHIP_UNIT_GID references SHIP_UNIT.SHIP_UNIT_GID.  
-![](/images/otm-domains-standard-schema-an-img1-16093e055e.png)  
-  
-  
-**Note:** Please post corrections(if any) to 'learnotm@outlook.com'
+<div class="field-box"><strong>What is a domain?</strong> A domain is a logical grouping of OTM data for a business unit. A corporation with multiple shipping divisions — say, Merchandise and Food & Beverage — would typically have one domain per division. Users and roles are tied to a domain, so a user in one domain cannot see or modify data in another.</div>
+
+<div class="field-box"><strong>Domain hierarchy:</strong> Domains can be nested — a parent domain at the corporate level with child domains under each business unit. Configuration defined at the parent level (e.g. Item Numbers, Agents, Rate Offerings) is shared across all child domains, while each child domain can also maintain its own configuration.</div>
+
+<div class="field-box"><strong>DOMAIN_NAME column:</strong> Every table in OTM includes a <code>DOMAIN_NAME</code> column that ties each row to its domain. This is how OTM isolates data between business units within a single database instance.</div>
+
+**GID and XID — How OTM Identifies Business Objects:**
+
+Every OTM business object has two identifier columns:
+
+<div class="field-box"><strong>GID (Global ID):</strong> The system-level unique identifier, formatted as <code>DOMAIN_NAME.XID</code>. For example, a purchase order in domain <code>ABC</code> with PO number <code>12345</code> has <code>ORDER_BASE_GID = ABC.12345</code>. GID is the primary key used in foreign key relationships across tables.</div>
+
+<div class="field-box"><strong>XID (External ID):</strong> The business-facing identifier — just the <code>12345</code> part, without the domain prefix. This is what business users recognise. In most implementations, the XID matches the source system's reference number.</div>
+
+**Standard OTM Database Schemas:**
+
+<div class="field-box"><strong>GLOGOWNER:</strong> The main transactional schema. All OTM business data lives here — Purchase Orders (<code>ORDER_BASE</code>), Order Releases (<code>ORDER_RELEASE</code>), Shipments (<code>SHIPMENT</code>), Locations (<code>LOCATION</code>), Rates, Invoices, and more.</div>
+
+<div class="field-box"><strong>REPORTOWNER:</strong> Stores report definitions, BI Publisher query templates, and Oracle stored procedures used for reporting. Objects created in this schema need a public synonym so the OTM application can access them.</div>
+
+**OTM Data Dictionary:**
+
+The Data Dictionary is built into OTM and documents every table and column in the GLOGOWNER schema — including primary keys, foreign keys, and field descriptions. To access it, add `html/data_dict` to your OTM URL after `GC3`:
+
+`https://<your-otm-host>/GC3/html/data_dict/`
+
+![OTM Data Dictionary showing SHIP_UNIT_LINE table with primary key and foreign key annotations](/images/otm-domains-standard-schema-an-img1-16093e055e.png)
+
+<div class="note-box"><strong>Note:</strong> Columns marked with <code>*</code> are part of the primary key. The value in brackets next to a column shows the foreign key reference — for example, <code>SHIP_UNIT_LINE.SHIP_UNIT_GID</code> references <code>SHIP_UNIT.SHIP_UNIT_GID</code>.</div>
+
+**What's Next:**
+
+The next topic covers Basic OTM Configurations — the foundational setup steps every OTM implementation requires, starting with Domain Items, Locations, and Equipment Groups.
+
+Next Topic: [Basic OTM Configurations — Domain Items, Locations and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)
