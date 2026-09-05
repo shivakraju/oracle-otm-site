@@ -101,6 +101,80 @@ Enter the Object GID in the **Object** field and search. OTM displays the Transm
 
 <div class="note-box"><strong>Note:</strong> In a production implementation, the Send Interface Transmission step is typically automated using an OTM Agent that fires on a business event — for example, sending a shipment XML to a carrier whenever a shipment status changes to TENDERED. Manual triggering (Step 3) is mainly used for testing and troubleshooting.</div>
 
+**Configuring a Web Service for the External System:**
+
+If your external system exposes a SOAP web service endpoint (common with middleware platforms such as Oracle SOA/BPEL), you need to register that web service in OTM and link it to the External System. This is an alternative to the simple HTTP POST URL approach — use it when the receiving system requires a WSDL-based service call.
+
+<div class="step-box">
+<strong>Step A — Create a new Web Service in OTM</strong>
+
+Navigate to:
+
+Business Process Automation > Communication Management > Web Services
+
+Click **New**.
+</div>
+
+> ![OTM Web Services screen — new Web Service form with WSDL Document field](/images/otm-webservice-new-form.png)
+
+On the new Web Service form, click **+** next to the WSDL Document field to upload the WSDL file. You will be prompted to enter a Document Type and Content Management System.
+
+> ![OTM Document Type and Content Management System selection](/images/otm-webservice-document-type.png)
+
+Click **Document Detail**. Enter a Document ID (e.g. `YOUR_WEBSERVICE_WSDL`) and click **Upload** to upload the WSDL file provided by your middleware team. Click **Finished**.
+
+<div class="step-box">
+<strong>Step B — Review Service Details auto-populated from the WSDL</strong>
+
+Back on the Web Service form, click **Service Details**. OTM reads the uploaded WSDL file and automatically populates the Service Name, Namespace, Port Name, SOAP Encoding, and Operations.
+</div>
+
+> ![OTM Web Service — WSDL linked, Service Details button highlighted](/images/otm-webservice-wsdl-linked.png)
+
+Enter a **Service ID** and click **Finished**. The Service ID is how you will reference this web service from the External System.
+
+<div class="step-box">
+<strong>Step C — Create the External System and link the Web Service</strong>
+
+Navigate to:
+
+Business Process Automation > Communication Management > External Systems
+
+Click **New**. Enter an External System ID and click **Finished**.
+</div>
+
+> ![OTM External System form showing ID, credentials, and configuration options](/images/otm-external-system-form.png)
+
+Open the External System again. Navigate to the **Web Service** section and enter the Web Service ID you created in Step B. Click **Finished**.
+
+> ![OTM External System — Web Service tab showing Out XML Profiles section](/images/otm-external-system-webservice-tab.png)
+
+<div class="step-box">
+<strong>Step D — Select Service Operation and Service Endpoint</strong>
+
+Open the External System once more and set the **Service Operation** and **Service Endpoint** dropdowns — these are populated from the WSDL. Click **Finished**.
+</div>
+
+> ![OTM External System — Service Operation and Service Endpoint fields highlighted](/images/otm-external-system-service-operation.png)
+
+<div class="step-box">
+<strong>Step E — Test by sending a transmission</strong>
+
+Open a test Shipment (or any object) and go to:
+
+Actions > Utilities > Send Interface Transmission
+</div>
+
+> ![OTM Shipment Actions menu showing Send Interface Transmission option](/images/otm-send-interface-transmission-menu.png)
+
+Enter the External System ID and set **Notify Type** to **SERVICE**. Click **Send**.
+
+> ![OTM Send Interface Transmission dialog — External System and SERVICE notify type highlighted](/images/otm-send-interface-transmission-dialog.png)
+
+In the Transmission Manager, you should see the outbound transmission with status **PROCESSED**.
+
+> ![OTM Transmission Manager showing PROCESSED and ERROR status rows](/images/otm-transmission-manager-processed.png)
+
 **What's Next:**
 
 The next topic covers OTM Domains, Standard Schema and Data Dictionary — foundational reference material that explains how OTM organises data across domains and where to find field-level documentation.
