@@ -11,20 +11,28 @@
 .step-box   { border-left: 4px solid #0369a1; background: #f0f9ff; padding: 12px 16px; margin: 16px 0 8px; border-radius: 0 6px 6px 0; }
 </style>
 
+<style>
+.markdown img { width: 100%; height: auto; display: block; border: 1px solid #e2e8f0; border-radius: 4px; margin: 12px 0; }
+#img-lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; }
+#img-lightbox.open { display:flex; }
+#img-lightbox img { max-width:95vw; max-height:95vh; object-fit:contain; border-radius:4px; box-shadow:0 8px 40px rgba(0,0,0,0.6); }
+</style>
+<div id="img-lightbox"><img id="img-lightbox-img" src="" alt=""></div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  var lb = document.getElementById('img-lightbox');
+  var lbImg = document.getElementById('img-lightbox-img');
   document.querySelectorAll('.markdown img').forEach(function(img) {
-    if (!img.closest('a')) {
-      var a = document.createElement('a');
-      a.href = img.src;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.title = 'Click to view full size';
-      img.style.cursor = 'zoom-in';
-      img.parentNode.insertBefore(a, img);
-      a.appendChild(img);
-    }
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function(e) {
+      e.preventDefault();
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.add('open');
+    });
   });
+  lb.addEventListener('click', function() { lb.classList.remove('open'); lbImg.src = ''; });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { lb.classList.remove('open'); lbImg.src = ''; } });
 });
 </script>
 
