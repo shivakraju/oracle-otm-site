@@ -141,12 +141,6 @@ ORDER BY ies.eventdate
 
 <div class="note-box"><strong>Note:</strong> <code>i_transaction_no</code> is the unique reference for each tender. Carrier responses must be sent against the latest OUTSTANDING tender record.</div>
 
-**Useful Standard Views:**
-
-<div class="field-box"><strong>VIEW_SHIPMENT_ORDER_RELEASE</strong> — Find all Order Releases associated with a shipment, or all shipments associated with an Order Release.</div>
-
-<div class="field-box"><strong>VIEW_SHIPMENT_ORDER_BASE</strong> — Find all Order Base (PO) records associated with a shipment, or all shipments associated with a PO.</div>
-
 **Sample queries:**
 
 ```sql
