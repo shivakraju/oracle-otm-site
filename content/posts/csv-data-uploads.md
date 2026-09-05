@@ -37,7 +37,7 @@ Shipment Management > Location Manager > New
 Fill in the required fields — Location GID, Name, Address — and save the record.
 </div>
 
-> ![OTM Location Manager showing a sample location record](/images/csv-otm-location-record.png)
+![OTM Location Manager showing a sample location record](/images/csv-otm-location-record.png)
 
 <div class="step-box">
 <strong>Step 2 — Find the backend table name and WHERE clause</strong>
@@ -59,7 +59,7 @@ Navigate to:
 Business Process Automation > Data Export > CSV Export
 </div>
 
-> ![OTM CSV Export screen](/images/csv-data-uploads-img1-80b819bdb1.png)
+![OTM CSV Export screen](/images/csv-data-uploads-img1-80b819bdb1.png)
 
 <div class="step-box">
 <strong>Step 4 — Select table and run the export</strong>
@@ -76,7 +76,7 @@ OTM displays the exported data as grey text. Select all of that text and save it
 To verify the file is correctly formatted, open it in a text editor (Notepad or TextPad) — you should see values separated by commas, with the column headers in the first line and the NLS date format in line 2.
 </div>
 
-> ![OTM CSV export output showing comma-separated data](/images/CSVUploadResult.png)
+![OTM CSV export output showing comma-separated data](/images/CSVUploadResult.png)
 
 <div class="step-box">
 <strong>Step 6 — Populate the CSV template with your data</strong>
@@ -94,7 +94,7 @@ Business Process Automation > Integration > Integration Manager > Upload XML/CSV
 Browse for your `.csv` file and click **Upload**.
 </div>
 
-> ![OTM Integration Manager upload screen](/images/csv-data-uploads-img2-7f6b9b4bab.png)
+![OTM Integration Manager upload screen](/images/csv-data-uploads-img2-7f6b9b4bab.png)
 
 The **Command** field on the upload screen controls how OTM handles each record in the CSV:
 
@@ -110,9 +110,9 @@ The **Command** field on the upload screen controls how OTM handles each record 
 After the upload, OTM displays a results screen showing **Process Count** and **Error Count**. A non-zero Error Count means some records failed — click the error details to review.
 </div>
 
-> ![OTM CSV upload result showing Process Count and Error Count](/images/csv-upload-result2.png)
+![OTM CSV upload result showing Process Count and Error Count](/images/csv-upload-result2.png)
 
-> ![OTM CSV upload confirmation screen](/images/csv-data-uploads-img3-f36c44c247.png)
+![OTM CSV upload confirmation screen](/images/csv-data-uploads-img3-f36c44c247.png)
 
 <div class="note-box"><strong>Important:</strong> Date columns in your CSV file must follow the NLS Date Format specified in line 2 of the exported CSV. If the date format does not match, OTM will reject those rows with a format error.</div>
 

@@ -53,7 +53,7 @@ Business Process Automation > Power Data > Integration > Out XML Profiles
 Create a new profile and set **Default Mode** to `MIN`. Then add XPath expressions for each field you want to include in the outbound XML. Using MIN mode means OTM only outputs the fields you explicitly list — everything else is excluded. This keeps the XML compact and relevant to the receiving system.
 </div>
 
-> ![OTM Out XML Profile screen showing MIN mode and XPath configuration](/images/otm-outbound-xml-profile.jpg)
+![OTM Out XML Profile screen showing MIN mode and XPath configuration](/images/otm-outbound-xml-profile.jpg)
 
 <div class="step-box">
 <strong>Step 2 — Create an External System</strong>
@@ -73,9 +73,9 @@ Create a new External System record and fill in the following fields:
 
 <div class="field-box"><strong>Out XML Profile ID:</strong> Link the profile created in Step 1. OTM uses this to determine which fields to include in the XML before sending.</div>
 
-> ![OTM External System definition screen](/images/otm-outbound-external-system1.png)
+![OTM External System definition screen](/images/otm-outbound-external-system1.png)
 
-> ![OTM External System showing URL and Out XML Profile fields](/images/otm-outbound-external-system2.png)
+![OTM External System showing URL and Out XML Profile fields](/images/otm-outbound-external-system2.png)
 
 <div class="step-box">
 <strong>Step 3 — Send a transmission manually</strong>
@@ -87,7 +87,7 @@ Shipment > Actions > Utilities > Send Interface Transmission
 Select the External System defined in Step 2 and choose the appropriate notification type — **HTTP** for a direct URL post, or **Service** for a web service call. Click **Send**.
 </div>
 
-> ![OTM Send Interface Transmission dialog showing External System selection](/images/otm-outbound-send-transmission.png)
+![OTM Send Interface Transmission dialog showing External System selection](/images/otm-outbound-send-transmission.png)
 
 <div class="step-box">
 <strong>Step 4 — Verify the generated XML</strong>
@@ -115,11 +115,11 @@ Business Process Automation > Communication Management > Web Services
 Click **New**.
 </div>
 
-> ![OTM Web Services screen — new Web Service form with WSDL Document field](/images/otm-webservice-new-form.png)
+![OTM Web Services screen — new Web Service form with WSDL Document field](/images/otm-webservice-new-form.png)
 
 On the new Web Service form, click **+** next to the WSDL Document field to upload the WSDL file. You will be prompted to enter a Document Type and Content Management System.
 
-> ![OTM Document Type and Content Management System selection](/images/otm-webservice-document-type.png)
+![OTM Document Type and Content Management System selection](/images/otm-webservice-document-type.png)
 
 Click **Document Detail**. Enter a Document ID (e.g. `YOUR_WEBSERVICE_WSDL`) and click **Upload** to upload the WSDL file provided by your middleware team. Click **Finished**.
 
@@ -129,7 +129,7 @@ Click **Document Detail**. Enter a Document ID (e.g. `YOUR_WEBSERVICE_WSDL`) and
 Back on the Web Service form, click **Service Details**. OTM reads the uploaded WSDL file and automatically populates the Service Name, Namespace, Port Name, SOAP Encoding, and Operations.
 </div>
 
-> ![OTM Web Service — WSDL linked, Service Details button highlighted](/images/otm-webservice-wsdl-linked.png)
+![OTM Web Service — WSDL linked, Service Details button highlighted](/images/otm-webservice-wsdl-linked.png)
 
 Enter a **Service ID** and click **Finished**. The Service ID is how you will reference this web service from the External System.
 
@@ -143,11 +143,11 @@ Business Process Automation > Communication Management > External Systems
 Click **New**. Enter an External System ID and click **Finished**.
 </div>
 
-> ![OTM External System form showing ID, credentials, and configuration options](/images/otm-external-system-form.png)
+![OTM External System form showing ID, credentials, and configuration options](/images/otm-external-system-form.png)
 
 Open the External System again. Navigate to the **Web Service** section and enter the Web Service ID you created in Step B. Click **Finished**.
 
-> ![OTM External System — Web Service tab showing Out XML Profiles section](/images/otm-external-system-webservice-tab.png)
+![OTM External System — Web Service tab showing Out XML Profiles section](/images/otm-external-system-webservice-tab.png)
 
 <div class="step-box">
 <strong>Step D — Select Service Operation and Service Endpoint</strong>
@@ -155,7 +155,7 @@ Open the External System again. Navigate to the **Web Service** section and ente
 Open the External System once more and set the **Service Operation** and **Service Endpoint** dropdowns — these are populated from the WSDL. Click **Finished**.
 </div>
 
-> ![OTM External System — Service Operation and Service Endpoint fields highlighted](/images/otm-external-system-service-operation.png)
+![OTM External System — Service Operation and Service Endpoint fields highlighted](/images/otm-external-system-service-operation.png)
 
 <div class="step-box">
 <strong>Step E — Test by sending a transmission</strong>
@@ -165,15 +165,15 @@ Open a test Shipment (or any object) and go to:
 Actions > Utilities > Send Interface Transmission
 </div>
 
-> ![OTM Shipment Actions menu showing Send Interface Transmission option](/images/otm-send-interface-transmission-menu.png)
+![OTM Shipment Actions menu showing Send Interface Transmission option](/images/otm-send-interface-transmission-menu.png)
 
 Enter the External System ID and set **Notify Type** to **SERVICE**. Click **Send**.
 
-> ![OTM Send Interface Transmission dialog — External System and SERVICE notify type highlighted](/images/otm-send-interface-transmission-dialog.png)
+![OTM Send Interface Transmission dialog — External System and SERVICE notify type highlighted](/images/otm-send-interface-transmission-dialog.png)
 
 In the Transmission Manager, you should see the outbound transmission with status **PROCESSED**.
 
-> ![OTM Transmission Manager showing PROCESSED and ERROR status rows](/images/otm-transmission-manager-processed.png)
+![OTM Transmission Manager showing PROCESSED and ERROR status rows](/images/otm-transmission-manager-processed.png)
 
 **What's Next:**
 

@@ -137,7 +137,7 @@ Browse for your XML file and click **Upload**.
 After clicking Upload, OTM displays a log showing the transmission number and initial processing status. Note the **Transmission Number** — you will need it to verify the final processing status.
 </div>
 
-> ![OTM Integration Manager upload log showing transmission number](/images/otm-inbound-integrations-xml-img1-364ef35ae6.png)
+![OTM Integration Manager upload log showing transmission number](/images/otm-inbound-integrations-xml-img1-364ef35ae6.png)
 
 <div class="step-box">
 <strong>Step 4 — Verify in Transmission Manager</strong>
@@ -149,7 +149,7 @@ Business Process Automation > Integration > Transmission Manager
 Query for your transmission number. The status should show as **PROCESSED**. If there are errors, click the **Report** button to see the error details — common errors include missing foreign key references (e.g. a Domain or Location that does not yet exist in OTM).
 </div>
 
-> ![OTM Transmission Manager showing PROCESSED status](/images/otm-inbound-transmission-manager.png)
+![OTM Transmission Manager showing PROCESSED status](/images/otm-inbound-transmission-manager.png)
 
 **Posting XML via Middleware:**
 
