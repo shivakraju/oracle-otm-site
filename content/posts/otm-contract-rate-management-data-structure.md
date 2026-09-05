@@ -1,5 +1,5 @@
----
-title: "OTM Contract & Rate Management Data Structure"
+﻿---
+title: "Contract & Rate Management Data Structure"
 date: 2016-05-06T17:29:00+00:00
 draft: false
 weight: 130

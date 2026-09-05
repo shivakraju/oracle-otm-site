@@ -1,5 +1,5 @@
----
-title: "OTM Shipment Management Data Structure"
+﻿---
+title: "Shipment Management Data Structure"
 date: 2016-05-03T20:01:00+00:00
 draft: false
 weight: 120
@@ -30,7 +30,7 @@ Shipments
 
 Shipment will have - Equipment(s), Shipment Ship Units within an Equipment, and Shipment Ship Unit lines within a Shipment Ship Unit.Note that at shipment level, ship units are always tied to equipment.  
   
-So, if a order release ship unit has quantity ‘100’, it may split across two equipments with say 60 quantity going in one equipment and other 40 going into second equipment during a bulk plan. Shipment Ship Unit Line will show this split information and is critical entity which is tied to a specific item, order release line, order release and order base. If we un-assign the shipment from order release, we are just breaking this link at this level.  
+So, if a order release ship unit has quantity â€˜100â€™, it may split across two equipments with say 60 quantity going in one equipment and other 40 going into second equipment during a bulk plan. Shipment Ship Unit Line will show this split information and is critical entity which is tied to a specific item, order release line, order release and order base. If we un-assign the shipment from order release, we are just breaking this link at this level.  
 
   
 

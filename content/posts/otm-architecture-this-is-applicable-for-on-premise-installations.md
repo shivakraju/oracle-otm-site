@@ -1,5 +1,5 @@
 ﻿---
-title: "OTM Product Architecture"
+title: "Product Architecture"
 date: 2016-04-15T14:54:00+00:00
 draft: false
 weight: 35

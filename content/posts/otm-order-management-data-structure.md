@@ -1,5 +1,5 @@
----
-title: "OTM Order Management Data Structure"
+﻿---
+title: "Order Management Data Structure"
 date: 2016-05-03T17:42:00+00:00
 draft: false
 weight: 110
@@ -84,7 +84,7 @@ Order Movements can be used to plan the different legs of the Order say Source l
 
   
 
-**Business use case:** In XXX company, when supplier books the order, order release is created. If Items on the order release is having ‘DAYS ON HAND’ refnum value less than 14 days, then Agent will update the Itinerary as DIRECT Itinerary instead of HUB Itinerary. Difference between Direct and HUB Itinieraray is that HUB itinerary will have two legs – source location to HUB(California HUB etc), California HUB to Destination location etc. Since this constraint is updated on the order release, once we call standard action ‘CREATE ORDER MOVEMENTS’ it will create two order movements in case of HUB Itinerary and users can plan these order movements. This will have better control of planning.
+**Business use case:** In XXX company, when supplier books the order, order release is created. If Items on the order release is having â€˜DAYS ON HANDâ€™ refnum value less than 14 days, then Agent will update the Itinerary as DIRECT Itinerary instead of HUB Itinerary. Difference between Direct and HUB Itinieraray is that HUB itinerary will have two legs â€“ source location to HUB(California HUB etc), California HUB to Destination location etc. Since this constraint is updated on the order release, once we call standard action â€˜CREATE ORDER MOVEMENTSâ€™ it will create two order movements in case of HUB Itinerary and users can plan these order movements. This will have better control of planning.
 
   
 
@@ -136,7 +136,7 @@ Packaged item links your item to ship unit spec(pallet). Packaged Item is the en
   * Item ID
   * Packaging Unit( which is Ship Unit Spec defined above in most cases)
   * Package dimensions
-  * Ti/High – This term is used in logistic business to indicate number of cartons per layer(Ti) and number of layer(High) used on the pallet.
+  * Ti/High â€“ This term is used in logistic business to indicate number of cartons per layer(Ti) and number of layer(High) used on the pallet.
 
 **Table:** 
 
