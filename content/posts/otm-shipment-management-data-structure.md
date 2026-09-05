@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Shipment Management Data Structure"
 date: 2016-05-03T20:01:00+00:00
 draft: false
@@ -26,161 +26,159 @@ keywords:
 description: "Describes the Oracle OTM shipment management data structure, including how shipments relate to equipment, ship units, and order release lines, and how bulk plan splits quantities across containers."
 ---
 
-Shipments
+A shipment in OTM consists of one or more **Equipment** records (containers or trailers), **Shipment Ship Units** loaded into each equipment, and **Shipment Ship Unit Lines** that link back to the original Order Release lines. Understanding this structure is essential for troubleshooting planning results, writing integration queries, and working with carrier tracking events.
 
-Shipment will have - Equipment(s), Shipment Ship Units within an Equipment, and Shipment Ship Unit lines within a Shipment Ship Unit.Note that at shipment level, ship units are always tied to equipment.  
-  
-So, if a order release ship unit has quantity â€˜100â€™, it may split across two equipments with say 60 quantity going in one equipment and other 40 going into second equipment during a bulk plan. Shipment Ship Unit Line will show this split information and is critical entity which is tied to a specific item, order release line, order release and order base. If we un-assign the shipment from order release, we are just breaking this link at this level.  
+**Shipment Structure:**
 
-  
+When OTM plans an Order Release to a shipment, it creates Shipment Ship Units and assigns them to equipment. If a Bulk Plan splits an order across two containers — say 60 units in one and 40 in another — that split is recorded at the Shipment Ship Unit Line level. This line is the critical link between the shipment and the originating order: it ties back to a specific item, Order Release Line, Order Release, and Order Base.
 
-**Note:** If secondary shipments are created from primary shipment, shipment ship unit lines are shared for all the shipments. They are not created for each secondary shipment.
+<div class="note-box"><strong>Secondary shipments:</strong> When secondary shipments are created from a primary shipment, the Shipment Ship Unit Lines are shared — they are not duplicated for each secondary shipment.</div>
 
-  
+<div class="note-box"><strong>ASN integration:</strong> When OTM receives an ASN (Advance Ship Notice) directly via integration, populate the <code>CIN</code> qualifier on the Ship Unit Line reference number and use the standard shipment action to link the ship unit back to the Order Base or PO.</div>
 
-If OTM is receiving ASN(Shipment) directly via Integration, we can populate CIN qualifier on the Ship Unit Line refnum and use standard shipment action to link ship unit to Order Base/PO.
+![OTM shipment structure showing order release ship units splitting across two equipment containers](/images/otm-shipment-management-data-s-img1-4bcedcc132.png)
 
-  
+**Shipment tables:**
 
-![](/images/otm-shipment-management-data-s-img1-4bcedcc132.png)
+<div class="field-box"><strong>SHIPMENT</strong> — Shipment header. Stores dates, locations, status, carrier, and overall shipment attributes.</div>
 
-  
+<div class="field-box"><strong>S_EQUIPMENT</strong> — Shipment equipment (container/trailer). For vessel shipments, a single shipment can have multiple equipment records — one per container on the vessel.</div>
 
-In this example an order has two lines and there order configuration is one to one which means one line has one ship unit only.
+<div class="field-box"><strong>SHIPMENT_S_EQUIPMENT_JOIN</strong> — Join table linking a shipment to its equipment records.</div>
 
-  
+**Shipment Ship Unit tables:**
 
-This example will show link between ship units on the order and ship units on the shipment.
+<div class="field-box"><strong>S_SHIP_UNIT</strong> — Shipment Ship Unit. Represents a pallet or carton assigned to equipment on the shipment.</div>
 
-  
+<div class="field-box"><strong>S_SHIP_UNIT_REFNUM</strong> — Reference numbers on the Shipment Ship Unit.</div>
 
-Here we can see that ship unit on the order for item 400000879017 got split into two containers and hence into two ship units on the shipment:
+<div class="field-box"><strong>S_SHIP_UNIT_REMARK</strong> — Remarks on the Shipment Ship Unit.</div>
 
-  
+<div class="field-box"><strong>S_SHIP_UNIT_LINE</strong> — Shipment Ship Unit Line. Links the shipment ship unit back to a specific Order Release Line, Order Release, and Order Base. Captures the split quantity if a single order line was split across containers during planning.</div>
 
-**Sample Queries:**  
-  
-select * from order_release where order_release_gid = 'DOMAIN.TST3PL1029001-001'  
-  
-select * from order_release_line where order_release_gid = 'DOMAIN.TST3PL1029001-001'  
-  
-select * from ship_unit where order_release_gid = 'DOMAIN.TST3PL1029001-001'  
-  
-select * from ship_unit_line where order_release_line_gid in (  
-select order_release_line_gid from order_release_line where order_release_gid = 'DOMAIN.TST3PL1029001-001')   
-  
-select * from shipment where shipment_gid = 'DOMAIN.267199'  
-  
-select * from shipment_s_equipment_join where shipment_gid = 'DOMAIN.267199'  
-  
-select * from s_equipment_s_ship_unit_join where s_equipment_gid in   
-(select s_equipment_gid from shipment_s_equipment_join where shipment_gid = 'DOMAIN.267199')  
-  
-select * from shipment_stop_d where shipment_gid = 'DOMAIN.267199'   
-  
-select * from s_ship_unit where s_ship_unit_gid in  
-(select s_ship_unit_gid from shipment_stop_d where shipment_gid = 'DOMAIN.267199')  
-  
-select * from s_ship_unit_line where s_ship_unit_gid in  
-(select s_ship_unit_gid from shipment_stop_d where shipment_gid = 'DOMAIN.267199')  
-  
+<div class="field-box"><strong>S_SHIP_UNIT_LINE_REFNUM</strong> — Reference numbers at Ship Unit Line level.</div>
 
-**Below is the list of shipment related tables/views:**  
-  
-**Shipment tables:**  
-  
-SHIPMENT - Shipment Header details   
-S_EQUIPMENT - Shipment Container(Equipment) details. Note incase of VESSEL shipments you will have multiple containers/equipment within the same shipment.  
-SHIPMENT_S_EQUIPMENT_JOIN - Shows link between Shipment and Equipments
+<div class="field-box"><strong>S_SHIP_UNIT_LINE_REMARK</strong> — Remarks at Ship Unit Line level.</div>
 
-  
-**Shipment Ship Unit tables:**  
-  
-S_SHIP_UNIT - Shipment Ship Unit data  
-S_SHIP_UNIT_REFNUM  
-S_SHIP_UNIT_REMARK  
-S_SHIP_UNIT_LINE - Shipment Shp Unit Line data  
-S_SHIP_UNIT_LINE_REFNUM  
-S_SHIP_UNIT_LINE_REMARK  
-S_EQUIPMENT_S_SHIP_UNIT_JOIN - Shipment Ship Units within a container  
-S_SHIP_UNIT_PIECE - When using load configuration feature, this table will show X,Y,Z location co-ordinates for the items placed in the container. (0,0,0) is starting point for front left corner of the container and Z co-ordinate runs on length direction of the container.This will also show the orientation details - if ship unit is placed lengthwise, width wise etc.   
-  
-**Shipment Stop tables:**  
-  
-SHIPMENT_STOP - Shipment Stop level details like Arrival, Departure dates etc  
-SHIPMENT_STOP_D - Stop level shipment ship units and other details.  
-  
-**Equipments:**  
-  
-Equipments are nothing but physical containers like 53 FT, 40 FT containers in which cartons/pallets are shipped from one location to another location. These are usually shipped across various legs/transport modes(INTERMODAL). For example a container sealed in China might arrive from China supplier location to China port, same container might be loaded into a Ship(Vessel) and transported to US Port, same container is unloaded from Vessel and placed on a trailer(truck) and shipped to a warehouse in US. Please note that trucks will have two parts - Power Unit(Engine) and Trailer(that holds container).   
-  
-**Table:**  
-EQUIPMENT_GROUP - This table can hold the equipment name like 53_FTL along with dimensions.  
-EQUIPMENT_GROUP_PROFILE - This is logical grouping of equipment groups that can be used in various setups  
-  
-**Itinerary:**  
-  
-Itineraries define the scope for your shipment planning like what source and destinations regions are covered by your OTM panning configuration, what are the equipments that are feasible for that source/dest region combinations, what are the transport modes for that source/dest combinations, how many different legs exist between that source/dest regions, etc.  
-For example, if you want to import items from suppliers in CHINA to your company warehouse in USA, you might define a mult-leg itinerary with following configurations:  
-**Leg1:** Supplier Region to China Port Locations with LORRY(2T,5T,etc) as equipment group profile and TL as transport mode.  
-**Leg2:** China Port locations to US Port Locations with VESSEL as transport mode.  
-**Leg3:** US Port locations to US Warehouse Locations with US_GROUND(53FT, 40FT, etc) equipment group profile and TL as transport mode.  
-  
-Identifying the itinerary is the first step that OTM Bulk Plan will perform. Note that you also need to define Rate Offering(Contract with carrier), Rate Records, etc for the source/dest region combinations, transport modes, etc.  
-  
-**Itinerary tables:**  
-ITINERARY - Itinerary header with name, lane(source/dest) details  
-ITINERARY_DETAIL - Leg names and sequence within an Itinerary  
-LEG - Leg level details like transport mode, equipment group profile, etc  
-  
-**Shipment Tracking Events:**  
-  
-Once the goods are picked by the carrier and if the shipment is "in-transit", carrier can send events to OTMspecifying the event location and event description(code). Below tables store the details:  
-  
-IE_SHIPMENTSTATUS  
-SS_STATUS_HISTORY  
-BS_STATUS_CODE  
-  
-**Sample Query to fetch event details for a shipment:**  
-  
-select ies.i_transaction_no,shp.shipment_gid,  
-ssh.event_location_gid,  
-ssh.shipment_stop_num,  
-to_char(ies.eventdate,'MM/DD/YYYY HH24:MI:SS'),  
-ies.status_code_gid,  
-bsc.description  
-from shipment shp,  
-ss_status_history ssh,  
-ie_shipmentstatus ies,  
-bs_status_code bsc  
-where shp.shipment_gid = 'DOMAIN.554680'  
-and shp.shipment_gid = ssh.shipment_gid  
-and ies.i_transaction_no = ssh.i_transaction_no  
-and ies.status_code_gid = bsc.bs_status_code_gid  
-ORDER BY IES.EVENTDATE  
-  
-**Shipment Tender:**  
-  
-**Shipment tender info is captured in below tables:**  
-  
-select * from tender_collaboration where SHIPMENT_GID = 'DOM.SHP_ID'  
-  
-This is key table with details like source location, destination location, expected response time, pickup time, delivery time, etc  
-  
-select * from tender_collab_servprov where i_transaction_no = <from above query>  
-  
-This table will link the tender information to carrier involved, tender acceptance code, etc  
-  
-select * from tender_collaboration_status where i_transaction_no = <from above query>  
-  
-This table shows the current shipment status associated to the tender.  
-  
-Note that i_transaction_no is the unique reference for each tender. Response should be sent against the latest OUTSTANDING tender(i_transaction_no).   
-  
-Standard OTM Views  
-  
-To find Order Releases associated to shipment or vice-versa:  
-view_shipment_order_release  
-  
-To find Order Base(PO) associated to shipment or vice-versa:  
-view_shipment_order_base
+<div class="field-box"><strong>S_EQUIPMENT_S_SHIP_UNIT_JOIN</strong> — Links Shipment Ship Units to the specific equipment they are loaded into.</div>
+
+<div class="field-box"><strong>S_SHIP_UNIT_PIECE</strong> — Used when load configuration is enabled. Stores X/Y/Z coordinates for each item placed inside the container — (0,0,0) is the front left corner, Z runs along the container length. Also records orientation (lengthwise, widthwise, etc.).</div>
+
+**Shipment Stop tables:**
+
+<div class="field-box"><strong>SHIPMENT_STOP</strong> — Stop-level details including arrival and departure dates, stop sequence, and location.</div>
+
+<div class="field-box"><strong>SHIPMENT_STOP_D</strong> — Stop-level ship unit assignments — which ship units are picked up or dropped off at each stop.</div>
+
+**Equipment:**
+
+Equipment represents the physical container used to move freight — a 53 FT trailer, a 40 FT ocean container, etc. The same container can move across multiple legs and transport modes (intermodal). For example, a sealed container may travel from a supplier in China to a Chinese port by truck, then cross to a US port by vessel, then move to a warehouse by truck. Note that trucks have two parts: the Power Unit (engine) and the Trailer (that holds the container).
+
+<div class="field-box"><strong>EQUIPMENT_GROUP</strong> — Defines equipment types (e.g. <code>53_FTL</code>) along with their dimensions and capacity.</div>
+
+<div class="field-box"><strong>EQUIPMENT_GROUP_PROFILE</strong> — A logical grouping of Equipment Groups used in itinerary and rate configurations.</div>
+
+**Itinerary:**
+
+An Itinerary defines the scope of shipment planning — which origin/destination regions are covered, what equipment types are valid for each region pair, what transport modes apply, and how many legs exist between source and destination.
+
+For example, an import itinerary from China suppliers to a US warehouse might have three legs:
+
+<div class="field-box"><strong>Leg 1:</strong> Supplier region to China port — LORRY equipment, TL transport mode.</div>
+
+<div class="field-box"><strong>Leg 2:</strong> China port to US port — VESSEL transport mode.</div>
+
+<div class="field-box"><strong>Leg 3:</strong> US port to US warehouse — US_GROUND equipment (53 FT, 40 FT), TL transport mode.</div>
+
+Identifying the itinerary is the first step OTM Bulk Plan performs. Rate Offerings and Rate Records must also be defined for each leg's source/destination region, transport mode, and equipment combination.
+
+**Itinerary tables:**
+
+<div class="field-box"><strong>ITINERARY</strong> — Itinerary header with name and lane (source/destination region) details.</div>
+
+<div class="field-box"><strong>ITINERARY_DETAIL</strong> — Leg names and sequence within an itinerary.</div>
+
+<div class="field-box"><strong>LEG</strong> — Leg-level details: transport mode, equipment group profile, and applicable locations.</div>
+
+**Shipment Tracking Events:**
+
+Once goods are picked up and the shipment is in transit, the carrier can send tracking events to OTM specifying the event location and status code. These are stored in:
+
+<div class="field-box"><strong>IE_SHIPMENTSTATUS</strong> — Inbound event record with event date and status code.</div>
+
+<div class="field-box"><strong>SS_STATUS_HISTORY</strong> — Links the event to the shipment stop and location.</div>
+
+<div class="field-box"><strong>BS_STATUS_CODE</strong> — Reference table for status code descriptions.</div>
+
+**Sample query — tracking events for a shipment:**
+
+```sql
+SELECT ies.i_transaction_no,
+       shp.shipment_gid,
+       ssh.event_location_gid,
+       ssh.shipment_stop_num,
+       TO_CHAR(ies.eventdate, 'MM/DD/YYYY HH24:MI:SS') AS event_date,
+       ies.status_code_gid,
+       bsc.description
+FROM   shipment shp,
+       ss_status_history ssh,
+       ie_shipmentstatus ies,
+       bs_status_code bsc
+WHERE  shp.shipment_gid = 'DOMAIN.554680'
+AND    shp.shipment_gid = ssh.shipment_gid
+AND    ies.i_transaction_no = ssh.i_transaction_no
+AND    ies.status_code_gid = bsc.bs_status_code_gid
+ORDER BY ies.eventdate
+```
+
+**Shipment Tender:**
+
+<div class="field-box"><strong>TENDER_COLLABORATION</strong> — Key tender table. Stores source/destination locations, expected response time, pickup time, delivery time, and other tender attributes.</div>
+
+<div class="field-box"><strong>TENDER_COLLAB_SERVPROV</strong> — Links the tender to the carrier, including acceptance code and carrier response.</div>
+
+<div class="field-box"><strong>TENDER_COLLABORATION_STATUS</strong> — Current shipment status associated with the tender.</div>
+
+<div class="note-box"><strong>Note:</strong> <code>i_transaction_no</code> is the unique reference for each tender. Carrier responses must be sent against the latest OUTSTANDING tender record.</div>
+
+**Useful Standard Views:**
+
+<div class="field-box"><strong>VIEW_SHIPMENT_ORDER_RELEASE</strong> — Find all Order Releases associated with a shipment, or all shipments associated with an Order Release.</div>
+
+<div class="field-box"><strong>VIEW_SHIPMENT_ORDER_BASE</strong> — Find all Order Base (PO) records associated with a shipment, or all shipments associated with a PO.</div>
+
+**Sample queries:**
+
+```sql
+-- Order Release and its ship units
+SELECT * FROM order_release WHERE order_release_gid = 'DOMAIN.TST3PL1029001-001';
+SELECT * FROM order_release_line WHERE order_release_gid = 'DOMAIN.TST3PL1029001-001';
+SELECT * FROM ship_unit WHERE order_release_gid = 'DOMAIN.TST3PL1029001-001';
+SELECT * FROM ship_unit_line
+WHERE  order_release_line_gid IN (
+         SELECT order_release_line_gid FROM order_release_line
+         WHERE  order_release_gid = 'DOMAIN.TST3PL1029001-001');
+
+-- Shipment and its equipment, ship units, and stops
+SELECT * FROM shipment WHERE shipment_gid = 'DOMAIN.267199';
+SELECT * FROM shipment_s_equipment_join WHERE shipment_gid = 'DOMAIN.267199';
+SELECT * FROM s_equipment_s_ship_unit_join
+WHERE  s_equipment_gid IN (
+         SELECT s_equipment_gid FROM shipment_s_equipment_join
+         WHERE  shipment_gid = 'DOMAIN.267199');
+SELECT * FROM shipment_stop_d WHERE shipment_gid = 'DOMAIN.267199';
+SELECT * FROM s_ship_unit
+WHERE  s_ship_unit_gid IN (
+         SELECT s_ship_unit_gid FROM shipment_stop_d
+         WHERE  shipment_gid = 'DOMAIN.267199');
+SELECT * FROM s_ship_unit_line
+WHERE  s_ship_unit_gid IN (
+         SELECT s_ship_unit_gid FROM shipment_stop_d
+         WHERE  shipment_gid = 'DOMAIN.267199');
+```
+
+**What's Next:**
+
+The next topic covers the Contract and Rate Management Data Structure — how OTM stores carrier contracts, rate records, and the tables used to look up freight costs during planning.
+
+Next Topic: [Contract & Rate Management Data Structure](/posts/otm-contract-rate-management-data-structure/)
