@@ -1,4 +1,4 @@
----
+﻿---
 title: "05 - Bulk Plan"
 date: 2020-08-22T04:52:00+00:00
 draft: false
@@ -72,11 +72,11 @@ Order Management > Purchase Order > Order Base > New >Enter below data:
 
 **Now Query for Order Releases:**
 
-> ![](/images/basic-otm-configurations-05-bu-img1-3c464757b9.png)
+![](/images/basic-otm-configurations-05-bu-img1-3c464757b9.png)
 
   
 
-Select Order Releases > Actions > Operational Planning > Create Buy Shipment > Bulk Plan – Buy
+Select Order Releases > Actions > Operational Planning > Create Buy Shipment > Bulk Plan â€“ Buy
 
 This will create a shipment that includes above two order releases. To see how bulk plan is working try 'Shipment Routing Options' as described below.
 
@@ -84,7 +84,7 @@ This will create a shipment that includes above two order releases. To see how b
 
 **Note tht we have below rates defined:**
 
-> ![](/images/basic-otm-configurations-05-bu-img2-1e8cf7b957.png)
+![](/images/basic-otm-configurations-05-bu-img2-1e8cf7b957.png)
 
 Now release PO with Source = DC and Destination = Store C and perform below action:
 
@@ -94,29 +94,29 @@ Order Release> Actions > Operational Planning > Show Routing Options
 
   
 
-> ![](/images/basic-otm-configurations-05-bu-img3-bad36e64d2.png)
+![](/images/basic-otm-configurations-05-bu-img3-bad36e64d2.png)
 
   
 
-Select both Itineraries and click ‘Show Options’
+Select both Itineraries and click â€˜Show Optionsâ€™
 
-You will see below details – all expected as per our configurations above.
+You will see below details â€“ all expected as per our configurations above.
 
   
 
-> ![](/images/basic-otm-configurations-05-bu-img4-485c789a85.png)
+![](/images/basic-otm-configurations-05-bu-img4-485c789a85.png)
 
   
 
 Now if you do a bulk plan on this order release, it should select ITIN_D(least cost itinerary) and create two shipments:
 
-• Shipment 1 with carrier PNDP going from DC to STORE_A with $20 as cost.
+â€¢ Shipment 1 with carrier PNDP going from DC to STORE_A with $20 as cost.
 
-• Shipment 2 with carrier SGTM going from Store A to Store C with $20 as cost.
+â€¢ Shipment 2 with carrier SGTM going from Store A to Store C with $20 as cost.
 
   
 
-> ![](/images/basic-otm-configurations-05-bu-img5-5117392ac6.png)
+![](/images/basic-otm-configurations-05-bu-img5-5117392ac6.png)
 
   
 

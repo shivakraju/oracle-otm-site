@@ -107,19 +107,19 @@ Define three items ITEMA01, 02, 03
 
 Order Management > Material Management > Item:
 
-> ![](/images/basic-otm-configurations-01-do-img6-bd7cb8d0d2.png)
+![](/images/basic-otm-configurations-01-do-img6-bd7cb8d0d2.png)
 
 **Item Dimensions:**
 
 Item Weight = 2 LB. 
 
-> ![](/images/basic-otm-configurations-01-do-img7-a40bf90d33.png)
+![](/images/basic-otm-configurations-01-do-img7-a40bf90d33.png)
 
 **Other item dimensions are updated as below:**
 
   
 
-> ![](/images/basic-otm-configurations-01-do-img8-8bba784532.png)
+![](/images/basic-otm-configurations-01-do-img8-8bba784532.png)
 
 **Locations:**
 
@@ -135,23 +135,23 @@ Shipment Management > Location Manager
 
   
 
-> ![](/images/basic-otm-configurations-01-do-img9-c911a8fa98.png)
+![](/images/basic-otm-configurations-01-do-img9-c911a8fa98.png)
 
   
 
   
 
-> ![](/images/basic-otm-configurations-01-do-img10-6cb1a6d6fb.png)
+![](/images/basic-otm-configurations-01-do-img10-6cb1a6d6fb.png)
 
   
 
-> ![](/images/basic-otm-configurations-01-do-img11-0095e94000.png)
+![](/images/basic-otm-configurations-01-do-img11-0095e94000.png)
 
   
 
 Create other 3 store locations with role as ship from/to:
 
-> ![](/images/basic-otm-configurations-01-do-img12-1dd20378a4.png)
+![](/images/basic-otm-configurations-01-do-img12-1dd20378a4.png)
 
   
 
@@ -163,12 +163,12 @@ Shipment Management > Equipment Management > Equipment Groups:
 
   
 
-> ![](/images/basic-otm-configurations-01-do-img13-e748421598.png)
+![](/images/basic-otm-configurations-01-do-img13-e748421598.png)
 
 **Define Equipment Group Profiles with below data:**
 
 Shipment Management > Equipment Management > Equipment Group Profile:
 
-> ![](/images/basic-otm-configurations-01-do-img14-504d5e728e.png)
+![](/images/basic-otm-configurations-01-do-img14-504d5e728e.png)
 
-> ![](/images/basic-otm-configurations-01-do-img15-032b315090.png)
+![](/images/basic-otm-configurations-01-do-img15-032b315090.png)

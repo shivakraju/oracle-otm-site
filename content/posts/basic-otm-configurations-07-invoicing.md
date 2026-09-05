@@ -1,4 +1,4 @@
----
+﻿---
 title: "07 - Invoicing"
 date: 2020-08-22T04:57:00+00:00
 draft: false
@@ -33,11 +33,11 @@ Invoicing
 
 Once Shipment execution is completed, carrier sends invoice and OTM can:
 
-• Match invoice to shipment based on MATCH rule
+â€¢ Match invoice to shipment based on MATCH rule
 
-• Approve Invoice based on Invoice APPROVAL rule
+â€¢ Approve Invoice based on Invoice APPROVAL rule
 
-• Allocate shipment costs to related order releases/POs based on weight or volume
+â€¢ Allocate shipment costs to related order releases/POs based on weight or volume
 
 > Invoice Matching:
 > 
@@ -51,21 +51,21 @@ Once Shipment execution is completed, carrier sends invoice and OTM can:
 
   
 
-> ![](/images/basic-otm-configurations-07-in-img1-845c364684.png)
+![](/images/basic-otm-configurations-07-in-img1-845c364684.png)
 
   
 
 > A match rule will try to identify a shipment for an invoice by matching:
 > 
-> · Service Provider
+> Â· Service Provider
 > 
-> · Refnums as shown above. Here we are creating invoice with SID (Shipment ID) as refnum and matching this to shipment refnum SID. In a real time business scenario these numbers can be BOL Number, Container Number references, etc.
+> Â· Refnums as shown above. Here we are creating invoice with SID (Shipment ID) as refnum and matching this to shipment refnum SID. In a real time business scenario these numbers can be BOL Number, Container Number references, etc.
 > 
 > To trigger this matching process go to:
 
 > Invoice Actions > Auto Match Invoices
 
-> ![](/images/basic-otm-configurations-07-in-img2-0a073a1406.png)
+![](/images/basic-otm-configurations-07-in-img2-0a073a1406.png)
 
   
 
@@ -77,7 +77,7 @@ Once Shipment execution is completed, carrier sends invoice and OTM can:
 
 > Invoice Routes/Ports tab will show Match/approval notes, matched shipment details
 
-> ![](/images/basic-otm-configurations-07-in-img3-08f8031794.png)
+![](/images/basic-otm-configurations-07-in-img3-08f8031794.png)
 
 > Invoice Approvals
 > 
@@ -87,13 +87,13 @@ Once Shipment execution is completed, carrier sends invoice and OTM can:
 > 
 > Financials > Payment Rule Management > Invoice Approval Rules:
 
-> ![](/images/basic-otm-configurations-07-in-img4-d4bbab97fb.png)
+![](/images/basic-otm-configurations-07-in-img4-d4bbab97fb.png)
 
 > This rule says approve all invoices from $1 to $1000.
 > 
 > Attach this rule to Approval Rule profile:
 
-> ![](/images/basic-otm-configurations-07-in-img5-66238a617c.png)
+![](/images/basic-otm-configurations-07-in-img5-66238a617c.png)
 
 > Attach this profile to the user record:
 
@@ -103,4 +103,4 @@ Once Shipment execution is completed, carrier sends invoice and OTM can:
 
   
 
-> ![](/images/basic-otm-configurations-07-in-img7-d217d23638.png)
+![](/images/basic-otm-configurations-07-in-img7-d217d23638.png)

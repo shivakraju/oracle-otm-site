@@ -1,4 +1,4 @@
----
+﻿---
 title: "04 - Business Numbers, Planning Parameter"
 date: 2020-08-22T04:47:00+00:00
 draft: false
@@ -36,7 +36,7 @@ OTM has default numbering for all business data objects like the one shown below
 
   
 
-> ![](/images/basic-otm-configurations-04-bu-img1-18e64bcaca.png)
+![](/images/basic-otm-configurations-04-bu-img1-18e64bcaca.png)
 
   
 
@@ -48,11 +48,11 @@ You will notice that there is default rule (TCRP domain level) for generating XI
 
   
 
-> ![](/images/basic-otm-configurations-04-bu-img2-0ce1184927.png)
+![](/images/basic-otm-configurations-04-bu-img2-0ce1184927.png)
 
   
 
-Let’s change this to use below rule. Rule is combination of static and dynamic expressions. Let us use three expressions:
+Letâ€™s change this to use below rule. Rule is combination of static and dynamic expressions. Let us use three expressions:
 
 'SHIP' which is static
 
@@ -62,13 +62,13 @@ One Hyphen which is static
 
 {nnnnn:start=01000} for a five digit number starting with 01000 value
 
-> ![](/images/basic-otm-configurations-04-bu-img3-73428c0a62.png)
+![](/images/basic-otm-configurations-04-bu-img3-73428c0a62.png)
 
 Now if you plan a shipment, it will generate ID as below:
 
   
 
-> ![](/images/basic-otm-configurations-04-bu-img4-ffe4ea06c0.png)
+![](/images/basic-otm-configurations-04-bu-img4-ffe4ea06c0.png)
 
   
 
@@ -76,11 +76,11 @@ Now if you plan a shipment, it will generate ID as below:
 
   
 
-Shipment Management > Power Data > General > Parameter Sets > New > Enter ‘TCRP_PLAN’ as new ID and save the record.
+Shipment Management > Power Data > General > Parameter Sets > New > Enter â€˜TCRP_PLANâ€™ as new ID and save the record.
 
   
 
-> ![](/images/basic-otm-configurations-04-bu-img5-a647769878.png)
+![](/images/basic-otm-configurations-04-bu-img5-a647769878.png)
 
   
 

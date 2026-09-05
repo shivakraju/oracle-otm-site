@@ -1,4 +1,4 @@
----
+﻿---
 title: "03 - Service Provider and Rates"
 date: 2020-08-22T04:43:00+00:00
 draft: false
@@ -40,7 +40,7 @@ Define two service providers with their SCAC codes and country code as USA as sh
 
 Contract and Rate Management > Service Provider Manager:
 
-> ![](/images/basic-otm-configurations-03-se-img1-d84a74c0db.png)
+![](/images/basic-otm-configurations-03-se-img1-d84a74c0db.png)
 
   
 
@@ -102,10 +102,10 @@ Open Rate Offering > Actions > Create Rate Record > Enter below data:
 
   
 
-> ![](/images/basic-otm-configurations-03-se-img2-b7d3679583.png)
+![](/images/basic-otm-configurations-03-se-img2-b7d3679583.png)
 
 > Define other rate records as shown below: 
 
-> ![](/images/basic-otm-configurations-03-se-img3-bae23963e6.png)
+![](/images/basic-otm-configurations-03-se-img3-bae23963e6.png)
 
-> ![](/images/basic-otm-configurations-03-se-img4-1e8cf7b957.png)
+![](/images/basic-otm-configurations-03-se-img4-1e8cf7b957.png)
