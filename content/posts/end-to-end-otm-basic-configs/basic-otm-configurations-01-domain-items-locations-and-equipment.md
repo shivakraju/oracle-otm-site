@@ -147,7 +147,9 @@ Create the DC/Warehouse location first with role Ship From:
 
 ![DC_TCRP location address tab](/images/basic-otm-configurations-01-do-img10-6cb1a6d6fb.png)
 
-![DC_TCRP location role configuration](/images/basic-otm-configurations-01-do-img11-0095e94000.png)
+<div class="note-box"><strong>Critical — Location Role Profile:</strong> Every location must have a Location Role Profile set to <strong>SHIPFROM/SHIPTO</strong> on the Roles tab. Bulk Plan uses this to identify valid shipment origins and destinations. If this is missing, Bulk Plan will fail to plan shipments through that location.</div>
+
+![DC_TCRP location role configuration showing SHIPFROM/SHIPTO profile](/images/basic-otm-configurations-01-do-img11-0095e94000.png)
 
 Create the three store locations with role Ship To:
 
