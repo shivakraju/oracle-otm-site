@@ -1,4 +1,4 @@
----
+﻿---
 title: "Basic Logistics Terminology"
 date: 2016-04-14T23:00:00+00:00
 draft: false
@@ -138,3 +138,5 @@ If you are new to logistics or coming from a purely technical background, here a
 Now that you are familiar with core logistics terminology, the next topic walks through a complete end-to-end OTM configuration � from setting up a domain, items, and locations through to bulk planning, tendering, invoicing, and cost allocation. Working through this series hands-on in a non-production environment is the most effective way to build practical OTM skills.
 
 Next Topic: [End-to-End Basic Configs � Domain, Items, Locations, and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)
+
+
