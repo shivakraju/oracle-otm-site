@@ -134,6 +134,6 @@ If you are new to logistics or coming from a purely technical background, here a
 
 **What's Next:**
 
-Now that you are familiar with core logistics terminology, the next topic covers how external systems send data into OTM using XML â€” the primary integration method for feeding orders, locations, and reference data into OTM from ERP and other source systems.
+Now that you are familiar with core logistics terminology, the next topic walks through a complete end-to-end OTM configuration — from setting up a domain, items, and locations through to bulk planning, tendering, invoicing, and cost allocation. Working through this series hands-on in a non-production environment is the most effective way to build practical OTM skills.
 
-Next Topic: [Inbound Integrations (XML)](/posts/otm-inbound-integrations-xml/)
+Next Topic: [End-to-End Basic Configs — Domain, Items, Locations, and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)

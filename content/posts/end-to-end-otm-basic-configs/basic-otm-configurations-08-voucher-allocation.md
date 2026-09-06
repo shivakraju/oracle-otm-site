@@ -71,5 +71,7 @@ Open the Order Release in View mode to see the freight cost allocated to it:
   <a href="/posts/basic-otm-configurations-07-invoicing/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;">
     <div style="font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#64748b;margin-bottom:5px;">&#8592; Previous</div>
     <div style="font-size:15px;font-weight:600;color:#1c3557;">Invoicing</div>
-  </a>  <div style='flex:1'></div>
-</div>
+  </a>  <a href="/posts/otm-inbound-integrations-xml/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;text-align:right;">
+    <div style="font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#64748b;margin-bottom:5px;">Next &#8594;</div>
+    <div style="font-size:15px;font-weight:600;color:#1c3557;">Inbound Integrations (XML)</div>
+  </a></div>
