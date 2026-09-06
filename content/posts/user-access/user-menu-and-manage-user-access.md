@@ -89,5 +89,5 @@ AND USER_ROLE_GID = '<enter role GID>'
 ```sql
 SELECT USER_MENU_LAYOUT_GID
 FROM USER_MENU_ACCESS
-WHERE USER_ACCESS_GID = '<Output from above Query>';
+WHERE USER_ACCESS_GID = '<Output from above Query>'
 ```
