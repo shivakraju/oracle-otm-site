@@ -36,6 +36,18 @@ description: "Explains Oracle OTM role-based security, covering how VPD profiles
 url: "/posts/user-roles-vpd-and-access-control-lists/"
 ---
 
+<div class="note-box"><strong>Why three mechanisms — User Role, VPD, and Access Control List?</strong>
+
+In any enterprise application, controlling "who can see what and do what" requires more than a single switch. OTM handles this through three layered mechanisms that work together under a single <strong>User Role</strong> definition:
+
+<strong>User Role</strong> is the container that binds everything together. Every OTM user is assigned a default role that determines their identity within the system — which domain they belong to, what data they can see, and which screens and functions they can access. Think of it as the user's job profile inside OTM.
+
+<strong>VPD (Virtual Private Database)</strong> controls <em>data-level</em> visibility. It operates at the database row level, silently filtering query results so that a user only ever sees records they are permitted to access — for example, a planner restricted to their own region's shipments, or an approver who can only see invoices within their approval threshold. VPD rules are invisible to the user: the application does not show them a filtered view, it simply never returns the rows they are not allowed to see.
+
+<strong>Access Control List (ACL)</strong> controls <em>function-level</em> access. Even if a user can see a record, ACLs determine which actions they can take — whether they can initiate a Bulk Plan, approve a tender, run a recurring process, or access the SQL servlet. ACLs work at the UI entry-point level, granting or restricting individual buttons, menus, and screens.
+
+Together: the Role defines <em>who</em> the user is, VPD defines <em>what data</em> they can see, and ACL defines <em>what they can do</em>. All three are configured under the User Role and must be planned together during an OTM implementation — a gap in any one of them can expose data or functionality that should be restricted.</div>
+
 OTM application users are grouped and classified based on the daily functions they perform in their organization. Each such group of users is assigned a "Role" in OTM.
 
 A "Role" controls:
