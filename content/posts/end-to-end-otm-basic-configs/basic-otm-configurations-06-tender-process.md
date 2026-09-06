@@ -36,8 +36,6 @@ When shipments are first created by Bulk Plan, their Secure Resources status is 
 
 <div class="step-box">Shipment > Actions > Shipment Management > Tender > Secure Resources</div>
 
-![Secure Resources action dialog for selected shipments](/images/basic-otm-configurations-06-te-img2-96cea8f493.png)
-
 After this action the Secure Resources status changes to **TENDERED**. OTM sends a tender notification to the carrier — this can be an XML message to an external TMS/EDI system, or an email notification, depending on the configuration at the Service Provider level.
 
 **Carrier accept / reject:**
