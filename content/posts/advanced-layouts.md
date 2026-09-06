@@ -22,22 +22,27 @@ keywords:
 description: "Explains how to create Oracle OTM Advanced Layouts with panel splitters to display multiple related business objects on the same screen, linked by parent-child relationships and populated via saved queries."
 ---
 
-There can be requirements like show shipments based on some complex query criteria(which cannot be written using simple default query criteria provided in screen sets) and also show related order releases for selected shipment in same screen, etc.  
+Advanced Layouts allow you to build screens that display multiple related business objects side by side. For example, you can show shipments matching a complex saved query in one panel, and the corresponding order releases for a selected shipment in an adjacent panel — all on the same screen.
 
-  
+This is useful when the default query criteria on standard screens is not flexible enough, or when planners need a combined view of parent and child records without navigating between separate screens.
 
-In such requirements we can use advanced layout which gives option to split the screen into panels and each panel can be associated to different business objects(like Order Release, Shipment, etc). We can have parent, child relationship between panel data(like shipment to order release). We can also associate saved query(SQL) to display results while launching the screen using these advanced layouts.
+**Steps to create a simple Advanced Layout:**
 
-  
+1. Log in as Domain ADMIN.
 
-Below are the steps to create a simple advanced layout:
+2. Navigate to:
+<div class="step-box">Configuration and Administration > User Configuration > Advanced Layout > New</div>
 
-  1. Login as Domain ADMIN
-  2. Configuration and Administration > User Configuration > Advanced Layout > New
-  3. Give ID(name) to the layout
-  4. Right click on the 'Layout' text to see options - 'Add Panel Splitter' and 'Add Table'
-  5. Click 'Add Table' if you want to add a simple table
-  6. After table is added, if you select the table(Under Layout), you can see table properties on the right side.
-  7. In these properties - select screen set ID(how to display data), population method(like Saved Query, etc which tells what data to be displayed)
-  8. Finish. Attach this layout to your menu as link.
-  9. Once you click this link, saved query is executed and data is shown in the advanced layout.
+3. Give the layout an ID (name).
+
+4. Right-click on the **Layout** text to see options — **Add Panel Splitter** and **Add Table**.
+
+5. Click **Add Table** to add a simple table panel.
+
+6. Select the table under Layout. The table properties appear on the right side.
+
+7. In the properties, set the **Screen Set ID** (how to display the data) and the **Population Method** (such as Saved Query — which controls what data is loaded when the layout is launched).
+
+8. Click **Finish**. Attach this layout to your menu as a link.
+
+9. When the menu link is clicked, the saved query executes and results are displayed in the advanced layout.

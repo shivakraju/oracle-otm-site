@@ -24,225 +24,234 @@ keywords:
 description: "Reference guide to frequently used Oracle OTM agent actions including Direct SQL Update, Raise Event, Call (PLSQL), and Data Type Associations, with syntax examples for DML statements and procedure calls."
 ---
 
-DIRECT SQL UPDATE  
+This page covers the most commonly used Oracle OTM agent actions, with syntax examples and usage notes for each.
 
-  
+**DIRECT SQL UPDATE**
 
-This is very useful action in writing a DML statement or to call an PLSQL procedure.
-
-While using the Action, there are specific formats for DML statements or calling Procedures:
-
-  
+This action is used to execute a DML statement or call a PL/SQL procedure from within an agent.
 
 **Insert Statement format:**
 
-  
-
-INSERT INTO order_release_refnum (order_release_gid,  
-ORDER_RELEASE_REFNUM_QUAL_GID,  
-ORDER_RELEASE_REFNUM_VALUE,  
-DOMAIN_NAME)  
-SELECT orr.order_release_gid,  
-'SO_NUM',  
-orlr.orl_refnum_value,  
-orlr.domain_name  
-FROM order_release orr,  
-order_release_line orl,  
-order_release_line_refnum orlr  
-WHERE orr.order_release_gid = orl.order_release_gid  
-AND orl.order_release_line_gid = orlr.order_release_line_gid  
-AND orlr.ORDER_RELEASE_REFNUM_QUAL_GID = 'SO_NUM'  
-AND ROWNUM = 1  
-AND NOT EXISTS  
-(SELECT 1  
-FROM order_release_refnum oref  
-WHERE oref.order_release_gid =  
-orr.order_release_gid  
-AND oref.order_release_refnum_qual_gid =  
-'SO_NUM')  
-AND orr.order_release_gid = $gid  
+```sql
+INSERT INTO order_release_refnum (order_release_gid,
+ORDER_RELEASE_REFNUM_QUAL_GID,
+ORDER_RELEASE_REFNUM_VALUE,
+DOMAIN_NAME)
+SELECT orr.order_release_gid,
+'SO_NUM',
+orlr.orl_refnum_value,
+orlr.domain_name
+FROM order_release orr,
+order_release_line orl,
+order_release_line_refnum orlr
+WHERE orr.order_release_gid = orl.order_release_gid
+AND orl.order_release_line_gid = orlr.order_release_line_gid
+AND orlr.ORDER_RELEASE_REFNUM_QUAL_GID = 'SO_NUM'
+AND ROWNUM = 1
+AND NOT EXISTS
+(SELECT 1
+FROM order_release_refnum oref
+WHERE oref.order_release_gid =
+orr.order_release_gid
+AND oref.order_release_refnum_qual_gid =
+'SO_NUM')
+AND orr.order_release_gid = $gid
+```
 
 **Update Statement format:**
 
-  
-
-UPDATE SHIP_UNIT SU  
-SET su.transport_handling_unit_gid = 'EXPORT'  
-WHERE EXISTS  
-(SELECT 1  
-FROM ORDER_RELEASE_LINE ORL, ship_unit_line sul  
-WHERE ORL.ORDER_RELEASE_GID = $GID  
-AND SUL.SHIP_UNIT_GID = SU.SHIP_UNIT_GID  
+```sql
+UPDATE SHIP_UNIT SU
+SET su.transport_handling_unit_gid = 'EXPORT'
+WHERE EXISTS
+(SELECT 1
+FROM ORDER_RELEASE_LINE ORL, ship_unit_line sul
+WHERE ORL.ORDER_RELEASE_GID = $GID
+AND SUL.SHIP_UNIT_GID = SU.SHIP_UNIT_GID
 AND sul.order_release_line_gid = orl.order_release_line_gid)
-
-  
-
-  
+```
 
 **Stored Procedure Calls:**
 
-  
-
+```sql
 CALL xxotm_agent_pkg.update_ebs_fsu($gid)
+```
 
-  
+For an Oracle stored procedure to be accessible by an OTM agent, create a PUBLIC synonym for the procedure defined in the GLOGOWNER schema:
 
-For Oracle Stored Procedure to be accessible by OTM agent, we need to create a PUBLIC synonym for the procedure that you define in GLOGOWNER schema.
+```sql
+CREATE OR REPLACE PUBLIC SYNONYM xxotm_agent_pkg FOR glogowner.xxotm_agent_pkg;
+```
 
-  
-CREATE OR REPLACE PUBLIC SYNONYM xxotm_agent_pkg FOR glogowner.xxotm_agent_pkg;   
-  
-**Note:** Synonym is not required if you are making a call to the stored procedure along with the schema name. Example : CALL glogowner.xxotm_agent_pkg.update_ebs_fsu($gid)
-
-  
+<div class="note-box"><strong>Note:</strong> A synonym is not required if you call the stored procedure with the schema name explicitly, for example: <code>CALL glogowner.xxotm_agent_pkg.update_ebs_fsu($gid)</code></div>
 
 **Direct SQL Update Tips:**
 
-  
+- When using statement type as stored procedure, ensure the Refresh Cache setting is not set to **DML Returning** (which is the default value).
+- Always write a short description in the SQL Description field so the agent remains readable.
 
-  * While using statement type as stored procedure, ensure refresh cache is not 'DML Returing' which is default value.
-  * SQL Description - always write small description for the DSU action so that agent is readable.
+---
 
-  
+**ASSIGN VARIABLE**
 
-ASSIGN VARIABLE
-
-  
-
-This is used in agents to declare a variable and associate a SQL statement to the variable.
-
-For example, following agent reads status of order release and sets the indicator color appropriately:
-
-  
+This action declares a variable and associates a SQL query to populate it. For example, the following agent reads the planning status of an order release and sets the indicator color accordingly:
 
 ![](/images/agents-frequently-used-actions-img1-1be557884e.png)
-
-  
 
 ![](/images/agents-frequently-used-actions-img2-ae374fffe2.png)
 
 **Query SQL:**
 
-SELECT NVL(STATUS_VALUE_XID,'X')  
-FROM ORDER_RELEASE_STATUS ORS, STATUS_VALUE SV, STATUS_TYPE ST  
-WHERE SV.STATUS_VALUE_GID = ORS.STATUS_VALUE_GID  
-AND ST.STATUS_TYPE_GID = ORS.STATUS_TYPE_GID  
-AND ST.STATUS_TYPE_XID = 'PLANNING'  
+```sql
+SELECT NVL(STATUS_VALUE_XID,'X')
+FROM ORDER_RELEASE_STATUS ORS, STATUS_VALUE SV, STATUS_TYPE ST
+WHERE SV.STATUS_VALUE_GID = ORS.STATUS_VALUE_GID
+AND ST.STATUS_TYPE_GID = ORS.STATUS_TYPE_GID
+AND ST.STATUS_TYPE_XID = 'PLANNING'
 AND ORS.ORDER_RELEASE_GID = $gid
+```
 
-  
+<div class="note-box"><strong>Note:</strong> The SQL associated with Assign Variable must always include NVL handling. If the SQL returns no value, the agent will fail at that point.</div>
 
-**Note:** SQL associated with assign variable should always have NVL handling. If SQL doesn’t return a value, agent will fail at that point.
+Variables declared in a parent agent can be accessed from a child agent.
 
-  
+**Agent Variables:**
 
-Variables used in Parent Agent can be accessed from child agent
+Refer to the topic "Agent Variables" in OTM Help for built-in variables such as `$gid`.
 
-  
-**Agent Variables:**  
-Refer Topic ‘Agent Variables’ in OTM Help for variables like $gid.  
-**Examples:**   
-$gid variable refers to current object ID on which agent is triggered like Order Release GID for Order Release agent, Shipment GID for shipment agent, etc.$event_gid variable: Say, if we have an agent already created in OTM that triggers on ORDER - CREATED and ORDER - MODIFIED events, and if we want to add some action specific to ORDER – CREATED event , use $EVENT_GID which is standard variable provided by OTM.  
-  
-  
+- `$gid` refers to the current object ID on which the agent is triggered — for example, Order Release GID for an Order Release agent, or Shipment GID for a Shipment agent.
+- `$event_gid` — if an agent listens to both ORDER - CREATED and ORDER - MODIFIED events and you need an action specific to ORDER - CREATED only, use `$EVENT_GID` to distinguish between the two.
 
-RAISE EVENT ACTION
+---
 
-This is used to trigger one agent from another agent.
+**RAISE EVENT ACTION**
 
-  
+This action triggers one agent from within another agent.
 
-**Example:** If we have 5 agents based on ORDER - CREATED event for different business process flows and if we need to perform activities common to all the processes, in this scenario we follow these steps:
+**Example:** If you have 5 agents triggered by ORDER - CREATED for different business process flows, and several common actions need to run for all 5, define a shared custom agent event and call it from each agent using RAISE EVENT.
 
-Business Process Automation > Power Data > Event Management > Agent Events  
-**Define a custom agent event:**  
-  
-![](/images/agents-frequently-used-actions-img3-ea95a9fb7c.png)   
-  
-  
+<div class="step-box">Business Process Automation > Power Data > Event Management > Agent Events</div>
 
-Define an agent based on this custom event as shown:
+Define a custom agent event:
 
-  
-![](/images/agents-frequently-used-actions-img4-dd0af676bc.png)   
-  
-  
+![](/images/agents-frequently-used-actions-img3-ea95a9fb7c.png)
 
-You can call this agent now from another agent using RAISE EVENT as shown below:
+Define an agent based on this custom event:
 
-  
-![](/images/agents-frequently-used-actions-img5-a862c3a8db.png)   
-  
-  
+![](/images/agents-frequently-used-actions-img4-dd0af676bc.png)
 
-DATA TYPE ASSOCIATIONS   
-**Example:** Set Order Release Status to Executed, when corresponding Shipment is in Accepted status.
+Call this agent from another agent using RAISE EVENT:
 
-This requires updating order release status when shipment agent is running. In such cases use Data Type Associations as follows:  
-  
-![](/images/agents-frequently-used-actions-img6-a48947db2e.png)   
-Above screen shot shows SHIPMENT AGENT action that updates status on all corresponding order releases.  
-  
+![](/images/agents-frequently-used-actions-img5-a862c3a8db.png)
 
-When using a Data Type Association to run an agent action against related objects, “Create New Process” checkbox appears. If selected, the related action runs in a separate workflow process. The initial agent does not wait for the related object actions to complete. This provides you a way to avoid potential deadlock when raising custom events.  
-  
-FOR EACH  
+---
 
-This is used from any agent to repeat a custom event on related objects.   
-**Example:** From a shipment agent, you want to identify specific order release based on some saved query and perform some custom action on each of these order releases. In this case define a saved query and condition to identify those order releases, define a custom agent(listening to custom event) with the set of actions that you want to perform on these order releases. Call this event for those order releases using FOR-EACH.  
-**Note:** For performing standard events on related objects, note that you can use DATA TYPE ASSOCIATION.  
-  
-IF, ESLE, ESLEIF, END IF  
-These are condition actions provided by OTM to control the agent action flow as required.IF and ELSEIF should be associated with saved conditions and this action would return either true or false based on either saved condition returns rows or not.
+**DATA TYPE ASSOCIATIONS**
 
-Complex Expression
+**Example:** Set Order Release Status to Executed when the corresponding Shipment reaches Accepted status. This requires updating the order release from within a shipment agent. Use Data Type Associations for cross-object updates.
 
-In the IF conditions, you can use complex expressions if you have multiple individual conditions to be combined with a logical AND or OR operators.   
-  
-SCHEDULE EVENT 
+![](/images/agents-frequently-used-actions-img6-a48947db2e.png)
 
-  
+The screenshot above shows a Shipment agent action that updates the status on all corresponding order releases.
 
-**Usage:** Alternate to WAIT logic
+<div class="note-box"><strong>Note:</strong> When using a Data Type Association to run an agent action against related objects, a <strong>Create New Process</strong> checkbox appears. If selected, the related action runs in a separate workflow process and the initial agent does not wait for completion. Use this to avoid potential deadlocks when raising custom events.</div>
 
-  
+---
 
-**Example:** Say we need to ensure that a particular action in an agent is triggered only after a record exists in particular table and if we are not aware of the time when this record would be available in the DB. In this case, using WAIT will not work as we might not be aware of exactly how much time to WAIT. So create an IF condition checking if record that we are looking is existing or not. If record is not existing call the same agent again after 2 mins using this action.To call the same agent, create a custom event and trigger the custom event in the above IF block. Add the custom event to existing agent. In the IF block use STOP so that no further processing happens in the agent.If the IF condition fails – meaning record not exists – we can write further processing logic after the IF block.  
+**FOR EACH**
 
-  
-BUILD SHIPMENT   
-This is used in ORDER RELEASE agent to plan the order and create a shipment. In this action you need to specify the perspective('B' for Buy, etc) and parameter set value.  
-  
-RELEASE ORDER BASE  
-This is used in ORDER BASE agent to release the instructions associated with that Order Base(PO) to create Order Release transactions.  
-  
-LINK SHIPMENT TO ORDER BASE  
-From Shipment Agent, we can use this action to link related Order Bases to Shipment. As a pre-req we need to ensure:   
+This action repeats a custom event on a set of related objects from within any agent.
 
-  * Corresponding Order Bases(PO) are released - Order Releases exist
-  * Shipment Ship Unit Line qualifier 'CIN' value should match to Order Base(PO Number)
+**Example:** From a shipment agent, identify specific order releases via a saved query and perform a custom action on each. Define a saved query to identify the target order releases, define a custom agent listening to a custom event with the desired actions, then call that event for each result using FOR EACH.
 
-  
-SEND INTEGRATION  
-This is used from any agent to send object XML to an external system.   
-  
-SET STATUS  
-This is used in any agent to set internal status values for current object.   
-  
-STOP  
-This is used to stop the workflow at that point based on some condition. Please note that no further agent actions will be executed once a STOP action is encountered.  
-  
-NOTIFY CONTACT  
-This is used in any agent to send notification to already defined contact in the system(like E-mail, etc)  
-  
-AUTO MATCH INVOICE  
-On Invoice Agent, this will trigger the match rule defined for the carrier sending this invoice.  
-  
-INVOICE - AUTO APPROVE, REJECT INVOICE  
-These actions on invoice agent are used to approve/reject that particular invoice transaction.  
-  
-DIVERT SHIPMENT  
-This action on a shipment is used to change destination location on the shipment and re-rate the shipment.  
-  
-SET INDICATOR  
-This action on any agent is used to set indicator status to Red, Green, White or Yellow. Usually R is used to indicate transaction failure, Green for success, White for New status and Yellow for Warning status.
+<div class="note-box"><strong>Note:</strong> For performing standard events on related objects, use DATA TYPE ASSOCIATION instead of FOR EACH.</div>
+
+---
+
+**IF, ELSE, ELSEIF, END IF**
+
+These are conditional flow-control actions provided by OTM. IF and ELSEIF must be associated with saved conditions. The action evaluates to true or false based on whether the saved condition returns rows.
+
+**Complex Expression:** In IF conditions, you can combine multiple individual conditions using logical AND or OR operators.
+
+---
+
+**SCHEDULE EVENT**
+
+**Usage:** An alternative to WAIT logic when the wait duration is unknown.
+
+**Example:** If an agent action should only run after a specific record exists in a table, but you do not know when that record will be available, a WAIT with a fixed duration will not work. Instead:
+
+1. Create an IF condition that checks whether the required record exists.
+2. If the record does not exist, use SCHEDULE EVENT to call the same agent again after 2 minutes (via a custom event).
+3. Add a STOP action inside the IF block so no further processing occurs in the current run.
+4. If the IF condition fails (record not found), the further processing logic after the IF block handles it.
+
+---
+
+**BUILD SHIPMENT**
+
+Used in an ORDER RELEASE agent to plan the order and create a shipment. You must specify the perspective (e.g., `B` for Buy) and the parameter set value.
+
+---
+
+**RELEASE ORDER BASE**
+
+Used in an ORDER BASE agent to release the instructions associated with that Order Base (PO) and create Order Release transactions.
+
+---
+
+**LINK SHIPMENT TO ORDER BASE**
+
+From a Shipment agent, links related Order Bases to the shipment. Prerequisites:
+
+- Corresponding Order Bases (POs) must already be released — Order Releases must exist.
+- The Shipment Ship Unit Line qualifier **CIN** value must match the Order Base (PO Number).
+
+---
+
+**SEND INTEGRATION**
+
+Used from any agent to send the object XML to an external system.
+
+---
+
+**SET STATUS**
+
+Used in any agent to set internal status values for the current object.
+
+---
+
+**STOP**
+
+Stops the agent workflow at that point, based on a condition. No further agent actions are executed after STOP is encountered.
+
+---
+
+**NOTIFY CONTACT**
+
+Used in any agent to send a notification to a defined contact in the system (such as an email or message center notification).
+
+---
+
+**AUTO MATCH INVOICE**
+
+On an Invoice agent, triggers the match rule defined for the carrier sending the invoice.
+
+---
+
+**INVOICE - AUTO APPROVE / REJECT INVOICE**
+
+These Invoice agent actions are used to approve or reject a particular invoice transaction.
+
+---
+
+**DIVERT SHIPMENT**
+
+Used on a Shipment agent to change the destination location on the shipment and re-rate it.
+
+---
+
+**SET INDICATOR**
+
+Used in any agent to set an indicator status to Red, Green, White, or Yellow. Typically: Red for failure, Green for success, White for new/unprocessed, Yellow for warning.

@@ -23,50 +23,52 @@ keywords:
 description: "Explains Oracle OTM Agent Event Restrictions, covering the INTEGRATION, INTERNAL, and USER source options and the Before Persist setting for pre-commit validation of inbound XML transactions."
 ---
 
-In Agents, "Event Restrictions" give us more control on what type of transactions agent should be triggered and also perform some pre- transaction commit validations(if required) on inbound XML transactions.  
-  
-We can access this by clicking the "i" icon as show below:  
-![](/images/agents-agent-event-restriction-img1-3b832dd4b4.png)  
-  
-**You will see below options:**   
-  
-![](/images/agents-agent-event-restriction-img2-1b611276a7.png)  
-  
-**Source:** You select this value based on below requirements(Order Release examples discussed)  
-  
-**INTEGRATION:** If you are receiving Order Release transaction from an external system via GlogXML element and if you want your Agent logic to trigger only for this type of transactions, you select 'INTEGRATION' as the source. Only Order Releases uploaded to OTM via XMLs will trigger this agent.  
-  
-**INTERNAL:** If you want to trigger your agent logic only when Order Release is created by standard OTM internal actions like "RELEASE ORDER BASE", you use this source as INTERNAL.  
-  
-**USER:** If you want to trigger your agent logic only when Order Release is manually keyed-in by user within OTM system, we use this source.  
-  
+Agent Event Restrictions give you control over which types of transactions trigger an agent, and optionally allow you to validate inbound XML transactions before they are committed to the database.
 
-**Before Persist:** We can use this option to perform some validations on the inbound XML, before committing the transaction to database.   
-  
-**Example Usage:** Validate some elements/data in the input PO xml before committing (creating) PO in the OTM DB/application.   
-Suppose that, integration layer is generating OTM XML and you want to ensure you create PO only if following reference number ‘SOURCE_SYSTEM’ exists - you can do following:  
-  
-**Create below agent:** 
+Access this by clicking the **"i" icon** on the agent header screen:
 
-  
-![](/images/agents-agent-event-restriction-img3-01d56efc28.png)  
-  
-In the Restrictions section, “Check” Before Persist box as shown below:  
-![](/images/agents-agent-event-restriction-img4-70e039283f.png)  
-  
-  
-Note that once you select ‘Before Persist’, list of actions that appear in the Agent-Actions will vary. They will not be same as standard set of ORDER BASE – CREATED actions.  
-![](/images/agents-agent-event-restriction-img5-6e13519067.png)  
-  
-  
-**Expression:** #OB_REFNUM/OB_REFNUM_QUAL_GID<>DOMAIN.SOURCE_SYSTEM  
-  
-By using this expression we are checking if source system refnum exists in the XML and if refnum is not existing, we are using standard action ‘DON'T PERSIST’ meaning don’t commit/CREATE the PO.  
-  
-Now upload PO XML, by ensuring we don’t have the refnum SOURCE_SYSTEM.  
-You will see the transmission in PROCESSED state,but Order Base record is not created in the system.  
-  
-![](/images/agents-agent-event-restriction-img6-1279d97034.png)   
+![](/images/agents-agent-event-restriction-img1-3b832dd4b4.png)
 
-If you repeat this case by adding the refnum, Order Base record would be created.  
-So this feature might be used to perform some custom validations on the data coming from other systems to OTM.
+The Event Restrictions panel appears:
+
+![](/images/agents-agent-event-restriction-img2-1b611276a7.png)
+
+**Source Options:**
+
+<div class="field-box"><strong>INTEGRATION:</strong> Triggers the agent only when the business object (e.g., Order Release) is created by an inbound GlogXML transmission from an external system. Use this when you want agent logic to run only for XML-uploaded transactions.</div>
+
+<div class="field-box"><strong>INTERNAL:</strong> Triggers the agent only when the business object is created by a standard OTM internal action, such as "RELEASE ORDER BASE". Use this when the agent should respond to system-generated events, not user or integration activity.</div>
+
+<div class="field-box"><strong>USER:</strong> Triggers the agent only when the business object is manually entered by a user within the OTM application.</div>
+
+**Before Persist:**
+
+The **Before Persist** option allows validation of an inbound XML transaction before it is committed to the database.
+
+**Example:** Validate that a required reference number exists in an inbound PO XML before creating the Order Base record. Suppose the integration layer sends OTM XML and you want to create the PO only if the reference number `SOURCE_SYSTEM` is present.
+
+Create the following agent:
+
+![](/images/agents-agent-event-restriction-img3-01d56efc28.png)
+
+In the Restrictions section, check the **Before Persist** box:
+
+![](/images/agents-agent-event-restriction-img4-70e039283f.png)
+
+<div class="note-box"><strong>Note:</strong> Once Before Persist is selected, the list of actions available in the Agent Actions section changes. They will differ from the standard ORDER BASE – CREATED action set.</div>
+
+![](/images/agents-agent-event-restriction-img5-6e13519067.png)
+
+Set the following expression to check for the reference number in the XML:
+
+```
+#OB_REFNUM/OB_REFNUM_QUAL_GID<>DOMAIN.SOURCE_SYSTEM
+```
+
+If the `SOURCE_SYSTEM` reference number does not exist in the XML, the standard **DON'T PERSIST** action is triggered — meaning the PO is not created in OTM.
+
+Upload a PO XML without the `SOURCE_SYSTEM` reference number. The transmission will show as PROCESSED, but no Order Base record will be created:
+
+![](/images/agents-agent-event-restriction-img6-1279d97034.png)
+
+If you repeat the upload with the reference number present, the Order Base record is created successfully. This feature is useful for enforcing data quality rules on transactions arriving from external systems.

@@ -24,16 +24,14 @@ keywords:
 description: "Covers Oracle OTM Agent Gates, which allow consultants to add saved-query conditions to standard OTM events and workflows — such as blocking the tender workflow for specific transport modes — at the domain level."
 ---
 
-**Navigation:** Business Process Automation > Power Data > Event Management > Agent Gates
+Agent Gates allow you to add custom saved-query conditions to standard OTM events and workflows. They operate at the domain level and can either extend or completely replace standard OTM validations. If the gate condition fails, the standard workflow is stopped.
 
-Agent Gates can be used to add custom conditions via saved query to control standard OTM events/worfklows. Agent Gates work at domain level.
+<div class="step-box">Business Process Automation > Power Data > Event Management > Agent Gates</div>
 
-Validation can be either used to extend standard validations or completely replace standard validations. If validation fails, standard workflow stops. 
+For example, to stop the tender workflow for specific transport modes, configure an Agent Gate with the following values:
 
-For example, you can stop tender worklfow for specific transport modes using below configurations:
-
-  * Object type: SHIPMENT
-  * Status Function: WKFLW_TENDER
-  * Functor Class: glog.server.workflow.shipment.ShipmentStatus$Tender
-  * Saved Condition ID: Write SQL with your custom business rules
-  * Check 'Saved Condition Additive'
+- **Object Type:** SHIPMENT
+- **Status Function:** WKFLW_TENDER
+- **Functor Class:** `glog.server.workflow.shipment.ShipmentStatus$Tender`
+- **Saved Condition ID:** Write a SQL condition with your custom business rules
+- **Saved Condition Additive:** Check this box
