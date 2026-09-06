@@ -23,8 +23,8 @@ pre { position: relative; }
 .copy-btn.copied { background:#16a34a; }
 .step-box   { border-left: 4px solid #0369a1; background: #f0f9ff; padding: 12px 16px; margin: 16px 0 8px; border-radius: 0 6px 6px 0; }
 
-/* Sidebar section group headers — rendered as <a> with no href by hugo-book when _index.md has no body */
-.book-menu-content a:not([href]) {
+/* Sidebar section group headers — target direct <a> children of <li> that also contain a <ul> */
+.book-menu-content ul > li:has(> ul) > a {
   font-size: 10px !important;
   font-weight: 700 !important;
   letter-spacing: .12em !important;
@@ -36,8 +36,9 @@ pre { position: relative; }
   display: block;
   border-top: 1px solid #e2e8f0;
   margin-top: 8px;
+  text-decoration: none !important;
 }
-.book-menu-content ul > li:first-child > a:not([href]) {
+.book-menu-content ul > li:first-child:has(> ul) > a {
   padding-top: 6px !important;
   border-top: none;
   margin-top: 0;
