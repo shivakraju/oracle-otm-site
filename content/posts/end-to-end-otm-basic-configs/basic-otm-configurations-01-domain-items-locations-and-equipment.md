@@ -30,6 +30,8 @@ description: "First in a series of end-to-end OTM configuration posts, covering 
 
 This is the first in a series of eight posts that walk through a complete OTM end-to-end transaction flow — from initial setup through planning, tendering, invoicing, and cost allocation. Each post builds on the previous one. Use this series as a starting point and refer to OTM Help documentation to explore each topic in depth.
 
+<div class="note-box"><strong>Recommendation for new OTM consultants:</strong> If you are early in your OTM career, the single most effective way to build confidence is to complete this entire series hands-on in a non-production environment. Step through each post in order, create every object yourself, and verify the results — rather than just reading through them. You will make mistakes, and that is exactly the point: troubleshooting your own configuration teaches you far more than any documentation can.<br><br>You do not need to create a new Domain. Skip the Domain creation step and work inside your existing business domain instead. Everything else — Items, Locations, Equipment, Service Providers, Rates, Itineraries, Bulk Plan, Tender, Invoice, and Voucher Allocation — can be built and tested within your current domain without affecting production data.</div>
+
 **Business Scenario:**
 
 Toys Corporation (TCRP) has one DC/Warehouse and three store locations in different cities. The DC distributes three items (Item A, Item B, Item C) to those stores. TCRP has contracts with two carriers (SGTM, PNDP) who use 20 ft, 40 ft, and 53 ft equipment. TCRP wants to use OTM Bulk Plan to optimise transport costs and settle carrier invoices.
