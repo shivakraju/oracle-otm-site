@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Agents - Sample Agent Creation Steps"
 date: 2016-08-05T19:33:00+00:00
 draft: false
-weight: 20
+weight: 10
 tags:
   - "Agent"
   - "Agent Actions"

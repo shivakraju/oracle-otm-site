@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Agents - Agent Event Restrictions"
 date: 2016-08-15T16:53:00+00:00
 draft: false
-weight: 30
+weight: 20
 tags:
   - "Before Persist"
   - "Event Source"
