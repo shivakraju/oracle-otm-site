@@ -24,44 +24,47 @@ keywords:
 description: "Explains how to create Custom Actions and Smart Links in Oracle OTM, enabling users to trigger agents or navigate to related records directly from the UI, with a worked example for reprocessing invoices."
 ---
 
-Actions  
-This feature can be used to allow users to perform some actions like triggering an agent for a list of transactions.  
-  
-**Example scenario:** Trigger an INVOICE agent when user selects a custom action 'Reprocess Invoice' from the UI on the user selected list of invoices.  
-  
-**Below are the setups required:**  
-  
-Login as DBA.ADMIN to create a label.  
-Configuration and Administration > User Configuration > Label Manager  
-  
+Custom Actions allow users to trigger an agent or perform an operation directly from the OTM UI against a selected list of transactions. Smart Links are similar but operate on a single selected record and navigate the user to related data. The example below shows how to configure a custom action that triggers an INVOICE agent when a user selects 'Reprocess Invoice' from the Actions menu on a list of invoices.
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwCKT_MrUWjkeGliAlrZiFK1kihtsAQnfBg6OX8x0RiL-HYJ4Zj5Ds5O3DZAkIqkD4V4I9VOzX486od3K7OZwthbuH5_ntGALQwJKTaRpzcTksTtQNfK0uLwFc2JshMpGFOviEP8M6DoU/s400/Capture5.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwCKT_MrUWjkeGliAlrZiFK1kihtsAQnfBg6OX8x0RiL-HYJ4Zj5Ds5O3DZAkIqkD4V4I9VOzX486od3K7OZwthbuH5_ntGALQwJKTaRpzcTksTtQNfK0uLwFc2JshMpGFOviEP8M6DoU/s1600/Capture5.JPG)
+**Step 1 — Create a Label (login as DBA.ADMIN):**
 
-  
-Login to transactions domain as ADMIN now and create a custom action to call the agent.  
-Configuration and Administration > User Configuration > Actions Manager  
-**Enter below details:**  
-Action = Give some name to the action  
-Label=Give name of label created in earlier step  
-Action Definition ID=RUN_AGENT_INVOICE  
-Agent ID=Select the name of the agent that should trigger.  
-  
-**Note:** Here agent is being called by name rather than the event. So make sure if you are creating new version of the agent, you need to come back and update this custom action with new agent name.  
-  
-Now, as a final step - add this action to your screen set.  
-Configuration and Administration > User Configuration > Screen set Manager > Query the screen set for which you need to add custom action > Go to 'Actions' tab > Select 'Top' on hierarchy list and click '+' button > Select 'Add Actions' > In the 'Actions' drop down you should see label you associated to the new action - select it > Save.  
-  
-**Test:**  
-Open your custom manager layout and select few invoices > click 'Actions' button > Select the action label.  
-  
-This should trigger the agent on the invoices selected.  
-  
-Smart Links  
-•Steps for creating Smart links are similar to creating Action.  
-  
-•In the screen set, there is tab ‘Smart Links’ next to ‘Actions’. You need to add the custom action here, so that it appears as smart link.  
-  
-•Difference between Smart links and actions:  
-  
-Actions can work on group of transactions. Say for example, you can select 10 order releases and bulk them together. Here Bulk Plan is defined as an action.  
-Smart link will work on specific selected transaction. For example, you can select specific order release and say ‘Related Buy Shipment’. This will fetch list of shipments associated with that specific Order Release.
+<div class="step-box">Configuration and Administration > User Configuration > Label Manager</div>
+
+Create a new Label record. The Label ID and text you enter here will appear in the Actions menu in the UI.
+
+[![OTM Label Manager screen showing a new label record](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwCKT_MrUWjkeGliAlrZiFK1kihtsAQnfBg6OX8x0RiL-HYJ4Zj5Ds5O3DZAkIqkD4V4I9VOzX486od3K7OZwthbuH5_ntGALQwJKTaRpzcTksTtQNfK0uLwFc2JshMpGFOviEP8M6DoU/s400/Capture5.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwCKT_MrUWjkeGliAlrZiFK1kihtsAQnfBg6OX8x0RiL-HYJ4Zj5Ds5O3DZAkIqkD4V4I9VOzX486od3K7OZwthbuH5_ntGALQwJKTaRpzcTksTtQNfK0uLwFc2JshMpGFOviEP8M6DoU/s1600/Capture5.JPG)
+
+**Step 2 — Create a Custom Action (login as domain ADMIN):**
+
+<div class="step-box">Configuration and Administration > User Configuration > Actions Manager</div>
+
+Create a new Action record with the following fields:
+
+<div class="field-box"><strong>Action:</strong> Give the action a unique name.</div>
+
+<div class="field-box"><strong>Label:</strong> Select the label created in Step 1.</div>
+
+<div class="field-box"><strong>Action Definition ID:</strong> Enter RUN_AGENT_INVOICE (or the appropriate action definition for your use case).</div>
+
+<div class="field-box"><strong>Agent ID:</strong> Select the name of the agent that should trigger when this action is invoked.</div>
+
+<div class="note-box"><strong>Note:</strong> The agent is called by name rather than by event. If you create a new version of the agent, you must come back to this custom action and update the Agent ID to point to the new agent name.</div>
+
+**Step 3 — Add the Action to a Screen Set:**
+
+<div class="step-box">Configuration and Administration > User Configuration > Screen Set Manager</div>
+
+Query the screen set for which you need to add the custom action. Go to the **Actions** tab, select **Top** on the hierarchy list, click the **+** button, and select **Add Actions**. In the Actions dropdown, select the label you associated with the new action, then save.
+
+**Testing:**
+
+Open your custom manager layout, select a few invoices, click the **Actions** button, and select the action label. This triggers the agent on the selected invoices.
+
+**Smart Links:**
+
+Smart Links are configured using the same steps as Actions with one difference: in the Screen Set, add the custom action under the **Smart Links** tab instead of the **Actions** tab.
+
+The key difference between Actions and Smart Links is scope:
+
+- **Actions** operate on a group of selected transactions. For example, you can select 10 order releases and trigger a Bulk Plan across all of them.
+- **Smart Links** operate on a single selected transaction. For example, selecting a specific order release and clicking 'Related Buy Shipment' fetches the shipments associated with that one order release.

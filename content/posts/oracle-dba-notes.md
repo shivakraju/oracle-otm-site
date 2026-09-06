@@ -32,200 +32,220 @@ keywords:
 description: "DBA quick-reference notes for Oracle OTM on-premise installations, covering database startup and shutdown, listener management, tnsnames.ora, invalid object recompilation, and common database maintenance tasks."
 ---
 
-**Note:** This post is applicable for OTM ver 6.x and below.
+<div class="note-box"><strong>Note:</strong> This post applies to OTM version 6.x and below.</div>
 
-  
+The following quick-reference notes cover common Oracle DBA tasks for maintaining an OTM on-premise database. These activities are typically performed by a DBA rather than an application administrator.
 
-To maintain Oracle OTM Database, below quick notes are useful. Note that usually DBA takes care of below activities.  
-  
-**Start the Database after OS reboot:**  
-  
-Login to OS as super user and start the Oracle Listener process. This process receives request from the client and manages traffic to the database server. You can do this with below command:  
-  
-$lsnrctl start;  
-  
-This will start the listener for Oracle DB.  
-  
-**To restart Oracle DB issue below command:**  
-$sqlplus / as sysdba;  
-  
+**Start the database after an OS reboot:**
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKkSEb4MmGUYyd8CXo_CXDphurYNx9kcjoP6A4DlCUpB6-J_l_Y3B1ZdBO6E9YVw5VzuyTJkNRSoyyF0SClytmZFoRZwsIqsfKE1xWUa7ekS4Yr9PplTjp3DKQxjC_Qqx5e0TMoUWMlv4/s400/IMG1.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKkSEb4MmGUYyd8CXo_CXDphurYNx9kcjoP6A4DlCUpB6-J_l_Y3B1ZdBO6E9YVw5VzuyTJkNRSoyyF0SClytmZFoRZwsIqsfKE1xWUa7ekS4Yr9PplTjp3DKQxjC_Qqx5e0TMoUWMlv4/s1600/IMG1.JPG)
+Log in to the OS as a super user and start the Oracle Listener process. The Listener receives client connection requests and routes traffic to the database server.
 
-  
-  
-  
-  
-  
-  
-  
-Now start the DB with below command at SQL prompt.  
-  
-SQL > STARTUP;  
-  
+```bash
+lsnrctl start
+```
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEiyKRKzYCoCpJFnccsZBY8XjP3m2KjL-8BY7FyDlNkUmzZLLqFrWFC22bMY6049MzDqB2vhlmno6c-YEEy0gGHHmI1tJJ3Ydba2wQcGiFx8FTWQffUeKC2gUlP2qzh7h5BM3u7TggibQ/s320/IMG2.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEiyKRKzYCoCpJFnccsZBY8XjP3m2KjL-8BY7FyDlNkUmzZLLqFrWFC22bMY6049MzDqB2vhlmno6c-YEEy0gGHHmI1tJJ3Ydba2wQcGiFx8FTWQffUeKC2gUlP2qzh7h5BM3u7TggibQ/s1600/IMG2.JPG)
+Connect to the database as sysdba and issue the STARTUP command:
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-**Note that to stop DB, command is:**  
-SQL > SHUTDOWN IMMEDIATE;  
-  
-**Reset password for DB schema/user(example):**  
-$sqlplus / as sysdba;  
-SQL > ALTER USER GLOGOWNER IDENTIFIED BY GLOGOWNER;  
-  
-**Unlock DB account(example):**  
-SQL > ALTER USER GLOGDBA ACCOUNT UNLOCK;  
-  
-**Recompile OTM DB invalid objects:**  
-  
-Login to server where OTM application is installed and switch to :  
-< OTM Home >/glog/oracle/script8 directory  
-$ls recom*  
-You will see recompile scripts. Now connect to glogowner:  
-$sqlplus [glogowner/glogowner@OTMDB](mailto:glogowner/glogowner@OTMDB);  
-SQL> @recompile_invalid_objects.sql;  
-**To review if all objects are fixed run:**  
-SQL> select Object_name, Owner, object_type, status  
-from all_objects  
-where owner='GLOGOWNER'  
-and status ='INVALID';  
-  
-This should not show any records.   
-**Note:** You can ask your system administrator path details for <OTM Home>. This is base folder on the server where your OTM application is installed. You can get glogowner schema password details from your DBA.  
-  
-Init.ora file  
-  
-Oracle DB configurations are maintained in this file.  
-$ORACLE_HOME/dbs  
-File is in the dbs folder under Oracle Home directory as show above.  
-In this file you can set DB parameters like open_cursors etc.  
-For OTM DB, set the open_cursors parameter in this file to >3000\. Default is 300.  
-  
-**Kill locked DB sessions:**  
-  
-Table DBA_DDL_LOCKS has locked sessions by schema name.  
-Table v$session has session details with SID and serial number.  
-  
-SELECT VS.SID, VS.SERIAL#  
-FROM DBA_DDL_LOCKS DDL,  
-V$SESSION VS  
-WHERE DDL.OWNER = 'GLOGOWNER'  
-AND VS.SID = DDL.SESSION_ID;  
-  
-If above query is from TOAD/SQL Developer, ensure you don't cancel that session :)  
-Your current Toad session/SQL Developer session can be identified with query:  
-  
-select sys_context('USERENV','SID') from dual;  
-  
-**Now to kill the session:**  
-  
-Login to server as OS super user and run below commands:  
-$sqlplus / as sysdba;  
-SQL > alter system kill session 'sid,serial#';  
-  
-**To compile all objects in a schema:**  
-  
-EXEC DBMS_UTILITY.compile_schema(schema => 'GLOGOWNER');  
-  
-**To get all Active DB sessions and their CPU time:**  
-  
-select S.USERNAME, s.sid, s.osuser, t.sql_id, sql_text from v$sqltext_with_newlines t,V$SESSION s where t.address =s.sql_address  
-and t.hash_value = s.sql_hash_value  
-and s.status = 'ACTIVE'  
-and s.username <> 'SYSTEM'  
-order by s.sid,t.piece  
-/  
-  
-**To access Oracle Enterprise Manager(EM) console:**  
-Login to server as OS super user and follow below steps:  
-  
-**Start DB Console as follows:**  
-[oracle@OTM-SERVER bin]$ cd $ORACLE_HOME/bin  
-[oracle@OTM-SERVER bin]$ ./emctl start dbconsole  
-  
-**Stop DB Console as follows:**  
-[oracle@OTM-SERVER bin]$ ./emctl stop dbconsole  
-  
-To access the console you need the Host Name and Port Number.  
-**You can identify Host Name as follows:**  
-[oracle@OTM-SERVER bin]$ sqlplus / as sysdba;  
-SQL> select host_name from v$instance;  
-HOST_NAME  
-\-------------  
-OTM-SERVER  
-  
-To find the port for em console, you can go to $ORACLE_HOME/install/readme.txt  
-**This file shows the port number(for example:** 1158).  
-  
-**In browser now use URL:**  
-<https://otm-server:1158/em>  
-Firt time browser may throw exception and add this exception to the list so that you can access the console.  
-  
-**User Name/Password issues while accessing this EM:**  
-  
-You need to login using SYSMAN user ID.  
-Please note that SYSMAN and DBSNMP user account must not be locked and password expiry must be removed.  
-  
-**You can review information using:**  
-  
-select USERNAME,ACCOUNT_STATUS,LOCK_DATE,EXPIRY_DATE,PROFILE   
-from dba_users where username in ('SYSMAN', 'DBSNMP');  
-alter user SYSMAN account unlock;  
-alter user DBSNMP account unlock;  
-alter profile DEFAULT limit password_life_time unlimited;  
-alter profile MONITORING_PROFILE limit password_life_time unlimited;  
-  
-**You may re-set SYSMAN password using:**  
-$emctl setpasswd dbconsole;  
-Enter sysman password when prompted.  
-  
-**Restart dbconsole using:**  
-cd $ORACLE_HOME/bin  
-./emctl stop dbconsole  
-./emctl start dbconsole  
-  
-**TNS NAMES file path:**  
-  
-Login to server as OS super user where Oracle DB is installed and then follow below steps:  
-  
-[oracle@OTM-SERVER admin]$ cd $ORACLE_HOME/network/admin  
-[oracle@OTM-SERVER admin]$ vi tnsnames.ora  
-  
-This will show the DB connection details like host name and port number.  
-  
-**If you know the SID, you can use command:**  
-[oracle@OTM-SERVER bin]$ tnsping OTMDB;  
-  
-**Removing password expiry of default DB users:**  
-  
-**Connect to DBA as OS rootuser and run command:**  
-  
-$ sqlplus / as sysdba;  
-  
-If we want to remove password expiry time period for SYSMAN user, run below SQL:  
-  
-select  
-p.profile as "Profile",  
-p.limit as "Limit"  
-from  
-dba_profiles p,  
-dba_users u  
-where  
-u.USERNAME='SYSMAN'  
-and u.profile=p.profile  
-and p.resource_name='PASSWORD_LIFE_TIME';  
-  
-Now run below statement if DEFAULT is the profile name from above query:  
-  
-SQL>alter profile DEFAULT limit password_life_time unlimited;  
-SQL>alter profile MONITORING_PROFILE limit password_life_time unlimited;
+```bash
+sqlplus / as sysdba
+```
+
+[![Oracle sqlplus startup screenshot](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKkSEb4MmGUYyd8CXo_CXDphurYNx9kcjoP6A4DlCUpB6-J_l_Y3B1ZdBO6E9YVw5VzuyTJkNRSoyyF0SClytmZFoRZwsIqsfKE1xWUa7ekS4Yr9PplTjp3DKQxjC_Qqx5e0TMoUWMlv4/s400/IMG1.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKkSEb4MmGUYyd8CXo_CXDphurYNx9kcjoP6A4DlCUpB6-J_l_Y3B1ZdBO6E9YVw5VzuyTJkNRSoyyF0SClytmZFoRZwsIqsfKE1xWUa7ekS4Yr9PplTjp3DKQxjC_Qqx5e0TMoUWMlv4/s1600/IMG1.JPG)
+
+```sql
+STARTUP;
+```
+
+[![Oracle database startup output screenshot](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEiyKRKzYCoCpJFnccsZBY8XjP3m2KjL-8BY7FyDlNkUmzZLLqFrWFC22bMY6049MzDqB2vhlmno6c-YEEy0gGHHmI1tJJ3Ydba2wQcGiFx8FTWQffUeKC2gUlP2qzh7h5BM3u7TggibQ/s320/IMG2.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEiyKRKzYCoCpJFnccsZBY8XjP3m2KjL-8BY7FyDlNkUmzZLLqFrWFC22bMY6049MzDqB2vhlmno6c-YEEy0gGHHmI1tJJ3Ydba2wQcGiFx8FTWQffUeKC2gUlP2qzh7h5BM3u7TggibQ/s1600/IMG2.JPG)
+
+To stop the database:
+
+```sql
+SHUTDOWN IMMEDIATE;
+```
+
+**Reset password for a DB schema or user:**
+
+```sql
+ALTER USER GLOGOWNER IDENTIFIED BY GLOGOWNER;
+```
+
+**Unlock a DB account:**
+
+```sql
+ALTER USER GLOGDBA ACCOUNT UNLOCK;
+```
+
+**Recompile OTM DB invalid objects:**
+
+Log in to the server where OTM is installed, switch to the script8 directory, and connect as glogowner:
+
+```bash
+cd $OTM_HOME/glog/oracle/script8
+ls recom*
+sqlplus glogowner/glogowner@OTMDB
+```
+
+```sql
+@recompile_invalid_objects.sql
+```
+
+To verify all objects are fixed:
+
+```sql
+SELECT object_name, owner, object_type, status
+FROM   all_objects
+WHERE  owner  = 'GLOGOWNER'
+AND    status = 'INVALID';
+```
+
+This should return no rows.
+
+<div class="note-box"><strong>Note:</strong> Ask your system administrator for the &lt;OTM Home&gt; path — this is the base directory on the server where OTM is installed. Get the glogowner schema password from your DBA.</div>
+
+**Init.ora file:**
+
+Oracle DB configuration parameters are maintained in the `init.ora` file located at:
+
+```
+$ORACLE_HOME/dbs
+```
+
+For OTM, set `open_cursors` to greater than 3000 in this file. The default value of 300 is insufficient for OTM workloads.
+
+**Kill locked DB sessions:**
+
+The `DBA_DDL_LOCKS` table shows sessions holding DDL locks by schema name. Use it together with `V$SESSION` to identify SID and serial number:
+
+```sql
+SELECT vs.sid, vs.serial#
+FROM   dba_ddl_locks ddl,
+       v$session vs
+WHERE  ddl.owner      = 'GLOGOWNER'
+AND    vs.sid         = ddl.session_id;
+```
+
+To identify your own current session (e.g. from TOAD or SQL Developer) before killing anything:
+
+```sql
+SELECT sys_context('USERENV', 'SID') FROM dual;
+```
+
+To kill a session (as sysdba on the OS):
+
+```sql
+ALTER SYSTEM KILL SESSION 'sid,serial#';
+```
+
+**Compile all objects in a schema:**
+
+```sql
+EXEC DBMS_UTILITY.compile_schema(schema => 'GLOGOWNER');
+```
+
+**Get all active DB sessions and their SQL:**
+
+```sql
+SELECT s.username, s.sid, s.osuser, t.sql_id, sql_text
+FROM   v$sqltext_with_newlines t,
+       v$session s
+WHERE  t.address    = s.sql_address
+AND    t.hash_value = s.sql_hash_value
+AND    s.status     = 'ACTIVE'
+AND    s.username  <> 'SYSTEM'
+ORDER BY s.sid, t.piece
+/
+```
+
+**Access Oracle Enterprise Manager (EM) Console:**
+
+Log in to the server as OS super user. Start or stop the DB Console:
+
+```bash
+cd $ORACLE_HOME/bin
+./emctl start dbconsole
+./emctl stop dbconsole
+```
+
+Find the hostname and EM port:
+
+```bash
+sqlplus / as sysdba
+```
+
+```sql
+SELECT host_name FROM v$instance;
+```
+
+The EM port is in `$ORACLE_HOME/install/readme.txt`. Access the console at:
+
+```
+https://otm-server:1158/em
+```
+
+The first time you access it, the browser may throw a certificate exception — add the exception to continue.
+
+**EM user account issues:**
+
+Log in to EM using the SYSMAN user ID. Ensure SYSMAN and DBSNMP are not locked and have no password expiry:
+
+```sql
+SELECT username, account_status, lock_date, expiry_date, profile
+FROM   dba_users
+WHERE  username IN ('SYSMAN', 'DBSNMP');
+
+ALTER USER SYSMAN  ACCOUNT UNLOCK;
+ALTER USER DBSNMP  ACCOUNT UNLOCK;
+ALTER PROFILE DEFAULT            LIMIT password_life_time UNLIMITED;
+ALTER PROFILE MONITORING_PROFILE LIMIT password_life_time UNLIMITED;
+```
+
+To reset the SYSMAN password:
+
+```bash
+$emctl setpasswd dbconsole
+```
+
+Enter the SYSMAN password when prompted, then restart the console:
+
+```bash
+cd $ORACLE_HOME/bin
+./emctl stop dbconsole
+./emctl start dbconsole
+```
+
+**TNS Names file path:**
+
+Log in to the server where the Oracle DB is installed:
+
+```bash
+cd $ORACLE_HOME/network/admin
+vi tnsnames.ora
+```
+
+This file contains the DB connection details including hostname and port. To test connectivity by SID:
+
+```bash
+tnsping OTMDB
+```
+
+**Remove password expiry for default DB users:**
+
+Connect as sysdba and check the current profile for a user:
+
+```sql
+SELECT p.profile AS "Profile",
+       p.limit   AS "Limit"
+FROM   dba_profiles p,
+       dba_users u
+WHERE  u.username          = 'SYSMAN'
+AND    u.profile           = p.profile
+AND    p.resource_name     = 'PASSWORD_LIFE_TIME';
+```
+
+If DEFAULT is the profile returned, remove the expiry:
+
+```sql
+ALTER PROFILE DEFAULT            LIMIT password_life_time UNLIMITED;
+ALTER PROFILE MONITORING_PROFILE LIMIT password_life_time UNLIMITED;
+```

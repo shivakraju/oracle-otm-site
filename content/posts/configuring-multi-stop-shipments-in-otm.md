@@ -35,7 +35,7 @@ OTM's Bulk Plan algorithm can automatically consolidate multiple orders into a s
 
 This is the main configuration that enables multi-stop behavior in the Bulk Plan algorithm.
 
-Shipment Management > Power Data > General > Logic Configuration
+<div class="step-box">Shipment Management > Power Data > General > Logic Configuration</div>
 
 Create a new Logic Configuration record with the below header fields:
 
@@ -71,7 +71,7 @@ Once the header is saved, update the below parameters in the GENERAL section:
 
 After updating the Logic Configuration, the MULTISTOP Config ID must be linked to the Bulk Plan Parameter Set so that the algorithm picks up the correct multi-stop settings during planning.
 
-Shipment Management > Power Data > General > Parameter Sets
+<div class="step-box">Shipment Management > Power Data > General > Parameter Sets</div>
 
 Open the Parameter Set used by your Bulk Plan and locate the **MULTISTOP** section. Update the below parameter:
 
@@ -99,7 +99,7 @@ The other parameters visible in this section can be left at their default values
 
 The Itinerary in OTM defines the route lanes and stop sequences used by the Bulk Plan algorithm when building shipments. For multi-stop shipments to work, configure the below two settings on the Itinerary.
 
-Shipment Management > Power Data > Itinerary
+<div class="step-box">Shipment Management > Power Data > Itinerary</div>
 
 <div class="field-box"><strong>Multi-Stop Itinerary (Header Level):</strong> On the Itinerary header, check the <strong>Multi-Stop Itinerary</strong> checkbox. This tells OTM that this itinerary is eligible for multi-stop shipment building during Bulk Plan.</div>
 
@@ -109,7 +109,7 @@ Shipment Management > Power Data > Itinerary
 
 The Rate Offering controls how OTM rates a shipment. For multi-stop shipments, stop count limits must be configured on the Rate Offering so OTM knows how many stops are permitted under a given rate.
 
-Shipment Management > Rate Management > Rate Offering
+<div class="step-box">Shipment Management > Rate Management > Rate Offering</div>
 
 On the Rate Offering, update the below stop count limits:
 
@@ -119,7 +119,7 @@ On the Rate Offering, update the below stop count limits:
 
 **Distance Lookup Configuration:**
 
-Shipment Management > Power Data > Geography > Distance
+<div class="step-box">Shipment Management > Power Data > Geography > Distance</div>
 
 For direct shipments, OTM only needs distance from the source location to the destination location. However, for multi-stop shipments, OTM also needs distances **between each stop** to correctly calculate the total route distance and shipment costs.
 

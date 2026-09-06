@@ -23,19 +23,32 @@ keywords:
 description: "Explains Oracle OTM Flex Fields, how to define FlexDropList and PickList field types on attribute columns, and how to add them to Manager Layouts so users can enter custom data from the UI."
 ---
 
-OTM provides attribute fields(Char, Number, Date and currency) on each table to store custom data. Note that we can also use refnum/remarks to store this custom data but those entries are made in separate tables. So new versions of OTM introduced these attribute columns on almost all major transaction data tables like ORDER_RELEASE, SHIPMENT etc.  
-  
-We can define flex fields on these attribute columns and add these fields to required manager layouts so that users can enter data directly into these fields from UI.  
-  
-If you are creating a manager layout on Order Release, and want to have Contact ID(not a standard column on Order Release) as a field to Order Release screen(layout) you can do following:  
+OTM provides attribute columns (Char, Number, Date, and Currency) on most major transaction tables such as ORDER_RELEASE and SHIPMENT to store custom data alongside standard fields. Flex Fields are definitions applied to these attribute columns that control how the field behaves in the UI — including whether it shows a free-text entry, a query-driven dropdown, or a standard lookup list. Once defined, a Flex Field can be added to a Manager Layout so that users can enter data directly from the screen.
 
-  1. Login as domain ADMIN
-  2. Goto Configuration and Administration > User Configuration > Flex Field Definition > New
-  **3. Enter details as below:**![](/images/flex-fields-img1-091b9556e1.png) Field Type=FlexDropList and Query to pull contact IDs from CONTACT table as shown above. 
-  4. Now when you add this field on the manager layout, it will display this list of values as shown: ![](/images/flex-fields-img2-e203f479b6.png)
+**Example — add a Contact ID field to the Order Release layout:**
 
-You can also have Picklist to associate flex field to standard fields like country code as shown below:  
-  
-![](/images/flex-fields-img3-12700a279f.png)  
-  
-Note Field Type=PickList and Query Table ID=SERVPROV as shown above.
+The Contact ID is not a standard column on the Order Release table. Using a FlexDropList Flex Field, you can expose it as a dropdown populated from the CONTACT table.
+
+**Step 1 — Create the Flex Field definition:**
+
+<div class="step-box">Configuration and Administration > User Configuration > Flex Field Definition > New</div>
+
+Log in as domain ADMIN and create a new Flex Field Definition. Set the following:
+
+<div class="field-box"><strong>Field Type:</strong> FlexDropList — presents the user with a dropdown list populated by the query you specify below.</div>
+
+<div class="field-box"><strong>Query:</strong> Enter a SQL query that returns the list of values. For example, to pull Contact IDs from the CONTACT table, query the CONTACT_XID column from CONTACT.</div>
+
+![OTM Flex Field Definition screen showing FlexDropList field type and CONTACT table query](/images/flex-fields-img1-091b9556e1.png)
+
+**Step 2 — Add the Flex Field to a Manager Layout:**
+
+After saving the Flex Field Definition, add the field to your Manager Layout for Order Release. When users open the Order Release screen, the field will display as a dropdown populated with values from the CONTACT table.
+
+![OTM Order Release screen showing the Contact ID flex field dropdown](/images/flex-fields-img2-e203f479b6.png)
+
+**PickList Flex Fields:**
+
+A PickList Flex Field associates the attribute column with a standard OTM reference table rather than a custom query. For example, to expose a country code selector on a layout, set Field Type to PickList and select SERVPROV as the Query Table ID.
+
+![OTM Flex Field Definition screen showing PickList field type with SERVPROV query table](/images/flex-fields-img3-12700a279f.png)
