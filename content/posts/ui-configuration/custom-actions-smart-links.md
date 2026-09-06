@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Custom Actions & Smart Links"
 date: 2018-09-21T20:38:00+00:00
 draft: false
-weight: 70
+weight: 26
 tags:
   - "Actions"
   - "Label"
