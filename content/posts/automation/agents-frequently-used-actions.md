@@ -31,7 +31,9 @@ This page covers the most commonly used Oracle OTM agent actions, with syntax ex
 
 This action is used to execute a DML statement or call a PL/SQL procedure from within an agent.
 
-**Insert Statement format:**
+<div class="note-box"><strong>Important:</strong> OTM does not support arbitrary SQL syntax in Direct SQL Update actions. Only a specific subset of Oracle SQL formats are accepted — standard INSERT, UPDATE, DELETE statements and simple PL/SQL procedure calls. Complex constructs such as multi-table joins in UPDATE statements, MERGE, CTEs, or anonymous PL/SQL blocks with DECLARE sections are not supported. Always test your SQL in a lower environment before deploying to production, and keep statements as simple as possible.</div>
+
+**Insert Statement — Example:**
 
 ```sql
 INSERT INTO order_release_refnum (order_release_gid,
