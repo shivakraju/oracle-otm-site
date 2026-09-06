@@ -71,7 +71,37 @@ After PNDP rejects the first leg, go back to TCRP.ADMIN and review the shipments
 
 ![Shipment list showing OTM has re-tendered the first leg to SGTM at $30](/images/basic-otm-configurations-06-te-img5-f89924dec9.png)
 
-OTM automatically re-tendered the first leg to the next available carrier — SGTM — at the $30 rate defined in the Rate Records for that lane.
+OTM automatically re-tendered the first leg to the next available carrier — SGTM — at the $30 rate defined in the Rate Records for that lane. Refer to the rate structure below as a quick reminder of the configured lanes and costs:
+
+<div style="background:#f0f4f8;border:1px solid #d1dce8;border-radius:8px;padding:16px 20px;margin:16px 0;">
+<svg viewBox="0 0 700 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:660px;display:block;margin:0 auto;">
+  <defs>
+    <marker id="arr6" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4a8bb5"/>
+    </marker>
+  </defs>
+  <line x1="268" y1="90" x2="165" y2="248" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr6)"/>
+  <line x1="320" y1="97" x2="320" y2="252" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr6)"/>
+  <line x1="372" y1="82" x2="530" y2="152" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr6)"/>
+  <line x1="215" y1="272" x2="288" y2="272" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr6)"/>
+  <text x="200" y="152" fill="#64748b" font-size="10" text-anchor="end" font-family="Consolas,monospace">SGTM  20-FT  $30</text>
+  <text x="200" y="164" fill="#64748b" font-size="10" text-anchor="end" font-family="Consolas,monospace">SGTM  40-FT  $50</text>
+  <text x="200" y="176" fill="#64748b" font-size="10" text-anchor="end" font-family="Consolas,monospace">PNDP  20-FT  $20</text>
+  <text x="200" y="188" fill="#64748b" font-size="10" text-anchor="end" font-family="Consolas,monospace">PNDP  40-FT  $40</text>
+  <text x="356" y="172" fill="#64748b" font-size="10" font-family="Consolas,monospace">SGTM</text>
+  <text x="356" y="184" fill="#64748b" font-size="10" font-family="Consolas,monospace">53-FT  $75</text>
+  <text x="480" y="118" fill="#64748b" font-size="10" text-anchor="start" font-family="Consolas,monospace">SGTM  40-FT  $50</text>
+  <text x="252" y="312" fill="#64748b" font-size="10" text-anchor="middle" font-family="Consolas,monospace">SGTM  20-FT  $20</text>
+  <rect x="282" y="52" width="76" height="36" rx="6" fill="#1c3557"/>
+  <text x="320" y="75" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">DC</text>
+  <rect x="115" y="254" width="96" height="36" rx="6" fill="#fff" stroke="#1c3557" stroke-width="1.8"/>
+  <text x="163" y="277" fill="#1c3557" font-size="12" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">STORE_A</text>
+  <rect x="282" y="254" width="76" height="36" rx="6" fill="#fff" stroke="#1c3557" stroke-width="1.8"/>
+  <text x="320" y="277" fill="#1c3557" font-size="12" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">STORE_C</text>
+  <rect x="500" y="152" width="96" height="36" rx="6" fill="#fff" stroke="#1c3557" stroke-width="1.8"/>
+  <text x="548" y="175" fill="#1c3557" font-size="12" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">STORE_B</text>
+</svg>
+</div>
 
 ![Shipment detail showing SGTM assigned to first leg after PNDP rejection](/images/basic-otm-configurations-06-te-img6-bae23963e6.png)
 
