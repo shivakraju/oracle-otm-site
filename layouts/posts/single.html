@@ -1,0 +1,32 @@
+{{ define "main" }}
+<article class="markdown book-post">
+  <h1>
+    {{ partial "docs/title" . }}
+  </h1>
+  {{ partial "docs/post-meta" . }}
+  <div class="book-post-content markdown-inner">
+    {{- .Content -}}
+  </div>
+</article>
+
+<div class="cusdis-wrapper">
+  <h3 class="cusdis-heading">Questions &amp; Discussion</h3>
+  <p class="cusdis-intro">Have a question about this topic? Post it below — use your name or a pseudonym, no account required. Comments are reviewed before appearing, usually within 24 hours.</p>
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="bbdff00d-6f62-4246-b5fe-f56b1ada5ee1"
+    data-page-id="{{ .RelPermalink }}"
+    data-page-url="{{ .Permalink }}"
+    data-page-title="{{ .Title }}"
+  ></div>
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+</div>
+{{ end }}
+
+{{ define "toc" }}
+  {{ partial "docs/toc" . }}
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "docs/post-prev-next" . }}
+{{ end }}
