@@ -46,10 +46,10 @@ VPD answers <em>what data can this user see?</em> ACL answers <em>what can this 
 
 OTM application users are grouped and classified based on the daily functions they perform in their organization. Each such group of users is assigned a "Role" in OTM.
 
-A "Role" controls:
+In summary, a "Role" controls:
 
 1. Data visibility (using VPD setups)
-2. User interface or screen access (using ACLs)
+2. UI or Feature Access (using ACLs)
 
 For example, the ADMIN role might have complete data visibility and access to all OTM data and UI functions, whereas the PLANNER role might have access only to a particular domain and particular Order Type PO transactions. The PLANNER may also need access to only a few OTM functions like Order review, Bulk Plan, and Tendering.
 
