@@ -2,7 +2,7 @@
 title: "Saved Queries/Conditions"
 date: 2016-07-20T21:30:00+00:00
 draft: false
-weight: 50
+weight: 5
 tags:
   - "User in Finder"
   - "OTM"
@@ -26,6 +26,8 @@ url: "/posts/saved-queriesconditions/"
 ---
 
 Saved Queries in OTM help to query specific records in a screen or add conditions to custom logic while creating an Agent or similar configuration. They can be reused across multiple OTM features including recurring processes and business monitors.
+
+<div class="note-box"><strong>Start here — this is foundational:</strong> Saved Queries and Conditions are arguably the most important configuration concept in OTM for both UI customisation and automation. Almost every advanced OTM feature — Agents, Business Monitors, Recurring Processes, Action Checks, and custom Workbenches — requires a Saved Query or Condition to define <em>which records</em> the logic should act on. Without a solid grasp of how to build and reuse queries, you cannot effectively configure any of these features.<br><br>Beyond automation, Saved Queries power the everyday user experience: they let you build pre-filtered finder screens that surface only the records relevant to a specific role or workflow — for example, a shipment coordinator who should only see shipments in their region, or an approver who only sees invoices within their approval threshold. A well-designed set of Saved Queries is often the difference between an OTM implementation that users actually adopt and one they work around.<br><br>Invest time here before moving to Agents, Business Monitors, or any other automation topic. Every hour spent mastering Saved Queries will save you many hours of troubleshooting downstream.</div>
 
 **Method 1: Simple Query from the UI using Order Release Finder Screen**
 
