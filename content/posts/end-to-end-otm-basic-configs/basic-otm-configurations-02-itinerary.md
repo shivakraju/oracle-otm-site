@@ -10,6 +10,8 @@ tags:
 aliases:
   - "/posts/basic-otm-configurations-02-itinerary/"
   - "/2020/08/basic-otm-configurations-02-itinerary.html"
+  - "/posts/end-to-end-otm-basic-configs/basic-otm-configurations-02-itinerary/"
+url: "/posts/end-to-end-otm-basic-configs/itinerary/"
 keywords:
   - "Oracle OTM itinerary configuration"
   - "OTM multi-leg itinerary setup"
