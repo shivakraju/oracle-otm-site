@@ -59,7 +59,9 @@ A **Screen Set** controls the broader screen behaviour — the query/finder fiel
 9. In the **General** tab, select the Manager Layout for each mode — New, Edit, View, and Delete. To create a view-only layout, create a view-only Manager Layout, uncheck New, Edit, and Delete in this tab, and assign your view-only layout against the View option.
 10. Click **Finish** to create the custom screen set. It can then be assigned to a menu item for your users.
 
-**Creating custom labels (field names):**
+**Creating Labels (Custom Field and Screen Names):**
+
+Labels in OTM allow you to rename any field caption, button text, or screen title displayed in the UI — useful when your organisation uses different terminology from Oracle's defaults, or when you want to make screens more intuitive for end users without any development work.
 
 <div class="step-box">Configuration and Administration > User Configuration > Label Manager > New</div>
 
