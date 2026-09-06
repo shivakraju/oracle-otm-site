@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Voucher Allocation"
 date: 2020-08-22T04:59:00+00:00
 draft: false
@@ -25,53 +25,47 @@ keywords:
 description: "Covers the Oracle OTM voucher allocation process that runs after invoice approval, distributing freight costs to order releases and updating the ALLOCATION_VOUCHER status."
 ---
 
-**Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:
+After an invoice is approved, OTM creates a Voucher record for it. Voucher Allocation distributes the total freight cost across the Order Releases on the shipment — proportionally by weight or volume — so each PO or Order Release line carries its share of the freight charge.
 
-[01 - Domain, Items, Locations, and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)
+**Voucher record after invoice approval:**
 
-Voucher Allocations
+OTM automatically creates the voucher once the invoice is approved:
 
-After invoice is approved, OTM creates a voucher record for this invoice.
+![Voucher record created after invoice approval](/images/basic-otm-configurations-08-vo-img1-0151e64dfd.png)
 
-  
+At this point the `ALLOCATION_VOUCHER` status on the voucher is **NOT ALLOCATED**:
 
-![](/images/basic-otm-configurations-08-vo-img1-0151e64dfd.png)
+![Voucher showing ALLOCATION_VOUCHER status as NOT ALLOCATED](/images/basic-otm-configurations-08-vo-img2-09dfa2084c.png)
 
-  
+**Define an Allocation Rule:**
 
-At this stage, ALLOCATION_VOUCHER status on the voucher is â€“ NOT ALLOCATED
+An Allocation Rule controls how the total voucher cost is split across Order Release lines. Define a rule that allocates 100% by line-level weight:
 
-  
+<div class="step-box">Financials > Allocation Rule Management > Allocation Rules</div>
 
-![](/images/basic-otm-configurations-08-vo-img2-09dfa2084c.png)
+![Allocation Rule screen showing line level weight at 100%](/images/basic-otm-configurations-08-vo-img3-11037065f9.png)
 
-  
+**Attach the rule to the Service Provider:**
 
-To allocate total voucher costs to correspoding orders based on weight or volume we need to define voucher allocation rule.
+Attach the Allocation Rule to the carrier's Service Provider record so OTM knows which rule to apply when processing vouchers for that carrier's invoices:
 
-Financials > Allocation Rule Management > Allocation Rules:
+![Service Provider screen showing Allocation Rule attached](/images/basic-otm-configurations-08-vo-img4-5c05c98d75.png)
 
-Define allocation rule with line level weight 100%
+**Run Allocate Voucher:**
 
-![](/images/basic-otm-configurations-08-vo-img3-11037065f9.png)
+<div class="step-box">Financials > Manage Vouchers > Voucher Actions > Allocate Voucher</div>
 
-Attach this allocation rule to the service provider.
+The `ALLOCATION_VOUCHER` status changes to **ALLOCATED**:
 
-  
+![Voucher showing ALLOCATION_VOUCHER status as ALLOCATED](/images/basic-otm-configurations-08-vo-img5-e384f3eea3.png)
 
-![](/images/basic-otm-configurations-08-vo-img4-5c05c98d75.png)
+**Verify the allocated cost on the Order Release:**
 
-Now go to voucher actions > Financials > Manage Vouchers > Allocate Voucher
+Open the Order Release in View mode to see the freight cost allocated to it:
 
-Status on the voucher now changes to ALLOCATED.
+![Order Release showing allocated freight cost after voucher allocation](/images/basic-otm-configurations-08-vo-img6-dd1dde4b1d.png)
 
-![](/images/basic-otm-configurations-08-vo-img5-e384f3eea3.png)
-
-After the voucher is allocated, then we can see the Order Release in View mode to see those details:
-
-![](/images/basic-otm-configurations-08-vo-img6-dd1dde4b1d.png)
-
-This information or freight cost allocated to PO level or Order Release Line level is critical because incase where you have multiple POs from different vendors on the same shipment and you want to allocate or identify vendor level shipping costs, use this allocation feature.
+<div class="note-box"><strong>Note:</strong> Voucher Allocation is especially valuable when multiple Purchase Orders from different vendors are consolidated on the same shipment. It lets you identify and report each vendor's precise share of the freight cost — rather than manually apportioning a single lump-sum invoice.</div>
 
 <div style="display:flex;gap:12px;margin-top:32px;border-top:2px solid #e2e8f0;padding-top:20px;flex-wrap:wrap;">
   <a href="/posts/basic-otm-configurations-07-invoicing/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;">
