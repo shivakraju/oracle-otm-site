@@ -28,7 +28,7 @@ Agents in OTM are automation rules that watch for specific events in the system 
 
 <div class="note-box"><strong>Learn by doing:</strong> Agent configuration involves several moving parts — events, conditions, actions, and error handlers — and reading about them in isolation can feel abstract. The most effective way to understand how Agents work is to build one yourself in a lower environment. This post walks through a small but complete working example from start to finish. Once you have built it and seen it fire, the follow-on posts covering Agent Event Restrictions, Frequently Used Actions, Agent Gates, and Business Monitors will make significantly more sense because you will already have a mental model of the full flow.</div>
 
-**Example Requirement:** Send a notification to a specific user when a shipment is created from bulk plan with a total volume less than 100 cubic feet.
+**Example Requirement:** Send a notification to a specific user when a shipment is created with a total volume less than 100 cubic feet.
 
 **High-level steps:**
 
