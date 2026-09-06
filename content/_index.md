@@ -1,25 +1,41 @@
 ---
-title: "What is OTM ?"
+title: "Learn Oracle OTM"
 type: "docs"
 bookToc: false
 ---
 
-OTM stands for Oracle Transportation Management and it is a software product designed to automate various logistics business processes like receiving orders from source ERP systems for freight consolidation, optimizing routes and shipping costs, sending tender requests to service providers(carriers), receiving shipment tracking revents from carriers, recieving and processing invoices from carriers, allocate freight costs to orders, and similar other functions which we will further discuss in future posts.
+<div style="max-width:720px;">
 
-  
-This product is designed such a way that it can be easily configured and customized by IT Consultants for various client specific business needs with minimal technical expertise. IT Technical consultants would need basic Oracle SQL and XML knowledge for customizing the product and Functional consultants would need basic logistics domain knowledge to configure(setup) the product based on the documentation and use cases provided by Oracle. Latest OTM SaaS versions make it easier for clients to just focus on core business configurations to fast track product implementation timelines while Oracle provides necessary infrastructure and application maintainance for all the standard (out of the box) OTM features.  
-  
-This product is originally developed by a company with name "Global Logistics Technologies, Inc" (also known as G-log). G-log was acquired by Oracle around 2005 and was renamed as OTM - Oracle Transportation Management.   
-  
-OTM has in-built integration with Oracle E-Business Suite of applications like Oracle Shipping(WSH). OTM can integrate with any external system by posting and receiving XML files based on GlogXML.xsd (product defined schema/data structure). Latest versions of OTM also support REST-API call based integrations. Note that OTM is not an application/module within the Oracle E-Business Suite of applications. OTM requires a separate installation - web, application and database tiers for on-premise configurations. Please see the next topic "OTM Architecuture" for these details.  
-  
-At a high level, few core capabilities of OTM are mentioned here:  
+<p style="font-size:1.15rem; color:#334155; line-height:1.7; margin-bottom:2rem;">A practical reference for Oracle Transportation Management consultants — written by a practitioner, not a documentation team. Use the topics on the left to navigate, or start below based on where you are in your OTM journey.</p>
 
-  * Receiving Purchase Orders(Order Base) from source ERP systems/legacy systems 
-  * Processing Order Release s(bookings) from the Purchase Orders for partial quantity or complete quantity with manual or automated release instructions
-  * Plan/consolidate Order Releases with common source and destination locations or into multi-stop shipments based on standard Bulk Plan algorithm that is configurable for client specific requirements. Bulk Plan involves identifying Itinerary(route), least cost Service Provider or Carrier (based on pre-uploaded rates), optimize loading of items into containers(equipments), calculating shipment in-transit times based on setups, etc. 
-  * OTM can dynamically fetch LTL rates from third party applications like 'SMC Rateware' and also distances between zip codes using third party applications like 'MILEMAKER', 'PCMILER', etc
-  * Send Tender Offer requests to Service Providers identified during planning. Note that if Carrier cannot accept XML tender files, we need to use Middleware tools like Web Methods, Mulesoft, Oracle BPEL etc to translate OTM outbound XML files to carrier readable formats like EDI files.
-  * Receive Tender Offer response and update the shipment
-  * Receive Shipment Tracking updates from Service Providers and update the shipment
-  * Receive/process invoices from Service Providers, match the invoice costs with planned costs for invoice approvals, create vouchers for approved invoices, allocate the costs against customer orders, etc.
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-bottom:2.5rem;">
+
+<div style="border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; border-top:3px solid #c74634;">
+<div style="font-size:0.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#94a3b8; margin-bottom:0.5rem;">New to OTM?</div>
+<div style="font-weight:600; color:#1e293b; margin-bottom:0.4rem;"><a href="/posts/what-is-otm/" style="color:#1e293b; text-decoration:none;">What is OTM?</a></div>
+<div style="font-size:0.875rem; color:#64748b;">Understand what OTM is, who uses it, and where it fits in the Oracle product landscape.</div>
+</div>
+
+<div style="border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; border-top:3px solid #0369a1;">
+<div style="font-size:0.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#94a3b8; margin-bottom:0.5rem;">Ready to build?</div>
+<div style="font-weight:600; color:#1e293b; margin-bottom:0.4rem;"><a href="/posts/end-to-end-otm-basic-configs/otm-domain-items-locations-and-equipment/" style="color:#1e293b; text-decoration:none;">End-to-End Basic Configs</a></div>
+<div style="font-size:0.875rem; color:#64748b;">Walk through a complete OTM transaction hands-on — from domain setup through invoicing and cost allocation.</div>
+</div>
+
+<div style="border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; border-top:3px solid #16a34a;">
+<div style="font-size:0.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#94a3b8; margin-bottom:0.5rem;">Automating OTM?</div>
+<div style="font-weight:600; color:#1e293b; margin-bottom:0.4rem;"><a href="/posts/agents-sample-agent-creation-steps/" style="color:#1e293b; text-decoration:none;">Agents — Introduction</a></div>
+<div style="font-size:0.875rem; color:#64748b;">Learn how OTM Agents work by building a small working example from scratch in a lower environment.</div>
+</div>
+
+<div style="border:1px solid #e2e8f0; border-radius:8px; padding:1.25rem; border-top:3px solid #6366f1;">
+<div style="font-size:0.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#94a3b8; margin-bottom:0.5rem;">Configuring queries?</div>
+<div style="font-weight:600; color:#1e293b; margin-bottom:0.4rem;"><a href="/posts/saved-queriesconditions/" style="color:#1e293b; text-decoration:none;">Saved Queries & Conditions</a></div>
+<div style="font-size:0.875rem; color:#64748b;">The most foundational configuration in OTM — required for UI customisation, Agents, Monitors, and more.</div>
+</div>
+
+</div>
+
+<p style="font-size:0.8rem; color:#94a3b8; border-top:1px solid #e2e8f0; padding-top:1rem;">This site is maintained by an independent OTM practitioner and is not affiliated with or endorsed by Oracle Corporation. For corrections or feedback write to <a href="mailto:learnotm@outlook.com" style="color:#94a3b8;">learnotm@outlook.com</a>.</p>
+
+</div>
