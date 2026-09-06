@@ -103,7 +103,7 @@ The locations map to real addresses:
 
 **Domain:**
 
-Create a new domain TCRP to hold all configurations and transaction data for this business scenario.
+Create a new domain TCRP to hold all configurations and transaction data for this business scenario. Once your domain is up and running, it is worth reading [OTM Domains — Standard Schema and Data Dictionary](/posts/otm-domains-standard-schema-and-data-dictionary/) — it explains how OTM organises data across domains, the standard database schema, and how domain-level isolation works, which helps you understand why objects you create here stay within TCRP and do not affect other domains.
 
 <div class="step-box">Configuration and Administration > Domain Management > Add Domain</div>
 
