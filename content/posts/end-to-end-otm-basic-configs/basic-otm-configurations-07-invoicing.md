@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Invoicing"
 date: 2020-08-22T04:57:00+00:00
 draft: false
@@ -24,87 +24,59 @@ keywords:
 description: "Explains how Oracle OTM processes carrier invoices by matching them to shipments, applying approval rules, and allocating freight costs to order releases and purchase orders."
 ---
 
-**Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:
+Once shipment execution is completed, the carrier sends a freight charge invoice for settlement. OTM can validate the invoice cost against the planned shipment cost, approve it, and then allocate that cost back to the originating Order Releases or Purchase Orders.
 
-  
+The three steps are: **Match → Approve → Allocate.**
 
-[01 - Domain, Items, Locations, and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)
+**Invoice Matching:**
 
-Invoicing
+A Match Rule identifies which shipment corresponds to an incoming carrier invoice, by comparing reference numbers and the Service Provider. In this scenario the invoice carries the Shipment ID (SID) as a reference number, which is matched to the same reference on the shipment record.
 
-Once Shipment execution is completed, carrier sends invoice and OTM can:
+<div class="step-box">Financials > Payment Rule Management > Match Rule</div>
 
-â€¢ Match invoice to shipment based on MATCH rule
+![Match Rule configuration showing Service Provider and SID refnum matching](/images/basic-otm-configurations-07-in-img1-845c364684.png)
 
-â€¢ Approve Invoice based on Invoice APPROVAL rule
+<div class="note-box"><strong>Note:</strong> In a real-world scenario the reference numbers can be BOL Number, Container Number, or any other carrier-specific reference. The Match Rule links the incoming invoice to the correct shipment regardless of which reference number your carrier uses.</div>
 
-â€¢ Allocate shipment costs to related order releases/POs based on weight or volume
+Once the Match Rule is defined, trigger the matching process on the invoice:
 
-> Invoice Matching:
-> 
-> Carrier who executed the shipping function will send an freigh charge invoice for settlement.
-> 
-> In OTM, we can validate this invoice cost against the OTM planned shipment cost by first matching invoice to a shipment.
-> 
-> This can be done by matching rule.
+<div class="step-box">Invoice > Actions > Auto Match Invoices</div>
 
-> Financials > Payment Rule Management > Match Rule: 
+![Invoice list showing Auto Match Invoices action in the Actions menu](/images/basic-otm-configurations-07-in-img2-0a073a1406.png)
 
-  
+After matching, the link between invoice and shipment is recorded in the `INVOICE_SHIPMENT` table. You can verify this with:
 
-![](/images/basic-otm-configurations-07-in-img1-845c364684.png)
+```sql
+SELECT * FROM INVOICE_SHIPMENT WHERE INVOICE_GID = 'TCRP.20180518-0001'
+```
 
-  
+The Invoice Routes/Ports tab also shows matching and approval notes alongside the matched shipment details:
 
-> A match rule will try to identify a shipment for an invoice by matching:
-> 
-> Â· Service Provider
-> 
-> Â· Refnums as shown above. Here we are creating invoice with SID (Shipment ID) as refnum and matching this to shipment refnum SID. In a real time business scenario these numbers can be BOL Number, Container Number references, etc.
-> 
-> To trigger this matching process go to:
+![Invoice Routes/Ports tab showing matched shipment details and match notes](/images/basic-otm-configurations-07-in-img3-08f8031794.png)
 
-> Invoice Actions > Auto Match Invoices
+**Invoice Approval:**
 
-![](/images/basic-otm-configurations-07-in-img2-0a073a1406.png)
+OTM determines which approval rule to apply based on the rule attached to the approving user's profile. Create an Invoice Approval Rule that covers the expected invoice range:
 
-  
+<div class="step-box">Financials > Payment Rule Management > Invoice Approval Rules</div>
 
-> Invoice once matched to a shipment will be recorded in below table:
-> 
-> SELECT * FROM INVOICE_SHIPMENT WHERE INVOICE_GID = 'TCRP.20180518-0001'
+![Invoice Approval Rule screen showing approval range $1 to $1000](/images/basic-otm-configurations-07-in-img4-d4bbab97fb.png)
 
-  
+This rule approves all invoices between $1 and $1,000. Next, attach this rule to an Approval Rule Profile:
 
-> Invoice Routes/Ports tab will show Match/approval notes, matched shipment details
+![Approval Rule Profile screen with the invoice approval rule attached](/images/basic-otm-configurations-07-in-img5-66238a617c.png)
 
-![](/images/basic-otm-configurations-07-in-img3-08f8031794.png)
+Then attach the profile to the user record so OTM knows which rule to apply when that user approves invoices:
 
-> Invoice Approvals
-> 
-> For a particular user to approve an invoice, note that OTM checks what is the invoice approval rule attached to the user definition.
-> 
-> So, create below invoice approval rule:
-> 
-> Financials > Payment Rule Management > Invoice Approval Rules:
+![User record screen showing the Approval Rule Profile field populated](/images/basic-otm-configurations-07-in-img6-0234c62a46.png)
 
-![](/images/basic-otm-configurations-07-in-img4-d4bbab97fb.png)
+With the rule and profile in place, approve the invoice from the invoice record:
 
-> This rule says approve all invoices from $1 to $1000.
-> 
-> Attach this rule to Approval Rule profile:
+<div class="step-box">Invoice > Actions > Approve</div>
 
-![](/images/basic-otm-configurations-07-in-img5-66238a617c.png)
+![Invoice Actions menu showing the Approve option](/images/basic-otm-configurations-07-in-img7-d217d23638.png)
 
-> Attach this profile to the user record:
-
-> > ![](/images/basic-otm-configurations-07-in-img6-0234c62a46.png)
-
-**Now we can approve invoice using below action:**
-
-  
-
-![](/images/basic-otm-configurations-07-in-img7-d217d23638.png)
+The invoice status changes to **Approved**, and the freight cost is now ready to be allocated back to the originating Order Releases and Purchase Orders in the next step.
 
 <div style="display:flex;gap:12px;margin-top:32px;border-top:2px solid #e2e8f0;padding-top:20px;flex-wrap:wrap;">
   <a href="/posts/basic-otm-configurations-06-tender-process/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;">
