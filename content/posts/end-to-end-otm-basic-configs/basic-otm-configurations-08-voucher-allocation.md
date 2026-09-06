@@ -73,6 +73,9 @@ After the voucher is allocated, then we can see the Order Release in View mode t
 
 This information or freight cost allocated to PO level or Order Release Line level is critical because incase where you have multiple POs from different vendors on the same shipment and you want to allocate or identify vendor level shipping costs, use this allocation feature.
 
-**Basic OTM Configurations:**
-
-[← Invoicing](/posts/basic-otm-configurations-07-invoicing/)
+<div style="display:flex;gap:12px;margin-top:32px;border-top:2px solid #e2e8f0;padding-top:20px;flex-wrap:wrap;">
+  <a href="/posts/basic-otm-configurations-07-invoicing/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;">
+    <div style="font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#64748b;margin-bottom:5px;">&#8592; Previous</div>
+    <div style="font-size:15px;font-weight:600;color:#1c3557;">Invoicing</div>
+  </a>  <div style='flex:1'></div>
+</div>

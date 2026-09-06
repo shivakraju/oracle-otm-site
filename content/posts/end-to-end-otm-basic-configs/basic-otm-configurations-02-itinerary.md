@@ -1,4 +1,4 @@
----
+﻿---
 title: "Itinerary"
 date: 2020-08-22T04:32:00+00:00
 draft: false
@@ -74,6 +74,11 @@ ITIN-D is a multi-leg itinerary — DC to LOC-A (Leg 1), then LOC-A to LOC-B (Le
 
 ![ITIN-D Leg 2 details showing source LOC-A, destination LOC-B, transport mode, and equipment](/images/basic-otm-configurations-02-it-img12-770a4132df.png)
 
-**Basic OTM Configurations:**
-
-[← Domain, Items, Locations, and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)  |  [Service Provider and Rates →](/posts/basic-otm-configurations-03-service-provider-and-rates/)
+<div style="display:flex;gap:12px;margin-top:32px;border-top:2px solid #e2e8f0;padding-top:20px;flex-wrap:wrap;">
+  <a href="/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;">
+    <div style="font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#64748b;margin-bottom:5px;">&#8592; Previous</div>
+    <div style="font-size:15px;font-weight:600;color:#1c3557;">Domain, Items, Locations, and Equipment</div>
+  </a>  <a href="/posts/basic-otm-configurations-03-service-provider-and-rates/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;text-align:right;">
+    <div style="font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#64748b;margin-bottom:5px;">Next &#8594;</div>
+    <div style="font-size:15px;font-weight:600;color:#1c3557;">Service Provider and Rates</div>
+  </a></div>
