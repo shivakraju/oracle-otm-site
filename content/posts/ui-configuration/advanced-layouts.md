@@ -2,7 +2,7 @@
 title: "Advanced Layouts"
 date: 2017-04-06T21:09:00+00:00
 draft: false
-weight: 80
+weight: 30
 tags:
   - "Advanced Layout"
   - "Panel splitter"
@@ -47,3 +47,4 @@ This is useful when the default query criteria on standard screens is not flexib
 8. Click **Finish**. Attach this layout to your menu as a link.
 
 9. When the menu link is clicked, the saved query executes and results are displayed in the advanced layout.
+

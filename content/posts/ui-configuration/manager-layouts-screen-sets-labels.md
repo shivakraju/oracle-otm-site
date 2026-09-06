@@ -2,7 +2,7 @@
 title: "Manager Layouts, Screen Sets, Labels"
 date: 2017-04-06T21:05:00+00:00
 draft: false
-weight: 70
+weight: 20
 tags:
   - "Manager Layouts"
   - "Labels"
@@ -64,3 +64,4 @@ A **Screen Set** controls the broader screen behaviour â€” the query/finder
 <div class="step-box">Configuration and Administration > User Configuration > Label Manager > New</div>
 
 Log in as DBA.ADMIN (required for this navigation). Enter the Label ID and the display text for the label.
+

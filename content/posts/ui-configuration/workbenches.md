@@ -2,7 +2,7 @@
 title: "Workbenches"
 date: 2026-05-14T18:55:04+00:00
 draft: false
-weight: 60
+weight: 10
 aliases:
   - "/2026/05/workbenches.html"
 keywords:
@@ -118,3 +118,4 @@ On the blank layout, go to the top right corner and click 'Add Content' and ente
 Click OK, then click 'Done Editing' from the right side panel.
 
 To test, select a PO that has order releases and query it using the first layout. Related order releases should appear in the second layout. Selecting an order release that has shipments should display the shipment records in the third layout.
+
