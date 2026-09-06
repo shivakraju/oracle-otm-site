@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Business Numbers, Planning Parameter"
 date: 2020-08-22T04:47:00+00:00
 draft: false
@@ -25,73 +25,55 @@ keywords:
 description: "Explains how to configure custom Business Number rules and Planning Parameters in Oracle OTM to control how shipment and order IDs are generated during bulk planning."
 ---
 
-**Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:
-
-  
-
-[01 - Domain, Items, Locations, and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)
-
 **Business Numbers:**
 
-OTM has default numbering for all business data objects like the one shown below for shipment - 01001.
+OTM auto-generates IDs for business objects — shipments, order releases, invoices — using Business Number Rules. By default, shipments get a simple sequential number (e.g. 01001). A custom rule lets you embed the date, a prefix, or a domain-specific sequence into the generated ID, making it easier to identify records and align with your organisation's numbering conventions.
 
-  
+The default shipment number looks like this:
 
-![](/images/basic-otm-configurations-04-bu-img1-18e64bcaca.png)
+![Default OTM shipment number showing sequential ID format](/images/basic-otm-configurations-04-bu-img1-18e64bcaca.png)
 
-  
+To customise the shipment number format, edit the Business Number Rule for the TCRP domain:
 
-To change this to a specific number requested by business, we can do below:
+<div class="step-box">Business Process Automation > Power Data > Business Numbers > Business Number Rule > Search for %SHIPMENT%</div>
 
-Business Process Automation > Power Data > Business Numbers > Business Number Rule > Search for %SHIPMENT%
+You will see a default rule at the TCRP domain level for generating the XID. Edit this rule:
 
-You will notice that there is default rule (TCRP domain level) for generating XID. Let us edit this rule for this domain:
+![Business Number Rule list showing the default SHIPMENT rule for TCRP domain](/images/basic-otm-configurations-04-bu-img2-0ce1184927.png)
 
-  
+Build a new rule using a combination of static and dynamic expressions:
 
-![](/images/basic-otm-configurations-04-bu-img2-0ce1184927.png)
+<div class="field-box"><strong>'SHIP'</strong> — static prefix</div>
 
-  
+<div class="field-box"><strong>{dddddddd:id=1}</strong> — date in YYYYMMDD format (dynamic)</div>
 
-Letâ€™s change this to use below rule. Rule is combination of static and dynamic expressions. Let us use three expressions:
+<div class="field-box"><strong>'-'</strong> — static hyphen separator</div>
 
-'SHIP' which is static
+<div class="field-box"><strong>{nnnnn:start=01000}</strong> — five-digit sequence starting at 01000 (dynamic)</div>
 
-{dddddddd:id=1} for date is YYYYMMDD format
+![Business Number Rule editor showing the four expression components](/images/basic-otm-configurations-04-bu-img3-73428c0a62.png)
 
-One Hyphen which is static
+With this rule in place, planned shipments generate IDs in the format `SHIP20200822-01000`:
 
-{nnnnn:start=01000} for a five digit number starting with 01000 value
-
-![](/images/basic-otm-configurations-04-bu-img3-73428c0a62.png)
-
-Now if you plan a shipment, it will generate ID as below:
-
-  
-
-![](/images/basic-otm-configurations-04-bu-img4-ffe4ea06c0.png)
-
-  
+![Shipment list showing newly generated ID in the custom format](/images/basic-otm-configurations-04-bu-img4-ffe4ea06c0.png)
 
 **Planning Parameter:**
 
-  
+A Planning Parameter Set controls the behaviour of OTM Bulk Plan — consolidation rules, time windows, cost optimisation settings, and more. Each domain should have its own parameter set so plan settings can be tuned independently.
 
-Shipment Management > Power Data > General > Parameter Sets > New > Enter â€˜TCRP_PLANâ€™ as new ID and save the record.
+Create a new parameter set for the TCRP domain:
 
-  
+<div class="step-box">Shipment Management > Power Data > General > Parameter Sets > New</div>
 
-![](/images/basic-otm-configurations-04-bu-img5-a647769878.png)
+<div class="field-box"><strong>Parameter Set ID:</strong> TCRP_PLAN</div>
 
-  
+![Planning Parameter Set screen for TCRP_PLAN with default values](/images/basic-otm-configurations-04-bu-img5-a647769878.png)
 
-Note that all above configuration parameters can be changed based on business requirements and they control how OTM Bulk Plan algorithm works. For now let us proceed with default values.
+<div class="note-box"><strong>Note:</strong> All parameters in the set control how the Bulk Plan algorithm works — consolidation windows, maximum stops, weight/volume thresholds, etc. For this scenario we proceed with default values. In production these are tuned to match business planning rules.</div>
 
-Now let us set this parameter as default planning parameter for domain TCRP.
+Set TCRP_PLAN as the default planning parameter for the TCRP domain so it is pre-selected each time a Bulk Plan is submitted:
 
-Configuration and Administration > Domain Management > Domain Settings > Search > Select TCRP record and Edit > Change Parameter Set ID=TCRP_PLAN > Finished.
-
-Now while submitting bulk plan, this new parameter comes up as default parameter.
+<div class="step-box">Configuration and Administration > Domain Management > Domain Settings > Search > Select TCRP > Edit > Set Parameter Set ID = TCRP_PLAN > Finished</div>
 
 <div style="display:flex;gap:12px;margin-top:32px;border-top:2px solid #e2e8f0;padding-top:20px;flex-wrap:wrap;">
   <a href="/posts/basic-otm-configurations-03-service-provider-and-rates/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;">
