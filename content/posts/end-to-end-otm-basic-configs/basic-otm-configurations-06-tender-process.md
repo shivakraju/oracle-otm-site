@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Tender Process"
 date: 2020-08-22T04:55:00+00:00
 draft: false
@@ -24,89 +24,66 @@ keywords:
 description: "Demonstrates the Oracle OTM tender process, showing how to notify a carrier about a shipment using the Secure Resources action, and how shipment statuses change through the tender lifecycle."
 ---
 
-**Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:
+After Bulk Plan creates Shipments, the next step is to notify the carrier — this is called Tendering. The carrier receives the shipment details (pickup time, locations, equipment), then accepts or rejects the tender. If rejected, OTM automatically re-tenders to the next available carrier on the lane.
 
-  
+**Shipment status after Bulk Plan:**
 
-[01 - Domain, Items, Locations, and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)
+When shipments are first created by Bulk Plan, their Secure Resources status is **SECURE_RESOURCES_NOT_STARTED**, meaning no tender has been sent yet.
 
-Tender Process
+![Shipment list showing SECURE_RESOURCES_NOT_STARTED status after Bulk Plan](/images/basic-otm-configurations-06-te-img1-70d35394c8.png)
 
-When shipments are created, note that status on these shipments is SECURE RESOURCES_NOT STARTED.
+**Send the tender:**
 
-  
+<div class="step-box">Shipment > Actions > Shipment Management > Tender > Secure Resources</div>
 
-![](/images/basic-otm-configurations-06-te-img1-70d35394c8.png)
+![Secure Resources action dialog for selected shipments](/images/basic-otm-configurations-06-te-img2-96cea8f493.png)
 
-  
+After this action the Secure Resources status changes to **TENDERED**. OTM sends a tender notification to the carrier — this can be an XML message to an external TMS/EDI system, or an email notification, depending on the configuration at the Service Provider level.
 
-At this point, we need to notify carrier about the shipment information like pickup time and location. This can be done using:
+**Carrier accept / reject:**
 
-Shipment > Actions > Shipment Management > Tender > Secure Resources
+The carrier responds to the tender in one of two ways:
 
-  
+- Via EDI integration (automated, in production)
+- By logging into OTM with the **Service Provider** role and accepting or rejecting manually
 
-![](/images/basic-otm-configurations-06-te-img2-96cea8f493.png)
+For manual login, the default credentials follow this format:
 
-Notice that Shipment SECURE_RESOURCE status changes to 'TENDERED' 
+<div class="field-box"><strong>User ID:</strong> SERVPROV.DOMAIN-SCAC (e.g. SERVPROV.TCRP-PNDP)</div>
 
-  
+<div class="field-box"><strong>Password:</strong> CHANGEME</div>
 
-OTM sends out tender XML to external system or email notification to carrier based on configuration at the service provider level.
+In this scenario, login as the PNDP carrier first and decline the tender:
 
-  
+![OTM login screen using Service Provider credentials for PNDP](/images/basic-otm-configurations-06-te-img3-34e7fdac05.png)
 
-Carrier should respond to the tender either via EDI or manually login into OTM app with 'Service Provider' role and accept or reject the tender.
+The carrier sees outstanding tenders in their queue:
 
-Tender Accept/Reject Process
+![Tender list showing the outstanding tender for the PNDP carrier](/images/basic-otm-configurations-06-te-img4-5be841085c.png)
 
-Assume that carriers have access to OTM application in that case they can login as:
+<div class="step-box">Select the record > Actions > Accept / Decline</div>
 
-> SERVPROV.DOMAIN-SCAC format as default USER ID
-> 
-> CHANGEME as default password
+Decline this tender as the PNDP carrier. Then login as the SGTM carrier and accept the tender for the second leg.
 
-  
+**OTM re-tenders automatically:**
 
-In this scenario, we login as SGTM and PNDP carriers and accept/reject these tenders:
+After PNDP rejects the first leg, go back to TCRP.ADMIN and review the shipments:
 
-![](/images/basic-otm-configurations-06-te-img3-34e7fdac05.png)
+![Shipment list showing OTM has re-tendered the first leg to SGTM at $30](/images/basic-otm-configurations-06-te-img5-f89924dec9.png)
 
-You can see the outstanding tenders for the carrier:
+OTM automatically re-tendered the first leg to the next available carrier — SGTM — at the $30 rate defined in the Rate Records for that lane.
 
-  
+![Shipment detail showing SGTM assigned to first leg after PNDP rejection](/images/basic-otm-configurations-06-te-img6-bae23963e6.png)
 
-![](/images/basic-otm-configurations-06-te-img4-5be841085c.png)
+Login as SERVPROV.TCRP-SGTM to see the new tender for the first leg:
 
-You can select this record and Actions > Accept/Decline. Letâ€™s decline this PNDP carrier tender.
+![OTM tender queue for SGTM showing the re-tendered first leg shipment](/images/basic-otm-configurations-06-te-img7-06b4e21ec1.png)
 
-  
+Accept this tender. Both shipments now show Secure Resources status as **ACCEPTED**:
 
-**Accept the tender for SGTM carrier:**
+![Shipment list showing both shipments with tender status ACCEPTED](/images/basic-otm-configurations-06-te-img8-8c7043a964.png)
 
-  
-
-Now go back to TCRP.ADMIN and review the shipments.
-
-![](/images/basic-otm-configurations-06-te-img5-f89924dec9.png)
-
-First leg shipment PNDP carrier rejected, so OTM automatically tendered to next available carrier SGTM with $30 rate we defined.
-
-  
-
-![](/images/basic-otm-configurations-06-te-img6-bae23963e6.png)
-
-Now we login as SERVPROV.TCRP-SGTM to see this new tender for first leg.
-
-  
-
-![](/images/basic-otm-configurations-06-te-img7-06b4e21ec1.png)
-
-  
-
-Accept this tender. Now we can see both the shipments are show tender as accepted.
-
-![](/images/basic-otm-configurations-06-te-img8-8c7043a964.png)
+With both legs tendered and accepted, the shipments are confirmed with their carriers and ready for the next step: invoicing.
 
 <div style="display:flex;gap:12px;margin-top:32px;border-top:2px solid #e2e8f0;padding-top:20px;flex-wrap:wrap;">
   <a href="/posts/basic-otm-configurations-05-bulk-plan/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;">
