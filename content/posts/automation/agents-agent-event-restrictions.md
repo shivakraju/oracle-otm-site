@@ -66,7 +66,7 @@ Set the following expression to check for the reference number in the XML:
 #OB_REFNUM/OB_REFNUM_QUAL_GID<>DOMAIN.SOURCE_SYSTEM
 ```
 
-If the `SOURCE_SYSTEM` reference number does not exist in the XML, the standard **DON'T PERSIST** action is triggered â€” meaning the PO is not created in OTM.
+If the `SOURCE_SYSTEM` reference number does not exist in the XML, the standard **DON'T PERSIST** action is triggered — meaning the PO is not created in OTM.
 
 Upload a PO XML without the `SOURCE_SYSTEM` reference number. The transmission will show as PROCESSED, but no Order Base record will be created:
 

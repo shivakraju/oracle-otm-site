@@ -23,7 +23,7 @@ description: "Explains how to create Oracle OTM Advanced Layouts with panel spli
 url: "/posts/advanced-layouts/"
 ---
 
-Advanced Layouts allow you to build screens that display multiple related business objects side by side. For example, you can show shipments matching a complex saved query in one panel, and the corresponding order releases for a selected shipment in an adjacent panel â€” all on the same screen.
+Advanced Layouts allow you to build screens that display multiple related business objects side by side. For example, you can show shipments matching a complex saved query in one panel, and the corresponding order releases for a selected shipment in an adjacent panel — all on the same screen.
 
 This is useful when the default query criteria on standard screens is not flexible enough, or when planners need a combined view of parent and child records without navigating between separate screens.
 
@@ -36,13 +36,13 @@ This is useful when the default query criteria on standard screens is not flexib
 
 3. Give the layout an ID (name).
 
-4. Right-click on the **Layout** text to see options â€” **Add Panel Splitter** and **Add Table**.
+4. Right-click on the **Layout** text to see options — **Add Panel Splitter** and **Add Table**.
 
 5. Click **Add Table** to add a simple table panel.
 
 6. Select the table under Layout. The table properties appear on the right side.
 
-7. In the properties, set the **Screen Set ID** (how to display the data) and the **Population Method** (such as Saved Query â€” which controls what data is loaded when the layout is launched).
+7. In the properties, set the **Screen Set ID** (how to display the data) and the **Population Method** (such as Saved Query — which controls what data is loaded when the layout is launched).
 
 8. Click **Finish**. Attach this layout to your menu as a link.
 

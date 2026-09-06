@@ -24,7 +24,7 @@ description: "Explains Oracle OTM Reference Numbers (Refnums), how to define qua
 url: "/posts/refnums/"
 ---
 
-OTM provides the flexibility to associate custom attributes â€” also called refnums â€” to every transaction object such as Order Base, Order Release, and Shipment. Developers can use these refnums to store client-specific values like source system information, custom dates, and other custom fields. Note that newer versions of OTM also have attribute (flex field) columns for the same purpose, which are covered in a separate post.
+OTM provides the flexibility to associate custom attributes — also called refnums — to every transaction object such as Order Base, Order Release, and Shipment. Developers can use these refnums to store client-specific values like source system information, custom dates, and other custom fields. Note that newer versions of OTM also have attribute (flex field) columns for the same purpose, which are covered in a separate post.
 
 To create a refnum, navigate to the specific business object menu. For a Shipment refnum:
 
@@ -37,7 +37,7 @@ Enter the following values:
 
 <div class="note-box"><strong>Note:</strong> When using the 'Many' option, the Qualifier ID and Value combination must be unique so that inbound XML transmissions do not fail.</div>
 
-Once the refnum qualifier is defined, you can use it to enter data just like any other attribute â€” select the qualifier from the dropdown, enter a value, and save:
+Once the refnum qualifier is defined, you can use it to enter data just like any other attribute — select the qualifier from the dropdown, enter a value, and save:
 
 [![OTM refnum entry on shipment screen](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigJtwF0DrDi2XECmHsjLPTn8yEOkLlz2TnbO2LMcZ-yXOKHA57-Qko_TCVdodHYlDAqgXEmzuwRniVwv6lCo8qti8SyFfI29daOTBKi_LwHDHMbIhYijTYiDWrVvjpWniwlivnEnbtjfE/s640/Capture0707_001.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigJtwF0DrDi2XECmHsjLPTn8yEOkLlz2TnbO2LMcZ-yXOKHA57-Qko_TCVdodHYlDAqgXEmzuwRniVwv6lCo8qti8SyFfI29daOTBKi_LwHDHMbIhYijTYiDWrVvjpWniwlivnEnbtjfE/s1600/Capture0707_001.JPG)
 

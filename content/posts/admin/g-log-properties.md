@@ -25,7 +25,7 @@ url: "/posts/g-log-properties/"
 
 <div class="note-box"><strong>Note:</strong> This post applies to OTM version 6.x and below.</div>
 
-The G-Log Properties file on the OTM App and Web servers holds the configuration that controls interactions between the App, Web, and Database tiers. It also contains configurable application settings such as the number of results to display on search screens. Always take a backup of the current file before making any changes â€” the file is read during application reboot and any corruption will cause application issues.
+The G-Log Properties file on the OTM App and Web servers holds the configuration that controls interactions between the App, Web, and Database tiers. It also contains configurable application settings such as the number of results to display on search screens. Always take a backup of the current file before making any changes — the file is read during application reboot and any corruption will cause application issues.
 
 **To view current properties from the application:**
 

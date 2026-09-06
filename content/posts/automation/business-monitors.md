@@ -26,7 +26,7 @@ description: "Covers how to create and configure Business Monitors in Oracle OTM
 url: "/posts/business-monitors/"
 ---
 
-The Business Monitor is designed to give planners and operations teams real-time visibility into critical business transactions relevant to their role. For example, a planner can configure a monitor to display all orders that failed during bulk planning, using a saved query and screen set â€” then attach the monitor to their user profile or role so it updates automatically.
+The Business Monitor is designed to give planners and operations teams real-time visibility into critical business transactions relevant to their role. For example, a planner can configure a monitor to display all orders that failed during bulk planning, using a saved query and screen set — then attach the monitor to their user profile or role so it updates automatically.
 
 You can launch the Business Monitor by clicking the flag icon at the top of the OTM page.
 

@@ -38,8 +38,8 @@ Every rule definition consists of one or more instructions enclosed in braces `{
 **Common expression formats:**
 
 ```
-{dddddddd:id=1}               â€” Date in YYYYDDMM format
-{nnnn:start=1000:end=4999}    â€” 4-digit number starting at 1000, ending at 4999
+{dddddddd:id=1}               — Date in YYYYDDMM format
+{nnnn:start=1000:end=4999}    — 4-digit number starting at 1000, ending at 4999
 ```
 
 **To edit an existing Business Number rule:**
@@ -47,11 +47,11 @@ Every rule definition consists of one or more instructions enclosed in braces `{
 1. Ensure the existing rule is not set as the Default.
 2. Create a new BN rule and set it as the Default.
 3. Specify the rule definition to control how the generated number is formed.
-4. Ensure the **BN Type** on the new rule matches the BN Type of the original rule â€” otherwise the system will not generate the number.
+4. Ensure the **BN Type** on the new rule matches the BN Type of the original rule — otherwise the system will not generate the number.
 
 **Backend Table:**
 
-The `BN_SEQUENCE` table maintains two critical columns â€” `BN_CONTEXT` and `CURVALUE` â€” both derived from the BN rule.
+The `BN_SEQUENCE` table maintains two critical columns — `BN_CONTEXT` and `CURVALUE` — both derived from the BN rule.
 
 **Example:**
 

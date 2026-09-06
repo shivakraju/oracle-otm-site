@@ -102,7 +102,7 @@ AND    status = 'INVALID';
 
 This should return no rows.
 
-<div class="note-box"><strong>Note:</strong> Ask your system administrator for the &lt;OTM Home&gt; path â€” this is the base directory on the server where OTM is installed. Get the glogowner schema password from your DBA.</div>
+<div class="note-box"><strong>Note:</strong> Ask your system administrator for the &lt;OTM Home&gt; path — this is the base directory on the server where OTM is installed. Get the glogowner schema password from your DBA.</div>
 
 **Init.ora file:**
 
@@ -184,7 +184,7 @@ The EM port is in `$ORACLE_HOME/install/readme.txt`. Access the console at:
 https://otm-server:1158/em
 ```
 
-The first time you access it, the browser may throw a certificate exception â€” add the exception to continue.
+The first time you access it, the browser may throw a certificate exception — add the exception to continue.
 
 **EM user account issues:**
 

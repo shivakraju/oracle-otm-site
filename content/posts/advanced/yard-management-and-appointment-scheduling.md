@@ -37,7 +37,7 @@ A warehouse typically has a Parking Yard and Dock Doors. The yard has Rows and e
 
 To move a container from port to yard, a custom container ranking algorithm can be used based on parameters such as PO priority and delivery dates. Warehouse staff use this rank to identify which containers to pull to the door first.
 
-Once the shipment or container is in a yard slot, the next step is to assign it to a dock door â€” a process called scheduling an appointment. Each dock door has time slots (for example, 30-minute slots) for loading or unloading activity that can be configured on the location resource.
+Once the shipment or container is in a yard slot, the next step is to assign it to a dock door — a process called scheduling an appointment. Each dock door has time slots (for example, 30-minute slots) for loading or unloading activity that can be configured on the location resource.
 
 Depending on the requirement, the drayage carrier should be notified once the appointment is created in the system for a specific container. This is typically done by sending a tender offer EDI 204 file with expected delivery time and details like Yard/Door number. EDI 204 can be triggered based on status update events from the ocean carrier, such as 'Available for Delivery'.
 

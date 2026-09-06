@@ -21,7 +21,7 @@ keywords:
   - "OTM functor class agent gate"
   - "Oracle Transportation Management workflow gate"
   - "OTM domain level agent gate control"
-description: "Covers Oracle OTM Agent Gates, which allow consultants to add saved-query conditions to standard OTM events and workflows â€” such as blocking the tender workflow for specific transport modes â€” at the domain level."
+description: "Covers Oracle OTM Agent Gates, which allow consultants to add saved-query conditions to standard OTM events and workflows — such as blocking the tender workflow for specific transport modes — at the domain level."
 url: "/posts/agent-gates/"
 ---
 

@@ -27,23 +27,23 @@ url: "/posts/emailing-reports-to-users-on-a-business-event/"
 
 OTM can automatically generate a report and email it as an attachment when a business event occurs. The example below shows how to send a custom report to the user who created a purchase order when a shipment tender is accepted.
 
-**Step 1 â€” Create a Report Set:**
+**Step 1 — Create a Report Set:**
 
 <div class="step-box">Business Process Automation > Reporting > Report Manager > Report Set Manager</div>
 
 Create a Report Set and include your report. You may add multiple reports to the Report Set as required.
 
-**Step 2 â€” Create a SHIPMENT agent with a PRINT DOCUMENT action:**
+**Step 2 — Create a SHIPMENT agent with a PRINT DOCUMENT action:**
 
 Create a SHIPMENT agent that listens to the **SHIPMENT - STATUS CHANGED** event with the restriction **SECURE RESOURCES_ACCEPTED**. Add the following standard action to the agent:
 
 <div class="field-box"><strong>PRINT DOCUMENT:</strong> Specify the name of the Report Set from Step 1 and the output format (e.g. PDF). When a tender is accepted, this action generates the report and OTM raises a standard <strong>REPORT-READY</strong> event for the generated report.</div>
 
-**Step 3 â€” Create a REPORT agent that listens to the REPORT-READY event:**
+**Step 3 — Create a REPORT agent that listens to the REPORT-READY event:**
 
 Create a REPORT agent that listens to the **REPORT-READY** event with an event restriction that filters on the Report Set name from Step 1. Add the following two actions to this agent:
 
-**Action 1 â€” ASSIGN VARIABLE to fetch the PO creator:**
+**Action 1 — ASSIGN VARIABLE to fetch the PO creator:**
 
 Use the ASSIGN VARIABLE action with the following SQL to fetch the user who created the purchase order:
 
@@ -60,9 +60,9 @@ AND    vsor.order_release_gid = orl.order_release_gid
 AND    orl.order_base_gid = ob.order_base_gid
 ```
 
-<div class="note-box"><strong>Note:</strong> The REPORT_LOG_PARAMETER table stores the input parameter values used for each report run. This query fetches the Shipment ID parameter value and joins to the related PO to identify the creator. A separate report definition for email purposes may be required â€” report definitions with multiple parameters beyond Shipment ID may not work reliably in this context.</div>
+<div class="note-box"><strong>Note:</strong> The REPORT_LOG_PARAMETER table stores the input parameter values used for each report run. This query fetches the Shipment ID parameter value and joins to the related PO to identify the creator. A separate report definition for email purposes may be required — report definitions with multiple parameters beyond Shipment ID may not work reliably in this context.</div>
 
-**Action 2 â€” NOTIFY CONTACT:**
+**Action 2 — NOTIFY CONTACT:**
 
 Use the NOTIFY CONTACT action with the following settings:
 
@@ -76,7 +76,7 @@ Use the NOTIFY CONTACT action with the following settings:
 <ul>
 <li>Template Name: workflow/DefaultReportEventHtml.xsl (Standard)</li>
 <li>Format: text/html</li>
-<li>Subject Property Key: {2} â€” this ensures the email subject uses the value defined in the NOTIFY CONTACT action</li>
+<li>Subject Property Key: {2} — this ensures the email subject uses the value defined in the NOTIFY CONTACT action</li>
 <li>Message Direction: OUTBOUND</li>
 <li>Type: XSL</li>
 <li>Attachments: EMBED</li>

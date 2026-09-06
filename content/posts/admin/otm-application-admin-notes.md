@@ -30,7 +30,7 @@ description: "Quick-reference notes for Oracle OTM application administrators co
 url: "/posts/otm-application-admin-notes/"
 ---
 
-This post covers common tasks for OTM application administrators â€” finding the installation path, restarting the application, applying Oracle patches, and resetting admin passwords.
+This post covers common tasks for OTM application administrators — finding the installation path, restarting the application, applying Oracle patches, and resetting admin passwords.
 
 **OTM installation path:**
 
@@ -38,7 +38,7 @@ To find the OTM home directory, log in to the OTM application and access the Pro
 
 <div class="step-box">http://otm-server:7777/GC3/glog.webserver.properties.PropertiesServlet</div>
 
-Click **List** to display the current G-Log properties. Note the following property â€” this is the base OTM installation path:
+Click **List** to display the current G-Log properties. Note the following property — this is the base OTM installation path:
 
 <div class="field-box"><strong>gc3.dir:</strong> /home/oracle/otm</div>
 
@@ -46,13 +46,13 @@ This is referred to as `$OTM_HOME` throughout this post. The actual path differs
 
 **Key directories:**
 
-<div class="field-box"><strong>G-Log properties:</strong> $OTM_HOME/glog/config â€” default application properties including DB connection details and install paths.</div>
+<div class="field-box"><strong>G-Log properties:</strong> $OTM_HOME/glog/config — default application properties including DB connection details and install paths.</div>
 
-<div class="field-box"><strong>Script8 folder:</strong> $OTM_HOME/glog/oracle/script8 â€” standard Oracle-provided scripts for maintenance tasks such as changing ADMIN passwords and recompiling DB objects.</div>
+<div class="field-box"><strong>Script8 folder:</strong> $OTM_HOME/glog/oracle/script8 — standard Oracle-provided scripts for maintenance tasks such as changing ADMIN passwords and recompiling DB objects.</div>
 
-<div class="field-box"><strong>Web install:</strong> $OTM_HOME/install/ohs â€” OTM web tier software.</div>
+<div class="field-box"><strong>Web install:</strong> $OTM_HOME/install/ohs — OTM web tier software.</div>
 
-<div class="field-box"><strong>App install:</strong> $OTM_HOME/install/weblogic â€” OTM application tier software.</div>
+<div class="field-box"><strong>App install:</strong> $OTM_HOME/install/weblogic — OTM application tier software.</div>
 
 <div class="field-box"><strong>App log files:</strong> $OTM_HOME/logs/weblogic</div>
 
@@ -67,7 +67,7 @@ cd $OTM_HOME/install
 ./gc3env.sh
 ```
 
-When stopping OTM, bring the web tier down first (to stop user traffic), then the app tier. When starting, reverse the order â€” app first, then web.
+When stopping OTM, bring the web tier down first (to stop user traffic), then the app tier. When starting, reverse the order — app first, then web.
 
 **Stop the web tier:**
 

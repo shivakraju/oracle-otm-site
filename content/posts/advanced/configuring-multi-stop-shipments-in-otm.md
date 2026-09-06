@@ -28,7 +28,7 @@ description: "Step-by-step guide to configuring multi-stop shipments in Oracle O
 url: "/posts/configuring-multi-stop-shipments-in-otm/"
 ---
 
-In OTM, a **multi-stop shipment** is a single shipment that picks up or delivers freight at more than one location. For example, a truck may pick up goods from one warehouse and deliver them to multiple customer locations in sequence â€” all on the same shipment.
+In OTM, a **multi-stop shipment** is a single shipment that picks up or delivers freight at more than one location. For example, a truck may pick up goods from one warehouse and deliver them to multiple customer locations in sequence — all on the same shipment.
 
 OTM's Bulk Plan algorithm can automatically consolidate multiple orders into a single multi-stop shipment to optimize transportation costs. To enable this, the following areas need to be configured.
 
@@ -124,7 +124,7 @@ On the Rate Offering, update the below stop count limits:
 
 For direct shipments, OTM only needs distance from the source location to the destination location. However, for multi-stop shipments, OTM also needs distances **between each stop** to correctly calculate the total route distance and shipment costs.
 
-<div class="field-box">Maintain distance records between all stop locations that may appear together on a multi-stop shipment â€” not just from origin to final destination.</div>
+<div class="field-box">Maintain distance records between all stop locations that may appear together on a multi-stop shipment — not just from origin to final destination.</div>
 
 <div class="field-box">If you use an external mileage engine (such as PC*MILER, MileMaker, or RatewareXL), verify that it is configured to return distances between intermediate stops and not just the direct origin-to-destination distance.</div>
 

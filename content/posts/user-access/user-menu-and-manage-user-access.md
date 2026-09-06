@@ -36,7 +36,7 @@ Note that while creating a user, the following values are mandatory:
 - <div class="field-box"><strong>Password:</strong> Initial password for the user</div>
 - <div class="field-box"><strong>User Role ID:</strong> Default role for that user after initial login</div>
 
-You can restrict the menu so that a user sees only specific screens â€” for example, only the Purchase Order (Order Base) screen. First create a custom menu with that single screen set link, then associate the menu to the user or role.
+You can restrict the menu so that a user sees only specific screens — for example, only the Purchase Order (Order Base) screen. First create a custom menu with that single screen set link, then associate the menu to the user or role.
 
 **Menu Creation:**
 

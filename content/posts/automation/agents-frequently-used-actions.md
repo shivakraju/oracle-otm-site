@@ -120,8 +120,8 @@ Variables declared in a parent agent can be accessed from a child agent.
 
 Refer to the topic "Agent Variables" in OTM Help for built-in variables such as `$gid`.
 
-- `$gid` refers to the current object ID on which the agent is triggered â€” for example, Order Release GID for an Order Release agent, or Shipment GID for a Shipment agent.
-- `$event_gid` â€” if an agent listens to both ORDER - CREATED and ORDER - MODIFIED events and you need an action specific to ORDER - CREATED only, use `$EVENT_GID` to distinguish between the two.
+- `$gid` refers to the current object ID on which the agent is triggered — for example, Order Release GID for an Order Release agent, or Shipment GID for a Shipment agent.
+- `$event_gid` — if an agent listens to both ORDER - CREATED and ORDER - MODIFIED events and you need an action specific to ORDER - CREATED only, use `$EVENT_GID` to distinguish between the two.
 
 ---
 
@@ -206,7 +206,7 @@ Used in an ORDER BASE agent to release the instructions associated with that Ord
 
 From a Shipment agent, links related Order Bases to the shipment. Prerequisites:
 
-- Corresponding Order Bases (POs) must already be released â€” Order Releases must exist.
+- Corresponding Order Bases (POs) must already be released — Order Releases must exist.
 - The Shipment Ship Unit Line qualifier **CIN** value must match the Order Base (PO Number).
 
 ---

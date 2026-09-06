@@ -30,10 +30,10 @@ Agents in OTM are workflow processes that listen to specific events happening in
 
 **High-level steps:**
 
-1. Identify the business object â€” in this example, **Shipment**.
-2. Identify the OTM event â€” in this example, **Shipment - Created**.
-3. Identify the conditions that must be met â€” the shipment must be a bulk plan shipment and have volume less than 100 cubic feet.
-4. Define the action â€” send a notification.
+1. Identify the business object — in this example, **Shipment**.
+2. Identify the OTM event — in this example, **Shipment - Created**.
+3. Identify the conditions that must be met — the shipment must be a bulk plan shipment and have volume less than 100 cubic feet.
+4. Define the action — send a notification.
 5. Define error handling actions.
 
 ---
@@ -106,11 +106,11 @@ Click **Add Action** and select **Notify Contact**.
 
 In the Notify Contact action:
 
-- **Contact:** Select the user to notify â€” in this example, `ADMIN`.
+- **Contact:** Select the user to notify — in this example, `ADMIN`.
 - **Communication Method:** `MESSAGE CENTER` (or select Email depending on requirements).
 - **Subject:** Write the notification message text.
 - Click **Save**.
-- Optionally click **Error Handler** to define actions that run if the agent fails â€” for example, sending an alert to the system administrator.
+- Optionally click **Error Handler** to define actions that run if the agent fails — for example, sending an alert to the system administrator.
 - Click **Finished**.
 
 ![](/images/agents-sample-agent-creation-s-img6-3b5e1ecabb.png)

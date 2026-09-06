@@ -26,7 +26,7 @@ description: "Explains Oracle OTM Action Checks, a configuration feature for add
 url: "/posts/action-checks/"
 ---
 
-Action Checks allow you to add custom validations on manager layouts before data is saved to the database. This is useful when a screen has conditional mandatory fields â€” for example, requiring either a pre-existing location XID or a full set of address fields, but not both.
+Action Checks allow you to add custom validations on manager layouts before data is saved to the database. This is useful when a screen has conditional mandatory fields — for example, requiring either a pre-existing location XID or a full set of address fields, but not both.
 
 **Example Scenario:**
 
@@ -40,7 +40,7 @@ A custom manager layout allows users to enter PO details. The destination can be
 
 <div class="field-box"><strong>Audit Action ID:</strong> Covers all standard user actions. For this scenario, select <strong>ADD ORDER BASE</strong> as the audit action.</div>
 
-<div class="field-box"><strong>Allow Condition:</strong> The SQL condition that must pass in order for the error NOT to display. In the example below, the condition allows the save to proceed if <code>source_location_gid &lt;&gt; 'DEFAULT'</code> OR the custom attribute <code>OB.Attribute2</code> (Address Line 1) is not null â€” meaning at least one destination detail is present.</div>
+<div class="field-box"><strong>Allow Condition:</strong> The SQL condition that must pass in order for the error NOT to display. In the example below, the condition allows the save to proceed if <code>source_location_gid &lt;&gt; 'DEFAULT'</code> OR the custom attribute <code>OB.Attribute2</code> (Address Line 1) is not null — meaning at least one destination detail is present.</div>
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-xiRTAfX9K5eoEMT5_JI3M65hGxUejeprsISuSzddUeaOY0nr0pxZZrTQi2pPz_t38NaBdUy9X7PwWcsstZf2AeMSk2hDAtSRS8r_SXNViGB0viU1cEkyTTuNdkfNSoIntXKH1Ye-ubI/s400/Capture1.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-xiRTAfX9K5eoEMT5_JI3M65hGxUejeprsISuSzddUeaOY0nr0pxZZrTQi2pPz_t38NaBdUy9X7PwWcsstZf2AeMSk2hDAtSRS8r_SXNViGB0viU1cEkyTTuNdkfNSoIntXKH1Ye-ubI/s1600/Capture1.JPG)
 
@@ -48,7 +48,7 @@ A custom manager layout allows users to enter PO details. The destination can be
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm3t3iuSrt4d5KmeWLef_hBl7P77g8Dw-lysomJjyWqfidt9v2jAMEZLm4UUXqjSg05qiWUTTYQbtaKNlZYLi6145Oa0BS4aRSTQVRvFx_6FeHPKaS2eyajRMrufSpGBotoGKqqr6QCvA/s400/Capture2.JPG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm3t3iuSrt4d5KmeWLef_hBl7P77g8Dw-lysomJjyWqfidt9v2jAMEZLm4UUXqjSg05qiWUTTYQbtaKNlZYLi6145Oa0BS4aRSTQVRvFx_6FeHPKaS2eyajRMrufSpGBotoGKqqr6QCvA/s1600/Capture2.JPG)
 
-<div class="field-box"><strong>Post Action Check:</strong> When checked, validation runs after the action executes but before data is committed to the database. For Delete Record validations, this should be <strong>unchecked</strong>. You can also add the same Audit Action twice â€” once with Post Action Check enabled and once without â€” to cover both pre- and post-action scenarios.</div>
+<div class="field-box"><strong>Post Action Check:</strong> When checked, validation runs after the action executes but before data is committed to the database. For Delete Record validations, this should be <strong>unchecked</strong>. You can also add the same Audit Action twice — once with Post Action Check enabled and once without — to cover both pre- and post-action scenarios.</div>
 
 **Testing:**
 

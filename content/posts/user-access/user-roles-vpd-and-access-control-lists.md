@@ -59,7 +59,7 @@ Before defining roles for a domain, identify the following:
 
 <div class="field-box"><strong>User Role ID:</strong> Give a unique ID for the role</div>
 
-<div class="field-box"><strong>Level:</strong> Give this value the same as the Role ID. This can be used to group a set of roles â€” for example, if you want to assign a single menu to a set of roles, give this Level the same value for all such roles.</div>
+<div class="field-box"><strong>Level:</strong> Give this value the same as the Role ID. This can be used to group a set of roles — for example, if you want to assign a single menu to a set of roles, give this Level the same value for all such roles.</div>
 
 <div class="field-box"><strong>Data Source Profile ID:</strong> DEFAULT</div>
 
@@ -90,11 +90,11 @@ select * from external_predicate where vpd_profile_gid = 'DOMAIN.VPD_PROFILE_ID'
 
 **Grantee User Role:** Add all role names in this list that require access to the current role being defined. For example, if you have a role like LOGISTICS_SUPERUSER and those users need to switch to the current role, add 'LOGISTICS_SUPERUSER' in this list. It is better to add the Domain ADMIN role to all new roles you define for that domain. Adding this access should be done from a DBA.ADMIN login if the current user has restricted privileges at the current domain level.
 
-**Access Control List:** This is used to restrict certain screens (certain UI-based functionality) like bulk plans and tender actions. OTM has 'Access Control Entry Points' for each UI function, and has also grouped most commonly used entry points into default Access Control Lists that can be readily used â€” for example, 'Bulk Plan - View'.
+**Access Control List:** This is used to restrict certain screens (certain UI-based functionality) like bulk plans and tender actions. OTM has 'Access Control Entry Points' for each UI function, and has also grouped most commonly used entry points into default Access Control Lists that can be readily used — for example, 'Bulk Plan - View'.
 
 As per Oracle documentation, every custom ACL defined with the 'Granted' option checked should include the 'COMMON' ACL provided by Oracle. This COMMON list covers standard OTM functionality like user logins.
 
-**Example â€” ACL for order-only access:**
+**Example — ACL for order-only access:**
 
 <div class="field-box"><strong>Access Control:</strong> ORDER_ONLY_ACCESS (or any name)</div>
 
@@ -106,9 +106,9 @@ Child Access Control List values: Allocation - View, COMMON, Customer-Actions, C
 
 To restrict users from seeing Bulk Plan related data, create a custom ACL using these child ACLs:
 
-- Bulk Plan â€” View
-- Bulk Plan â€” Update
-- Bulk Plan â€” Actions
+- Bulk Plan — View
+- Bulk Plan — Update
+- Bulk Plan — Actions
 
 To use this as a restricted list in the role definition, uncheck the "Granted" checkbox when saving this ACL in the "Access Control List" section of the Role definition.
 
@@ -121,7 +121,7 @@ If you cannot control certain access with ACLs provided by Oracle, you may need 
 <div class="field-box"><strong>User ID:</strong> Unique ID such as an employee number</div>
 <div class="field-box"><strong>User Name:</strong> Unique name or ID from the organization's IT/HR system</div>
 <div class="field-box"><strong>Password / Retype password:</strong> Provide the initial password</div>
-<div class="field-box"><strong>User Role ID:</strong> The role defined above â€” this will be the default role for that user at login, appearing in the top right corner of the application</div>
+<div class="field-box"><strong>User Role ID:</strong> The role defined above — this will be the default role for that user at login, appearing in the top right corner of the application</div>
 
 **OTM Tables:**
 

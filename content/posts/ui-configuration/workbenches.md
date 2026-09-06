@@ -16,7 +16,7 @@ keywords:
   - "OTM workbench parent child content"
   - "Oracle OTM workbench default query"
   - "OTM workbench buy shipments order release"
-description: "Explains how to create Oracle OTM Workbenches that display multiple related business objects in a hierarchical view â€” for example, Purchase Orders linked to Order Releases and Shipments â€” on a single screen."
+description: "Explains how to create Oracle OTM Workbenches that display multiple related business objects in a hierarchical view — for example, Purchase Orders linked to Order Releases and Shipments — on a single screen."
 url: "/posts/workbenches/"
 ---
 
@@ -29,8 +29,8 @@ A workbench has one or more layouts and each layout can be associated to content
 **For this scenario, three layouts are needed:**
 
 - Purchase Orders layout with content from the Order Base table
-- Order Releases/Bookings layout with content from the Order Release table â€” this is a detail (child) level for the Purchase Order content
-- Shipment layout with content from the Buy Shipments table â€” this is detail (child) level content associated to the selected order release
+- Order Releases/Bookings layout with content from the Order Release table — this is a detail (child) level for the Purchase Order content
+- Shipment layout with content from the Buy Shipments table — this is detail (child) level content associated to the selected order release
 
 <div class="note-box"><strong>Note:</strong> As a prerequisite, you need screensets defined for each of the above layouts before proceeding. Screenset configuration is covered in a separate post.</div>
 
@@ -69,7 +69,7 @@ On the new blank layout, go to the top right corner and click 'Add content' and 
 - <div class="field-box"><strong>Tab Name:</strong> Bookings</div>
 - <div class="field-box"><strong>Screen Set:</strong> ORDER_RELEASE</div>
 - Check 'Detail Table'
-- <div class="field-box"><strong>Associated Tables â€” Purchase Order Saved Search:</strong> TEMP_ORDER_REL</div>
+- <div class="field-box"><strong>Associated Tables — Purchase Order Saved Search:</strong> TEMP_ORDER_REL</div>
 
 <div class="note-box"><strong>Note:</strong> The 'Associated Table' option establishes the link from the parent PO level data to child order release level data records.</div>
 
@@ -110,8 +110,8 @@ On the blank layout, go to the top right corner and click 'Add Content' and ente
 - <div class="field-box"><strong>Tab Name:</strong> Shipments</div>
 - <div class="field-box"><strong>Screen Set:</strong> BUY_SHIPMENT</div>
 - Check 'Detail Table'
-- <div class="field-box"><strong>Associated Tables â€” Purchase Order Saved Search:</strong> Leave blank</div>
-- <div class="field-box"><strong>Associated Tables â€” Bookings Saved Search:</strong> TEMP_SHIPMENT</div>
+- <div class="field-box"><strong>Associated Tables — Purchase Order Saved Search:</strong> Leave blank</div>
+- <div class="field-box"><strong>Associated Tables — Bookings Saved Search:</strong> TEMP_SHIPMENT</div>
 
 <div class="note-box"><strong>Note:</strong> The 'Associated Table' option here establishes the link from the parent Order Release level data to child shipment level data records.</div>
 

@@ -38,6 +38,6 @@ If you want to add new status types, you can create external statuses based on c
 
 <div class="step-box">Configuration and Administration Data > Power Data > General > Status Types > New</div>
 
-- <div class="field-box"><strong>Status Type ID:</strong> Enter a qualifier or name â€” this appears when you click the 'Status' button</div>
+- <div class="field-box"><strong>Status Type ID:</strong> Enter a qualifier or name — this appears when you click the 'Status' button</div>
 - <div class="field-box"><strong>Object Type:</strong> Enter the object this status applies to, for example 'Shipment'</div>
-- <div class="field-box"><strong>Status Values:</strong> Use the naming convention of Status Type ID followed by an underscore and the status value. Add all possible values and mark one as 'Initial Value' â€” this will be the default when the transaction is created. You can update these values via SQL DML through Agents based on standard or custom events.</div>
+- <div class="field-box"><strong>Status Values:</strong> Use the naming convention of Status Type ID followed by an underscore and the status value. Add all possible values and mark one as 'Initial Value' — this will be the default when the transaction is created. You can update these values via SQL DML through Agents based on standard or custom events.</div>

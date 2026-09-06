@@ -24,11 +24,11 @@ description: "Covers how to create and customize Manager Layouts and Screen Sets
 url: "/posts/manager-layouts-screen-sets-labels/"
 ---
 
-OTM ships with a variety of screens for each business object â€” Shipment, Order Release, and others â€” and most of these screens can be copied and customized to show only the data elements relevant to a particular user or role. For example, a user may need to query a shipment by a custom attribute, see only selected columns in the results, and open a view-only layout to prevent accidental edits. All of this can be configured from the OTM UI using Manager Layouts and Screen Sets.
+OTM ships with a variety of screens for each business object — Shipment, Order Release, and others — and most of these screens can be copied and customized to show only the data elements relevant to a particular user or role. For example, a user may need to query a shipment by a custom attribute, see only selected columns in the results, and open a view-only layout to prevent accidental edits. All of this can be configured from the OTM UI using Manager Layouts and Screen Sets.
 
-A **Manager Layout** controls the arrangement of data elements on a screen â€” which fields appear, what labels they carry, and where the data comes from.
+A **Manager Layout** controls the arrangement of data elements on a screen — which fields appear, what labels they carry, and where the data comes from.
 
-A **Screen Set** controls the broader screen behaviour â€” the query/finder fields, the results columns, available Actions and Smart Links, and which Manager Layouts are used for New, Edit, and View modes.
+A **Screen Set** controls the broader screen behaviour — the query/finder fields, the results columns, available Actions and Smart Links, and which Manager Layouts are used for New, Edit, and View modes.
 
 **Creating custom layouts:**
 
@@ -53,10 +53,10 @@ A **Screen Set** controls the broader screen behaviour â€” the query/finder
 3. Select the screen set and click **Copy Screen Set**.
 4. Enter the ID for the new screen set and change the label name if required.
 5. In the **Search** tab, add or remove fields used as search criteria.
-6. In the **Default Criteria** tab, add filter conditions to restrict the data being searched â€” for example, by order type or business unit.
+6. In the **Default Criteria** tab, add filter conditions to restrict the data being searched — for example, by order type or business unit.
 7. In the **Results** tab, control which columns appear in the results screen after a search. Reference numbers and Refnum fields can also be added here. The Sequence Number controls the column display order.
 8. The **Actions** and **Smart Links** tabs show the actions and smart links that can be added or removed. These are covered in the Custom Actions topic.
-9. In the **General** tab, select the Manager Layout for each mode â€” New, Edit, View, and Delete. To create a view-only layout, create a view-only Manager Layout, uncheck New, Edit, and Delete in this tab, and assign your view-only layout against the View option.
+9. In the **General** tab, select the Manager Layout for each mode — New, Edit, View, and Delete. To create a view-only layout, create a view-only Manager Layout, uncheck New, Edit, and Delete in this tab, and assign your view-only layout against the View option.
 10. Click **Finish** to create the custom screen set. It can then be assigned to a menu item for your users.
 
 **Creating custom labels (field names):**
