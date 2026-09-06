@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Service Provider and Rates"
 date: 2020-08-22T04:43:00+00:00
 draft: false
@@ -29,87 +29,71 @@ keywords:
 description: "Covers how to define service providers with SCAC codes and configure rate offerings, rate services, and rate records in Oracle OTM as part of the basic end-to-end configuration series."
 ---
 
-**Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:
+OTM models carrier contracting in two layers: a **Rate Offering** (the contract — who, what transport mode, what service level) and **Rate Records** (the lanes — source, destination, and cost). Bulk Plan uses Rate Offerings and Rate Records to select a carrier and calculate freight cost for each shipment leg.
 
-  
+**Service Provider:**
 
-[01 - Domain, Items, Locations, and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)
+A Service Provider (carrier) must exist in OTM before a Rate Offering can be created. Each carrier requires a SCAC code — the four-letter industry identifier that uniquely distinguishes them.
 
-**Service Provider (Carrier):**
+<div class="step-box">Contract and Rate Management > Service Provider Manager</div>
 
-Define two service providers with their SCAC codes and country code as USA as shown below:
+Define two service providers for the TCRP scenario:
 
-Contract and Rate Management > Service Provider Manager:
+<div class="field-box"><strong>SGTM</strong> — SCAC: SGTM, Country Code: USA</div>
 
-![](/images/basic-otm-configurations-03-se-img1-d84a74c0db.png)
+<div class="field-box"><strong>PNDP</strong> — SCAC: PNDP, Country Code: USA</div>
 
-  
+![Service Provider list showing SGTM and PNDP](/images/basic-otm-configurations-03-se-img1-d84a74c0db.png)
 
-**Rates:**
+**Rate Offering:**
 
-  
+A Rate Offering defines the high-level contract between your organisation and a carrier — the transport mode, rate service (transit time method), and distance engine. Create one Rate Offering per carrier.
 
-Create new Rate Offering that details high level contract details between your organization and service providers like type of offering(TL,LTL, PARCEL, etc.), Rate Service, Rate Distance, etc.
+<div class="step-box">Contract and Rate Management > Contract Management > Rate Offering</div>
 
-  
+Create the Rate Offering for carrier SGTM with the following details:
 
-Contract and Rate Management > Contract Management > Rate Offering > Enter below data:
+<div class="field-box"><strong>Offering ID:</strong> SGTM_TL</div>
 
-  
+<div class="field-box"><strong>Offering Type:</strong> TL</div>
 
-> Offering ID=SGTM_TL
-> 
-> Offering Type=TL
-> 
-> Service Provider=SGTM
-> 
-> Rate Service ID=TL-SIM
-> 
-> Version=EXP2020 (New)
-> 
-> Rate Distance ID=LOOKUP ELSE ESTIMATE
+<div class="field-box"><strong>Service Provider:</strong> SGTM</div>
 
-  
+<div class="field-box"><strong>Rate Service ID:</strong> TL-SIM</div>
 
-Note that here we are using default Rate Service and Rate Distance provided by Oracle. However it is possible to configure external engines for time and distance calculations like PCMILER, RATEWARE XL.
+<div class="field-box"><strong>Version:</strong> EXP2020 (New)</div>
 
-  
+<div class="field-box"><strong>Rate Distance ID:</strong> LOOKUP ELSE ESTIMATE</div>
 
-Next create new Rate Records  which define cost details for each lane served by the service provider as per the contract agreed.
+<div class="note-box"><strong>Note:</strong> TL-SIM and LOOKUP ELSE ESTIMATE are default Rate Service and Rate Distance configurations provided by Oracle. For production implementations it is possible to configure external engines such as PC*MILER for mileage and RATEWARE XL for LTL rate calculations.</div>
 
-  
+**Rate Records:**
 
-Open Rate Offering > Actions > Create Rate Record > Enter below data:
+Rate Records define the cost for each lane (source city to destination city) within the Rate Offering. Each lane the carrier serves needs a separate Rate Record.
 
-> Rate Record ID= SGTM_TL_DC_STOREB
-> 
-> Source Geo Hierarchy=CITY
-> 
-> Destination Geo Hierarchy=CITY
-> 
-> SG city= INDIANAPOLIS
-> 
-> SG Province Code= IN
-> 
-> SG Country Code ID= USA
-> 
-> DG City= CHARLOTTE
-> 
-> DG Province Code=NC
-> 
-> DG Country Code ID=USA
-> 
-> Rate Cost > Charge 100 USD PER Buy Shipment
+<div class="step-box">Open Rate Offering > Actions > Create Rate Record</div>
 
-  
+Create the first Rate Record for the DC to LOC-B lane (Indianapolis to Charlotte):
 
-![](/images/basic-otm-configurations-03-se-img2-b7d3679583.png)
+<div class="field-box"><strong>Rate Record ID:</strong> SGTM_TL_DC_STOREB</div>
 
-> Define other rate records as shown below: 
+<div class="field-box"><strong>Source Geo Hierarchy:</strong> CITY</div>
 
-![](/images/basic-otm-configurations-03-se-img3-bae23963e6.png)
+<div class="field-box"><strong>Source City / Province / Country:</strong> INDIANAPOLIS / IN / USA</div>
 
-![](/images/basic-otm-configurations-03-se-img4-1e8cf7b957.png)
+<div class="field-box"><strong>Destination Geo Hierarchy:</strong> CITY</div>
+
+<div class="field-box"><strong>Destination City / Province / Country:</strong> CHARLOTTE / NC / USA</div>
+
+<div class="field-box"><strong>Rate Cost:</strong> 100 USD PER BUY SHIPMENT</div>
+
+![Rate Record screen for SGTM_TL_DC_STOREB showing lane and cost details](/images/basic-otm-configurations-03-se-img2-b7d3679583.png)
+
+Define the remaining Rate Records for all other lanes in the same way:
+
+![Rate Records list showing all lanes for SGTM](/images/basic-otm-configurations-03-se-img3-bae23963e6.png)
+
+![Rate Records list showing lanes for PNDP](/images/basic-otm-configurations-03-se-img4-1e8cf7b957.png)
 
 <div style="display:flex;gap:12px;margin-top:32px;border-top:2px solid #e2e8f0;padding-top:20px;flex-wrap:wrap;">
   <a href="/posts/basic-otm-configurations-02-itinerary/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;">
