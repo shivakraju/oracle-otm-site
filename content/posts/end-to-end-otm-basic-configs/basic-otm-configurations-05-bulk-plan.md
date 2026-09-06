@@ -24,7 +24,7 @@ keywords:
 description: "Walks through creating a purchase order and running Bulk Plan in Oracle OTM to generate shipments, as part of the basic end-to-end configuration series."
 ---
 
-Bulk Plan is OTM's automated planning engine. It reads Order Releases, matches them against the Itineraries and Rate Records configured in earlier posts, and creates optimised Shipments with carrier assignments and freight cost.
+Bulk Plan is OTM's automated planning engine. It reads Order Release or Order Movements, matches them against the Itineraries and Rate Records configured in earlier posts, and creates optimised Shipments with carrier assignments and freight cost.
 
 **Create an Order Base:**
 
