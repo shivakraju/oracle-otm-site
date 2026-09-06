@@ -1,5 +1,5 @@
 ---
-title: "Agents - Frequently Used Actions"
+title: "Agents - Actions"
 date: 2016-08-05T20:29:00+00:00
 draft: false
 weight: 30
