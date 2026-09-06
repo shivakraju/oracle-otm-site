@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Itinerary"
 date: 2020-08-22T04:32:00+00:00
 draft: false
@@ -24,75 +24,55 @@ keywords:
 description: "Explains how to define itineraries in Oracle OTM as part of the basic configuration series, including setting up source-to-destination legs used during bulk plan route optimization."
 ---
 
-**Itinerary:**
+An Itinerary defines the route OTM Bulk Plan uses to move freight — the origin region, destination region, transport mode, and equipment types for each leg. Bulk Plan matches order release origins and destinations against itinerary lanes to determine which route to use. Without a matching itinerary, planning will fail.
 
-**Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:
+For the TCRP scenario we defined four itineraries — three single-leg and one multi-leg. Refer to the [business scenario](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/) for the full network diagram.
 
-  
+**Itinerary summary:**
 
-[01 - Domain, Items, Locations, and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)
+![Table showing ITIN-A through ITIN-D with source, destination, carriers, and equipment](/images/basic-otm-configurations-02-it-img1-f4ab54eb77.png)
 
-  
+<div class="note-box"><strong>S</strong> = Source Location &nbsp;&nbsp; <strong>D</strong> = Destination Location</div>
 
-**Define Itineraries as below:**
+**Create itineraries:**
 
-  
+<div class="step-box">Shipment Management > Itinerary Management > Itinerary</div>
 
-![](/images/basic-otm-configurations-02-it-img1-f4ab54eb77.png)
+![Itinerary list screen showing ITIN-A, ITIN-B, ITIN-C, ITIN-D](/images/basic-otm-configurations-02-it-img2-247e7d669f.png)
 
-> *S=Source Location
-> 
-> *D=Destination Location
+**Single-leg itineraries (ITIN-A, ITIN-B, ITIN-C):**
 
-  
+ITIN-A, ITIN-B, and ITIN-C are each single-leg itineraries — one direct lane from source to destination. The header defines the lane (source and destination location groups) and the leg defines the transport mode and equipment types.
 
-Shipment Management > Itinerary Management > Itinerary:
+![ITIN-A header showing source and destination lane](/images/basic-otm-configurations-02-it-img3-a577b1ef97.png)
 
-  
+![ITIN-A leg details showing transport mode and equipment group profile](/images/basic-otm-configurations-02-it-img4-0847727dcb.png)
 
-![](/images/basic-otm-configurations-02-it-img2-247e7d669f.png)
+![ITIN-B configuration screen](/images/basic-otm-configurations-02-it-img5-51c047e157.png)
 
-ITIN_A, B and C are single leg itineraries in format similar to below:
+![ITIN-C configuration screen](/images/basic-otm-configurations-02-it-img6-d142177af0.png)
 
-![](/images/basic-otm-configurations-02-it-img3-a577b1ef97.png)
+**Multi-leg itinerary (ITIN-D):**
 
-![](/images/basic-otm-configurations-02-it-img4-0847727dcb.png)
+ITIN-D is a multi-leg itinerary — DC to LOC-A (Leg 1), then LOC-A to LOC-B (Leg 2). The itinerary header shows only the overall source and final destination; the intermediate stop (LOC-A) is defined at the leg level.
 
-![](/images/basic-otm-configurations-02-it-img5-51c047e157.png)
+<div class="note-box"><strong>Note:</strong> The lane definition on the itinerary header shows the source location and final destination only. Intermediate stops are configured within each leg.</div>
 
-  
+![ITIN-D header showing DC as source and LOC-B as final destination](/images/basic-otm-configurations-02-it-img7-d892b20abc.png)
 
-![](/images/basic-otm-configurations-02-it-img6-d142177af0.png)
+![ITIN-D lane definition screen](/images/basic-otm-configurations-02-it-img8-8c9ab76fab.png)
 
-  
+**Leg 1 — DC to LOC-A:**
 
-ITIN_D is multi-leg itinerary, with leg1 from Indianapolis to Nashville and leg2 from Nashville to Atlanta defined as below:
+![ITIN-D Leg 1 header showing sequence and name](/images/basic-otm-configurations-02-it-img9-67a3ab1305.png)
 
-![](/images/basic-otm-configurations-02-it-img7-d892b20abc.png)
+![ITIN-D Leg 1 details showing source DC, destination LOC-A, transport mode, and equipment](/images/basic-otm-configurations-02-it-img10-e716e063ec.png)
 
-  
+**Leg 2 — LOC-A to LOC-B:**
 
-![](/images/basic-otm-configurations-02-it-img8-8c9ab76fab.png)
+![ITIN-D Leg 2 header](/images/basic-otm-configurations-02-it-img11-fbaf4986c2.png)
 
-Note that lane defintion above shows source location and final destination only. 
-
-  
-
-**Leg1:**
-
-![](/images/basic-otm-configurations-02-it-img9-67a3ab1305.png)
-
-  
-
-![](/images/basic-otm-configurations-02-it-img10-e716e063ec.png)
-
-**Leg2:**
-
-![](/images/basic-otm-configurations-02-it-img11-fbaf4986c2.png)
-
-  
-
-![](/images/basic-otm-configurations-02-it-img12-770a4132df.png)
+![ITIN-D Leg 2 details showing source LOC-A, destination LOC-B, transport mode, and equipment](/images/basic-otm-configurations-02-it-img12-770a4132df.png)
 
 **Basic OTM Configurations:**
 
