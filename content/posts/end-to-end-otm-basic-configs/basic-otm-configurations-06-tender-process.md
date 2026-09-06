@@ -101,8 +101,6 @@ OTM automatically re-tendered the first leg to the next available carrier — SG
 </svg>
 </div>
 
-![Shipment detail showing SGTM assigned to first leg after PNDP rejection](/images/basic-otm-configurations-06-te-img6-bae23963e6.png)
-
 Login as SERVPROV.TCRP-SGTM to see the new tender for the first leg:
 
 ![OTM tender queue for SGTM showing the re-tendered first leg shipment](/images/basic-otm-configurations-06-te-img7-06b4e21ec1.png)
