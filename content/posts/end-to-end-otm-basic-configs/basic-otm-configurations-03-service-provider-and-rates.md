@@ -15,6 +15,8 @@ tags:
 aliases:
   - "/posts/basic-otm-configurations-03-service-provider-and-rates/"
   - "/2020/08/basic-otm-configurations-03-service.html"
+  - "/posts/end-to-end-otm-basic-configs/basic-otm-configurations-03-service-provider-and-rates/"
+url: "/posts/end-to-end-otm-basic-configs/service-provider-and-rates/"
 keywords:
   - "Oracle OTM service provider setup"
   - "OTM carrier rate configuration"

@@ -10,6 +10,8 @@ tags:
 aliases:
   - "/posts/basic-otm-configurations-05-bulk-plan/"
   - "/2020/08/basic-otm-configurations-05-bulk-plan.html"
+  - "/posts/end-to-end-otm-basic-configs/basic-otm-configurations-05-bulk-plan/"
+url: "/posts/end-to-end-otm-basic-configs/bulk-plan/"
 keywords:
   - "Oracle OTM bulk plan configuration steps"
   - "OTM bulk plan run order release"

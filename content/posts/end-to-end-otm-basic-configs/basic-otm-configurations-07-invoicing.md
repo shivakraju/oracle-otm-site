@@ -10,6 +10,8 @@ tags:
 aliases:
   - "/posts/basic-otm-configurations-07-invoicing/"
   - "/2020/08/basic-otm-configurations-07-invoicing.html"
+  - "/posts/end-to-end-otm-basic-configs/basic-otm-configurations-07-invoicing/"
+url: "/posts/end-to-end-otm-basic-configs/invoicing/"
 keywords:
   - "Oracle OTM invoicing configuration"
   - "OTM carrier invoice match rule"

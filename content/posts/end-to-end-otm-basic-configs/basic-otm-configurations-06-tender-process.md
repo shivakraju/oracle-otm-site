@@ -10,6 +10,8 @@ tags:
 aliases:
   - "/posts/basic-otm-configurations-06-tender-process/"
   - "/2020/08/basic-otm-configurations-06-tender.html"
+  - "/posts/end-to-end-otm-basic-configs/basic-otm-configurations-06-tender-process/"
+url: "/posts/end-to-end-otm-basic-configs/tender-process/"
 keywords:
   - "Oracle OTM tender process configuration"
   - "OTM secure resources tender shipment"

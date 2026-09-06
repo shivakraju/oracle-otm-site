@@ -11,6 +11,8 @@ tags:
 aliases:
   - "/posts/basic-otm-configurations-04-business-numbers-planning-parameter/"
   - "/2020/08/basic-otm-configurations-04-business.html"
+  - "/posts/end-to-end-otm-basic-configs/basic-otm-configurations-04-business-numbers-planning-parameter/"
+url: "/posts/end-to-end-otm-basic-configs/business-numbers-planning-parameter/"
 keywords:
   - "Oracle OTM business number rule configuration"
   - "OTM shipment number sequence setup"

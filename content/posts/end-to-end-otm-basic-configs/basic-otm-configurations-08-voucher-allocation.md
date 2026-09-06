@@ -11,6 +11,8 @@ tags:
 aliases:
   - "/posts/basic-otm-configurations-08-voucher-allocation/"
   - "/2020/08/basic-otm-configurations-08-voucher.html"
+  - "/posts/end-to-end-otm-basic-configs/basic-otm-configurations-08-voucher-allocation/"
+url: "/posts/end-to-end-otm-basic-configs/voucher-allocation/"
 keywords:
   - "Oracle OTM voucher allocation configuration"
   - "OTM voucher allocation invoice approved"
