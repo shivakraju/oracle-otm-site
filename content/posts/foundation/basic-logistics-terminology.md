@@ -2,7 +2,7 @@
 title: "Basic Logistics Terminology"
 date: 2016-04-14T23:00:00+00:00
 draft: false
-weight: 20
+weight: 30
 tags:
   - "THU"
   - "LTL"
