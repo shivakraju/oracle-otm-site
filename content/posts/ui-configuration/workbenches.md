@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Workbenches"
 date: 2026-05-14T18:55:04+00:00
 draft: false
-weight: 10
+weight: 40
 aliases:
   - "/2026/05/workbenches.html"
 keywords:
