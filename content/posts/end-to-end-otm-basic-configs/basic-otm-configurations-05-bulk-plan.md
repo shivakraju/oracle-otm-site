@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Bulk Plan"
 date: 2020-08-22T04:52:00+00:00
 draft: false
@@ -24,104 +24,89 @@ keywords:
 description: "Walks through creating a purchase order and running Bulk Plan in Oracle OTM to generate shipments, as part of the basic end-to-end configuration series."
 ---
 
-**Note:** This post is continuation to topic: 01 and these configurations are specific to business scenario mentioned in that post. Link below to that post for quick reference:
+Bulk Plan is OTM's automated planning engine. It reads Order Releases, matches them against the Itineraries and Rate Records configured in earlier posts, and creates optimised Shipments with carrier assignments and freight cost.
 
-  
+**Create an Order Base:**
 
-[01 - Domain, Items, Locations, and Equipment](/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/)
+An Order Base (Purchase Order) represents a buying commitment for a quantity of goods. Order Releases drawn from it represent shipments of specific quantities.
 
-**Bulk Plan:**
+<div class="step-box">Order Management > Purchase Order > Order Base > New</div>
 
-**Create a new purchase order/order base record:**
+Enter the following details for the TCRP scenario:
 
-Order Management > Purchase Order > Order Base > New >Enter below data:
+<div class="field-box"><strong>Order Base ID:</strong> PO2018051001</div>
 
-  
+<div class="field-box"><strong>Order Configuration:</strong> ONE_TO_ONE</div>
 
-> Order Base ID= PO2018051001
-> 
-> Order Configuration=ONE_TO_ONE
-> 
-> Item ID= ITEMA01
-> 
-> Source Location ID= DC_TCRP
-> 
-> Destination Location ID= STORE_B
-> 
-> Total Package Count=100
+<div class="field-box"><strong>Item ID:</strong> ITEMA01</div>
 
-  
+<div class="field-box"><strong>Source Location ID:</strong> DC_TCRP</div>
 
-**Create two new order releases:**
+<div class="field-box"><strong>Destination Location ID:</strong> STORE_B</div>
 
-  
+<div class="field-box"><strong>Total Package Count:</strong> 100</div>
 
-> Order Base > Actions > Order Management > Change Order > Release Lines
-> 
-> Click button New Release Instruction
-> 
-> Unit Amount=20(Qty being released for shipping)
-> 
->   
-> 
-> 
-> Order Base > Actions > Order Management > Change Order > Release Lines
-> 
-> Click button New Release Instruction
-> 
-> Unit Amount=10(Qty being released for shipping)
+<div class="note-box"><strong>Note:</strong> Order Configuration <strong>ONE_TO_ONE</strong> means each Order Release will generate exactly one Shipment. This is the simplest configuration and appropriate for this scenario.</div>
 
-**Now Query for Order Releases:**
+**Create two Order Releases:**
 
-![](/images/basic-otm-configurations-05-bu-img1-3c464757b9.png)
+Order Releases represent specific quantities being released for shipment against the Order Base. Create two releases for different quantities.
 
-  
+<div class="step-box">Order Base > Actions > Order Management > Change Order > Release Lines > New Release Instruction</div>
 
-Select Order Releases > Actions > Operational Planning > Create Buy Shipment > Bulk Plan â€“ Buy
+Create the first release:
 
-This will create a shipment that includes above two order releases. To see how bulk plan is working try 'Shipment Routing Options' as described below.
+<div class="field-box"><strong>Unit Amount:</strong> 20 (quantity being released for shipping)</div>
+
+Repeat the same path to create a second release:
+
+<div class="field-box"><strong>Unit Amount:</strong> 10 (quantity being released for shipping)</div>
+
+**Run Bulk Plan:**
+
+Query for the two Order Releases you just created:
+
+![Order Release query results showing two order releases ready for planning](/images/basic-otm-configurations-05-bu-img1-3c464757b9.png)
+
+Select both Order Releases and run Bulk Plan:
+
+<div class="step-box">Select Order Releases > Actions > Operational Planning > Create Buy Shipment > Bulk Plan – Buy</div>
+
+OTM evaluates the available Itineraries and Rate Records and creates a single consolidated Shipment covering both Order Releases, assigning the least-cost carrier for the lane.
 
 **Shipment Routing Options:**
 
-**Note tht we have below rates defined:**
+To understand how OTM selects a route, use Shipment Routing Options before running Bulk Plan. This is useful when verifying your Rate and Itinerary configuration.
 
-![](/images/basic-otm-configurations-05-bu-img2-1e8cf7b957.png)
+The rates configured for this scenario are:
 
-Now release PO with Source = DC and Destination = Store C and perform below action:
+![Rate records showing carrier, equipment, and cost for each lane](/images/basic-otm-configurations-05-bu-img2-1e8cf7b957.png)
 
-Order Release> Actions > Operational Planning > Show Routing Options
+Create a new Order Release with Source = DC and Destination = STORE_C, then request routing options:
 
-**OTM will show two possible itineraries as below:**
+<div class="step-box">Order Release > Actions > Operational Planning > Show Routing Options</div>
 
-  
+OTM evaluates all matching Itineraries and presents two routing options — one direct (ITIN-B: DC → STORE_C) and one multi-leg (ITIN-D: DC → STORE_A → STORE_C):
 
-![](/images/basic-otm-configurations-05-bu-img3-bad36e64d2.png)
+![Two routing options shown — ITIN-B direct and ITIN-D multi-leg](/images/basic-otm-configurations-05-bu-img3-bad36e64d2.png)
 
-  
+Select both Itineraries and click **Show Options** to see the cost breakdown for each:
 
-Select both Itineraries and click â€˜Show Optionsâ€™
+![Cost and carrier details for both itinerary options](/images/basic-otm-configurations-05-bu-img4-485c789a85.png)
 
-You will see below details â€“ all expected as per our configurations above.
+The results confirm our configuration is correct:
 
-  
+- **ITIN-B** (DC → STORE_C direct): SGTM, 53-FT, $75
+- **ITIN-D** (DC → STORE_A → STORE_C, two legs): Leg 1 PNDP $20 + Leg 2 SGTM $20 = **$40 total**
 
-![](/images/basic-otm-configurations-05-bu-img4-485c789a85.png)
+When you run Bulk Plan on this Order Release, OTM selects ITIN-D as the least-cost option and creates two Shipments:
 
-  
+- Shipment 1: PNDP, DC → STORE_A, $20
+- Shipment 2: SGTM, STORE_A → STORE_C, $20
 
-Now if you do a bulk plan on this order release, it should select ITIN_D(least cost itinerary) and create two shipments:
+![Shipment list showing two planned shipments with carriers and costs](/images/basic-otm-configurations-05-bu-img5-5117392ac6.png)
 
-â€¢ Shipment 1 with carrier PNDP going from DC to STORE_A with $20 as cost.
-
-â€¢ Shipment 2 with carrier SGTM going from Store A to Store C with $20 as cost.
-
-  
-
-![](/images/basic-otm-configurations-05-bu-img5-5117392ac6.png)
-
-  
-
-Note that OTM has identified the carrier for each leg. Next step is to notify/send tender to those carriers with these pickup date/time and location details.
+OTM has identified the carrier for each leg. The next step is to notify (tender) those carriers with the pickup dates, times, and location details.
 
 <div style="display:flex;gap:12px;margin-top:32px;border-top:2px solid #e2e8f0;padding-top:20px;flex-wrap:wrap;">
   <a href="/posts/basic-otm-configurations-04-business-numbers-planning-parameter/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;">
