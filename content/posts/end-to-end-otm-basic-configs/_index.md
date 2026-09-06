@@ -1,5 +1,5 @@
 ---
 title: "End-to-End Basic Configs"
-weight: 50
-bookCollapseSection: true
+weight: 30
+bookCollapseSection: false
 ---
