@@ -89,7 +89,7 @@ In the Agent Header screen:
 - **Agent Type:** `SHIPMENT`
 - **Domain Name:** `XXX`
 - **Active:** Check this box when the agent is ready for use.
-- **Agent Event:** `SHIPMENT â€“ CREATED`
+- **Agent Event:** `SHIPMENT – CREATED`
 - **Restrictions:** Click the **I** icon to see restriction options (Integration, User, Internal). Select **User** to trigger only on actions performed manually within OTM.
 - **Saved Condition:** `IS_BULK_SHIPMENT_HAS_VOL_LESS_THAN_100`
 - Click **View/Enter Actions**.

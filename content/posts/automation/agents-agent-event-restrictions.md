@@ -56,7 +56,7 @@ In the Restrictions section, check the **Before Persist** box:
 
 ![](/images/agents-agent-event-restriction-img4-70e039283f.png)
 
-<div class="note-box"><strong>Note:</strong> Once Before Persist is selected, the list of actions available in the Agent Actions section changes. They will differ from the standard ORDER BASE â€“ CREATED action set.</div>
+<div class="note-box"><strong>Note:</strong> Once Before Persist is selected, the list of actions available in the Agent Actions section changes. They will differ from the standard ORDER BASE – CREATED action set.</div>
 
 ![](/images/agents-agent-event-restriction-img5-6e13519067.png)
 
