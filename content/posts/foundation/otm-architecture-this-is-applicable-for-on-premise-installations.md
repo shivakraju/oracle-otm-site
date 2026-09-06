@@ -11,6 +11,7 @@ tags:
   - "WebLogic"
 aliases:
   - "/2016/04/otm-architecture.html"
+  - "/posts/otm-architecture-this-is-applicable-for-on-premise-installations/"
 keywords:
   - "Oracle OTM product architecture"
   - "OTM three tier architecture"
@@ -25,7 +26,7 @@ keywords:
   - "OTM JDBC database connection"
   - "Oracle OTM GC3 application tier"
 description: "An overview of Oracle OTM's three-tier product architecture — covering the Web Tier (Oracle HTTP Server), Application Tier (Oracle WebLogic with UI and Business components), and Database Tier (Oracle Database with GLOGOWNER and REPORTOWNER schemas)."
-url: "/posts/otm-architecture-this-is-applicable-for-on-premise-installations/"
+url: "/posts/otm-architecture/"
 ---
 
 OTM follows a standard **three-tier architecture** — a widely used design in enterprise software where the application is split into three distinct layers: Web Tier, Application Tier, and Database Tier. Each tier has a specific responsibility, and together they allow OTM to scale, be maintained, and support many users simultaneously.
