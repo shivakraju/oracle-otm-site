@@ -76,6 +76,8 @@ AND sul.order_release_line_gid = orl.order_release_line_gid)
 
 **Stored Procedure Calls:**
 
+<div class="note-box"><strong>Note:</strong> The ability to call stored procedures directly from a Direct SQL Update action is not available in recent versions of OTM. If you are on a current version, use a standard INSERT or UPDATE statement instead. Stored procedure calls documented here apply to older OTM versions only.</div>
+
 ```sql
 CALL xxotm_agent_pkg.update_ebs_fsu($gid)
 ```
