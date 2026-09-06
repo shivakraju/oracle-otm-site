@@ -89,11 +89,56 @@ Create the first Rate Record for the DC to LOC-B lane (Indianapolis to Charlotte
 
 ![Rate Record screen for SGTM_TL_DC_STOREB showing lane and cost details](/images/basic-otm-configurations-03-se-img2-b7d3679583.png)
 
-Define the remaining Rate Records for all other lanes in the same way:
+Define the remaining Rate Records for all other lanes in the same way. Below is the complete set of Rate Records for this scenario:
 
-![Rate Records list showing all lanes for SGTM](/images/basic-otm-configurations-03-se-img3-bae23963e6.png)
-
-![Rate Records list showing lanes for PNDP](/images/basic-otm-configurations-03-se-img4-1e8cf7b957.png)
+<div style="background:#f0f4f8;border:1px solid #d1dce8;border-radius:8px;padding:16px 20px;margin:16px 0;">
+<svg viewBox="0 0 700 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:660px;display:block;margin:0 auto 16px;">
+  <defs>
+    <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4a8bb5"/>
+    </marker>
+  </defs>
+  <line x1="268" y1="90" x2="165" y2="248" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr3)"/>
+  <line x1="320" y1="97" x2="320" y2="252" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr3)"/>
+  <line x1="372" y1="82" x2="530" y2="152" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr3)"/>
+  <line x1="215" y1="272" x2="288" y2="272" stroke="#4a8bb5" stroke-width="1.6" marker-end="url(#arr3)"/>
+  <text x="200" y="152" fill="#64748b" font-size="10" text-anchor="end" font-family="Consolas,monospace">SGTM  20-FT  $30</text>
+  <text x="200" y="164" fill="#64748b" font-size="10" text-anchor="end" font-family="Consolas,monospace">SGTM  40-FT  $50</text>
+  <text x="200" y="176" fill="#64748b" font-size="10" text-anchor="end" font-family="Consolas,monospace">PNDP  20-FT  $20</text>
+  <text x="200" y="188" fill="#64748b" font-size="10" text-anchor="end" font-family="Consolas,monospace">PNDP  40-FT  $40</text>
+  <text x="356" y="172" fill="#64748b" font-size="10" font-family="Consolas,monospace">SGTM</text>
+  <text x="356" y="184" fill="#64748b" font-size="10" font-family="Consolas,monospace">53-FT  $75</text>
+  <text x="480" y="118" fill="#64748b" font-size="10" text-anchor="start" font-family="Consolas,monospace">SGTM  40-FT  $50</text>
+  <text x="252" y="312" fill="#64748b" font-size="10" text-anchor="middle" font-family="Consolas,monospace">SGTM  20-FT  $20</text>
+  <rect x="282" y="52" width="76" height="36" rx="6" fill="#1c3557"/>
+  <text x="320" y="75" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">DC</text>
+  <rect x="115" y="254" width="96" height="36" rx="6" fill="#fff" stroke="#1c3557" stroke-width="1.8"/>
+  <text x="163" y="277" fill="#1c3557" font-size="12" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">STORE_A</text>
+  <rect x="282" y="254" width="76" height="36" rx="6" fill="#fff" stroke="#1c3557" stroke-width="1.8"/>
+  <text x="320" y="277" fill="#1c3557" font-size="12" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">STORE_C</text>
+  <rect x="500" y="152" width="96" height="36" rx="6" fill="#fff" stroke="#1c3557" stroke-width="1.8"/>
+  <text x="548" y="175" fill="#1c3557" font-size="12" font-weight="bold" text-anchor="middle" font-family="Consolas,monospace">STORE_B</text>
+</svg>
+<table style="width:100%;border-collapse:collapse;font-size:13px;">
+  <thead><tr style="background:#e8f0f8;">
+    <th style="padding:8px 12px;text-align:left;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:#64748b;border-bottom:1px solid #d1dce8;">Rate Record</th>
+    <th style="padding:8px 12px;text-align:left;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:#64748b;border-bottom:1px solid #d1dce8;">Source</th>
+    <th style="padding:8px 12px;text-align:left;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:#64748b;border-bottom:1px solid #d1dce8;">Destination</th>
+    <th style="padding:8px 12px;text-align:left;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:#64748b;border-bottom:1px solid #d1dce8;">Equipment</th>
+    <th style="padding:8px 12px;text-align:left;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:#64748b;border-bottom:1px solid #d1dce8;">Carrier</th>
+    <th style="padding:8px 12px;text-align:left;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:#64748b;border-bottom:1px solid #d1dce8;">Rate (USD)</th>
+  </tr></thead>
+  <tbody>
+    <tr><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-family:Consolas,monospace;font-size:12px;font-weight:600;color:#1c3557;">SGTM_TL_DC_STOREB</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">DC</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">STORE_B</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">40-FT</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">SGTM</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-weight:600;color:#16a34a;">$50</td></tr>
+    <tr><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-family:Consolas,monospace;font-size:12px;font-weight:600;color:#1c3557;">SGTM_TL_DC_STOREC</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">DC</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">STORE_C</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">53-FT</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">SGTM</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-weight:600;color:#16a34a;">$75</td></tr>
+    <tr><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-family:Consolas,monospace;font-size:12px;font-weight:600;color:#1c3557;" rowspan="2">SGTM_TL_DC_STOREA</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">DC</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">STORE_A</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">20-FT</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">SGTM</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-weight:600;color:#16a34a;">$30</td></tr>
+    <tr><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">DC</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">STORE_A</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">40-FT</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">SGTM</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-weight:600;color:#16a34a;">$50</td></tr>
+    <tr><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-family:Consolas,monospace;font-size:12px;font-weight:600;color:#1c3557;" rowspan="2">PNDP_TL_DC_STOREA</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">DC</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">STORE_A</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">20-FT</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">PNDP</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-weight:600;color:#16a34a;">$20</td></tr>
+    <tr><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">DC</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">STORE_A</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">40-FT</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;">PNDP</td><td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;font-weight:600;color:#16a34a;">$40</td></tr>
+    <tr><td style="padding:8px 12px;font-family:Consolas,monospace;font-size:12px;font-weight:600;color:#1c3557;">SGTM_TL_STOREA_STOREC</td><td style="padding:8px 12px;">STORE_A</td><td style="padding:8px 12px;">STORE_C</td><td style="padding:8px 12px;">20-FT</td><td style="padding:8px 12px;">SGTM</td><td style="padding:8px 12px;font-weight:600;color:#16a34a;">$20</td></tr>
+  </tbody>
+</table>
+</div>
 
 <div style="display:flex;gap:12px;margin-top:32px;border-top:2px solid #e2e8f0;padding-top:20px;flex-wrap:wrap;">
   <a href="/posts/basic-otm-configurations-02-itinerary/" style="flex:1;display:block;padding:14px 18px;border:1px solid #d1dce8;border-radius:8px;text-decoration:none;background:#f8fafc;">
