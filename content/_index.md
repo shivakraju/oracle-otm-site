@@ -1,7 +1,7 @@
 ---
 title: "Learn Oracle OTM"
 type: "docs"
-bookToc: false
+bookToc: true
 ---
 
 <div style="max-width:720px;">

@@ -110,12 +110,16 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <style>
+/* Hide empty TOC nav on home page — logo sidebar still shows */
+body.home-page nav#TableOfContents { display: none; }
 .cusdis-wrapper { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #e2e8f0; }
 .cusdis-heading { font-size: 1.1rem; font-weight: 700; color: #1e293b; margin-bottom: 0.4rem; }
 .cusdis-intro { font-size: 0.875rem; color: #64748b; margin-bottom: 1.25rem; line-height: 1.6; }
 #cusdis_thread { width: 100%; }
 #cusdis_thread iframe { width: 100% !important; height: auto !important; min-height: 500px !important; border: none !important; overflow: hidden !important; display: block; }
 </style>
+
+{{ if .IsHome }}<script>document.documentElement.classList.add('home-page');document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('home-page');});</script>{{ end }}
 
 <!-- Favicon: SVG logo (modern browsers + Google Search) -->
 <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
