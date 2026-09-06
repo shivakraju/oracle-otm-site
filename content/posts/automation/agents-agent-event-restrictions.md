@@ -42,6 +42,8 @@ The Event Restrictions panel appears:
 
 <div class="field-box"><strong>USER:</strong> Triggers the agent only when the business object is manually entered by a user within the OTM application.</div>
 
+<div class="note-box"><strong>Tip:</strong> You can select multiple sources at once — hold <strong>Ctrl</strong> and click each source you want. Most users miss this and assume only one source can be selected at a time. If your agent should fire regardless of how the record was created, select all three sources.</div>
+
 **Before Persist:**
 
 The **Before Persist** option allows validation of an inbound XML transaction before it is committed to the database.
