@@ -29,57 +29,53 @@ Saved Queries in OTM help to query specific records in a screen or add condition
 
 <div class="note-box"><strong>Start here — this is foundational:</strong> Saved Queries and Conditions are arguably the most important configuration concept in OTM for both UI customisation and automation. Almost every advanced OTM feature — Agents, Business Monitors, Recurring Processes, Action Checks, and custom Workbenches — requires a Saved Query or Condition to define <em>which records</em> the logic should act on. Without a solid grasp of how to build and reuse queries, you cannot effectively configure any of these features.<br><br>Beyond automation, Saved Queries power the everyday user experience: they let you build pre-filtered finder screens that surface only the records relevant to a specific role or workflow — for example, a shipment coordinator who should only see shipments in their region, or an approver who only sees invoices within their approval threshold. A well-designed set of Saved Queries is often the difference between an OTM implementation that users actually adopt and one they work around.<br><br>Invest time here before moving to Agents, Business Monitors, or any other automation topic. Every hour spent mastering Saved Queries will save you many hours of troubleshooting downstream.</div>
 
-**Method 1: Simple Query from the UI using Order Release Finder Screen**
+**Type 1: User in Finder Query**
+
+A User in Finder query is a search criteria set saved directly from a Finder screen (such as Order Release, Shipment, or Invoice). OTM stores the criteria you enter on a Finder screen and lets you replay it instantly from a dropdown — no SQL required. This is the right starting point for functional consultants who need to build pre-filtered views for end users without writing code.
 
 <div class="step-box">Order Management > Order Release > Order Release</div>
 
-**Enter Search Criteria:**
+Enter your search criteria on the Finder screen:
 
-![](/images/saved-queriesconditions-img1-30bf48b186.png)
+![Order Release Finder screen with search criteria entered](/images/saved-queriesconditions-img1-30bf48b186.png)
 
-![](/images/saved-queriesconditions-img2-13b34ec6ee.png)
+![Finder screen showing additional criteria fields populated](/images/saved-queriesconditions-img2-13b34ec6ee.png)
 
-Click Save button and give a name to your query.
+Click **Save** and give the query a name:
 
-![](/images/saved-queriesconditions-img3-5a733322dd.png)
+![Save Query dialog with query name field](/images/saved-queriesconditions-img3-5a733322dd.png)
 
-You will see this query appearing in the Saved Query drop down list as shown below:
+The saved query now appears in the Saved Query dropdown on the Finder screen:
 
-![](/images/saved-queriesconditions-img4-6c758e6dbc.png)
+![Finder screen showing the saved query in the dropdown list](/images/saved-queriesconditions-img4-6c758e6dbc.png)
 
-Click 'Execute Query' button to see the results of the query.
+Click **Execute Query** to run it and see results:
 
-![](/images/saved-queriesconditions-img5-23908464dd.png)
+![Finder screen showing results after executing the saved query](/images/saved-queriesconditions-img5-23908464dd.png)
 
-Please note that this query is saved in the application and can be executed any time.
-
-**You can review this query definition as below:**
+The query is stored in the system and can be re-executed at any time. To inspect or edit the query definition:
 
 <div class="step-box">Business Process Automation > Power Data > Event Management > Saved Query</div>
 
-![](/images/saved-queriesconditions-img6-8dd623a834.png)
+![Saved Query search screen](/images/saved-queriesconditions-img6-8dd623a834.png)
 
-Enter the Query name that was provided earlier and click 'Search'. Select the Query and 'Edit' to see the definition as below:
+Search for the query by name, then select and edit it:
 
-![](/images/saved-queriesconditions-img7-0cf28abb2d.png)
+![Saved Query definition screen showing criteria](/images/saved-queriesconditions-img7-0cf28abb2d.png)
 
-Note that 'Use in Finder' is checked for this query as this is created from the Finder Screen.
+Notice that **Use in Finder** is checked — this flag is set automatically when a query is created from a Finder screen. It controls whether the query appears in the Finder screen dropdown.
 
-![](/images/saved-queriesconditions-img8-9113c5fa7e.png)
+![Saved Query showing Use in Finder checkbox checked](/images/saved-queriesconditions-img8-9113c5fa7e.png)
 
-You will review the criteria you have added while defining the query.
+You can also add further criteria directly here — for example, adding **Indicator = Red** by selecting the Indicator column, choosing Red as the value, and saving:
 
-You can also create query directly from this screen and add necessary criteria. For example, if you want to add another criteria/condition that 'Indicator = Red', you can select 'Indicator' under Column drop down list. This will populate the possible list of value once you tab out of column. You can select 'Red' as value and 'Save'.
+![Saved Query editor with Indicator = Red criteria added](/images/saved-queriesconditions-img9-37ea3c479b.png)
 
-![](/images/saved-queriesconditions-img9-37ea3c479b.png)
+**Type 2: Saved Query (SQL-Based)**
 
-This is an easy feature for functional consultants who are not familiar with SQL to write simple queries.
+A Saved Query defined with custom SQL lets you express logic that the Finder screen criteria builder cannot — multi-table joins, aggregates, subqueries, and runtime variables. This is the primary query type used in automation: Agents, Business Monitors, Recurring Processes, and Action Checks all reference Saved Queries to identify which records to act on. The query receives the record's primary key (GID) as a runtime variable from OTM, so it always evaluates against the specific object being processed.
 
-**Method 2: Complex SQL Query**
-
-If you need to write complex SQL queries using joins with multiple object types (like Order Release to Shipment) or SQL built-in functions like SUM, use the method below.
-
-**Example:** Check if an Order Release is split into multiple shipments while planning. This type of query/condition cannot be written from the Finder Screen criteria.
+**Example:** Check whether an Order Release has been split across multiple shipments during planning — something that cannot be expressed as Finder screen criteria:
 
 ```sql
 select orl.order_release_gid
@@ -91,32 +87,32 @@ group by orl.order_release_gid
 having count(*) > 1
 ```
 
-Note that `$gid` is a variable (primary key to identify order release) that is passed to the query during execution time from the application. For example, if you use this query in an 'ORDER RELEASE' agent, then Order Release GID will be passed during agent run-time.
+`$gid` is a runtime variable OTM substitutes with the GID of the object being evaluated — for an Order Release agent this will be the Order Release GID.
 
-These types of queries are normally used in Agents, Recurring Processes, Business Monitors, etc.
+Define this in the system:
 
-**We define these queries in the system as below:**
+<div class="step-box">Business Process Automation > Power Data > Event Management > Saved Queries > New</div>
 
-<div class="step-box">Business Process Automation > Power Data > Event Management > Saved Queries</div>
-
-![](/images/saved-queriesconditions-img10-4451a43d6a.png)
+![Saved Query new screen with SQL fields](/images/saved-queriesconditions-img10-4451a43d6a.png)
 
 <div class="field-box"><strong>Query Name:</strong> Enter a unique query name</div>
 <div class="field-box"><strong>Object Type:</strong> ORDER RELEASE</div>
-<div class="field-box"><strong>Domain Name:</strong> Enter domain name</div>
+<div class="field-box"><strong>Domain Name:</strong> Enter your domain name</div>
 
-Click 'View/Define Query'. Copy the query without any ending semicolon (`;`) in the 'Check one SQL' and 'Find All SQL' fields as shown above, then click 'Finished'.
+Click **View/Define Query** and paste the SQL (without a trailing semicolon) into both the **Check one SQL** and **Find All SQL** fields, then click **Finished**:
 
-![](/images/saved-queriesconditions-img11-ebad4cc20e.png)
+![Saved Query SQL editor showing Check one SQL and Find All SQL fields](/images/saved-queriesconditions-img11-ebad4cc20e.png)
 
-If you need to use the same query in an agent, associate it to a saved condition. Saved conditions are mostly used to write IF condition logic in Agents.
+<div class="note-box"><strong>Note:</strong> Write the entire SQL on a single line with no line breaks. Line breaks cause export-to-CSV failures and will break the query when migrating between environments.</div>
+
+**Type 3: Saved Condition**
+
+A Saved Condition is a named grouping of one or more Saved Queries that evaluates to true or false. It is the construct OTM Agents use for IF/ELSE logic — the agent's condition step references a Saved Condition, and if all queries in that condition return at least one row, the condition is true and the agent proceeds to its action. Think of a Saved Query as a data filter and a Saved Condition as the boolean decision built on top of it.
 
 <div class="step-box">Business Process Automation > Power Data > Event Management > Saved Condition > New</div>
 
-![](/images/saved-queriesconditions-img12-61e25779cc.png)
+![Saved Condition new screen showing query association fields](/images/saved-queriesconditions-img12-61e25779cc.png)
 
-Specify details as shown above to link the Saved Query with a Saved Condition. Saved Conditions will be true if all the Saved Queries in the list return records.
+Link one or more Saved Queries to the condition. The condition evaluates to true when every associated query returns at least one record:
 
-![](/images/saved-queriesconditions-img13-7fa6ba4dda.png)
-
-<div class="note-box"><strong>Note:</strong> While writing saved queries using SQL, ensure the entire query is written in a single line with no line breaks. Line breaks will cause issues when you try to export the query to CSV and load it in another environment.</div>
+![Saved Condition screen showing the list of associated Saved Queries](/images/saved-queriesconditions-img13-7fa6ba4dda.png)
