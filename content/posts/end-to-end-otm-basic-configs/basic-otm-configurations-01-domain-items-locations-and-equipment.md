@@ -13,6 +13,8 @@ tags:
 aliases:
   - "/posts/basic-otm-configurations-01-domain-items-locations-and-equipment/"
   - "/2020/08/basic-otm-configurations-01-domain.html"
+  - "/posts/end-to-end-otm-basic-configs/basic-otm-configurations-01-domain-items-locations-and-equipment/"
+url: "/posts/end-to-end-otm-basic-configs/otm-domain-items-locations-and-equipment/"
   - "/2020/06/basic-otm-configurations.html"
 keywords:
   - "Oracle OTM basic configuration domain setup"
