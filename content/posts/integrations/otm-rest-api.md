@@ -48,7 +48,7 @@ https://{your-otm-host}/logisticsRestApi/resources-int/v2/{entity}
 
 Replace `{your-otm-host}` with your OTM instance hostname. Replace `{entity}` with the object collection name — for example `locations`, `shipments`, `orderBases`.
 
-In Postman or any REST client set the authorization to **Basic Auth** and use the integration user credentials.
+In Postman or any REST client set the authorization to **Basic Auth** and use the integration user credentials. OTM SaaS versions also support **OAuth 2.0** — authentication is handled through the Oracle IDCS (Identity Cloud Service) layer. For Basic Auth, use the `resources-int` path as noted above. For OAuth 2.0, use the standard `resources` path and pass the bearer token obtained from IDCS.
 
 ---
 
