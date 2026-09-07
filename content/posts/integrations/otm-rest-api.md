@@ -54,6 +54,8 @@ In Postman or any REST client set the authorization to **Basic Auth** and use th
 
 **GET — Read a Record**
 
+The examples below use **Location** as the entity, but the same URL patterns and parameters work for any OTM resource — Shipments, Order Bases, Order Releases, and others. See the [Common Entity URLs](#common-entity-urls) section at the bottom of this page for a quick reference list.
+
 Fetch a specific location by its GID:
 
 ```
