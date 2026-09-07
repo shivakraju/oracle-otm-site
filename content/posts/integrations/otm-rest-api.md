@@ -32,7 +32,9 @@ Before making any API call, create a dedicated user in OTM and attach a role tha
 
 <div class="field-box"><strong>Username:</strong> {DOMAIN}.INTEGRATION</div>
 
-Attach a user role that has REST API ACLs enabled for the required entities (Locations, Shipments, Order Releases, etc.).
+Attach a user role that has REST API ACLs enabled for the required entities (Locations, Shipments, Order Releases, etc.). OTM ships a default role called **INTEGRATION** that already has these ACLs configured — you can assign that role directly or create a custom role with only the ACLs your use case needs.
+
+The username is free text and does not have to be "INTEGRATION" — use any name that makes the account's purpose clear in your environment.
 
 <div class="note-box"><strong>Note:</strong> Use <code>resources-int</code> in the URL path (not <code>resources</code>) to bypass SSO and authenticate with Basic Auth directly.</div>
 
