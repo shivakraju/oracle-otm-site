@@ -1,5 +1,5 @@
 ---
-title: "OTM REST API"
+title: "REST API"
 date: 2026-09-07T00:00:00+00:00
 draft: false
 weight: 50
