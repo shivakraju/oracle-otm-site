@@ -256,7 +256,7 @@ POST https://{your-otm-host}/logisticsRestApi/resources-int/v2/custom-actions/qu
 }
 ```
 
-<div class="note-box"><strong>Important:</strong> The column alias in your SQL must exactly match the entity's primary key field name. For shipments the alias must be <code>SHIPMENT_GID</code>. For tracking events it must be <code>I_TRANSACTION_NO</code>. A wrong alias returns empty results with no error.</div>
+<div class="note-box"><strong>Important:</strong> The column alias in your SQL must exactly match the entity's primary key field name, and the value returned must be the full GID of that entity. For shipments the alias must be <code>SHIPMENT_GID</code> and the value must include the domain prefix (e.g. <code>DOMAIN.SHIPMENT123</code>). For tracking events the alias must be <code>I_TRANSACTION_NO</code>. A wrong alias or a value without the domain prefix returns empty results with no error.</div>
 
 ---
 
