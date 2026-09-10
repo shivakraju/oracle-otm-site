@@ -9,30 +9,24 @@
   </div>
 </article>
 
-<div class="cusdis-wrapper">
-  <h3 class="cusdis-heading">Questions &amp; Discussion</h3>
-  <p class="cusdis-intro">Have a question about this topic? Post it below — use your name or a pseudonym, no account required. Comments are reviewed before appearing, usually within 24 hours.</p>
-  <div id="cusdis_thread"
-    data-host="https://cusdis.com"
-    data-app-id="bbdff00d-6f62-4246-b5fe-f56b1ada5ee1"
-    data-page-id="{{ .RelPermalink }}"
-    data-page-url="{{ .Permalink }}"
-    data-page-title="{{ .Title }}"
-  ></div>
-  <script defer src="https://cusdis.com/js/cusdis.es.js"></script>
-  <script>
-  window.addEventListener('message', function(e) {
-    if (e.data && e.data.from === 'cusdis' && e.data.type === 'resize') {
-      var iframe = document.querySelector('#cusdis_thread iframe');
-      if (iframe) iframe.style.height = (e.data.height + 32) + 'px';
-    }
-  });
-  // Fallback: manually trigger Cusdis if the auto-init missed the element
-  window.addEventListener('load', function() {
-    if (window.renderCusdis) {
-      window.renderCusdis(document.getElementById('cusdis_thread'));
-    }
-  });
+<div class="giscus-wrapper">
+  <h3 class="giscus-heading">Questions &amp; Discussion</h3>
+  <p class="giscus-intro">Have a question about this topic? Post it below using your GitHub account. Comments are visible to everyone and help other OTM consultants with the same question.</p>
+  <script src="https://giscus.app/client.js"
+    data-repo="shivakraju/oracle-otm-site"
+    data-repo-id="R_kgDOTQhlag"
+    data-category="General"
+    data-category-id="DIC_kwDOTQhlas4DFU1Y"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
   </script>
 </div>
 {{ end }}
