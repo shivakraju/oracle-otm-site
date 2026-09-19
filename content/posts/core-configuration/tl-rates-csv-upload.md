@@ -23,7 +23,16 @@ keywords:
 description: "Step-by-step guide to uploading Truckload rates in Oracle OTM using six CSV files — X_LANE, RATE_OFFERING, DISTANCE_LOOKUP, RATE_GEO, RATE_GEO_COST_GROUP, and RATE_GEO_COST — with copy-paste templates for each file."
 ---
 
-OTM allows Truckload (TL) rate contracts to be loaded using CSV files instead of manual UI entry. This is the most efficient approach when setting up rates for multiple lanes or carriers.
+Truckload (TL) carrier contracts are typically priced on a **per-mile basis** — the freight cost for a shipment is calculated by multiplying the agreed rate per mile by the distance between the origin and destination. To do this, OTM needs to know the distance for every lane it plans.
+
+OTM supports two approaches to sourcing distances:
+
+- **Distance Lookup (manual upload):** The business team maintains a table of pre-defined distances between city pairs or zip codes and uploads them into OTM. This is the approach covered in this topic — the DISTANCE_LOOKUP file in the upload sequence stores these values.
+- **Third-party distance providers:** OTM can integrate with mileage calculation applications such as PC\*MILER or MileMaker. When a rate is configured to use one of these providers, OTM calls the external application at runtime to fetch the exact mileage rather than relying on a stored value.
+
+<div class="note-box">Configuring a third-party distance provider (Rate Distance) is a separate setup topic that will be covered in a future post. The <strong>RATE_DISTANCE_GID</strong> field in the files below must reference whichever distance source your environment is using — either a lookup table or a third-party provider already configured in OTM.</div>
+
+OTM allows TL rate contracts to be loaded using CSV files instead of manual UI entry. This is the most efficient approach when setting up rates for multiple lanes or carriers.
 
 Six CSV files must be uploaded in a specific order — each file builds on data created by the previous one:
 
