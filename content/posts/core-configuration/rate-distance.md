@@ -102,7 +102,7 @@ This setup requires a PCMiler license and an API Authorization Key from ALK.
 
 <div class="field-box"><strong>Domain Name:</strong> Your OTM domain</div>
 
-**Parameters** — add the following rows in the Parameter section:
+**Parameters** — the following rows are a sample configuration commonly used with PCMiler. OTM provides several additional parameters and the right combination depends on your business requirements and how your locations are set up.
 
 | Parameter | Value | Country Code |
 |-----------|-------|--------------|
