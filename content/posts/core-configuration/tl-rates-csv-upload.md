@@ -105,7 +105,7 @@ Defines the rate offering header — the carrier, transport mode, rate service, 
 
 <div class="field-box"><strong>MIN_WEIGHT_CONSTRAINT / MAX_WEIGHT_CONSTRAINT:</strong> Minimum and maximum shipment weight this rate applies to. Each requires a <code>_UOM_CODE</code> column (e.g. <code>LB</code>) and a <code>_BASE</code> column (same numeric value, used internally by OTM for unit conversion).</div>
 
-<div class="field-box"><strong>RATE_DISTANCE_GID:</strong> Distance provider GID used to calculate mileage — e.g. <code>YOUR_DOMAIN.MILEMAKER</code> or <code>YOUR_DOMAIN.PC_MILER</code>. Must match what you use in DISTANCE_LOOKUP.</div>
+<div class="field-box"><strong>RATE_DISTANCE_GID:</strong> Distance provider GID used to calculate mileage — e.g. <code>YOUR_DOMAIN.MILEMAKER</code> or <code>YOUR_DOMAIN.PC_MILER</code>. Must match what you use in DISTANCE_LOOKUP. See the <a href="/posts/rate-distance/">Rate Distance</a> topic for setup details.</div>
 
 <div class="field-box"><strong>IS_ACTIVE:</strong> <code>Y</code> to activate the rate offering</div>
 
