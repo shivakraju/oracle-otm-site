@@ -32,15 +32,13 @@ The Rate Distance record is linked to the **Rate Offering** (carrier contract) �
 
 ---
 
-**Section 1 — Rate Distance Using Distance Lookups**
+**Rate Distance Using Distance Lookups**
 
 With the lookup approach, your business team manually creates records for each lane they want to cover, assigning a fixed mileage to each origin-destination pair. OTM uses Oracle's built-in **LOOKUP ONLY** Rate Distance ID — no external system or configuration is needed beyond loading the data.
 
 **Step 1 — Create the Rate Distance record**
 
 <div class="step-box">Rates > Contract Rate Management > Rate Distance > New</div>
-
-![Rate Distance configuration screen showing Distance Type and fields](../../images/rate-distance-img1-config.png)
 
 <div class="field-box"><strong>Rate Distance ID / XID:</strong> A unique identifier for this rate distance record, e.g. <code>YOUR_DOMAIN.LOOKUP_ONLY</code>. Oracle provides a built-in record — use <code>PUBLIC.LOOKUP ONLY</code> if you do not need a custom one.</div>
 
@@ -56,13 +54,9 @@ Each Distance Lookup record defines the mileage for one lane. Open the rate dist
 
 <div class="step-box">Rates > Contract Rate Management > Distance Lookup > New</div>
 
-![Distance Lookup screen with Lane Definitions popup showing zip-to-zip lane configuration](../../images/rate-distance-img2-lookup.png)
-
 <div class="field-box"><strong>Rate Distance GID:</strong> The rate distance record you created in Step 1</div>
 
 <div class="field-box"><strong>Source Geo Hierarchy / Destination Geo Hierarchy:</strong> The geographic level used to identify the origin and destination. OTM supports multiple options — choose based on how you want to define your lanes.</div>
-
-![Geo Hierarchy dropdown showing available options: CITY, LOCATION, POSTAL_CODE, STATE/PROVINCE, USZIP3, USZIP5, and others](../../images/rate-distance-img3-geohierarchy.png)
 
 Common geo hierarchy options:
 
@@ -86,7 +80,7 @@ In your Rate Offering (carrier contract) record, set the **Rate Distance GID** f
 
 ---
 
-**Section 2 — Rate Distance Using External Distance Engine (PCMiler)**
+**Rate Distance Using External Distance Engine (PCMiler)**
 
 PCMiler (from ALK Technologies) is a widely used routing engine that calculates distances based on road networks, route type, and address or postal code inputs. OTM integrates with PCMiler via a web service call at plan time.
 
@@ -95,8 +89,6 @@ This setup requires a PCMiler license and an API Authorization Key from ALK.
 **Step 1 — Create the External Distance Engine record**
 
 <div class="step-box">Rates > Contract Rate Management > External Distance Engine > New</div>
-
-![External Distance Engine configuration screen showing PCMiler fields, parameters, and geo hierarchy entries](../../images/rate-distance-img4-external-engine.png)
 
 <div class="field-box"><strong>External Distance Engine ID / Description:</strong> A unique ID for this engine record, e.g. <code>YOUR_DOMAIN.PCMILER_WS</code>. Description can be something like <code>DISTANCE BASED ON POSTAL CODES USING PCMILER/PRACTICAL - WS</code></div>
 
@@ -142,8 +134,6 @@ Save the record.
 PCMiler requires an API key for authentication. In OTM, this is stored as a system property rather than directly on the External Distance Engine record.
 
 <div class="step-box">Configuration > System Administration > Property Sets</div>
-
-![Property Set screen showing glog.ExternalDistanceEnginePCMilerWS.AuthorizationKey with value masked by asterisks](../../images/rate-distance-img5-property-set.png)
 
 Locate or create the property:
 
